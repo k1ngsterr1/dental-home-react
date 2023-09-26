@@ -1341,7 +1341,7 @@ export default function HomePage() {
                   <input
                     type="tel"
                     className="telephone-input"
-                    placeholder="+7 (999) 999-99-99"
+                    placeholder="+7 (925) 222-90-22"
                   />
                   <button className="form-btn">Записать на осмотр</button>
                 </div>
@@ -1500,7 +1500,7 @@ export default function HomePage() {
                 <input
                   type="text"
                   className="input-c"
-                  placeholder="+7 (775) 993-25-87"
+                  placeholder="+7 (925) 222-90-22"
                 />
               </div>
             </div>
@@ -1592,7 +1592,7 @@ export default function HomePage() {
                 type="tel"
                 name="phone"
                 className="input-text"
-                placeholder="+7 (775) 993-25-87"
+                placeholder="+7 (925) 222-90-22"
               />
             </div>
             <div className="input-container">
@@ -1677,7 +1677,8 @@ export default function HomePage() {
                 type="tel"
                 name="phone-number-input"
                 className="phone-number-input"
-                placeholder="+7 (999) 999-99-99"
+                placeholder="+7 (925) 222-90-22"
+                style={{ textAlign: "center" }}
                 id=""
               />
               <button className="phone-btn">

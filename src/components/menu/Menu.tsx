@@ -15,6 +15,8 @@ import {
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 
+const childIcon: string = require("../../assets/child-icon.svg").default;
+
 interface MenuProps {
   isMenuOpen?: any;
   toggleMenu?: any;
@@ -111,8 +113,8 @@ const Menu: React.FC<MenuProps> = ({
           </div>
           <span className="dark schedule">Пн-Вс - 9:00-21:00</span>
           <span className="dark free">Бесплатная парковка</span>
-          <a className="phone link" href="tel:+79259259955">
-            +7(925) 925 99 55
+          <a className="phone link" href="tel:+79252229022">
+            +7 (925) 222-90-22
           </a>
           {/* <div className="geo-row second">
             <FontAwesomeIcon
@@ -138,7 +140,9 @@ const Menu: React.FC<MenuProps> = ({
         </div>
         <div className="buttons">
           <div className="button">Записать на прием</div>
-          <div className="button child">Детская стоматология</div>
+          <Link to="/child-dental" className="button child">
+            Детская стоматология
+          </Link>
         </div>
       </div>
       <div className="menu-pc">
@@ -258,18 +262,15 @@ const Menu: React.FC<MenuProps> = ({
               <a href="" className="golden-link l">
                 Исправление прикуса
               </a>
-              <a href="tel:+" className="phone-number">
-                +7(925) 925 99 55
+              <a href="tel:+79252229022" className="phone-number">
+                +7 (925) 222-90-22
               </a>
             </div>
           </div>
           <div className="column-three">
             <div className="btn-container">
               <Link to="/children-dental" className="child-button">
-                <FontAwesomeIcon
-                  className="icon"
-                  icon={faChild}
-                ></FontAwesomeIcon>
+                <img className="icon" src={childIcon}></img>
               </Link>
               <span className="child-text">Детская стоматология</span>
             </div>

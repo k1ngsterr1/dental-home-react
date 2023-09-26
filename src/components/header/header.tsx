@@ -59,8 +59,12 @@ const Header: React.FC<HeaderProps> = ({
       <div className="header-pc">
         <img className="logo" src={logo} alt="logo"></img>
         <div className="header-content">
-          <a href="tel:+7(925) 925 99 55" className="tel-link">
-            +7(925) 925 99 55
+          <a
+            href="tel:+79252229022"
+            className="tel-link"
+            style={{ textDecoration: "none" }}
+          >
+            +7 (925) 222-90-22
           </a>
           <button className="header-btn">Записаться на прием</button>
           <Hamburger

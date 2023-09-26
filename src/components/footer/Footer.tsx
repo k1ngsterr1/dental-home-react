@@ -70,7 +70,9 @@ const Footer = () => {
         </div>
         <div className="contacts-container">
           <h5 className="contacts">Контакты</h5>
-          <span className="contact-text">+7(925) 925 99 55</span>
+          <a href="tel:+79252229022" className="contact-text">
+            +7 (925) 222-90-22
+          </a>
           <span className="contact-text two">
             Россия, Московская область, г. Ивантеевка, Советский проспект 5
           </span>

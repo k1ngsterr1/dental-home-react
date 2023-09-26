@@ -34,6 +34,12 @@ interface PriceTabProps {
   price12?: any;
   paragraph13?: any;
   price13?: any;
+  paragraph14?: any;
+  price14?: any;
+  paragraph15?: any;
+  price15?: any;
+  paragraph16?: any;
+  price16?: any;
   style?: any;
 }
 
@@ -132,6 +138,39 @@ const PriceTabLong: React.FC<PriceTabProps> = (props) => {
           <span className="price-three">{props.price13}</span>
         </>
       )}
+      {props.paragraph14 && (
+        <>
+          <p className="price-p-three">{props.paragraph14}</p>
+          <span className="price-three">{props.price14}</span>
+        </>
+      )}
+
+      {props.paragraph15 && (
+        <>
+          <p className="price-p-three">{props.paragraph15}</p>
+          <span className="price-three">{props.price15}</span>
+        </>
+      )}
+      {props.paragraph16 && (
+        <>
+          <p className="price-p-three">{props.paragraph16}</p>
+          <span className="price-three">{props.price16}</span>
+        </>
+      )}
+
+      {props.paragraph13 && (
+        <>
+          <p className="price-p-three">{props.paragraph13}</p>
+          <span className="price-three">{props.price13}</span>
+        </>
+      )}
+
+      {props.paragraph13 && (
+        <>
+          <p className="price-p-three">{props.paragraph13}</p>
+          <span className="price-three">{props.price13}</span>
+        </>
+      )}
       <button className="blue-btn">Записаться</button>
     </div>
   );
@@ -139,6 +178,11 @@ const PriceTabLong: React.FC<PriceTabProps> = (props) => {
 
 const PricesPage = () => {
   const [displayNone, setDisplayNone] = useState("");
+  const [displayNoneTwo, setDisplayNoneTwo] = useState("");
+  const [displayNoneThree, setDisplayNoneThree] = useState("");
+  const [displayNoneFour, setDisplayNoneFour] = useState("");
+  const [displayNoneFive, setDisplayNoneFive] = useState("");
+  const [displayNoneSix, setDisplayNoneSix] = useState("");
 
   const [heading, setHeading] = useState("Ортопедия");
 
@@ -604,55 +648,62 @@ const PricesPage = () => {
   };
 
   const whiteningExpansion = () => {
-    setToothHealingOpen(false);
     setWhiteningOpen(!isWhiteningOpened);
+    setDisplayNoneTwo("none");
+    setDisplayNoneThree("none");
+    setDisplayNoneFour("none");
+    setDisplayNoneFive("none");
+    setDisplayNoneSix("none");
+    setToothHealingOpen(false);
     setMouthHygieneOpen(false);
     setHealingInSleepOpen(false);
     setParodontHealingOpen(false);
     setVinirsOpen(false);
     setProthesisOpen(false);
     setDiagnosisOpen(false);
-    setHeading("Оттиски");
-    setServiceName("Оттиски");
-    setServiceNameTwo("Оттиски");
-    setServiceParagraph("Снятие оттиска с одной челюсти альгинатными массами");
-    setServiceParagraphTwo(
-      "Снятие оттиска с одной челюсти массой из С-силикона"
-    );
-    setServiceParagraphThree(
-      "Снятие оттиска с одной челюсти массой из А-силикона"
-    );
-    setServiceParagraphFour("Прикусной блок ");
-    setServiceParagraphFive(
-      "Изготовление прикусного шаблона и индивидуальной ложки"
-    );
-    setServiceParagraphSix(
-      "Снятие оттиска с одной челюсти для изготовления силиконового ключа "
-    );
-    setServiceParagraphSeven(
-      "Снятие оттиска с одной челюсти с имплантов с использованием индивидуальной ложки"
-    );
-    setServiceParagraphEight("Wax up восковое моделирование ");
-    setServiceParagraphNine(
-      "Цифровой оттиск (сканирование верхней и нижней челюсти, прикус)"
-    );
+    setHeading("Консультация");
+    setServiceName("Консультация");
+    setServiceNameTwo("Консультация");
+    setServiceParagraph("");
+    setServiceParagraphTwo("");
+    setServiceParagraphThree("");
+    setServiceParagraphFour("");
+    setServiceParagraphFive("");
+    setServiceParagraphSix("");
+    setServiceParagraphSeven("");
+    setServiceParagraphEight("");
+    setServiceParagraphNine("");
     setServiceParagraphTen("");
     setServiceParagraph11("");
     setServiceParagraph12("");
     setServiceParagraph13("");
-    setPrice("1000₽");
-    setPriceTwo("1500₽");
-    setPriceThree("2000₽");
-    setPriceFour("1000₽");
-    setPriceFive("3500₽");
-    setPriceSix("1500₽");
-    setPriceSeven("2500₽");
-    setPriceEight("2000₽");
+    setServiceParagraph14(
+      "Прием (осмотр, консультация) врача-стоматолога первичный"
+    );
+    setServiceParagraph15(
+      "Диспансерный прием (осмотр, консультация) врача-стоматолога"
+    );
+    setServiceParagraph16(
+      "Профилактический прием (осмотр, консультация) врача-стоматолога"
+    );
+    setServiceParagraph17("");
+    setPrice("");
+    setPriceTwo("");
+    setPriceThree("");
+    setPriceFour("");
+    setPriceFive("");
+    setPriceSix("");
+    setPriceSeven("");
+    setPriceEight("");
     setPriceNine("");
     setPriceTen("");
     setPrice11("");
     setPrice12("");
     setPrice13("");
+    setPrice14("1000₽");
+    setPrice15("500₽");
+    setPrice16("0₽");
+    setPrice17("");
   };
 
   const mouthHygieneExpansion = () => {
@@ -926,7 +977,7 @@ const PricesPage = () => {
                 className={isWhiteningOpened ? "button-active" : "button"}
                 onClick={whiteningExpansion}
               >
-                Оттиски
+                Консультация
               </button>
             </div>
             <div className="row two">
@@ -1036,7 +1087,7 @@ const PricesPage = () => {
                 className={isWhiteningOpened ? "button-active" : "button"}
                 onClick={whiteningExpansion}
               >
-                Оттиски
+                Консультация
               </button>
               <button
                 className={isMouthHygieneOpened ? "button-active" : "button"}
@@ -1098,6 +1149,7 @@ const PricesPage = () => {
                 price13={price13}
               ></PriceTabLong>
               <PriceTabLong
+                style={setDisplayNoneTwo}
                 tabHeadign={serviceNameTwo}
                 paragraphOne={serviceParagraph14}
                 priceOne={price14}
@@ -1119,6 +1171,7 @@ const PricesPage = () => {
                 priceNine={price22}
               ></PriceTabLong>
               <PriceTabLong
+                style={setDisplayNoneThree}
                 tabHeadign={serviceNameThree}
                 paragraphOne={serviceParagraph23}
                 priceOne={price23}
@@ -1130,6 +1183,7 @@ const PricesPage = () => {
                 priceFour={price26}
               ></PriceTabLong>
               <PriceTabLong
+                style={setDisplayNoneFour}
                 tabHeadign={serviceNameFour}
                 paragraphOne={serviceParagraph27}
                 priceOne={price27}
@@ -1147,6 +1201,7 @@ const PricesPage = () => {
                 priceSeven={price33}
               ></PriceTabLong>
               <PriceTabLong
+                style={setDisplayNoneFive}
                 tabHeadign={serviceNameFive}
                 paragraphOne={serviceParagraph34}
                 priceOne={price34}
@@ -1156,6 +1211,7 @@ const PricesPage = () => {
                 priceThree={price36}
               ></PriceTabLong>
               <PriceTabLong
+                style={setDisplayNoneSix}
                 tabHeadign={serviceNameSix}
                 paragraphOne={serviceParagraph37}
                 priceOne={price37}
