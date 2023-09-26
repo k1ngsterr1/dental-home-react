@@ -1,4 +1,4 @@
-@import '../../styles/variables'
+@import '../../../styles/variables'
 
 body
 
@@ -319,14 +319,19 @@ body
                         height: auto
                         display: flex
                         justify-content: space-between
+                        align-items: flex-start
                         margin-top: $m64
 
                         .services-list
+                            height: auto !important
+                            position: sticky !important
+                            top: $m128 !important
                             display: flex
                             flex-direction: column
                             align-items: flex-start
 
                             .button, .button-active
+                                cursor: pointer
                                 padding: 0 !important
                                 margin: 0 !important
                                 background: none !important
@@ -423,6 +428,8 @@ body
                                     background-color: $dark_blue
                                     border: none
                                     border-radius: 6px
+                                    cursor: pointer
+                                    font-size: clamp(10px,1.0416vw,40px)
                                     color: $gold
                                     margin-left: $m32
                                     margin-top: $m32

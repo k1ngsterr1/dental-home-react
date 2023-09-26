@@ -318,14 +318,19 @@ body .screen .content .services-content .cards .price-tab .blue-btn:hover, body 
     height: auto;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     margin-top: clamp(32px, 3.33312vw, 128px);
   }
   body .screen .pc-content .main-content .services-content .services-list {
+    height: auto !important;
+    position: sticky !important;
+    top: clamp(64px, 6.66624vw, 256px) !important;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
   body .screen .pc-content .main-content .services-content .services-list .button, body .screen .pc-content .main-content .services-content .services-list .button-active {
+    cursor: pointer;
     padding: 0 !important;
     margin: 0 !important;
     background: none !important;
@@ -423,6 +428,8 @@ body .screen .content .services-content .cards .price-tab .blue-btn:hover, body 
     background-color: #202637;
     border: none;
     border-radius: 6px;
+    cursor: pointer;
+    font-size: clamp(10px, 1.0416vw, 40px);
     color: #E8CB6C;
     margin-left: clamp(16px, 1.66656vw, 64px);
     margin-top: clamp(16px, 1.66656vw, 64px);
