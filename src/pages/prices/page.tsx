@@ -20,6 +20,20 @@ interface PriceTabProps {
   priceFive?: any;
   paragraphSix?: any;
   priceSix?: any;
+  paragraphSeven?: any;
+  priceSeven?: any;
+  paragraphEight?: any;
+  priceEight?: any;
+  paragraphNine?: any;
+  priceNine?: any;
+  paragraphTen?: any;
+  priceTen?: any;
+  paragraph11?: any;
+  price11?: any;
+  paragraph12?: any;
+  price12?: any;
+  paragraph13?: any;
+  price13?: any;
 }
 
 const PriceTab: React.FC<PriceTabProps> = (props) => {
@@ -45,54 +59,124 @@ const PriceTabLong: React.FC<PriceTabProps> = (props) => {
       <span className="price-two">{props.priceTwo}</span>
       <p className="price-p-three">{props.paragraphThree}</p>
       <span className="price-three">{props.priceThree}</span>
+      <p className="price-p-three">{props.paragraphFour}</p>
+      <span className="price-three">{props.priceFour}</span>
+      <p className="price-p-three">{props.paragraphFive}</p>
+      <span className="price-three">{props.priceFive}</span>
+      <p className="price-p-three">{props.paragraphSix}</p>
+      <span className="price-three">{props.priceSix}</span>
+      <p className="price-p-three">{props.paragraphSeven}</p>
+      <span className="price-three">{props.priceSeven}</span>
+      <p className="price-p-three">{props.paragraphEight}</p>
+      <span className="price-three">{props.priceEight}</span>
+      <p className="price-p-three">{props.paragraphNine}</p>
+      <span className="price-three">{props.priceNine}</span>
+      <p className="price-p-three">{props.paragraphTen}</p>
+      <span className="price-three">{props.priceTen}</span>
+      <p className="price-p-three">{props.paragraph11}</p>
+      <span className="price-three">{props.price11}</span>
+      <p className="price-p-three">{props.paragraph12}</p>
+      <span className="price-three">{props.price12}</span>
+      <p className="price-p-three">{props.paragraph13}</p>
+      <span className="price-three">{props.price13}</span>
       <button className="blue-btn">Записаться</button>
     </div>
   );
 };
 
 const PricesPage = () => {
-  const [heading, setHeading] = useState("Лечение зубов");
+  const [heading, setHeading] = useState("Ортопедия");
 
-  const [serviceName, setServiceName] = useState("Художественные реставрации");
-  const [serviceNameTwo, setServiceNameTwo] = useState("Лечение кариеса");
-  const [serviceNameThree, setServiceNameThree] = useState("Лечение кариеса");
-  const [serviceNameFour, setServiceNameFour] = useState(
-    "Художественные реставрации"
-  );
-  const [serviceNameFive, setServiceNameFive] = useState(
-    "Художественные реставрации"
-  );
-  const [serviceNameSix, setServiceNameSix] = useState(
-    "Художественные реставрации"
-  );
+  const [serviceName, setServiceName] = useState("Ортопедия");
+  const [serviceNameTwo, setServiceNameTwo] = useState("Ортопедия");
+  const [serviceNameThree, setServiceNameThree] = useState("Ортопедия");
+  const [serviceNameFour, setServiceNameFour] = useState("Ортопедия");
+  const [serviceNameFive, setServiceNameFive] = useState("Ортопедия");
+  const [serviceNameSix, setServiceNameSix] = useState("Ортопедия");
+  const [serviceNameSeven, setServiceNameSeven] = useState("Ортопедия");
+  const [serviceNameEight, setServiceNameEight] = useState("Ортопедия");
+  const [serviceNameNine, setServiceNameNine] = useState("Ортопедия");
+  const [serviceNameTen, setServiceNameTen] = useState("Ортопедия");
+  const [serviceName11, setServiceName11] = useState("Ортопедия");
 
   const [serviceParagraph, setServiceParagraph] = useState(
-    "Восстановление зуба композитом, лечение кариеса (художественная реставрация с повышенными эстетическим показателями 1 категории) / А16.07.002.011"
+    "Повторная фиксация на постоянный цемент несъемных ортопедических конструкций"
   );
 
   const [serviceParagraphTwo, setServiceParagraphTwo] = useState(
-    "Восстановление зуба композитом, лечение кариеса (художественная реставрация с повышенными эстетическим показателями 2 категории) / А16.07.002.010"
+    "Фиксация на RELYX Luting несъемных ортопедических конструкций 2 000Р"
   );
 
   const [serviceParagraphThree, setServiceParagraphThree] = useState(
-    "Восстановление зуба пломбой, лечение кариеса IV класс по Блэку, МОД / А16.07.002.006"
+    "Фиксация несъемных ортопедических конструкций на временный цемент Temp bond"
   );
 
   const [serviceParagraphFour, setServiceParagraphFour] = useState(
-    "Восстановление зуба пломбой, лечение кариеса  I,V класс по Блэку / А16.07.002.004"
+    "Снятие несъемной ортопедической конструкции (1 единица) "
   );
 
-  const [serviceParagraphFive, setServiceParagraphFive] = useState(
-    "Восстановление зуба пломбой, лечение кариеса II,III класс по Блэку / А16.07.002.005"
+  const [serviceParagraphFive, setServiceParagraphFive] =
+    useState("Удаление вкладки");
+
+  const [serviceParagraphSix, setServiceParagraphSix] = useState(
+    "Коррекция протеза, изготовленного в другой клинике"
   );
 
-  const [serviceParagraphSix, setServiceParagraphSix] = useState("");
+  const [serviceParagraphSeven, setServiceParagraphSeven] = useState(
+    "Коррекция протеза, изготовленного в другой клинике"
+  );
 
-  const [price, setPrice] = useState("27500₽");
-  const [priceTwo, setPriceTwo] = useState("33000₽");
-  const [priceThree, setPriceThree] = useState("22500₽");
-  const [priceFour, setPriceFour] = useState("17600₽");
-  const [priceFive, setPriceFive] = useState("20900₽");
+  const [serviceParagraphEight, setServiceParagraphEight] = useState(
+    "Коррекция протеза, изготовленного в другой клинике"
+  );
+
+  const [serviceParagraphNine, setServiceParagraphNine] = useState(
+    "Коррекция протеза, изготовленного в другой клинике - 9"
+  );
+
+  const [serviceParagraphTen, setServiceParagraphTen] = useState(
+    "Коррекция протеза, изготовленного в другой клинике - 10"
+  );
+
+  const [serviceParagraph11, setServiceParagraph11] = useState(
+    "Коррекция протеза, изготовленного в другой клинике - 11"
+  );
+
+  const [serviceParagraph12, setServiceParagraph12] = useState(
+    "Коррекция протеза, изготовленного в другой клинике - 12"
+  );
+
+  const [serviceParagraph13, setServiceParagraph13] = useState(
+    "Коррекция протеза, изготовленного в другой клинике - 13"
+  );
+
+  const [serviceParagraph14, setServiceParagraph14] = useState(
+    "Коррекция протеза, изготовленного в другой клинике - 14"
+  );
+
+  const [serviceParagraph15, setServiceParagraph15] = useState(
+    "Коррекция протеза, изготовленного в другой клинике - 15"
+  );
+
+  const [serviceParagraph16, setServiceParagraph16] = useState(
+    "Коррекция протеза, изготовленного в другой клинике - 16"
+  );
+
+  const [price, setPrice] = useState("1500₽");
+  const [priceTwo, setPriceTwo] = useState("2000₽");
+  const [priceThree, setPriceThree] = useState("700₽");
+  const [priceFour, setPriceFour] = useState("1000₽");
+  const [priceFive, setPriceFive] = useState("4000₽");
+  const [priceSix, setPriceSix] = useState("1500₽");
+  const [priceSeven, setPriceSeven] = useState("5500₽");
+  const [priceEight, setPriceEight] = useState("5500₽");
+  const [priceNine, setPriceNine] = useState("5500₽");
+  const [priceTen, setPriceTen] = useState("5500₽");
+  const [price11, setPrice11] = useState("5000₽");
+  const [price12, setPrice12] = useState("1500₽");
+  const [price13, setPrice13] = useState("20000₽");
+  const [price14, setPrice14] = useState("5000₽");
+  const [price15, setPrice15] = useState("5000₽");
 
   const [isToothHealingOpened, setToothHealingOpen] = useState(true);
   const [isWhiteningOpened, setWhiteningOpen] = useState(false);
@@ -112,7 +196,7 @@ const PricesPage = () => {
     setVinirsOpen(false);
     setProthesisOpen(false);
     setDiagnosisOpen(false);
-    setHeading("Лечение зубов");
+    setHeading("Ортопедия");
     setServiceName("Художественная реставрация");
     setServiceNameTwo("Лечение кариеса");
     setServiceParagraph(
@@ -130,12 +214,32 @@ const PricesPage = () => {
     setServiceParagraphFive(
       "Восстановление зуба пломбой, лечение кариеса II,III класс по Блэку / А16.07.002.005"
     );
-
+    setServiceParagraphSix(
+      "Коррекция протеза, изготовленного в другой клинике"
+    );
+    setServiceParagraphSeven(
+      "Починка (перебазировка) съемного протеза лабораторным методом"
+    );
+    setServiceParagraphEight("Приварка 1 кламмера ");
+    setServiceParagraphNine("Приварка 1 зуба ");
+    setServiceParagraphTen("Замена матрицы на бюгельном протезе (1 протез)");
+    setServiceParagraph11("Изготовление каппы для депрограмирования мышц");
+    setServiceParagraph12(
+      "Коррекция съемного протеза изготовленного в другой клинике"
+    );
+    setServiceParagraph13("Каппа для стабилизации прикуса (Ортотик) ");
     setPrice("27500₽");
     setPriceTwo("33000₽");
     setPriceThree("22500₽");
     setPriceFour("17600₽");
     setPriceFive("20900₽");
+    setPriceSix("5500₽");
+    setPriceSeven("5500₽");
+    setPriceEight("5500₽");
+    setPriceNine("5500₽");
+    setPriceTen("5000₽");
+    setPrice11("1500₽");
+    setPrice12("20000₽");
   };
 
   const whiteningExpansion = () => {
@@ -260,7 +364,7 @@ const PricesPage = () => {
                 className={isToothHealingOpened ? "button-active" : "button"}
                 onClick={toothHealingExpansion}
               >
-                Лечение зубов
+                Ортопедия
               </button>
               <button
                 className={isWhiteningOpened ? "button-active" : "button"}
@@ -318,7 +422,7 @@ const PricesPage = () => {
               paragraphThree={serviceParagraphFive}
               priceThree={priceFive}
             ></PriceTabLong>
-            <PriceTab
+            {/* <PriceTab
               tabHeadign={serviceName}
               paragraphOne={serviceParagraph}
               priceOne={price}
@@ -333,7 +437,7 @@ const PricesPage = () => {
               priceTwo={priceFour}
               paragraphThree={serviceParagraphFive}
               priceThree={priceFive}
-            ></PriceTabLong>
+            ></PriceTabLong> */}
           </div>
         </div>
       </div>
@@ -370,7 +474,7 @@ const PricesPage = () => {
                 className={isToothHealingOpened ? "button-active" : "button"}
                 onClick={toothHealingExpansion}
               >
-                Лечение зубов
+                Ортопедия
               </button>
               <button
                 className={isWhiteningOpened ? "button-active" : "button"}
@@ -407,7 +511,30 @@ const PricesPage = () => {
             </div>
             <div className="cards-list">
               <h2 className="heading">{heading}</h2>
-              <PriceTab
+              {/* <PriceTab
+                tabHeadign={serviceName}
+                paragraphOne={serviceParagraph}
+                priceOne={price}
+                paragraphTwo={serviceParagraphTwo}
+                priceTwo={priceTwo}
+              ></PriceTab> */}
+              <PriceTabLong
+                tabHeadign={serviceNameTwo}
+                paragraphOne={serviceParagraph}
+                priceOne={price}
+                paragraphTwo={serviceParagraphTwo}
+                priceTwo={priceTwo}
+                paragraphThree={serviceParagraphThree}
+                priceThree={priceThree}
+                paragraphFour={serviceParagraphFour}
+                priceFour={priceFour}
+                paragraphFive={serviceNameFive}
+                priceFive={priceFive}
+                paragraphSix={serviceNameSix}
+                priceSix={priceSix}
+                paragraphSeven={serviceParagraphSeven}
+              ></PriceTabLong>
+              {/* <PriceTab
                 tabHeadign={serviceName}
                 paragraphOne={serviceParagraph}
                 priceOne={price}
@@ -438,23 +565,7 @@ const PricesPage = () => {
                 priceTwo={priceFour}
                 paragraphThree={serviceParagraphFive}
                 priceThree={priceFive}
-              ></PriceTabLong>
-              <PriceTab
-                tabHeadign={serviceName}
-                paragraphOne={serviceParagraph}
-                priceOne={price}
-                paragraphTwo={serviceParagraphTwo}
-                priceTwo={priceTwo}
-              ></PriceTab>
-              <PriceTabLong
-                tabHeadign={serviceNameTwo}
-                paragraphOne={serviceParagraphThree}
-                priceOne={priceThree}
-                paragraphTwo={serviceParagraphFour}
-                priceTwo={priceFour}
-                paragraphThree={serviceParagraphFive}
-                priceThree={priceFive}
-              ></PriceTabLong>
+              ></PriceTabLong> */}
             </div>
           </div>
         </main>

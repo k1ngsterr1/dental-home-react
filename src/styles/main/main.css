@@ -643,8 +643,6 @@ body .modal {
   align-items: center;
   margin: auto !important;
   position: fixed;
-  right: 0 !important;
-  bottom: 0 !important;
   border-radius: 28px;
   background-color: #202637;
   box-shadow: 0px 15px 31px 0px rgba(0, 0, 0, 0.25);
@@ -1649,9 +1647,9 @@ body .modal .modal-content .phone-btn .icon {
     flex-direction: row;
     margin: auto !important;
     position: fixed;
-    right: 0 !important;
-    bottom: 0 !important;
-    border-radius: 28px;
+    top: 25% !important;
+    left: 23% !important;
+    border-radius: 28px !important;
     background-color: #202637;
     box-shadow: 0px 15px 31px 0px rgba(0, 0, 0, 0.25);
   }
@@ -1665,6 +1663,7 @@ body .modal .modal-content .phone-btn .icon {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 28px !important;
     background-color: #202637;
   }
   body .modal .modal-content .logo {

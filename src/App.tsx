@@ -1656,6 +1656,7 @@ export default function HomePage() {
         onClose={closeModal}
         modal
         nested
+        className="popup-container"
         position="center center"
       >
         <div className="modal">
