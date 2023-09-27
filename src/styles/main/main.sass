@@ -754,6 +754,38 @@ body
         &:hover
             transform: rotate(360deg)
 
+    .loader
+        width: 100vw
+        height: 100vh
+        background-color: $dark_blue
+        display: flex
+        align-items: center
+        justify-content: center
+
+        .loader-container
+            width: auto
+            height: auto
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: start
+
+            .logo
+                width: clamp(84px,8.74944vw,336px)
+                height: clamp(94px,9.79104vw,376px)
+
+            .loading-heading
+                width: 70%
+                color: $white
+                text-align: center
+                font-family: Merriweather
+                font-size: clamp(15px,7.0092vw,60px) !important
+                font-style: normal
+                font-weight: 700
+                line-height: 137.4%
+                text-transform: capitalize
+                margin-top: $m32 !important
+
     @media screen and  (min-width: 1024px)
 
         .screen
@@ -1767,6 +1799,39 @@ body
                     .icon
                         color: $dark_blue
 
+        .loader
+            width: 100vw
+            height: 100vh
+            display: flex
+            align-items: center
+            justify-content: center
+            background-color: $dark_blue
+            opacity: 1
+            transition: all 3s ease-in-out
+
+            .loader-container
+                width: auto
+                height: auto
+                display: flex
+                flex-direction: column
+                align-items: center
+
+                .logo
+                    width: clamp(124.5px,12.96792vw,498px)
+                    height: clamp(143px,14.89488vw,572px)
+
+                .loading-heading
+                    width: 80%
+                    color: $white !important
+                    text-align: center !important
+                    font-family: Merriweather !important
+                    font-size: clamp(25px,2.604vw,100px) !important
+                    font-style: normal
+                    font-weight: 700
+                    line-height: 137.4%
+                    text-transform: capitalize
+                    margin-top: $m32
+
     @media screen and (min-width: 480px) and (max-width: 1024px)
 
         .screen
@@ -2496,3 +2561,35 @@ body
                                 transition: 0.3s all
                                 &:hover
                                     color: $white
+
+        .loader
+            width: 100vw
+            height: 100vh
+            background-color: $dark_blue
+            display: flex
+            align-items: center
+            justify-content: center
+
+            .loader-container
+                width: auto
+                height: auto
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: start
+
+                .logo
+                    width: clamp(127px,28.683914510686165vw,510px)
+                    height: clamp(147px, 33.07086614173228vw,588px)
+
+                .loading-heading
+                    width: 70%
+                    color: $white
+                    text-align: center
+                    font-family: Merriweather
+                    font-size: clamp(25px, 5.62429696287964vw,100px) !important
+                    font-style: normal
+                    font-weight: 700
+                    line-height: 137.4%
+                    text-transform: capitalize
+                    margin-top: $m32 !important
