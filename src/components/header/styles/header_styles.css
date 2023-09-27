@@ -18,22 +18,15 @@ body .header .header-mob .logo {
   width: clamp(36px, 16.82208vw, 144px);
   height: clamp(41.5px, 19.39212vw, 166px);
 }
-body .hamburger-react {
-  width: clamp(24px, 11.21472vw, 96px);
-  position: absolute !important;
-  z-index: 2000;
-  top: clamp(24px, 11.21472vw, 96px);
-  left: clamp(173px, 80.83944vw, 692px);
+body .header .header-mob .hamburger-button {
+  top: clamp(22px, 10.28016vw, 88px);
+  left: clamp(177.5px, 82.9422vw, 710px);
+}
+body .header .header-tablet {
+  display: none;
 }
 
-@media screen and (min-width: 1200px) {
-  .hamburger-react {
-    width: clamp(24px, 2.49984vw, 96px);
-    position: absolute !important;
-    z-index: 2000;
-    top: clamp(55px, 5.7288vw, 220px) !important;
-    left: clamp(816px, 84.99456vw, 3264px) !important;
-  }
+@media screen and (min-width: 1024px) {
   .header {
     width: 100%;
     height: auto;
@@ -55,6 +48,10 @@ body .hamburger-react {
     display: flex;
     flex-direction: row;
     align-items: center;
+  }
+  .header .header-pc .header-content .hamburger-button {
+    top: clamp(50px, 5.208vw, 200px);
+    left: clamp(795px, 82.8072vw, 3180px);
   }
   .header .header-pc .logo {
     width: clamp(53px, 5.52048vw, 212px);
@@ -88,16 +85,11 @@ body .hamburger-react {
     background: #E8CB6C;
     color: #202637;
   }
+  .header .header-tablet {
+    display: none;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .hamburger-react {
-    width: clamp(24px, 2.49984vw, 96px);
-    position: absolute !important;
-    z-index: 2000;
-    top: clamp(25px, 6.5104166667vw, 100px) !important;
-    right: 0 !important;
-    left: clamp(475px, 92.7734375vw, 1900px) !important;
-  }
   .header {
     width: 100%;
     height: auto;
@@ -106,50 +98,58 @@ body .hamburger-react {
     display: none !important;
   }
   .header .header-pc {
+    display: none !important;
+  }
+  .header .header-tablet {
     width: 100%;
+    height: auto;
     display: flex !important;
+    align-items: center;
+    margin-top: clamp(16px, 4.1666666667vw, 64px);
+  }
+  .header .header-tablet .tablet-content {
+    width: 100%;
+    height: auto;
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-top: clamp(32px, 3.33312vw, 128px);
   }
-  .header .header-pc .header-content {
+  .header .header-tablet .tablet-content .logo {
+    width: clamp(45px, 11.71875vw, 180px);
+    height: clamp(52px, 13.5416666667vw, 208px);
+  }
+  .header .header-tablet .tablet-content .header-content {
     width: auto;
     height: auto;
     display: flex;
     flex-direction: row;
     align-items: center;
   }
-  .header .header-pc .header-content .logo {
-    width: clamp(45px, 8.7890625vw, 180px);
-    height: clamp(52.5px, 10.25390625vw, 210px);
-  }
-  .header .header-pc .header-content .tel-link {
+  .header .header-tablet .tablet-content .header-content .tel-link {
     color: #202637;
     font-family: Raleway;
-    font-size: clamp(10px, 1.953125vw, 40px);
+    font-size: clamp(10px, 2.6041666667vw, 40px);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-right: clamp(24px, 4.6875vw, 96px);
+    margin-right: clamp(8px, 2.0833333333vw, 32px);
   }
-  .header .header-pc .header-content .header-btn {
-    width: clamp(119px, 23.2421875vw, 476px);
-    height: clamp(24px, 4.6875vw, 96px);
-    border-radius: 5px;
-    background: #202637;
+  .header .header-tablet .tablet-content .header-content .header-btn {
+    width: clamp(119px, 30.9895833333vw, 476px);
+    height: clamp(24px, 6.25vw, 96px);
+    border-radius: 6px;
     color: #F4F4F4;
     font-family: Raleway;
-    font-size: clamp(9px, 1.7578125vw, 36px);
+    font-size: 18px;
     font-style: normal;
     font-weight: 500;
     line-height: 137.4%;
-    border: none;
-    margin-right: clamp(24px, 4.6875vw, 96px);
-    transition: 0.3s all;
+    background-color: #202637;
+    margin-right: clamp(8px, 2.0833333333vw, 32px);
   }
-  .header .header-pc .header-content .header-btn:hover {
-    background: #E8CB6C;
-    color: #202637;
+  .header .header-tablet .tablet-content .hamburger-button {
+    top: clamp(35px, 7.5187969925vw, 140px);
+    right: clamp(16px, 3.4371643394vw, 64px);
   }
 }/*# sourceMappingURL=header_styles.css.map */

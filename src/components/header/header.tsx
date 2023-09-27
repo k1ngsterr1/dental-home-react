@@ -58,11 +58,19 @@ const Header: React.FC<HeaderProps> = ({
           onClick={navigateToMain}
           style={{ cursor: "pointer" }}
         ></img>
-        <Hamburger
-          color={isMenuOpen ? "#E6C96B" : "#202637"}
-          toggled={isMenuOpen ? true : false}
-          onToggle={toggleMenu}
-        ></Hamburger>
+        <div
+          className="hamburger-button"
+          style={{
+            position: isMenuOpen ? "absolute" : "static",
+            zIndex: "20000",
+          }}
+        >
+          <Hamburger
+            color={isMenuOpen ? "#E6C96B" : "#202637"}
+            toggled={isMenuOpen ? true : false}
+            onToggle={toggleMenu}
+          ></Hamburger>
+        </div>
         {isMenuOpen && (
           <Fade delay={300}>
             <Menu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />{" "}
@@ -86,16 +94,63 @@ const Header: React.FC<HeaderProps> = ({
             +7 (925) 222-90-22
           </a>
           <button className="header-btn">Записаться на прием</button>
-          <Hamburger
-            onToggle={togglePcMenu}
-            toggled={isMenuPcOpen ? true : false}
-            color={isMenuPcOpen ? "#E6C96B" : "#202637"}
-          ></Hamburger>
+          <div
+            className="hamburger-button"
+            style={{
+              position: isMenuPcOpen ? "absolute" : "static",
+              zIndex: "20000",
+            }}
+          >
+            <Hamburger
+              onToggle={togglePcMenu}
+              toggled={isMenuPcOpen ? true : false}
+              color={isMenuPcOpen ? "#E6C96B" : "#202637"}
+            ></Hamburger>
+          </div>
           {isMenuPcOpen && (
             <Fade>
               <Menu isMenuPcOpen={isMenuPcOpen} togglePcMenu={togglePcMenu} />
             </Fade>
           )}
+        </div>
+      </div>
+      <div className="header-tablet">
+        <div className="tablet-content">
+          <img
+            className="logo"
+            src={logo}
+            alt="logo"
+            onClick={navigateToMain}
+            style={{ cursor: "pointer" }}
+          ></img>
+          <div className="header-content">
+            <a
+              href="tel:+79252229022"
+              className="tel-link"
+              style={{ textDecoration: "none" }}
+            >
+              +7 (925) 222-90-22
+            </a>
+            <button className="header-btn">Записаться на прием</button>
+            <div
+              className="hamburger-button"
+              style={{
+                position: isMenuPcOpen ? "absolute" : "static",
+                zIndex: "20000",
+              }}
+            >
+              <Hamburger
+                onToggle={togglePcMenu}
+                toggled={isMenuPcOpen ? true : false}
+                color={isMenuPcOpen ? "#E6C96B" : "#202637"}
+              ></Hamburger>
+            </div>
+            {isMenuPcOpen && (
+              <Fade>
+                <Menu isMenuPcOpen={isMenuPcOpen} togglePcMenu={togglePcMenu} />
+              </Fade>
+            )}
+          </div>
         </div>
       </div>
     </header>

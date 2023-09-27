@@ -11,8 +11,10 @@ import { faVk } from "@fortawesome/free-brands-svg-icons";
 
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
+import { log } from "console";
 
 const childIcon: string = require("../../assets/child-icon.svg").default;
+const logo: string = require("../../assets/logo_mob.svg").default;
 
 interface MenuProps {
   isMenuOpen?: any;
@@ -76,12 +78,6 @@ const Menu: React.FC<MenuProps> = ({
               </Link>
             </div>
             <div className="column-two">
-              {/* <a href="" className="golden-link">
-                Работы
-              </a>
-              <a href="" className="golden-link l">
-                Статьи
-              </a> */}
               <ScrollLink
                 to="review"
                 smooth={true}
@@ -217,8 +213,11 @@ const Menu: React.FC<MenuProps> = ({
                 <span className="text">Пн-Вс - 9:00-21:00</span>
                 <span className="text parking">Бесплатная парковка</span>
               </div>
-              <div className="adress-column">
-                <div className="adress-row ">
+              <div
+                className="adress-column"
+                style={{ marginLeft: "clamp(-72px,-7.49952vw,-288px)" }}
+              >
+                <div className="adress-row">
                   <FontAwesomeIcon
                     icon={faMapPin}
                     className="icon"
@@ -277,6 +276,116 @@ const Menu: React.FC<MenuProps> = ({
         <Link to="/services/teeth-healing">
           <img className="services" src={services} alt="services"></img>
         </Link>
+        <img src={logo} alt="logo" className="logo" />
+        <button className="form-btn">Записаться на прием</button>
+      </div>
+      <div className="menu-tablet">
+        <div className="menu-content">
+          <div className="nav-links">
+            <img className="logo" src={logo} alt="logo"></img>
+            <nav className="nav">
+              <Link to="/" className="link">
+                Главная
+              </Link>
+              <ScrollLink to="features" className="link">
+                О клинике
+              </ScrollLink>
+              <ScrollLink to="doctors" className="link">
+                Врачи
+              </ScrollLink>
+              <Link to="/" className="link">
+                Цены
+              </Link>
+              <Link to="/" className="link">
+                Работы
+              </Link>
+              <ScrollLink to="reviews" className="link">
+                Отзывы
+              </ScrollLink>
+              <ScrollLink to="contacts" className="link">
+                Контакты
+              </ScrollLink>
+            </nav>
+            <FontAwesomeIcon
+              className="icon"
+              icon={faVk}
+              onClick={navigateToVk}
+            ></FontAwesomeIcon>
+          </div>
+          <div className="main-content">
+            <div className="column-one">
+              <div className="adresses">
+                <div className="adress-one">
+                  <FontAwesomeIcon
+                    icon={faMapPin}
+                    className="icon"
+                  ></FontAwesomeIcon>
+                  <span className="text">
+                    Московская область, г. Ивантеевка, Советский проспект 5
+                    <br />
+                    <br />
+                    Пн-Вс - 9:00-21:00
+                    <br />
+                    <br />
+                    Бесплатная парковка
+                  </span>
+                </div>
+                <div className="adress-one one">
+                  <FontAwesomeIcon
+                    icon={faMapPin}
+                    className="icon"
+                  ></FontAwesomeIcon>
+                  <span className="text">
+                    Московская область, г. Ивантеевка, Советский проспект 5
+                    <br />
+                    <br />
+                    Пн-Вс - 9:00-21:00
+                    <br />
+                    <br />
+                    Бесплатная парковка
+                  </span>
+                </div>
+              </div>
+              <div className="our-services">
+                <div className="links">
+                  <span className="text">Наши услуги</span>
+                  <Link to="/" className="gold-link">
+                    Лечение зубов
+                  </Link>
+                  <Link to="/" className="gold-link two">
+                    Отбеливние
+                  </Link>
+                  <Link to="/" className="gold-link two">
+                    Гигиена полости рта
+                  </Link>
+                  <Link to="/" className="gold-link two">
+                    Лечение зубов во сне
+                  </Link>
+                  <Link to="/" className="gold-link two">
+                    Виниры и коронки
+                  </Link>
+                  <Link to="/" className="gold-link two">
+                    Лечение пародонта
+                  </Link>
+                  <Link to="/" className="gold-link two">
+                    Протезирование зубов
+                  </Link>
+                  <Link to="/" className="gold-link two">
+                    Диагностика
+                  </Link>
+                  <Link to="/" className="gold-link two">
+                    Исправление прикуса
+                  </Link>
+                </div>
+              </div>
+              <button className="child-button">Детская стоматология</button>
+              <a href="tel:+7 (925) 222-90-22" className="tel">
+                +7 (925) 222-90-22
+              </a>
+            </div>
+          </div>
+          <div className="blue-bg"></div>
+        </div>
       </div>
     </div>
   );
