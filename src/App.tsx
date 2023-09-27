@@ -1,5 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
+
 // import img from "next/image";
 import Header from "./components/header/header";
 import Popup from "reactjs-popup";
@@ -70,6 +73,8 @@ const chairIcon: string = require("./assets/chairs_icon.svg").default;
 const galleryOnePic = require("./assets/gallery_one_pic.webp");
 const galleryTwoPic = require("./assets/gallery_two_pic.webp");
 const logoMobile: string = require("./assets/logo_mob.svg").default;
+const servicesButton: string = require("./assets/service_button.svg").default;
+
 // Gallery Photos
 const galleryOne = require("./assets/gallery01.webp");
 const galleryTwo = require("./assets/gallery02.webp");
@@ -290,6 +295,10 @@ export default function HomePage() {
   const [open, setOpen] = useState(false);
   const closeModal = () => setOpen(false);
 
+  function openPopupWindow() {
+    setOpen(true);
+  }
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -297,6 +306,12 @@ export default function HomePage() {
   const togglePcMenu = () => {
     setIsMenuPcOpen(!isMenuPcOpen);
   };
+
+  // const navigate = useNavigate()
+
+  // function navigateToServices(){
+  //   navigate("")
+  // }
 
   useEffect(() => {
     let previousScrollY = 0;
@@ -512,7 +527,9 @@ export default function HomePage() {
               text="Современное обородувоние"
             ></FeatureLong>
           </div>
-          <button className="golden-button">Записаться на прием</button>
+          <button className="golden-button" onClick={openPopupWindow}>
+            Записаться на прием
+          </button>
         </section>
       </div>
       <div className="pc-features-screen" id="features-list-pc">
@@ -747,7 +764,9 @@ export default function HomePage() {
                 </Fade>
               </div>
               <Fade triggerOnce={true} direction="right" delay={800}>
-                <button className="golden-btn">Записаться на прием</button>
+                <button className="golden-btn" onClick={openPopupWindow}>
+                  Записаться на прием
+                </button>
               </Fade>
             </div>
           </div>
@@ -1321,20 +1340,32 @@ export default function HomePage() {
                 <h4 className="heading">
                   Что вас ждёт на бесплатном осмотре у стоматолога:
                 </h4>
-                <div className="text-container two">
-                  <img className="tooth-icon" src={toothIcon} alt="tooth"></img>
-                  <p className="paragraph tooth">
-                    Осмотрим полость рта и составим фотопротокол
-                  </p>
-                </div>
-                <div className="text-container">
-                  <img className="chair-icon" src={chairIcon} alt="chair"></img>
-                  <p className="paragraph">
-                    После тщательного осмотра, составим план лечения
-                  </p>
+                <div className="icons-text-container">
+                  <div className="icons">
+                    <div className="tooth-icon-container">
+                      <img
+                        className="tooth-icon"
+                        src={toothIcon}
+                        alt="tooth"
+                      ></img>
+                      <p className="paragraph tooth">
+                        Осмотрим полость рта и составим фотопротокол
+                      </p>
+                    </div>
+                    <div className="chair-icon-container">
+                      <img
+                        className="chair-icon"
+                        src={chairIcon}
+                        alt="chair"
+                      ></img>
+                      <p className="paragraph tooth">
+                        После тщательного осмотра, составим план лечения
+                      </p>
+                    </div>
+                  </div>
                 </div>
                 <span className="text-span">
-                  Звоните с 9:00 до 21:00 <strong>8 (925) 925-99-55</strong> или
+                  Звоните с 9:00 до 21:00 <strong>8 (925) 222-90-22</strong> или
                   оставьте заявку, мы вам перезвоним
                 </span>
                 <div className="input-container">
@@ -1443,7 +1474,9 @@ export default function HomePage() {
             </div>
           </div>
           <div className="btn-container">
-            <button className="gold-btn">Записаться на прием</button>
+            <button className="gold-btn" onClick={openPopupWindow}>
+              Записаться на прием
+            </button>
           </div>
         </section>
       </div>
@@ -1547,7 +1580,9 @@ export default function HomePage() {
                   Ознакомлен с Условиями обработки персональных данных
                 </span>
               </div>
-              <button className="golden-btn">Записаться на прием</button>
+              <button className="golden-btn" onClick={openPopupWindow}>
+                Записаться на прием
+              </button>
             </div>
           </form>
         </section>
@@ -1645,7 +1680,9 @@ export default function HomePage() {
                 />
               </div>
             </div>
-            <button className="form-button">Записаться на прием</button>
+            <button className="form-button" onClick={openPopupWindow}>
+              Записаться на прием
+            </button>
           </form>
         </section>
       </div>
@@ -1692,6 +1729,11 @@ export default function HomePage() {
           </div>
         </div>
       </Popup>
+      <ScrollLink to="services" smooth={true} className="services-modal-button">
+        <Bounce delay={300}>
+          <img src={servicesButton} alt="services-button" />
+        </Bounce>
+      </ScrollLink>
     </div>
   );
 }

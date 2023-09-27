@@ -5,6 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faV } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faVk } from "@fortawesome/free-brands-svg-icons";
 
+import { Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
+
 import "../footer/styles/footer_styles.css";
 import { useNavigate } from "react-router-dom";
 
@@ -19,7 +22,7 @@ const Footer = () => {
         <YMaps>
           <Map
             defaultState={{
-              center: [55.751574, 37.573856], // Your initial latitude and longitude
+              center: [55.965502, 37.920435], // Your initial latitude and longitude
               zoom: 9,
             }}
             width="90%"
@@ -37,32 +40,29 @@ const Footer = () => {
           <h5 className="information">Информация</h5>
           <div className="links-container">
             <div className="link-column-one">
-              <a href="" className="l">
+              <ScrollLink to="services" className="l">
                 Услуги
-              </a>
-              <a href="" className="l two">
+              </ScrollLink>
+              <ScrollLink to="features" className="l two">
                 О клинике
-              </a>
-              <a href="" className="l two">
+              </ScrollLink>
+              <ScrollLink to="doctors" className="l two">
                 Врачи
-              </a>
-              <a href="" className="l two">
+              </ScrollLink>
+              <Link to="/prices" className="l two">
                 Цены
-              </a>
+              </Link>
             </div>
             <div className="link-column-two">
               <a href="" className="l">
                 Работы
               </a>
-              <a href="" className="l two">
-                Статьи
-              </a>
-              <a href="" className="l two">
+              <Link to="/prices" className="l two">
                 Отзывы
-              </a>
-              <a href="" className="l two">
+              </Link>
+              <ScrollLink to="contacts" className="l two">
                 Контакты
-              </a>
+              </ScrollLink>
             </div>
           </div>
         </div>
@@ -94,7 +94,7 @@ const Footer = () => {
           <YMaps>
             <Map
               defaultState={{
-                center: [55.751574, 37.573856], // Your initial latitude and longitude
+                center: [55.965502, 37.920435], // Your initial latitude and longitude
                 zoom: 9,
               }}
               width="clamp(196.5px,20.46744vw,786px)"
@@ -112,30 +112,27 @@ const Footer = () => {
         </div>
         <div className="column">
           <h6 className="information">Информация</h6>
-          <a className="link-nav" href="">
+          <ScrollLink className="link-nav" to="services">
             Услуги
-          </a>
-          <a className="link-nav" href="">
+          </ScrollLink>
+          <ScrollLink className="link-nav" to="features">
             О клинике
-          </a>
-          <a className="link-nav" href="">
+          </ScrollLink>
+          <ScrollLink className="link-nav" to="doctors">
             Врачи
-          </a>
-          <a className="link-nav" href="">
+          </ScrollLink>
+          <Link className="link-nav" to="/prices">
             Цены
-          </a>
+          </Link>
           <a className="link-nav" href="">
             Работы
           </a>
-          <a className="link-nav" href="">
-            Статьи
-          </a>
-          <a className="link-nav" href="">
+          <ScrollLink className="link-nav" to="reviews">
             Отзывы
-          </a>
-          <a className="link-nav" href="">
+          </ScrollLink>
+          <ScrollLink className="link-nav" to="footer">
             Контакты
-          </a>
+          </ScrollLink>
         </div>
         <div className="column">
           <h6 className="information">Контакты</h6>

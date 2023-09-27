@@ -745,6 +745,15 @@ body
                 .icon
                     color: $dark_blue
 
+    .services-modal-button
+        position: fixed
+        right: $m64
+        bottom: $m64
+        cursor: pointer
+        transition: transform .7s ease-in-out
+        &:hover
+            transform: rotate(360deg)
+
     @media screen and  (min-width: 1024px)
 
         .screen
@@ -1277,16 +1286,34 @@ body
                             flex-direction: column
                             align-items: flex-start
 
-                            .text-container
+                            .icons-text-container
                                 width: auto
                                 height: auto
                                 display: flex
                                 flex-direction: row
-                                align-items: center
+                                justify-content: space-between
+                                margin-top: $m32
 
-                                .tooth-icon
-                                    width: clamp(18px,1.87488vw,72px)
-                                    height: clamp(21px,2.18736vw,84px)
+                                .icons
+                                    width: auto
+                                    height: auto
+                                    display: flex
+                                    flex-direction: column
+                                    justify-content: space-between
+
+                                    .tooth-icon, .chair-icon
+                                        width: clamp(18px,1.87488vw,72px)
+                                        height: clamp(21px,2.18736vw,84px)
+
+                                    .tooth-icon
+                                        margin-top: $m8
+
+                                    .tooth-icon-container, .chair-icon-container
+                                        display: flex
+                                        align-items: center
+
+                                    .chair-icon-container
+                                        margin-top: $m16
 
                                 .paragraph
                                     width: 80%
@@ -2147,10 +2174,6 @@ body
                                 align-items: center !important
                                 margin-top: clamp(4px,0.78125vw,16px)
                                 margin-top: clamp(8px,1.5625vw,32px)
-
-                                .tooth-icon, .chair-icon
-                                    width: clamp(17.5px,3.41796875vw,70px) !important
-                                    height: clamp(17.5px,3.41796875vw,70px) !important
 
                                 .paragraph
                                     width: 50%
