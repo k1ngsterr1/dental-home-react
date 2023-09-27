@@ -129,7 +129,7 @@ body .footer .pc-content {
 body .footer .divider {
   display: none;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
   body .footer {
     width: 100%;
     height: auto;
@@ -168,6 +168,10 @@ body .footer .divider {
   body .footer .pc-content .map-social-c .white-link:hover, body .footer .pc-content .column .white-link:hover {
     color: #E8CB6C;
   }
+  body .footer .pc-content .map-social-c .social-m-row, body .footer .pc-content .column .social-m-row {
+    display: flex;
+    align-items: flex-start !important;
+  }
   body .footer .pc-content .map-social-c .icon, body .footer .pc-content .column .icon {
     margin-top: clamp(8px, 0.83328vw, 32px);
     font-size: clamp(20px, 2.0832vw, 80px);
@@ -179,7 +183,7 @@ body .footer .divider {
     color: #E8CB6C;
   }
   body .footer .pc-content .map-social-c .vk, body .footer .pc-content .column .vk {
-    margin-left: clamp(8px, 0.83328vw, 32px);
+    margin-left: 0px;
   }
   body .footer .pc-content .map-social-c .information, body .footer .pc-content .column .information {
     color: #F4F4F4;
@@ -294,7 +298,7 @@ body .footer .divider {
     color: #E8CB6C;
   }
   body .footer .pc-content .map-social-c .vk, body .footer .pc-content .column .vk {
-    margin-left: clamp(8px, 1.5625vw, 32px) !important;
+    margin-left: 0pxx;
   }
   body .footer .pc-content .map-social-c .information, body .footer .pc-content .column .information {
     color: #F4F4F4 !important;

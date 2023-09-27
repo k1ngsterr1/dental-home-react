@@ -6,6 +6,7 @@ import Menu from "../menu/Menu";
 
 import Hamburger from "hamburger-react";
 import { Fade, Zoom } from "react-awesome-reveal";
+import { useNavigate } from "react-router-dom";
 
 interface HeaderProps {
   isMenuOpen?: any;
@@ -28,6 +29,12 @@ const Header: React.FC<HeaderProps> = ({
     document.body.style.overflowY = "";
   }
 
+  const navigate = useNavigate();
+
+  function navigateToMain() {
+    navigate("/");
+  }
+
   useEffect(() => {
     if (isMenuOpen || isMenuPcOpen) {
       document.body.style.overflowY = "hidden";
@@ -44,7 +51,13 @@ const Header: React.FC<HeaderProps> = ({
   return (
     <header className="header">
       <div className="header-mob">
-        <img src={logo} alt="logotype" className="logo"></img>
+        <img
+          src={logo}
+          alt="logotype"
+          className="logo"
+          onClick={navigateToMain}
+          style={{ cursor: "pointer" }}
+        ></img>
         <Hamburger
           color={isMenuOpen ? "#E6C96B" : "#202637"}
           toggled={isMenuOpen ? true : false}
@@ -57,7 +70,13 @@ const Header: React.FC<HeaderProps> = ({
         )}
       </div>
       <div className="header-pc">
-        <img className="logo" src={logo} alt="logo"></img>
+        <img
+          className="logo"
+          src={logo}
+          alt="logo"
+          onClick={navigateToMain}
+          style={{ cursor: "pointer" }}
+        ></img>
         <div className="header-content">
           <a
             href="tel:+79252229022"

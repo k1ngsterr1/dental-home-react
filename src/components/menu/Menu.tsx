@@ -5,12 +5,9 @@ import Hamburger from "hamburger-react";
 // import Image from "next/image";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useNavigate } from "react-router-dom";
 import { faMapPin, faChild } from "@fortawesome/free-solid-svg-icons";
-import {
-  faInstagram,
-  faFacebook,
-  faVk,
-} from "@fortawesome/free-brands-svg-icons";
+import { faVk } from "@fortawesome/free-brands-svg-icons";
 
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
@@ -43,6 +40,10 @@ const Menu: React.FC<MenuProps> = ({
       togglePcMenu();
     }
   };
+
+  function navigateToVk() {
+    window.open("https://vk.com/dentalhomeclinik");
+  }
 
   return (
     <div className={`menu-screen`}>
@@ -131,10 +132,10 @@ const Menu: React.FC<MenuProps> = ({
             +7(925) 925 99 55
           </a> */}
           <div className="social-media">
-            <FontAwesomeIcon icon={faVk} className="icon"></FontAwesomeIcon>
             <FontAwesomeIcon
-              icon={faInstagram}
-              className="icon insta"
+              icon={faVk}
+              className="icon"
+              onClick={navigateToVk}
             ></FontAwesomeIcon>
           </div>
         </div>
@@ -194,12 +195,9 @@ const Menu: React.FC<MenuProps> = ({
               </ScrollLink>
               <div className="medias">
                 <FontAwesomeIcon
-                  icon={faInstagram}
-                  className="icon"
-                ></FontAwesomeIcon>
-                <FontAwesomeIcon
                   icon={faVk}
                   className="icon vk"
+                  onClick={navigateToVk}
                 ></FontAwesomeIcon>
               </div>
             </nav>

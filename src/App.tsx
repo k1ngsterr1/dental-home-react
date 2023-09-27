@@ -1358,7 +1358,7 @@ export default function HomePage() {
           </div>
           <div className="galleries-container">
             <div className="gallery-one">
-              <h6 className="g-heading">Первая клиника Dental Home</h6>
+              <h6 className="g-heading">Клиника на Советском проспекте, 5</h6>
               <Swiper
                 slidesPerView={1}
                 spaceBetween={30}
@@ -1400,7 +1400,7 @@ export default function HomePage() {
               </Swiper>
             </div>
             <div className="gallery-two">
-              <h6 className="g-heading">Вторая клиника Dental Home</h6>
+              <h6 className="g-heading">Клиника на Рощинской, 9</h6>
               <Swiper
                 slidesPerView={1}
                 spaceBetween={30}
@@ -1455,13 +1455,13 @@ export default function HomePage() {
           <div className="divider"></div>
           <div className="galleries">
             <div className="gallery-one">
-              <h4 className="gallery-heading">Первая клиника Dental Home</h4>
+              <h4 className="gallery-heading">
+                Клиника на Советском проспекте, 5
+              </h4>
               <ClinicGalleryOne></ClinicGalleryOne>
             </div>
             <div className="gallery-two">
-              <h4 className="gallery-heading-two">
-                Вторая клиника Dental Home
-              </h4>
+              <h4 className="gallery-heading-two">Клиника на Рощинской, 9</h4>
               <ClinicGalleryTwo></ClinicGalleryTwo>
             </div>
           </div>

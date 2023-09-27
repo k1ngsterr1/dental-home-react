@@ -224,7 +224,7 @@ body .menu-screen .menu-pc {
     color: #F4F4F4;
   }
   body .menu-pc .menu-content .column-one .medias .vk, body .menu-pc .menu-content .column-two .medias .vk, body .menu-pc .menu-content .column-three .medias .vk {
-    margin-left: clamp(8px, 0.83328vw, 32px);
+    margin-left: 0px;
   }
   body .menu-pc .menu-content .column-two {
     height: 100vh;

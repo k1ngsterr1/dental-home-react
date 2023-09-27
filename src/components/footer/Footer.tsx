@@ -3,15 +3,16 @@ import { YMaps, Map } from "react-yandex-maps";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faV } from "@fortawesome/free-solid-svg-icons";
-import {
-  faInstagram,
-  faFacebook,
-  faVk,
-} from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faVk } from "@fortawesome/free-brands-svg-icons";
 
 import "../footer/styles/footer_styles.css";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  function navigateToVk() {
+    window.open("https://vk.com/dentalhomeclinik");
+  }
+
   return (
     <footer className="footer" id="contacts">
       <div className="content">
@@ -25,15 +26,12 @@ const Footer = () => {
             height="345px"
           />
         </YMaps>
-        <a href="" className="map-link">
-          Показать на карте
-        </a>
         <div className="icons">
           <FontAwesomeIcon
-            icon={faInstagram}
-            className="icon insta"
+            icon={faVk}
+            className="icon"
+            onClick={navigateToVk}
           ></FontAwesomeIcon>
-          <FontAwesomeIcon icon={faVk} className="icon"></FontAwesomeIcon>
         </div>
         <div className="informations-container">
           <h5 className="information">Информация</h5>
@@ -103,15 +101,13 @@ const Footer = () => {
               height="clamp(172.5px,17.9676vw,690px)"
             />
           </YMaps>
-          <a href="" className="white-link">
-            Показать на карте
-          </a>
+
           <div className="social-m-row">
             <FontAwesomeIcon
-              icon={faInstagram}
-              className="icon"
+              icon={faVk}
+              className="icon vk"
+              onClick={navigateToVk}
             ></FontAwesomeIcon>
-            <FontAwesomeIcon icon={faVk} className="icon vk"></FontAwesomeIcon>
           </div>
         </div>
         <div className="column">

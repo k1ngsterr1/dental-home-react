@@ -277,7 +277,6 @@ const TeethHealing = () => {
             <ReviewGallery></ReviewGallery>
           </div>
         </div>
-        <Footer />
       </main>
       <main className="services-pc">
         <div className="pc-content">
@@ -458,6 +457,7 @@ const TeethHealing = () => {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };
