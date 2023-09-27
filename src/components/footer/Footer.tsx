@@ -1,5 +1,5 @@
 import React from "react";
-import { YMaps, Map } from "react-yandex-maps";
+import { YMaps, Map, Placemark } from "react-yandex-maps";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faV } from "@fortawesome/free-solid-svg-icons";
@@ -16,6 +16,27 @@ const Footer = () => {
     window.open("https://vk.com/dentalhomeclinik");
   }
 
+  const mapData = {
+    geometry: [55.9647, 37.915],
+    zoom: 9,
+  };
+
+  const placeMark1 = {
+    geometry: [55.965502, 37.920435],
+    properties: {
+      hintContent: "Клиника на Советском проспекте, 5",
+      balloonContent: "Клиника Dental Home",
+    },
+  };
+
+  const placeMark2 = {
+    geometry: [55.974727, 37.905218],
+    properties: {
+      hintContent: "Клиника на Рощинской, 9",
+      balloonContent: "Клиника Dental Home",
+    },
+  };
+
   return (
     <footer className="footer" id="contacts">
       <div className="content">
@@ -23,11 +44,14 @@ const Footer = () => {
           <Map
             defaultState={{
               center: [55.965502, 37.920435], // Your initial latitude and longitude
-              zoom: 9,
+              zoom: 12,
             }}
             width="90%"
             height="345px"
-          />
+          >
+            <Placemark {...placeMark1}></Placemark>
+            <Placemark {...placeMark2}></Placemark>
+          </Map>
         </YMaps>
         <div className="icons">
           <FontAwesomeIcon
@@ -93,15 +117,14 @@ const Footer = () => {
         <div className="map-social-c column">
           <YMaps>
             <Map
-              defaultState={{
-                center: [55.965502, 37.920435], // Your initial latitude and longitude
-                zoom: 9,
-              }}
+              defaultState={{ center: [55.9647, 37.915], zoom: 12 }}
               width="clamp(196.5px,20.46744vw,786px)"
               height="clamp(172.5px,17.9676vw,690px)"
-            />
+            >
+              <Placemark {...placeMark1}></Placemark>
+              <Placemark {...placeMark2}></Placemark>
+            </Map>
           </YMaps>
-
           <div className="social-m-row">
             <FontAwesomeIcon
               icon={faVk}

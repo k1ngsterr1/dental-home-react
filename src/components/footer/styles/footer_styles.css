@@ -136,6 +136,7 @@ body .footer .divider {
     background-color: #202637;
     display: flex;
     justify-content: center;
+    margin-top: 0px !important;
   }
   body .footer .pc-content {
     width: 71.8229166667% !important;
