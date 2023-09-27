@@ -562,10 +562,11 @@ body .screen .form-screen .content .form .input-container .la {
   margin-bottom: clamp(4px, 1.86912vw, 16px);
 }
 body .screen .form-screen .content .form .input-container .input-text {
-  width: 289px;
-  height: 50px;
+  width: clamp(144.5px, 67.52196vw, 578px);
+  height: clamp(25px, 11.682vw, 100px);
   border-radius: 4px;
-  border: 2px solid #6A6F7F;
+  background-color: #F4F4F4;
+  border: 2px solid rgba(32, 38, 55, 0.6);
   color: #6A6F7F;
   padding-left: clamp(8px, 3.73824vw, 32px);
   font-family: Raleway;
@@ -575,9 +576,10 @@ body .screen .form-screen .content .form .input-container .input-text {
   line-height: 137.4%;
 }
 body .screen .form-screen .content .form .input-container .comment {
-  width: 289px;
-  height: 133px;
+  width: clamp(144.5px, 67.52196vw, 578px);
+  height: clamp(66.5px, 31.07412vw, 266px);
   border-radius: 4px;
+  background-color: #F4F4F4;
   border: 2px solid #6A6F7F;
 }
 body .screen .form-screen .content .form .checkbox-container {
@@ -643,6 +645,8 @@ body .modal {
   align-items: center;
   margin: auto !important;
   position: fixed;
+  right: 0 !important;
+  bottom: 0 !important;
   border-radius: 28px;
   background-color: #202637;
   box-shadow: 0px 15px 31px 0px rgba(0, 0, 0, 0.25);
@@ -1612,6 +1616,7 @@ body .loader .loader-container .loading-heading {
     border-radius: 4px;
     color: rgba(32, 38, 55, 0.6);
     font-family: Raleway;
+    background-color: #F4F4F4;
     font-size: clamp(8px, 0.83328vw, 32px);
     font-style: normal;
     font-weight: 400;
@@ -1624,6 +1629,7 @@ body .loader .loader-container .loading-heading {
     width: clamp(305px, 31.7688vw, 1220px);
     height: clamp(25px, 2.604vw, 100px);
     border-radius: 4px;
+    background-color: #F4F4F4;
     color: rgba(32, 38, 55, 0.6);
     font-family: Raleway;
     font-size: clamp(8px, 0.83328vw, 32px);
@@ -1640,6 +1646,7 @@ body .loader .loader-container .loading-heading {
   body .screen .form-pc-screen .content .form-content .row-c .comment {
     width: clamp(305px, 31.7688vw, 1220px);
     border-radius: 4px;
+    background-color: #F4F4F4;
     color: rgba(32, 38, 55, 0.6);
     font-family: Raleway;
     font-size: clamp(8px, 0.83328vw, 32px);
@@ -1681,7 +1688,7 @@ body .loader .loader-container .loading-heading {
     margin-left: clamp(8px, 0.83328vw, 32px);
   }
   body .screen .form-pc-screen .content .form-content .checkbox-container .golden-btn {
-    width: clamp(117px, 12.18672vw, 468px);
+    width: clamp(125px, 13.02vw, 500px);
     height: clamp(23px, 2.39568vw, 92px);
     background: linear-gradient(90deg, #E8CB6C 0%, #B29D55 100%);
     color: #202637;

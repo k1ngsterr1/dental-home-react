@@ -1641,6 +1641,7 @@ export default function HomePage() {
                         type="text"
                         placeholder="Выберите Направление"
                         className="input-s"
+                        required
                       />
                     </div>
                   </div>
@@ -1650,6 +1651,7 @@ export default function HomePage() {
                       <input
                         type="text"
                         placeholder="Выберите Врача"
+                        required
                         className="input-s"
                       />
                     </div>
@@ -1669,6 +1671,14 @@ export default function HomePage() {
                     </div>
                     <button className="golden-btn" onClick={openPopupWindow}>
                       Записаться на прием
+                      <FontAwesomeIcon
+                        icon={faChevronRight}
+                        className="icon"
+                        style={{
+                          fontSize: "clamp(6px,0.62496vw,24px)",
+                          marginLeft: "clamp(4px,0.41664vw,16px)",
+                        }}
+                      ></FontAwesomeIcon>
                     </button>
                   </div>
                 </form>
@@ -1769,6 +1779,14 @@ export default function HomePage() {
                   </div>
                   <button className="form-button" onClick={openPopupWindow}>
                     Записаться на прием
+                    <FontAwesomeIcon
+                      className="icon"
+                      icon={faChevronRight}
+                      style={{
+                        fontSize: "clamp(7px,3.2709599999999996vw,28px",
+                        marginLeft: "clamp(4px,1.86912vw,16px)",
+                      }}
+                    ></FontAwesomeIcon>
                   </button>
                 </form>
               </section>

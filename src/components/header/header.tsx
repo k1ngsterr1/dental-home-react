@@ -38,6 +38,7 @@ const Header: React.FC<HeaderProps> = ({
   useEffect(() => {
     if (isMenuOpen || isMenuPcOpen) {
       document.body.style.overflowY = "hidden";
+      window.scrollTo(0, 0);
     } else {
       document.body.style.overflowY = "";
     }
