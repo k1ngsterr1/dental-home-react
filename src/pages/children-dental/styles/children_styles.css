@@ -85,6 +85,7 @@ body .screen-children .footer .pc-content {
     display: flex;
     flex-direction: column;
     margin: auto;
+    margin-bottom: clamp(64px, 6.66624vw, 256px);
   }
   body .screen-children .pc-screen .content-container {
     width: 100%;

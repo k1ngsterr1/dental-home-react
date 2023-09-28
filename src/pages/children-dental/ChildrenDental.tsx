@@ -37,10 +37,10 @@ const ChildDental = () => {
           <h2 className="service-heading">Наши услуги</h2>
 
           <div className="service-squares">
-            <div className="service-square"></div>
-            <div className="service-square"></div>
-            <div className="service-square"></div>
-            <div className="service-square"></div>
+            <div className="service-square">Исправление прикуса</div>
+            <div className="service-square">Хирургия</div>
+            <div className="service-square">Лечение зубов</div>
+            <div className="service-square">Диагностика</div>
           </div>
         </div>
       </div>

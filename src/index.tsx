@@ -7,16 +7,18 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import Home from "./App";
 import TeethHealing from "./pages/services/teeth-healing/TeethHealing";
-import ChildDental from "./pages/children-dental/page";
-import PricesPage from "./pages/prices/page";
+import ChildDental from "./pages/children-dental/ChildrenDental";
+import PricesPage from "./pages/prices/PricesPage";
+import Privacy from "./pages/privacy/PrivacyPage";
 
 ReactDOM.render(
   <Router>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/services/teeth-healing" element={<TeethHealing />}></Route>
-      <Route path="/child-dental" element={<ChildDental />}></Route>
+      <Route path="/children-dental" element={<ChildDental />}></Route>
       <Route path="/prices" element={<PricesPage />}></Route>
+      <Route path="/privacy" element={<Privacy />}></Route>
     </Routes>
   </Router>,
   document.getElementById("root")

@@ -51,4 +51,73 @@ button, a {
 .btn {
   background: none !important;
   border: none;
+}
+
+.loader {
+  width: 100vw;
+  height: 100vh;
+  background-color: #202637;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader .loader-container {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+.loader .loader-container .logo {
+  width: clamp(84px, 8.74944vw, 336px);
+  height: clamp(94px, 9.79104vw, 376px);
+}
+.loader .loader-container .logo .loading-heading {
+  width: 70%;
+  color: #F4F4F4;
+  text-align: center;
+  font-family: Merriweather;
+  font-size: clamp(15px, 7.0092vw, 60px) !important;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 137.4%;
+  text-transform: capitalize;
+  margin-top: clamp(16px, 1.66656vw, 64px) !important;
+}
+
+@media screen and (min-width: 1024px) {
+  .loader {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #202637;
+    opacity: 1;
+    transition: all 3s ease-in-out;
+  }
+  .loader .loader-container {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .loader .loader-container .logo {
+    width: clamp(124.5px, 12.96792vw, 498px);
+    height: clamp(143px, 14.89488vw, 572px);
+  }
+  .loader .loader-container .logo .loading-heading {
+    width: 80%;
+    color: #F4F4F4 !important;
+    text-align: center !important;
+    font-family: Merriweather !important;
+    font-size: clamp(25px, 2.604vw, 100px) !important;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 137.4%;
+    text-transform: capitalize;
+    margin-top: clamp(16px, 1.66656vw, 64px);
+  }
 }/*# sourceMappingURL=global.css.map */
