@@ -8,6 +8,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronLeft,
   faChevronRight,
+  faArrowLeft,
+  faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
 
 import "./styles/reviews_pc_gallery.css";
@@ -63,10 +65,10 @@ const ReviewGalleryDesktop = () => {
     <div className="reviews">
       <div className="gallery-nav">
         <button className="previous" onClick={handlePrev}>
-          <FontAwesomeIcon className="icon" icon={faChevronLeft} />
+          <FontAwesomeIcon className="icon" icon={faArrowLeft} />
         </button>
         <button className="next" onClick={handleNext}>
-          <FontAwesomeIcon className="icon" icon={faChevronRight} />
+          <FontAwesomeIcon className="icon" icon={faArrowRight} />
         </button>
       </div>
       <Swiper

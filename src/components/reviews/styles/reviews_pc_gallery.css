@@ -35,7 +35,7 @@ body .reviews .mySwiper6 .review-tab {
   width: clamp(190.5px, 19.84248vw, 762px);
   height: clamp(178.5px, 18.59256vw, 714px);
   border-radius: 6px;
-  background: #BBC0CF;
+  background: #bfc2c7;
   display: flex;
   justify-content: center;
 }
@@ -102,7 +102,7 @@ body .reviews .mySwiper6 .review-tab .review-content .main-content .full {
   font-family: Raleway;
   font-size: clamp(9px, 0.93744vw, 36px);
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 137.4%;
   margin-top: clamp(4px, 0.41664vw, 16px);
   text-decoration: underline;
@@ -146,7 +146,7 @@ body .reviews .mySwiper6 .review-tab .review-content .main-content .full {
     width: clamp(150px, 29.296875vw, 600px) !important;
     height: clamp(140px, 27.34375vw, 460px) !important;
     border-radius: 6px;
-    background: #7f838d;
+    background: #bfc2c7;
     display: flex;
     justify-content: center;
   }

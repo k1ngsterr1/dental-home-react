@@ -14,6 +14,7 @@ body .menu-screen .menu-mob {
   top: 0;
   left: 0;
   right: 0;
+  border: 2px solid red;
 }
 body .menu-screen .menu-mob .menu-content {
   width: 90%;

@@ -747,15 +747,6 @@ body
                 .icon
                     color: $dark_blue
 
-    .services-modal-button
-        position: fixed
-        right: $m64
-        bottom: $m64
-        cursor: pointer
-        transition: transform .7s ease-in-out
-        &:hover
-            transform: rotate(360deg)
-
     .loader
         width: 100vw
         height: 100vh
@@ -797,8 +788,8 @@ body
             .content
                 display: none
 
-            .css-zvi4ix
-                width: 100% !important
+            // .css-zvi4ix
+                // width: 100% !important
 
             .pc-content
                 width: 100% !important
@@ -842,10 +833,15 @@ body
                         .photos
                             position: relative
                             margin-bottom: clamp(200px,20.832vw,800px)
+
                             .main_image
                                 width: clamp(304.5px,31.716720000000002vw,1218px)
                                 height: clamp(469px,48.851040000000005vw,1876px)
                                 margin-top: $m64
+                                transition: transform 0.5s ease
+
+                            .main_image.large
+                                transform: scale(1.2)
 
                             .photo-container
                                 display: flex
@@ -1867,6 +1863,21 @@ body
                     line-height: 137.4%
                     text-transform: capitalize
                     margin-top: $m32
+
+    .services-modal-button
+        position: fixed !important
+        right: $m32
+        bottom: $m32
+        z-index: 10000
+        cursor: pointer
+        transition: transform .7s ease-in-out
+        &:hover
+            transform: rotate(360deg)
+
+    .all-screen-content
+        width: 100%
+        height: 100%
+        position: relative !important
 
     @media screen and (min-width: 480px) and (max-width: 1024px)
 

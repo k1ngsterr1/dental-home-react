@@ -742,16 +742,6 @@ body .modal .modal-content .phone-btn {
 body .modal .modal-content .phone-btn .icon {
   color: #202637;
 }
-body .services-modal-button {
-  position: fixed;
-  right: clamp(32px, 3.33312vw, 128px);
-  bottom: clamp(32px, 3.33312vw, 128px);
-  cursor: pointer;
-  transition: transform 0.7s ease-in-out;
-}
-body .services-modal-button:hover {
-  transform: rotate(360deg);
-}
 body .loader {
   width: 100vw;
   height: 100vh;
@@ -791,9 +781,6 @@ body .loader .loader-container .loading-heading {
   }
   body .screen .content {
     display: none;
-  }
-  body .screen .css-zvi4ix {
-    width: 100% !important;
   }
   body .screen .pc-content {
     width: 100% !important;
@@ -842,6 +829,10 @@ body .loader .loader-container .loading-heading {
     width: clamp(304.5px, 31.71672vw, 1218px);
     height: clamp(469px, 48.85104vw, 1876px);
     margin-top: clamp(32px, 3.33312vw, 128px);
+    transition: transform 0.5s ease;
+  }
+  body .screen .pc-content .white-content .blue-content .photos .main_image.large {
+    transform: scale(1.2);
   }
   body .screen .pc-content .white-content .blue-content .photos .photo-container {
     display: flex;
@@ -1877,6 +1868,22 @@ body .loader .loader-container .loading-heading {
     text-transform: capitalize;
     margin-top: clamp(16px, 1.66656vw, 64px);
   }
+}
+body .services-modal-button {
+  position: fixed !important;
+  right: clamp(16px, 1.66656vw, 64px);
+  bottom: clamp(16px, 1.66656vw, 64px);
+  z-index: 10000;
+  cursor: pointer;
+  transition: transform 0.7s ease-in-out;
+}
+body .services-modal-button:hover {
+  transform: rotate(360deg);
+}
+body .all-screen-content {
+  width: 100%;
+  height: 100%;
+  position: relative !important;
 }
 @media screen and (min-width: 480px) and (max-width: 1024px) {
   body .screen {
