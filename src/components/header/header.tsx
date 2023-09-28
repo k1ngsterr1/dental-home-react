@@ -31,6 +31,8 @@ const Header: React.FC<HeaderProps> = ({
 
   const navigate = useNavigate();
 
+  const [scrollAmount, setScrollAmount] = useState(100);
+
   function navigateToMain() {
     navigate("/");
   }
@@ -38,10 +40,14 @@ const Header: React.FC<HeaderProps> = ({
   useEffect(() => {
     if (isMenuOpen || isMenuPcOpen) {
       document.body.style.overflowY = "hidden";
-      window.scrollTo(0, 0);
+      // window.scrollBy(0, scrollAmount);
+      // window.scrollTo(0, 0);
     } else {
       document.body.style.overflowY = "";
     }
+
+    // window.addEventListener("scroll", handleScroll);
+    // window.removeEventListener("scroll", handleScroll);
 
     return () => {
       document.body.style.overflowY = ""; // Reset when the component unmounts

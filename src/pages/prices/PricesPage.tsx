@@ -1,10 +1,14 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/Footer";
 import { Link } from "react-router-dom";
+import { keyframes } from "@emotion/react";
+import { Reveal } from "react-awesome-reveal";
 
 import "../prices/styles/prices_styles.css";
+
+const logoMobile: string = require("../../assets/logo_mob.svg").default;
 
 interface PriceTabProps {
   tabHeadign: any;
@@ -183,6 +187,18 @@ const PricesPage = () => {
   const [displayNoneFour, setDisplayNoneFour] = useState("");
   const [displayNoneFive, setDisplayNoneFive] = useState("");
   const [displayNoneSix, setDisplayNoneSix] = useState("");
+
+  const customAnimation = keyframes`
+  from {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(-2000, 0, 0);
+  }
+`;
 
   const [heading, setHeading] = useState("Ортопедия");
 
@@ -441,6 +457,7 @@ const PricesPage = () => {
   const [isParodontHealingOpened, setParodontHealingOpen] = useState(false);
   const [isProthesisOpened, setProthesisOpen] = useState(false);
   const [isDiagnosisOpened, setDiagnosisOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   const toothHealingExpansion = () => {
     setToothHealingOpen(!isToothHealingOpened);
@@ -941,306 +958,341 @@ const PricesPage = () => {
     setIsMenuPcOpen(!isMenuPcOpen);
   };
 
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+
+    return () => {};
+  }, []);
+
   return (
-    <div className="screen">
-      <div className="content">
-        <Header isMenuOpen={isMenuOpen} toggleMenu={toggleMenu}></Header>
-        <main className="main-content">
-          <div className="bread-dots">
-            <Link to="/" className="main-link">
-              Главная
-            </Link>
-            <div className="circle"></div>
-            <Link to="/prices" className="prices-link">
-              Цены
-            </Link>
-          </div>
-          <h1 className="heading">Цены</h1>
-          <div className="divider-container">
-            <div className="divider"></div>
-            <div className="row">
-              <span className="text">Направления</span>
-              <span className="text">Цена</span>
+    <div className="div">
+      {isLoading ? (
+        <Reveal keyframes={customAnimation} delay={1000}>
+          <div className={`loader ${isLoading ? "" : "hidden"}`}>
+            <div className="loader-container">
+              <img className="logo" src={logoMobile} alt="logo"></img>
+              <h1 className="loading-heading">
+                Клиника Эстетической Стоматологии
+              </h1>
             </div>
           </div>
-        </main>
-        <div className="services-content">
-          <div className="buttons">
-            <div className="row">
-              <button
-                className={isToothHealingOpened ? "button-active" : "button"}
-                onClick={toothHealingExpansion}
-              >
-                Ортопедия
-              </button>
-              <button
-                className={isWhiteningOpened ? "button-active" : "button"}
-                onClick={whiteningExpansion}
-              >
-                Консультация
-              </button>
-            </div>
-            <div className="row two">
-              <button
-                className={isMouthHygieneOpened ? "button-active" : "button"}
-                onClick={mouthHygieneExpansion}
-              >
-                Гигиена полости рта
-              </button>
-              <button
-                className={isVinirsOpened ? "button-active" : "button"}
-                onClick={vinirExpansion}
-              >
-                Виниры и коронки
-              </button>
-            </div>
-            <div className="row two">
-              <button
-                className={isParodontHealingOpened ? "button-active" : "button"}
-                onClick={parodontHealthExpansion}
-              >
-                Лечение пародонта
-              </button>
-              <button
-                className={isDiagnosisOpened ? "button-active" : "button"}
-                onClick={diagnosisExpansion}
-              >
-                Диагностика
-              </button>
-            </div>
-          </div>
-          <div className="heading-container">
-            <h2 className="heading">{heading}</h2>
-          </div>
-          <div className="cards">
-            <PriceTab
-              tabHeadign={serviceName}
-              paragraphOne={serviceParagraph}
-              priceOne={price}
-              paragraphTwo={serviceParagraphTwo}
-              priceTwo={priceTwo}
-            ></PriceTab>
-            <PriceTabLong
-              tabHeadign={serviceNameTwo}
-              paragraphOne={serviceParagraphThree}
-              priceOne={priceThree}
-              paragraphTwo={serviceParagraphFour}
-              priceTwo={priceFour}
-              paragraphThree={serviceParagraphFive}
-              priceThree={priceFive}
-            ></PriceTabLong>
-            {/* <PriceTab
-              tabHeadign={serviceName}
-              paragraphOne={serviceParagraph}
-              priceOne={price}
-              paragraphTwo={serviceParagraphTwo}
-              priceTwo={priceTwo}
-            ></PriceTab>
-            <PriceTabLong
-              tabHeadign={serviceNameTwo}
-              paragraphOne={serviceParagraphThree}
-              priceOne={priceThree}
-              paragraphTwo={serviceParagraphFour}
-              priceTwo={priceFour}
-              paragraphThree={serviceParagraphFive}
-              priceThree={priceFive}
-            ></PriceTabLong> */}
-          </div>
-        </div>
-      </div>
-      <div className="pc-content-c">
-        <main className="main-content">
-          <Header
-            isMenuPcOpen={isMenuPcOpen}
-            togglePcMenu={togglePcMenu}
-          ></Header>
-          <div className="upper-content">
-            <div className="bread-dots-container">
-              <Link className="link" to="/">
-                Главная
-              </Link>
-              <div className="bread-dot"></div>
-              <Link className="link-prices" to="/prices">
-                Цены
-              </Link>
-            </div>
-            <div className="heading-container">
+        </Reveal>
+      ) : (
+        <div className="screen">
+          <div className="content">
+            <Header isMenuOpen={isMenuOpen} toggleMenu={toggleMenu}></Header>
+            <main className="main-content">
+              <div className="bread-dots">
+                <Link to="/" className="main-link">
+                  Главная
+                </Link>
+                <div className="circle"></div>
+                <Link to="/prices" className="prices-link">
+                  Цены
+                </Link>
+              </div>
               <h1 className="heading">Цены</h1>
-            </div>
-            <div className="divider-container">
-              <div className="divider"></div>
-              <div className="row-container">
-                <span className="text">Услуги</span>
-                <span className="text">Направления</span>
+              <div className="divider-container">
+                <div className="divider"></div>
+                <div className="row">
+                  <span className="text">Направления</span>
+                  <span className="text">Цена</span>
+                </div>
+              </div>
+            </main>
+            <div className="services-content">
+              <div className="buttons">
+                <div className="row">
+                  <button
+                    className={
+                      isToothHealingOpened ? "button-active" : "button"
+                    }
+                    onClick={toothHealingExpansion}
+                  >
+                    Ортопедия
+                  </button>
+                  <button
+                    className={isWhiteningOpened ? "button-active" : "button"}
+                    onClick={whiteningExpansion}
+                  >
+                    Консультация
+                  </button>
+                </div>
+                <div className="row two">
+                  <button
+                    className={
+                      isMouthHygieneOpened ? "button-active" : "button"
+                    }
+                    onClick={mouthHygieneExpansion}
+                  >
+                    Гигиена полости рта
+                  </button>
+                  <button
+                    className={isVinirsOpened ? "button-active" : "button"}
+                    onClick={vinirExpansion}
+                  >
+                    Виниры и коронки
+                  </button>
+                </div>
+                <div className="row two">
+                  <button
+                    className={
+                      isParodontHealingOpened ? "button-active" : "button"
+                    }
+                    onClick={parodontHealthExpansion}
+                  >
+                    Лечение пародонта
+                  </button>
+                  <button
+                    className={isDiagnosisOpened ? "button-active" : "button"}
+                    onClick={diagnosisExpansion}
+                  >
+                    Диагностика
+                  </button>
+                </div>
+              </div>
+              <div className="heading-container">
+                <h2 className="heading">{heading}</h2>
+              </div>
+              <div className="cards">
+                <PriceTab
+                  tabHeadign={serviceName}
+                  paragraphOne={serviceParagraph}
+                  priceOne={price}
+                  paragraphTwo={serviceParagraphTwo}
+                  priceTwo={priceTwo}
+                ></PriceTab>
+                <PriceTabLong
+                  tabHeadign={serviceNameTwo}
+                  paragraphOne={serviceParagraphThree}
+                  priceOne={priceThree}
+                  paragraphTwo={serviceParagraphFour}
+                  priceTwo={priceFour}
+                  paragraphThree={serviceParagraphFive}
+                  priceThree={priceFive}
+                ></PriceTabLong>
+                {/* <PriceTab
+            tabHeadign={serviceName}
+            paragraphOne={serviceParagraph}
+            priceOne={price}
+            paragraphTwo={serviceParagraphTwo}
+            priceTwo={priceTwo}
+          ></PriceTab>
+          <PriceTabLong
+            tabHeadign={serviceNameTwo}
+            paragraphOne={serviceParagraphThree}
+            priceOne={priceThree}
+            paragraphTwo={serviceParagraphFour}
+            priceTwo={priceFour}
+            paragraphThree={serviceParagraphFive}
+            priceThree={priceFive}
+          ></PriceTabLong> */}
               </div>
             </div>
           </div>
-          <div className="services-content">
-            <div className="services-list">
-              <button
-                className={isToothHealingOpened ? "button-active" : "button"}
-                onClick={toothHealingExpansion}
-              >
-                Ортопедия
-              </button>
-              <button
-                className={isWhiteningOpened ? "button-active" : "button"}
-                onClick={whiteningExpansion}
-              >
-                Консультация
-              </button>
-              <button
-                className={isMouthHygieneOpened ? "button-active" : "button"}
-                onClick={mouthHygieneExpansion}
-              >
-                Вкладки
-              </button>
-              <button
-                className={isVinirsOpened ? "button-active" : "button"}
-                onClick={vinirExpansion}
-              >
-                Коронки
-              </button>
-              <button
-                className={isParodontHealingOpened ? "button-active" : "button"}
-                onClick={parodontHealthExpansion}
-              >
-                Восстановление Зуба Виниром
-              </button>
-              <button
-                className={isDiagnosisOpened ? "button-active" : "button"}
-                onClick={diagnosisExpansion}
-              >
-                Диагностика
-              </button>
-              {/* <button className="button">Имплантация и хирургия</button>
-              <button className="button">Исправление прикуса</button> */}
-            </div>
-            <div className="cards-list">
-              <h2 className="heading">{heading}</h2>
-              <PriceTabLong
-                style={setDisplayNone}
-                tabHeadign={serviceName}
-                paragraphOne={serviceParagraph14}
-                priceOne={price14}
-                paragraphTwo={serviceParagraph15}
-                priceTwo={price15}
-                paragraphThree={serviceParagraph16}
-                priceThree={price16}
-                paragraphFour={serviceParagraph17}
-                priceFour={price17}
-                paragraphFive={serviceParagraphFive}
-                priceFive={priceFive}
-                paragraphSix={serviceParagraphSix}
-                priceSix={priceSix}
-                paragraphSeven={serviceParagraphSeven}
-                priceSeven={priceSeven}
-                paragraphEight={serviceParagraphEight}
-                priceEight={priceEight}
-                paragraphNine={serviceParagraphNine}
-                priceNine={priceNine}
-                paragraphTen={serviceParagraphTen}
-                priceTen={priceTen}
-                paragraph11={serviceParagraph11}
-                price11={price11}
-                paragraph12={serviceParagraph12}
-                price12={price12}
-                paragraph13={serviceParagraph13}
-                price13={price13}
-              ></PriceTabLong>
-              <PriceTabLong
-                style={setDisplayNoneTwo}
-                tabHeadign={serviceNameTwo}
-                paragraphOne={serviceParagraph14}
-                priceOne={price14}
-                paragraphTwo={serviceParagraph15}
-                priceTwo={price15}
-                paragraphThree={serviceParagraph16}
-                priceThree={price16}
-                paragraphFour={serviceParagraph17}
-                priceFour={price17}
-                paragraphFive={serviceParagraph18}
-                priceFive={price18}
-                paragraphSix={serviceParagraph19}
-                priceSix={price19}
-                paragraphSeven={serviceParagraph20}
-                priceSeven={price20}
-                paragraphEight={serviceParagraph21}
-                priceEight={price21}
-                paragraphNine={serviceParagraph22}
-                priceNine={price22}
-              ></PriceTabLong>
-              <PriceTabLong
-                style={setDisplayNoneThree}
-                tabHeadign={serviceNameThree}
-                paragraphOne={serviceParagraph23}
-                priceOne={price23}
-                paragraphTwo={serviceParagraph24}
-                priceTwo={price24}
-                paragraphThree={serviceParagraph25}
-                priceThree={price25}
-                paragraphFour={serviceParagraph26}
-                priceFour={price26}
-              ></PriceTabLong>
-              <PriceTabLong
-                style={setDisplayNoneFour}
-                tabHeadign={serviceNameFour}
-                paragraphOne={serviceParagraph27}
-                priceOne={price27}
-                paragraphTwo={serviceParagraph28}
-                priceTwo={price28}
-                paragraphThree={serviceParagraph29}
-                priceThree={price29}
-                paragraphFour={serviceParagraph30}
-                priceFour={price30}
-                paragraphFive={serviceParagraph31}
-                priceFive={price31}
-                paragraphSix={serviceParagraph32}
-                priceSix={price32}
-                paragraphSeven={serviceParagraph33}
-                priceSeven={price33}
-              ></PriceTabLong>
-              <PriceTabLong
-                style={setDisplayNoneFive}
-                tabHeadign={serviceNameFive}
-                paragraphOne={serviceParagraph34}
-                priceOne={price34}
-                paragraphTwo={serviceParagraph35}
-                priceTwo={price35}
-                paragraphThree={serviceParagraph36}
-                priceThree={price36}
-              ></PriceTabLong>
-              <PriceTabLong
-                style={setDisplayNoneSix}
-                tabHeadign={serviceNameSix}
-                paragraphOne={serviceParagraph37}
-                priceOne={price37}
-                paragraphTwo={serviceParagraph38}
-                priceTwo={price38}
-                paragraphThree={serviceParagraph39}
-                priceThree={price39}
-                paragraphFour={serviceParagraph40}
-                priceFour={price40}
-                paragraphFive={serviceParagraph41}
-                priceFive={price41}
-                paragraphSix={serviceParagraph42}
-                priceSix={price42}
-                paragraphSeven={serviceParagraph43}
-                priceSeven={price43}
-                paragraphEight={serviceParagraph44}
-                priceEight={price44}
-                paragraphTen={serviceParagraph45}
-                priceTen={price45}
-                paragraph11={serviceParagraph46}
-                price11={price46}
-                paragraph12={serviceParagraph47}
-                price12={price47}
-              ></PriceTabLong>
-            </div>
+          <div className="pc-content-c">
+            <main className="main-content">
+              <Header
+                isMenuPcOpen={isMenuPcOpen}
+                togglePcMenu={togglePcMenu}
+              ></Header>
+              <div className="upper-content">
+                <div className="bread-dots-container">
+                  <Link className="link" to="/">
+                    Главная
+                  </Link>
+                  <div className="bread-dot"></div>
+                  <Link className="link-prices" to="/prices">
+                    Цены
+                  </Link>
+                </div>
+                <div className="heading-container">
+                  <h1 className="heading">Цены</h1>
+                </div>
+                <div className="divider-container">
+                  <div className="divider"></div>
+                  <div className="row-container">
+                    <span className="text">Услуги</span>
+                    <span className="text">Направления</span>
+                  </div>
+                </div>
+              </div>
+              <div className="services-content">
+                <div className="services-list">
+                  <button
+                    className={
+                      isToothHealingOpened ? "button-active" : "button"
+                    }
+                    onClick={toothHealingExpansion}
+                  >
+                    Ортопедия
+                  </button>
+                  <button
+                    className={isWhiteningOpened ? "button-active" : "button"}
+                    onClick={whiteningExpansion}
+                  >
+                    Консультация
+                  </button>
+                  <button
+                    className={
+                      isMouthHygieneOpened ? "button-active" : "button"
+                    }
+                    onClick={mouthHygieneExpansion}
+                  >
+                    Вкладки
+                  </button>
+                  <button
+                    className={isVinirsOpened ? "button-active" : "button"}
+                    onClick={vinirExpansion}
+                  >
+                    Коронки
+                  </button>
+                  <button
+                    className={
+                      isParodontHealingOpened ? "button-active" : "button"
+                    }
+                    onClick={parodontHealthExpansion}
+                  >
+                    Восстановление Зуба Виниром
+                  </button>
+                  <button
+                    className={isDiagnosisOpened ? "button-active" : "button"}
+                    onClick={diagnosisExpansion}
+                  >
+                    Диагностика
+                  </button>
+                  {/* <button className="button">Имплантация и хирургия</button>
+            <button className="button">Исправление прикуса</button> */}
+                </div>
+                <div className="cards-list">
+                  <h2 className="heading">{heading}</h2>
+                  <PriceTabLong
+                    style={setDisplayNone}
+                    tabHeadign={serviceName}
+                    paragraphOne={serviceParagraph14}
+                    priceOne={price14}
+                    paragraphTwo={serviceParagraph15}
+                    priceTwo={price15}
+                    paragraphThree={serviceParagraph16}
+                    priceThree={price16}
+                    paragraphFour={serviceParagraph17}
+                    priceFour={price17}
+                    paragraphFive={serviceParagraphFive}
+                    priceFive={priceFive}
+                    paragraphSix={serviceParagraphSix}
+                    priceSix={priceSix}
+                    paragraphSeven={serviceParagraphSeven}
+                    priceSeven={priceSeven}
+                    paragraphEight={serviceParagraphEight}
+                    priceEight={priceEight}
+                    paragraphNine={serviceParagraphNine}
+                    priceNine={priceNine}
+                    paragraphTen={serviceParagraphTen}
+                    priceTen={priceTen}
+                    paragraph11={serviceParagraph11}
+                    price11={price11}
+                    paragraph12={serviceParagraph12}
+                    price12={price12}
+                    paragraph13={serviceParagraph13}
+                    price13={price13}
+                  ></PriceTabLong>
+                  <PriceTabLong
+                    style={setDisplayNoneTwo}
+                    tabHeadign={serviceNameTwo}
+                    paragraphOne={serviceParagraph14}
+                    priceOne={price14}
+                    paragraphTwo={serviceParagraph15}
+                    priceTwo={price15}
+                    paragraphThree={serviceParagraph16}
+                    priceThree={price16}
+                    paragraphFour={serviceParagraph17}
+                    priceFour={price17}
+                    paragraphFive={serviceParagraph18}
+                    priceFive={price18}
+                    paragraphSix={serviceParagraph19}
+                    priceSix={price19}
+                    paragraphSeven={serviceParagraph20}
+                    priceSeven={price20}
+                    paragraphEight={serviceParagraph21}
+                    priceEight={price21}
+                    paragraphNine={serviceParagraph22}
+                    priceNine={price22}
+                  ></PriceTabLong>
+                  <PriceTabLong
+                    style={setDisplayNoneThree}
+                    tabHeadign={serviceNameThree}
+                    paragraphOne={serviceParagraph23}
+                    priceOne={price23}
+                    paragraphTwo={serviceParagraph24}
+                    priceTwo={price24}
+                    paragraphThree={serviceParagraph25}
+                    priceThree={price25}
+                    paragraphFour={serviceParagraph26}
+                    priceFour={price26}
+                  ></PriceTabLong>
+                  <PriceTabLong
+                    style={setDisplayNoneFour}
+                    tabHeadign={serviceNameFour}
+                    paragraphOne={serviceParagraph27}
+                    priceOne={price27}
+                    paragraphTwo={serviceParagraph28}
+                    priceTwo={price28}
+                    paragraphThree={serviceParagraph29}
+                    priceThree={price29}
+                    paragraphFour={serviceParagraph30}
+                    priceFour={price30}
+                    paragraphFive={serviceParagraph31}
+                    priceFive={price31}
+                    paragraphSix={serviceParagraph32}
+                    priceSix={price32}
+                    paragraphSeven={serviceParagraph33}
+                    priceSeven={price33}
+                  ></PriceTabLong>
+                  <PriceTabLong
+                    style={setDisplayNoneFive}
+                    tabHeadign={serviceNameFive}
+                    paragraphOne={serviceParagraph34}
+                    priceOne={price34}
+                    paragraphTwo={serviceParagraph35}
+                    priceTwo={price35}
+                    paragraphThree={serviceParagraph36}
+                    priceThree={price36}
+                  ></PriceTabLong>
+                  <PriceTabLong
+                    style={setDisplayNoneSix}
+                    tabHeadign={serviceNameSix}
+                    paragraphOne={serviceParagraph37}
+                    priceOne={price37}
+                    paragraphTwo={serviceParagraph38}
+                    priceTwo={price38}
+                    paragraphThree={serviceParagraph39}
+                    priceThree={price39}
+                    paragraphFour={serviceParagraph40}
+                    priceFour={price40}
+                    paragraphFive={serviceParagraph41}
+                    priceFive={price41}
+                    paragraphSix={serviceParagraph42}
+                    priceSix={price42}
+                    paragraphSeven={serviceParagraph43}
+                    priceSeven={price43}
+                    paragraphEight={serviceParagraph44}
+                    priceEight={price44}
+                    paragraphTen={serviceParagraph45}
+                    priceTen={price45}
+                    paragraph11={serviceParagraph46}
+                    price11={price46}
+                    paragraph12={serviceParagraph47}
+                    price12={price47}
+                  ></PriceTabLong>
+                </div>
+              </div>
+            </main>
           </div>
-        </main>
-      </div>
-      <Footer />
+          <Footer />
+        </div>
+      )}
     </div>
   );
 };

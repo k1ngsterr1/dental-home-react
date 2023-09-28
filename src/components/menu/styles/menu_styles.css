@@ -14,7 +14,6 @@ body .menu-screen .menu-mob {
   top: 0;
   left: 0;
   right: 0;
-  border: 2px solid red;
 }
 body .menu-screen .menu-mob .menu-content {
   width: 90%;
@@ -134,8 +133,11 @@ body .menu-screen .menu-mob .geo-content .social-media .insta {
   margin-left: clamp(8px, 3.73824vw, 32px);
 }
 body .menu-screen .menu-mob .buttons {
-  height: 25%;
+  width: 100%;
+  height: auto;
   display: flex;
+  position: absolute;
+  bottom: 0;
   flex-direction: column;
   justify-content: flex-end;
 }
