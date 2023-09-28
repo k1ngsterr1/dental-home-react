@@ -14,9 +14,10 @@ type Swiper = any;
 
 interface PhotoSource {
   imageSrc: any;
+  openModal?: any;
 }
 
-const PcGallery: React.FC<PhotoSource> = ({ imageSrc }) => {
+const PcGallery: React.FC<PhotoSource> = ({ imageSrc, openModal }) => {
   const swiperRef = React.useRef<Swiper | null>(null);
 
   const handlePrev = () => {
@@ -55,7 +56,7 @@ const PcGallery: React.FC<PhotoSource> = ({ imageSrc }) => {
         <SwiperSlide>
           <div className="dentist-card">
             <div className="button-image-container">
-              <button className="doctor-btn">
+              <button className="doctor-btn" onClick={openModal}>
                 <span className="text">Записаться</span>
               </button>
               <img src={imageSrc} alt="Doctor 1" className="doctor-image" />
@@ -69,7 +70,7 @@ const PcGallery: React.FC<PhotoSource> = ({ imageSrc }) => {
         <SwiperSlide>
           <div className="dentist-card">
             <div className="button-image-container">
-              <button className="doctor-btn">
+              <button className="doctor-btn" onClick={openModal}>
                 <span className="text">Записаться</span>
               </button>
               <img src={imageSrc} alt="Doctor 1" className="doctor-image" />
@@ -83,7 +84,7 @@ const PcGallery: React.FC<PhotoSource> = ({ imageSrc }) => {
         <SwiperSlide>
           <div className="dentist-card">
             <div className="button-image-container">
-              <button className="doctor-btn">
+              <button className="doctor-btn" onClick={openModal}>
                 <span className="text">Записаться</span>
               </button>
               <img src={imageSrc} alt="Doctor 1" className="doctor-image" />

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, RefObject } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
@@ -38,6 +38,8 @@ import "./styles/global.css";
 import "./styles/main/main.css";
 
 // import { link } from "fs";
+
+import emailjs from "@emailjs/browser";
 
 interface Tabprops {
   number: string;
@@ -191,6 +193,35 @@ export default function HomePage() {
 
   const swiperRef = React.useRef<Swiper | null>(null);
 
+  const [fullName, setFullName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [serviceName, setServiceName] = useState("");
+  const [doctorName, setDoctorName] = useState("");
+  const [comment, setComment] = useState("");
+
+  const form: RefObject<HTMLDivElement> = useRef(null);
+
+  function sendEmail(e: any) {
+    e.preventDefault();
+    setFullName("");
+    setPhoneNumber("");
+    setServiceName("");
+    setDoctorName("");
+    setServiceName("");
+
+    emailjs
+      .sendForm(
+        "service_kwh5orp",
+        "template_5kdc5wu",
+        e.target,
+        "b-K7bdT7JW4cqcN4y"
+      )
+      .then((res) => {
+        console.log("SUCCESS");
+      })
+      .catch((err) => console.log(err));
+  }
+
   // interface Service {
   //   slug: string;
   //   name: string;
@@ -316,10 +347,6 @@ export default function HomePage() {
 
   function openPopupWindow() {
     setOpen(true);
-  }
-
-  function consoleLog() {
-    console.log("zhopa");
   }
 
   const toggleMenu = () => {
@@ -1397,6 +1424,7 @@ export default function HomePage() {
                 imageSrc={pavelGallery}
                 imageSrcTwo={pavelGallery}
                 imageSrcThree={pavelGallery}
+                openModal={openModal}
                 imageSrcFour={pavelGallery}
               />
             </section>
@@ -1407,7 +1435,7 @@ export default function HomePage() {
                 <h3 className="heading">Наши специалисты</h3>
               </div>
               <div className="divider"></div>
-              <PcGallery imageSrc={pavelGalleryPc} />
+              <PcGallery imageSrc={pavelGalleryPc} openModal={openModal} />
               <div
                 className="divider"
                 style={{ marginTop: "clamp(32px,3.33312vw,128px)" }}
@@ -1598,7 +1626,7 @@ export default function HomePage() {
               </div>
             </section>
           </div>
-          <div className="form-pc-screen">
+          <div className="form-pc-screen" ref={form} onSubmit={sendEmail}>
             <section className="content">
               <div className="heading-container">
                 <h5 className="heading">Записаться На Прием</h5>
@@ -1611,6 +1639,9 @@ export default function HomePage() {
                     <input
                       type="text"
                       className="input-c"
+                      required={true}
+                      value={fullName}
+                      onChange={(event) => setFullName(event.target.value)}
                       placeholder="Иван Иванов"
                     />
                   </div>
@@ -1619,6 +1650,9 @@ export default function HomePage() {
                     <input
                       type="text"
                       className="input-c"
+                      required={true}
+                      value={phoneNumber}
+                      onChange={(event) => setPhoneNumber(event.target.value)}
                       placeholder="+7 (925) 222-90-22"
                     />
                   </div>
@@ -1629,6 +1663,9 @@ export default function HomePage() {
                     <input
                       type="text"
                       placeholder="Выберите Услугу"
+                      required={true}
+                      value={serviceName}
+                      onChange={(event) => setServiceName(event.target.value)}
                       className="input-s"
                     />
                   </div>
@@ -1650,7 +1687,9 @@ export default function HomePage() {
                     <input
                       type="text"
                       placeholder="Выберите Врача"
-                      required
+                      required={true}
+                      value={doctorName}
+                      onChange={(event) => setDoctorName(event.target.value)}
                       className="input-s"
                     />
                   </div>
@@ -1658,7 +1697,11 @@ export default function HomePage() {
                 <div className="row-c">
                   <div className="input-container services">
                     <span className="text">Комментарий</span>
-                    <textarea className="comment" />
+                    <textarea
+                      className="comment"
+                      value={comment}
+                      onChange={(event) => setComment(event.target.value)}
+                    />
                   </div>
                 </div>
                 <div className="checkbox-container">
@@ -1668,7 +1711,7 @@ export default function HomePage() {
                       Ознакомлен с Условиями обработки персональных данных
                     </span>
                   </div>
-                  <button className="golden-btn" onClick={openPopupWindow}>
+                  <button className="golden-btn" value="Send">
                     Записаться на прием
                     <FontAwesomeIcon
                       icon={faChevronRight}

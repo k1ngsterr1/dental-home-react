@@ -76,7 +76,7 @@ const Gallery: React.FC<PhotoSource> = ({
         <SwiperSlide>
           <div className="dentist-card">
             <div className="button-image-container">
-              <button className="doctor-btn">
+              <button className="doctor-btn" onClick={openModal}>
                 <span className="text">Записаться</span>
               </button>
               <img src={imageSrc} alt="Doctor 1" className="doctor-image" />
@@ -90,7 +90,7 @@ const Gallery: React.FC<PhotoSource> = ({
         <SwiperSlide>
           <div className="dentist-card-2">
             <div className="button-image-container">
-              <button className="doctor-btn">
+              <button className="doctor-btn" onClick={openModal}>
                 <span className="text">Записаться</span>
               </button>
               <img src={imageSrcTwo} alt="Doctor 2" className="doctor-image" />
@@ -104,7 +104,7 @@ const Gallery: React.FC<PhotoSource> = ({
         <SwiperSlide>
           <div className="dentist-card-2">
             <div className="button-image-container">
-              <button className="doctor-btn">
+              <button className="doctor-btn" onClick={openModal}>
                 <span className="text">Записаться</span>
               </button>
               <img
