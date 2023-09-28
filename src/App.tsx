@@ -312,10 +312,14 @@ export default function HomePage() {
 
   const [isLarge, setIsLarge] = useState(false);
 
-  const closeModal = () => setOpen(false);
+  // const closeModal = () => setOpen(false);
 
   function openPopupWindow() {
     setOpen(true);
+  }
+
+  function consoleLog() {
+    console.log("zhopa");
   }
 
   const toggleMenu = () => {
@@ -324,6 +328,15 @@ export default function HomePage() {
 
   const togglePcMenu = () => {
     setIsMenuPcOpen(!isMenuPcOpen);
+  };
+
+  const openModal = () => {
+    console.log("Opening modal");
+    setOpen(true);
+  };
+
+  const closeModal = () => {
+    setOpen(false);
   };
 
   // const navigate = useNavigate()
@@ -436,6 +449,7 @@ export default function HomePage() {
               <div className="header-container">
                 <Header
                   isMenuPcOpen={isMenuPcOpen}
+                  openModal={openModal}
                   togglePcMenu={togglePcMenu}
                 ></Header>
               </div>

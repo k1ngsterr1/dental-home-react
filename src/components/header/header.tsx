@@ -13,6 +13,8 @@ interface HeaderProps {
   isMenuPcOpen?: any;
   toggleMenu?: any;
   togglePcMenu?: any;
+  openModal?: any;
+  consoleLog?: () => void;
 }
 
 const logo: string = require("../../assets/logo_mob.svg").default;
@@ -22,6 +24,8 @@ const Header: React.FC<HeaderProps> = ({
   toggleMenu,
   isMenuPcOpen,
   togglePcMenu,
+  openModal,
+  consoleLog,
 }) => {
   if (isMenuOpen || isMenuPcOpen) {
     document.body.style.overflowY = "hidden";
@@ -100,7 +104,9 @@ const Header: React.FC<HeaderProps> = ({
           >
             +7 (925) 222-90-22
           </a>
-          <button className="header-btn">Записаться на прием</button>
+          <button className="header-btn" onClick={openModal}>
+            Записаться на прием
+          </button>
           <div
             className="hamburger-button"
             style={{

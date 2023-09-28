@@ -24,6 +24,7 @@ interface PhotoSource {
   imageSrcFive?: any;
   imageSrcSix?: any;
   imageSrcSeven?: any;
+  openModal?: any;
 }
 
 const Gallery: React.FC<PhotoSource> = ({
@@ -34,6 +35,7 @@ const Gallery: React.FC<PhotoSource> = ({
   imageSrcFive,
   imageSrcSix,
   imageSrcSeven,
+  openModal,
 }) => {
   const swiperRef = React.useRef<Swiper | null>(null);
 
