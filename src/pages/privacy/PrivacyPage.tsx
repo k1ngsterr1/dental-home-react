@@ -565,7 +565,7 @@ const PrivacyPage = () => {
           </div>
         </div>
       </div>
-      <div className="pc-content">
+      <div className="pc-content-cont">
         <Header
           isMenuPcOpen={isMenuPcOpen}
           togglePcMenu={togglePcMenu}

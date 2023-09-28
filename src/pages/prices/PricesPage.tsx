@@ -1048,7 +1048,7 @@ const PricesPage = () => {
           </div>
         </div>
       </div>
-      <div className="pc-content">
+      <div className="pc-content-c">
         <main className="main-content">
           <Header
             isMenuPcOpen={isMenuPcOpen}

@@ -113,7 +113,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="pc-content">
+      <div className="pc-content-cont">
         <div className="map-social-c column">
           <YMaps>
             <Map

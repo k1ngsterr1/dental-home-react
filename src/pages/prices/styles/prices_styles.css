@@ -225,35 +225,35 @@ body .screen .content .services-content .cards .price-tab .blue-btn:hover, body 
   body .screen .content {
     display: none;
   }
-  body .screen .pc-content {
-    width: 100%;
+  body .screen .pc-content-c {
+    width: 100% !important;
     height: auto;
     flex-direction: column;
     display: flex;
   }
-  body .screen .pc-content .main-content {
-    width: 71.8229166667%;
+  body .screen .pc-content-c .main-content {
+    width: 71.8229166667% !important;
     height: auto;
     display: flex;
     flex-direction: column;
     margin: auto;
   }
-  body .screen .pc-content .main-content .upper-content {
+  body .screen .pc-content-c .main-content .upper-content {
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     margin-top: clamp(32px, 3.33312vw, 128px);
   }
-  body .screen .pc-content .main-content .upper-content .bread-dots-container {
+  body .screen .pc-content-c .main-content .upper-content .bread-dots-container {
     display: flex;
     flex-direction: row;
     align-items: center;
   }
-  body .screen .pc-content .main-content .upper-content .bread-dots-container .link-prices {
+  body .screen .pc-content-c .main-content .upper-content .bread-dots-container .link-prices {
     color: rgba(51, 51, 51, 0.5) !important;
   }
-  body .screen .pc-content .main-content .upper-content .bread-dots-container .link, body .screen .pc-content .main-content .upper-content .bread-dots-container .link-prices {
+  body .screen .pc-content-c .main-content .upper-content .bread-dots-container .link, body .screen .pc-content-c .main-content .upper-content .bread-dots-container .link-prices {
     color: #202637;
     font-family: Raleway;
     font-size: clamp(9px, 0.93744vw, 36px);
@@ -261,7 +261,7 @@ body .screen .content .services-content .cards .price-tab .blue-btn:hover, body 
     font-weight: 500;
     line-height: 137.4%;
   }
-  body .screen .pc-content .main-content .upper-content .bread-dots-container .bread-dot {
+  body .screen .pc-content-c .main-content .upper-content .bread-dots-container .bread-dot {
     width: clamp(2.5px, 0.2604vw, 10px);
     height: clamp(2.5px, 0.2604vw, 10px);
     margin-left: clamp(4px, 0.41664vw, 16px);
@@ -269,7 +269,7 @@ body .screen .content .services-content .cards .price-tab .blue-btn:hover, body 
     background-color: #202637;
     border-radius: 50px;
   }
-  body .screen .pc-content .main-content .upper-content .heading-container {
+  body .screen .pc-content-c .main-content .upper-content .heading-container {
     width: 100%;
     height: auto;
     display: flex;
@@ -277,7 +277,7 @@ body .screen .content .services-content .cards .price-tab .blue-btn:hover, body 
     align-items: flex-start;
     margin-top: clamp(11.5px, 1.19784vw, 46px);
   }
-  body .screen .pc-content .main-content .upper-content .heading-container .heading {
+  body .screen .pc-content-c .main-content .upper-content .heading-container .heading {
     color: #202637;
     font-family: Merriweather;
     font-size: clamp(29px, 3.02064vw, 116px) !important;
@@ -286,25 +286,25 @@ body .screen .content .services-content .cards .price-tab .blue-btn:hover, body 
     line-height: 137.4%;
     text-transform: capitalize;
   }
-  body .screen .pc-content .main-content .upper-content .divider-container {
+  body .screen .pc-content-c .main-content .upper-content .divider-container {
     width: 100%;
     display: flex;
     flex-direction: column;
     margin-top: clamp(32px, 3.33312vw, 128px);
   }
-  body .screen .pc-content .main-content .upper-content .divider-container .divider {
+  body .screen .pc-content-c .main-content .upper-content .divider-container .divider {
     width: 100%;
     height: 1px;
     background: rgba(32, 38, 55, 0.5);
   }
-  body .screen .pc-content .main-content .upper-content .divider-container .row-container {
+  body .screen .pc-content-c .main-content .upper-content .divider-container .row-container {
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
-  body .screen .pc-content .main-content .upper-content .divider-container .row-container .text {
+  body .screen .pc-content-c .main-content .upper-content .divider-container .row-container .text {
     color: #7D8291;
     font-family: Raleway;
     font-size: clamp(9px, 0.93744vw, 36px);
@@ -313,7 +313,7 @@ body .screen .content .services-content .cards .price-tab .blue-btn:hover, body 
     line-height: 137.4%;
     margin-top: clamp(8px, 0.83328vw, 32px);
   }
-  body .screen .pc-content .main-content .services-content {
+  body .screen .pc-content-c .main-content .services-content {
     width: 100%;
     height: auto;
     display: flex;
@@ -321,7 +321,7 @@ body .screen .content .services-content .cards .price-tab .blue-btn:hover, body 
     align-items: flex-start;
     margin-top: clamp(32px, 3.33312vw, 128px);
   }
-  body .screen .pc-content .main-content .services-content .services-list {
+  body .screen .pc-content-c .main-content .services-content .services-list {
     height: auto !important;
     position: sticky !important;
     top: clamp(64px, 6.66624vw, 256px) !important;
@@ -329,7 +329,7 @@ body .screen .content .services-content .cards .price-tab .blue-btn:hover, body 
     flex-direction: column;
     align-items: flex-start;
   }
-  body .screen .pc-content .main-content .services-content .services-list .button, body .screen .pc-content .main-content .services-content .services-list .button-active {
+  body .screen .pc-content-c .main-content .services-content .services-list .button, body .screen .pc-content-c .main-content .services-content .services-list .button-active {
     cursor: pointer;
     padding: 0 !important;
     margin: 0 !important;
@@ -337,7 +337,7 @@ body .screen .content .services-content .cards .price-tab .blue-btn:hover, body 
     border: none !important;
     margin-top: clamp(8px, 0.83328vw, 32px) !important;
   }
-  body .screen .pc-content .main-content .services-content .services-list .button-active {
+  body .screen .pc-content-c .main-content .services-content .services-list .button-active {
     color: #202637;
     font-family: Raleway;
     font-size: clamp(10.5px, 1.09368vw, 42px);
@@ -346,7 +346,7 @@ body .screen .content .services-content .cards .price-tab .blue-btn:hover, body 
     line-height: 137.4%;
     text-decoration-line: underline;
   }
-  body .screen .pc-content .main-content .services-content .services-list .button {
+  body .screen .pc-content-c .main-content .services-content .services-list .button {
     color: #7D8291;
     font-family: Raleway;
     font-size: clamp(10px, 1.0416vw, 40px);
@@ -355,15 +355,15 @@ body .screen .content .services-content .cards .price-tab .blue-btn:hover, body 
     line-height: 137.4%;
     transition: 0.3s all;
   }
-  body .screen .pc-content .main-content .services-content .services-list .button:hover {
+  body .screen .pc-content-c .main-content .services-content .services-list .button:hover {
     font-size: clamp(10.5px, 1.09368vw, 42px);
     font-weight: 800;
   }
-  body .screen .pc-content .main-content .services-content .cards-list {
+  body .screen .pc-content-c .main-content .services-content .cards-list {
     display: flex;
     flex-direction: column;
   }
-  body .screen .pc-content .main-content .services-content .cards-list .heading {
+  body .screen .pc-content-c .main-content .services-content .cards-list .heading {
     color: #202637;
     font-family: Merriweather;
     font-size: clamp(13px, 1.35408vw, 52px);
@@ -371,7 +371,7 @@ body .screen .content .services-content .cards .price-tab .blue-btn:hover, body 
     font-weight: 700;
     line-height: 137.4%;
   }
-  body .screen .pc-content .main-content .services-content .cards-list .price-tab, body .screen .pc-content .main-content .services-content .cards-list .price-tab-long {
+  body .screen .pc-content-c .main-content .services-content .cards-list .price-tab, body .screen .pc-content-c .main-content .services-content .cards-list .price-tab-long {
     width: clamp(443.5px, 46.19496vw, 1774px);
     height: auto;
     display: flex;
@@ -380,7 +380,7 @@ body .screen .content .services-content .cards .price-tab .blue-btn:hover, body 
     margin-top: clamp(16px, 1.66656vw, 64px);
     background: #747988;
   }
-  body .screen .pc-content .main-content .services-content .cards-list .price-tab .price-heading, body .screen .pc-content .main-content .services-content .cards-list .price-tab-long .price-heading {
+  body .screen .pc-content-c .main-content .services-content .cards-list .price-tab .price-heading, body .screen .pc-content-c .main-content .services-content .cards-list .price-tab-long .price-heading {
     color: #F4F4F4;
     font-family: Merriweather;
     font-size: clamp(12px, 1.24992vw, 48px);
@@ -390,7 +390,7 @@ body .screen .content .services-content .cards .price-tab .blue-btn:hover, body 
     margin-top: clamp(16px, 1.66656vw, 64px);
     margin-left: clamp(16px, 1.66656vw, 64px);
   }
-  body .screen .pc-content .main-content .services-content .cards-list .price-tab .price-p, body .screen .pc-content .main-content .services-content .cards-list .price-tab .price-p-two, body .screen .pc-content .main-content .services-content .cards-list .price-tab .price-p-three, body .screen .pc-content .main-content .services-content .cards-list .price-tab-long .price-p, body .screen .pc-content .main-content .services-content .cards-list .price-tab-long .price-p-two, body .screen .pc-content .main-content .services-content .cards-list .price-tab-long .price-p-three {
+  body .screen .pc-content-c .main-content .services-content .cards-list .price-tab .price-p, body .screen .pc-content-c .main-content .services-content .cards-list .price-tab .price-p-two, body .screen .pc-content-c .main-content .services-content .cards-list .price-tab .price-p-three, body .screen .pc-content-c .main-content .services-content .cards-list .price-tab-long .price-p, body .screen .pc-content-c .main-content .services-content .cards-list .price-tab-long .price-p-two, body .screen .pc-content-c .main-content .services-content .cards-list .price-tab-long .price-p-three {
     width: 65%;
     color: #FFF;
     font-family: Raleway;
@@ -401,7 +401,7 @@ body .screen .content .services-content .cards .price-tab .blue-btn:hover, body 
     margin-top: clamp(16px, 1.66656vw, 64px);
     margin-left: clamp(16px, 1.66656vw, 64px);
   }
-  body .screen .pc-content .main-content .services-content .cards-list .price-tab .price-p-two, body .screen .pc-content .main-content .services-content .cards-list .price-tab-long .price-p-two {
+  body .screen .pc-content-c .main-content .services-content .cards-list .price-tab .price-p-two, body .screen .pc-content-c .main-content .services-content .cards-list .price-tab-long .price-p-two {
     width: 65%;
     color: #FFF;
     font-family: Raleway;
@@ -412,7 +412,7 @@ body .screen .content .services-content .cards .price-tab .blue-btn:hover, body 
     margin-top: clamp(16px, 1.66656vw, 64px);
     margin-left: clamp(16px, 1.66656vw, 64px);
   }
-  body .screen .pc-content .main-content .services-content .cards-list .price-tab .price, body .screen .pc-content .main-content .services-content .cards-list .price-tab .price-two, body .screen .pc-content .main-content .services-content .cards-list .price-tab .price-three, body .screen .pc-content .main-content .services-content .cards-list .price-tab-long .price, body .screen .pc-content .main-content .services-content .cards-list .price-tab-long .price-two, body .screen .pc-content .main-content .services-content .cards-list .price-tab-long .price-three {
+  body .screen .pc-content-c .main-content .services-content .cards-list .price-tab .price, body .screen .pc-content-c .main-content .services-content .cards-list .price-tab .price-two, body .screen .pc-content-c .main-content .services-content .cards-list .price-tab .price-three, body .screen .pc-content-c .main-content .services-content .cards-list .price-tab-long .price, body .screen .pc-content-c .main-content .services-content .cards-list .price-tab-long .price-two, body .screen .pc-content-c .main-content .services-content .cards-list .price-tab-long .price-three {
     color: #F4F4F4;
     font-family: Raleway;
     font-size: clamp(10.5px, 1.09368vw, 42px);
@@ -422,7 +422,7 @@ body .screen .content .services-content .cards .price-tab .blue-btn:hover, body 
     margin-left: clamp(16px, 1.66656vw, 64px);
     margin-top: clamp(8px, 0.83328vw, 32px);
   }
-  body .screen .pc-content .main-content .services-content .cards-list .price-tab .blue-btn, body .screen .pc-content .main-content .services-content .cards-list .price-tab-long .blue-btn {
+  body .screen .pc-content-c .main-content .services-content .cards-list .price-tab .blue-btn, body .screen .pc-content-c .main-content .services-content .cards-list .price-tab-long .blue-btn {
     width: clamp(119px, 12.39504vw, 476px);
     height: clamp(24px, 2.49984vw, 96px);
     background-color: #202637;
@@ -436,7 +436,7 @@ body .screen .content .services-content .cards .price-tab .blue-btn:hover, body 
     margin-bottom: clamp(16px, 1.66656vw, 64px);
     transition: 0.3s all;
   }
-  body .screen .pc-content .main-content .services-content .cards-list .price-tab .blue-btn:hover, body .screen .pc-content .main-content .services-content .cards-list .price-tab-long .blue-btn:hover {
+  body .screen .pc-content-c .main-content .services-content .cards-list .price-tab .blue-btn:hover, body .screen .pc-content-c .main-content .services-content .cards-list .price-tab-long .blue-btn:hover {
     background-color: #E8CB6C;
     color: #202637;
   }
@@ -445,31 +445,31 @@ body .screen .content .services-content .cards .price-tab .blue-btn:hover, body 
   body .screen .content {
     display: none;
   }
-  body .screen .pc-content {
+  body .screen .pc-content-c {
     width: 100%;
     display: flex !important;
     height: auto;
     margin: auto;
     margin-bottom: clamp(45px, 11.71875vw, 180px);
   }
-  body .screen .pc-content .main-content {
+  body .screen .pc-content-c .main-content {
     width: 93.5546875%;
     height: auto;
     margin: auto !important;
   }
-  body .screen .pc-content .main-content .upper-content {
+  body .screen .pc-content-c .main-content .upper-content {
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     margin-top: clamp(16px, 4.1666666667vw, 64px);
   }
-  body .screen .pc-content .main-content .upper-content .bread-dots-container {
+  body .screen .pc-content-c .main-content .upper-content .bread-dots-container {
     width: 100%;
     display: flex;
     align-items: center;
   }
-  body .screen .pc-content .main-content .upper-content .bread-dots-container .bread-dot {
+  body .screen .pc-content-c .main-content .upper-content .bread-dots-container .bread-dot {
     width: clamp(4px, 0.78125vw, 16px);
     height: clamp(4px, 0.78125vw, 16px);
     border-radius: 50px;
@@ -477,7 +477,7 @@ body .screen .content .services-content .cards .price-tab .blue-btn:hover, body 
     margin-left: clamp(4px, 1.0416666667vw, 16px);
     margin-right: clamp(4px, 1.0416666667vw, 16px);
   }
-  body .screen .pc-content .main-content .upper-content .bread-dots-container .link, body .screen .pc-content .main-content .upper-content .bread-dots-container .link-prices {
+  body .screen .pc-content-c .main-content .upper-content .bread-dots-container .link, body .screen .pc-content-c .main-content .upper-content .bread-dots-container .link-prices {
     color: #202637 !important;
     font-family: Raleway;
     font-size: clamp(9px, 2.34375vw, 36px) !important;
@@ -485,15 +485,15 @@ body .screen .content .services-content .cards .price-tab .blue-btn:hover, body 
     font-weight: 500;
     line-height: 137.4%;
   }
-  body .screen .pc-content .main-content .upper-content .bread-dots-container .link-prices {
+  body .screen .pc-content-c .main-content .upper-content .bread-dots-container .link-prices {
     color: rgba(32, 38, 55, 0.5) !important;
   }
-  body .screen .pc-content .main-content .upper-content .heading-container {
+  body .screen .pc-content-c .main-content .upper-content .heading-container {
     width: 100%;
     height: auto;
     display: flex;
   }
-  body .screen .pc-content .main-content .upper-content .heading-container .heading {
+  body .screen .pc-content-c .main-content .upper-content .heading-container .heading {
     color: #202637;
     font-family: Merriweather;
     font-size: clamp(22px, 5.7291666667vw, 88px) !important;
@@ -503,18 +503,18 @@ body .screen .content .services-content .cards .price-tab .blue-btn:hover, body 
     text-transform: capitalize;
     margin-top: clamp(8px, 2.0833333333vw, 32px);
   }
-  body .screen .pc-content .main-content .upper-content .divider-container {
+  body .screen .pc-content-c .main-content .upper-content .divider-container {
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
   }
-  body .screen .pc-content .main-content .upper-content .divider-container .divider {
+  body .screen .pc-content-c .main-content .upper-content .divider-container .divider {
     width: 100%;
     height: 1px;
     background: rgba(32, 38, 55, 0.5);
   }
-  body .screen .pc-content .main-content .upper-content .divider-container .row-container {
+  body .screen .pc-content-c .main-content .upper-content .divider-container .row-container {
     width: 100%;
     height: auto;
     display: flex;
@@ -522,7 +522,7 @@ body .screen .content .services-content .cards .price-tab .blue-btn:hover, body 
     justify-content: space-between;
     margin-top: clamp(8px, 2.0833333333vw, 32px);
   }
-  body .screen .pc-content .main-content .upper-content .divider-container .row-container .text {
+  body .screen .pc-content-c .main-content .upper-content .divider-container .row-container .text {
     color: rgba(32, 38, 55, 0.5);
     font-family: Raleway;
     font-size: clamp(9px, 2.34375vw, 36px);
@@ -530,18 +530,18 @@ body .screen .content .services-content .cards .price-tab .blue-btn:hover, body 
     font-weight: 400;
     line-height: 137.4%;
   }
-  body .screen .pc-content .main-content .services-content {
+  body .screen .pc-content-c .main-content .services-content {
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin-top: clamp(32px, 8.3333333333vw, 128px);
   }
-  body .screen .pc-content .main-content .services-content .services-list {
+  body .screen .pc-content-c .main-content .services-content .services-list {
     display: flex;
     flex-direction: column;
     align-items: flex-start !important;
   }
-  body .screen .pc-content .main-content .services-content .services-list .button, body .screen .pc-content .main-content .services-content .services-list .button-active {
+  body .screen .pc-content-c .main-content .services-content .services-list .button, body .screen .pc-content-c .main-content .services-content .services-list .button-active {
     display: flex !important;
     align-items: flex-start !important;
     padding: 0 !important;
@@ -550,7 +550,7 @@ body .screen .content .services-content .cards .price-tab .blue-btn:hover, body 
     background: none;
     margin-top: 16px !important;
   }
-  body .screen .pc-content .main-content .services-content .services-list .button {
+  body .screen .pc-content-c .main-content .services-content .services-list .button {
     color: rgba(32, 38, 55, 0.5);
     font-family: Raleway;
     font-size: clamp(9px, 2.34375vw, 36px) !important;
@@ -558,7 +558,7 @@ body .screen .content .services-content .cards .price-tab .blue-btn:hover, body 
     font-weight: 600;
     line-height: 137.4%;
   }
-  body .screen .pc-content .main-content .services-content .services-list .button-active {
+  body .screen .pc-content-c .main-content .services-content .services-list .button-active {
     color: #202637;
     font-family: Raleway;
     font-size: clamp(9px, 2.34375vw, 36px) !important;
@@ -567,11 +567,11 @@ body .screen .content .services-content .cards .price-tab .blue-btn:hover, body 
     line-height: 137.4%;
     text-decoration-line: underline;
   }
-  body .screen .pc-content .main-content .cards-list {
+  body .screen .pc-content-c .main-content .cards-list {
     display: flex;
     flex-direction: column;
   }
-  body .screen .pc-content .main-content .cards-list .heading {
+  body .screen .pc-content-c .main-content .cards-list .heading {
     color: #202637;
     font-family: Merriweather;
     font-size: clamp(13px, 3.3854166667vw, 52px);
@@ -579,7 +579,7 @@ body .screen .content .services-content .cards .price-tab .blue-btn:hover, body 
     font-weight: 700;
     line-height: 137.4%;
   }
-  body .screen .pc-content .main-content .cards-list .price-tab, body .screen .pc-content .main-content .cards-list .price-tab-long {
+  body .screen .pc-content-c .main-content .cards-list .price-tab, body .screen .pc-content-c .main-content .cards-list .price-tab-long {
     width: clamp(214.5px, 55.859375vw, 858px);
     height: auto;
     border-radius: 8px;
@@ -589,7 +589,7 @@ body .screen .content .services-content .cards .price-tab .blue-btn:hover, body 
     flex-direction: column;
     margin-top: clamp(16px, 4.1666666667vw, 64px);
   }
-  body .screen .pc-content .main-content .cards-list .price-tab .price-heading, body .screen .pc-content .main-content .cards-list .price-tab-long .price-heading {
+  body .screen .pc-content-c .main-content .cards-list .price-tab .price-heading, body .screen .pc-content-c .main-content .cards-list .price-tab-long .price-heading {
     color: #F4F4F4;
     font-family: Merriweather;
     font-size: clamp(10px, 2.6041666667vw, 40px);
@@ -599,7 +599,7 @@ body .screen .content .services-content .cards .price-tab .blue-btn:hover, body 
     margin-top: clamp(16px, 4.1666666667vw, 64px);
     margin-left: clamp(16px, 4.1666666667vw, 64px);
   }
-  body .screen .pc-content .main-content .cards-list .price-tab .price-p, body .screen .pc-content .main-content .cards-list .price-tab .price-p-two, body .screen .pc-content .main-content .cards-list .price-tab .price-p-three, body .screen .pc-content .main-content .cards-list .price-tab .price-p-four, body .screen .pc-content .main-content .cards-list .price-tab-long .price-p, body .screen .pc-content .main-content .cards-list .price-tab-long .price-p-two, body .screen .pc-content .main-content .cards-list .price-tab-long .price-p-three, body .screen .pc-content .main-content .cards-list .price-tab-long .price-p-four {
+  body .screen .pc-content-c .main-content .cards-list .price-tab .price-p, body .screen .pc-content-c .main-content .cards-list .price-tab .price-p-two, body .screen .pc-content-c .main-content .cards-list .price-tab .price-p-three, body .screen .pc-content-c .main-content .cards-list .price-tab .price-p-four, body .screen .pc-content-c .main-content .cards-list .price-tab-long .price-p, body .screen .pc-content-c .main-content .cards-list .price-tab-long .price-p-two, body .screen .pc-content-c .main-content .cards-list .price-tab-long .price-p-three, body .screen .pc-content-c .main-content .cards-list .price-tab-long .price-p-four {
     width: 80%;
     color: #F4F4F4;
     font-family: Raleway;
@@ -610,7 +610,7 @@ body .screen .content .services-content .cards .price-tab .blue-btn:hover, body 
     margin-top: clamp(16px, 4.1666666667vw, 64px);
     margin-left: clamp(16px, 4.1666666667vw, 64px);
   }
-  body .screen .pc-content .main-content .cards-list .price-tab .price, body .screen .pc-content .main-content .cards-list .price-tab .price-two, body .screen .pc-content .main-content .cards-list .price-tab .price-three, body .screen .pc-content .main-content .cards-list .price-tab-long .price, body .screen .pc-content .main-content .cards-list .price-tab-long .price-two, body .screen .pc-content .main-content .cards-list .price-tab-long .price-three {
+  body .screen .pc-content-c .main-content .cards-list .price-tab .price, body .screen .pc-content-c .main-content .cards-list .price-tab .price-two, body .screen .pc-content-c .main-content .cards-list .price-tab .price-three, body .screen .pc-content-c .main-content .cards-list .price-tab-long .price, body .screen .pc-content-c .main-content .cards-list .price-tab-long .price-two, body .screen .pc-content-c .main-content .cards-list .price-tab-long .price-three {
     color: #F4F4F4;
     font-family: Raleway;
     font-size: clamp(8px, 2.0833333333vw, 32px);
@@ -620,7 +620,7 @@ body .screen .content .services-content .cards .price-tab .blue-btn:hover, body 
     margin-top: clamp(8px, 2.0833333333vw, 32px) !important;
     margin-left: clamp(16px, 4.1666666667vw, 64px);
   }
-  body .screen .pc-content .main-content .cards-list .price-tab .blue-btn, body .screen .pc-content .main-content .cards-list .price-tab-long .blue-btn {
+  body .screen .pc-content-c .main-content .cards-list .price-tab .blue-btn, body .screen .pc-content-c .main-content .cards-list .price-tab-long .blue-btn {
     width: clamp(119px, 30.9895833333vw, 476px);
     height: clamp(24px, 6.25vw, 96px);
     color: #F4F4F4;

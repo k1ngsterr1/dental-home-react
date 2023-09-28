@@ -96,14 +96,14 @@ body .screen .mob-content .text-content .text-container .table .cell {
   textAlign: left;
   borderRight: 1px solid #BBC0CF;
 }
-body .screen .pc-content {
+body .screen .pc-content-cont {
   display: none;
 }
 @media screen and (min-width: 1024px) {
   body .mob-content {
     display: none !important;
   }
-  body .pc-content {
+  body .pc-content-cont {
     width: 71.8229166667% !important;
     height: auto !important;
     display: flex !important;
@@ -111,19 +111,19 @@ body .screen .pc-content {
     margin: auto;
     margin-bottom: clamp(64px, 6.66624vw, 256px);
   }
-  body .pc-content .heading-container {
+  body .pc-content-cont .heading-container {
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     margin-top: clamp(32px, 3.33312vw, 128px);
   }
-  body .pc-content .heading-container .bread-dots-container {
+  body .pc-content-cont .heading-container .bread-dots-container {
     display: flex;
     flex-direction: row;
     align-items: center;
   }
-  body .pc-content .heading-container .bread-dots-container .link {
+  body .pc-content-cont .heading-container .bread-dots-container .link {
     color: #202637;
     font-family: Raleway;
     font-size: clamp(9px, 0.93744vw, 36px);
@@ -131,7 +131,7 @@ body .screen .pc-content {
     font-weight: 500;
     line-height: 137.4%;
   }
-  body .pc-content .heading-container .bread-dots-container .dot {
+  body .pc-content-cont .heading-container .bread-dots-container .dot {
     width: clamp(3px, 0.31248vw, 12px);
     height: clamp(3px, 0.31248vw, 12px);
     margin-left: clamp(4px, 0.41664vw, 16px);
@@ -139,7 +139,7 @@ body .screen .pc-content {
     background-color: #202637;
     border-radius: 50px;
   }
-  body .pc-content .heading-container .heading {
+  body .pc-content-cont .heading-container .heading {
     width: 60%;
     color: #202637;
     font-family: Merriweather;
@@ -150,36 +150,36 @@ body .screen .pc-content {
     text-transform: capitalize;
     margin-top: clamp(8px, 0.83328vw, 32px);
   }
-  body .pc-content .divider-container {
+  body .pc-content-cont .divider-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     margin-top: clamp(32px, 3.33312vw, 128px);
   }
-  body .pc-content .divider-container .divider-one, body .pc-content .divider-container .divider-two {
+  body .pc-content-cont .divider-container .divider-one, body .pc-content-cont .divider-container .divider-two {
     width: 35%;
     display: flex;
     flex-direction: column;
   }
-  body .pc-content .divider-container .divider-one .divider, body .pc-content .divider-container .divider-two .divider {
+  body .pc-content-cont .divider-container .divider-one .divider, body .pc-content-cont .divider-container .divider-two .divider {
     background-color: #BBC0CF;
     height: 1px;
   }
-  body .pc-content .divider-container .divider-one .text, body .pc-content .divider-container .divider-two .text {
+  body .pc-content-cont .divider-container .divider-one .text, body .pc-content-cont .divider-container .divider-two .text {
     margin-top: clamp(4px, 0.41664vw, 16px);
     color: #BBC0CF;
   }
-  body .pc-content .divider-container .divider-two {
+  body .pc-content-cont .divider-container .divider-two {
     width: 60%;
   }
-  body .pc-content .text-container {
+  body .pc-content-cont .text-container {
     height: auto;
     margin-top: clamp(16px, 1.66656vw, 64px);
     display: flex;
     justify-content: space-between;
   }
-  body .pc-content .anchor-list {
+  body .pc-content-cont .anchor-list {
     width: 65%;
     height: clamp(365px, 38.0184vw, 1460px);
     display: flex;
@@ -188,7 +188,7 @@ body .screen .pc-content {
     top: clamp(64px, 6.66624vw, 256px) !important;
     align-items: flex-start;
   }
-  body .pc-content .anchor-list .link {
+  body .pc-content-cont .anchor-list .link {
     width: 50%;
     color: #202637;
     font-family: Raleway;
@@ -199,31 +199,49 @@ body .screen .pc-content {
     text-decoration-line: underline;
     transition: 0.3s all;
   }
-  body .pc-content .anchor-list .link:hover {
+  body .pc-content-cont .anchor-list .link:hover {
     color: #E8CB6C;
   }
-  body .pc-content .anchor-list .two {
+  body .pc-content-cont .anchor-list .two {
     margin-top: clamp(8px, 0.83328vw, 32px);
   }
-  body .pc-content .information {
+  body .pc-content-cont .information {
     width: 100%;
     display: flex;
     flex-direction: column;
   }
-  body .pc-content .information .text-container {
+  body .pc-content-cont .information .text-container {
     display: flex;
     flex-direction: column;
   }
-  body .pc-content .information .text-container h4 {
+  body .pc-content-cont .information .text-container h4 {
+    color: #202637;
+    font-family: Merriweather;
+    font-size: clamp(13px, 1.35408vw, 52px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 137.4%;
     margin-bottom: clamp(16px, 1.66656vw, 64px);
   }
-  body .pc-content .information .text-container .table {
-    width: 100%;
-    borderCollapse: collapse;
-    border: 1px solid #BBC0CF;
+  body .pc-content-cont .information .text-container p {
+    margin-top: clamp(8px, 0.83328vw, 32px);
   }
-  body .pc-content .information .text-container .table .cell {
+  body .pc-content-cont .information .text-container .table {
+    width: 100% !important;
+    borderCollapse: collapse !important;
+    border: 1px solid #BBC0CF !important;
+    color: rgba(32, 38, 55, 0.8);
+    font-family: Raleway;
+    font-size: clamp(8px, 0.83328vw, 32px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 137.4%;
+  }
+  body .pc-content-cont .information .text-container .table .cell {
     text-align: left;
-    border-right: 1px solid #BBC0CF;
+    padding-top: clamp(8px, 0.83328vw, 32px);
+    padding-left: clamp(4px, 0.41664vw, 16px);
+    border-right: 1px solid #BBC0CF !important;
+    padding-bottom: clamp(8px, 0.83328vw, 32px);
   }
 }/*# sourceMappingURL=privacy_styles.css.map */

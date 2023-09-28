@@ -100,7 +100,7 @@ body
                             textAlign: left,
                             borderRight: 1px solid $low_opacity_blue, // A
 
-        .pc-content
+        .pc-content-cont
             display: none
 
     @media screen and  (min-width: 1024px)
@@ -108,7 +108,7 @@ body
         .mob-content
             display: none !important
 
-        .pc-content
+        .pc-content-cont
             width: 71.82291666666667% !important
             height: auto !important
             display: flex !important
@@ -219,13 +219,31 @@ body
                     flex-direction: column
 
                     h4
+                        color: #202637
+                        font-family: Merriweather
+                        font-size: clamp(13px,1.35408vw,52px)
+                        font-style: normal
+                        font-weight: 700
+                        line-height: 137.4%
                         margin-bottom: $m32
 
+                    p
+                        margin-top: clamp(8px,0.83328vw,32px)
+
                     .table
-                        width: 100%
-                        borderCollapse: collapse,
-                        border: 1px solid $low_opacity_blue
+                        width: 100% !important
+                        borderCollapse: collapse !important
+                        border: 1px solid $low_opacity_blue !important
+                        color: rgba(32, 38, 55, 0.80)
+                        font-family: Raleway
+                        font-size: $m16
+                        font-style: normal
+                        font-weight: 400
+                        line-height: 137.4%
 
                         .cell
                             text-align: left
-                            border-right: 1px solid $low_opacity_blue
+                            padding-top: $m16
+                            padding-left: $m8
+                            border-right: 1px solid $low_opacity_blue !important
+                            padding-bottom: $m16

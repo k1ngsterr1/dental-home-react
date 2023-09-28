@@ -1635,7 +1635,7 @@ export default function HomePage() {
                     </div>
                   </div>
                   <div className="row-c">
-                    <div className="input-container services">
+                    {/* <div className="input-container services">
                       <span className="text">Направление</span>
                       <input
                         type="text"
@@ -1643,7 +1643,7 @@ export default function HomePage() {
                         className="input-s"
                         required
                       />
-                    </div>
+                    </div> */}
                   </div>
                   <div className="row-c">
                     <div className="input-container services">
@@ -1738,7 +1738,7 @@ export default function HomePage() {
                       className="input-text"
                     />
                   </div>
-                  <div className="input-container">
+                  {/* <div className="input-container">
                     <label htmlFor="direction" className="la">
                       Направление
                     </label>
@@ -1748,7 +1748,7 @@ export default function HomePage() {
                       placeholder="Выберите Направление"
                       className="input-text"
                     />
-                  </div>
+                  </div> */}
                   <div className="input-container">
                     <label htmlFor="doctor" className="la">
                       Врач

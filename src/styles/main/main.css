@@ -792,15 +792,19 @@ body .loader .loader-container .loading-heading {
   body .screen .content {
     display: none;
   }
+  body .screen .css-zvi4ix {
+    width: 100% !important;
+  }
   body .screen .pc-content {
-    width: 100%;
+    width: 100% !important;
     height: auto;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     background-color: #F4F4F4;
+    margin-bottom: 0px !important;
   }
   body .screen .pc-content .white-content {
-    width: 100%;
+    width: 100% !important;
     height: auto;
     display: flex;
     align-items: center;
@@ -845,7 +849,35 @@ body .loader .loader-container .loading-heading {
     align-items: center;
   }
   body .screen .pc-content .white-content .blue-content .photos .photo-container .doctor-names {
-    display: none;
+    width: 100%;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    z-index: 100 !important;
+    top: clamp(616px, 64.16256vw, 2464px) !important;
+    left: clamp(150px, 15.624vw, 600px) !important;
+  }
+  body .screen .pc-content .white-content .blue-content .photos .photo-container .doctor-names .name {
+    text-align: center;
+    font-family: Merriweather;
+    font-size: clamp(16px, 1.66656vw, 64px);
+    color: #E8CB6C;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 137.4%;
+    text-transform: capitalize;
+  }
+  body .screen .pc-content .white-content .blue-content .photos .photo-container .doctor-names .under-text {
+    color: rgba(255, 255, 255, 0.35);
+    text-align: center;
+    font-family: Merriweather;
+    font-size: clamp(11.5px, 1.19784vw, 46px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 137.4%;
+    margin-top: clamp(4px, 0.41664vw, 16px);
+    text-transform: capitalize;
   }
   body .screen .pc-content .white-content .blue-content .photos .photo-container .pavel {
     width: clamp(175px, 18.228vw, 700px);

@@ -797,15 +797,19 @@ body
             .content
                 display: none
 
+            .css-zvi4ix
+                width: 100% !important
+
             .pc-content
-                width: 100%
+                width: 100% !important
                 height: auto
-                display: flex
+                display: flex !important
                 flex-direction: column
                 background-color: $white
+                margin-bottom: 0px !important
 
                 .white-content
-                    width: 100%
+                    width: 100% !important
                     height: auto
                     display: flex
                     align-items: center
@@ -845,12 +849,39 @@ body
 
                             .photo-container
                                 display: flex
-                                // position: relative
                                 flex-direction: column
                                 align-items: center
 
                                 .doctor-names
-                                    display: none
+                                    width: 100%
+                                    display: flex !important
+                                    flex-direction: column
+                                    align-items: center
+                                    position: absolute
+                                    z-index: 100 !important
+                                    top: clamp(616px,64.16256vw,2464px) !important
+                                    left: clamp(150px,15.624vw,600px) !important
+
+                                    .name
+                                        text-align: center
+                                        font-family: Merriweather
+                                        font-size: $m32
+                                        color: $gold
+                                        font-style: normal
+                                        font-weight: 400
+                                        line-height: 137.4%
+                                        text-transform: capitalize
+
+                                    .under-text
+                                        color: rgba(255, 255, 255, 0.35)
+                                        text-align: center
+                                        font-family: Merriweather
+                                        font-size: clamp(11.5px,1.19784vw,46px)
+                                        font-style: normal
+                                        font-weight: 400
+                                        line-height: 137.4%
+                                        margin-top: $m8
+                                        text-transform: capitalize
 
                                 .pavel
                                     width: clamp(175px,18.228vw,700px)
