@@ -10,6 +10,7 @@ import TeethHealing from "./pages/services/teeth-healing/TeethHealing";
 import ChildDental from "./pages/children-dental/ChildrenDental";
 import PricesPage from "./pages/prices/PricesPage";
 import Privacy from "./pages/privacy/PrivacyPage";
+import ReviewsPage from "./pages/reviews/ReviewsPage";
 
 ReactDOM.render(
   <Router>
@@ -19,6 +20,7 @@ ReactDOM.render(
       <Route path="/children-dental" element={<ChildDental />}></Route>
       <Route path="/prices" element={<PricesPage />}></Route>
       <Route path="/privacy" element={<Privacy />}></Route>
+      <Route path="/reviews" element={<ReviewsPage />}></Route>
     </Routes>
   </Router>,
   document.getElementById("root")

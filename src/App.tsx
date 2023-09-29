@@ -1869,7 +1869,7 @@ export default function HomePage() {
                     />
                   </div>
                 </div>
-                <button className="form-button" onClick={openPopupWindow}>
+                <button className="form-button" onClick={sendEmail}>
                   Записаться на прием
                   <FontAwesomeIcon
                     className="icon"
