@@ -24,6 +24,8 @@ interface PhotoSource {
   imageSrcFive?: any;
   imageSrcSix?: any;
   imageSrcSeven?: any;
+  imageSrcEight?: any;
+  imageSrcNine?: any;
   openModal?: any;
 }
 
@@ -35,6 +37,8 @@ const Gallery: React.FC<PhotoSource> = ({
   imageSrcFive,
   imageSrcSix,
   imageSrcSeven,
+  imageSrcEight,
+  imageSrcNine,
   openModal,
 }) => {
   const swiperRef = React.useRef<Swiper | null>(null);
@@ -81,10 +85,8 @@ const Gallery: React.FC<PhotoSource> = ({
               </button>
               <img src={imageSrc} alt="Doctor 1" className="doctor-image" />
             </div>
-            <h3 className="doctor-name">Тамаров Павел Сергеевич</h3>
-            <p className="doctor-position">
-              Главный врач, врач-ортопед, врач-хирург,имплантолог{" "}
-            </p>
+            <h3 className="doctor-name">Аманова Альфия Камиловна</h3>
+            <p className="doctor-position">Врач стоматолог-терапевт</p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -95,10 +97,8 @@ const Gallery: React.FC<PhotoSource> = ({
               </button>
               <img src={imageSrcTwo} alt="Doctor 2" className="doctor-image" />
             </div>
-            <h3 className="doctor-name">Тамаров Павел Сергеевич</h3>
-            <p className="doctor-position">
-              Главный врач, врач-ортопед, врач-хирург,имплантолог{" "}
-            </p>
+            <h3 className="doctor-name">Таха Дана Юрьевна</h3>
+            <p className="doctor-position">Управляющий</p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -117,6 +117,86 @@ const Gallery: React.FC<PhotoSource> = ({
             <p className="doctor-position">
               Главный врач, врач-ортопед, врач-хирург,имплантолог{" "}
             </p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="dentist-card-2">
+            <div className="button-image-container">
+              <button className="doctor-btn" onClick={openModal}>
+                <span className="text">Записаться</span>
+              </button>
+              <img src={imageSrcFour} alt="Doctor 3" className="doctor-image" />
+            </div>
+            <h3 className="doctor-name">Пятаев Ислам Рушанович</h3>
+            <p className="doctor-position">Стоматолог терапевт-микроскопист</p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="dentist-card-2">
+            <div className="button-image-container">
+              <button className="doctor-btn" onClick={openModal}>
+                <span className="text">Записаться</span>
+              </button>
+              <img src={imageSrcFive} alt="Doctor 3" className="doctor-image" />
+            </div>
+            <h3 className="doctor-name">Терехова Елена Юрьевна`</h3>
+            <p className="doctor-position">Стоматолог-терапевт</p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="dentist-card-2">
+            <div className="button-image-container">
+              <button className="doctor-btn" onClick={openModal}>
+                <span className="text">Записаться</span>
+              </button>
+              <img src={imageSrcSix} alt="Doctor 3" className="doctor-image" />
+            </div>
+            <h3 className="doctor-name">Врач</h3>
+            <p className="doctor-position">Стоматолог</p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="dentist-card-2">
+            <div className="button-image-container">
+              <button className="doctor-btn" onClick={openModal}>
+                <span className="text">Записаться</span>
+              </button>
+              <img
+                src={imageSrcSeven}
+                alt="Doctor 3"
+                className="doctor-image"
+              />
+            </div>
+            <h3 className="doctor-name">Врач</h3>
+            <p className="doctor-position">Стоматолог</p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="dentist-card-2">
+            <div className="button-image-container">
+              <button className="doctor-btn" onClick={openModal}>
+                <span className="text">Записаться</span>
+              </button>
+              <img
+                src={imageSrcEight}
+                alt="Doctor 3"
+                className="doctor-image"
+              />
+            </div>
+            <h3 className="doctor-name">Врач</h3>
+            <p className="doctor-position">Стоматолог</p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="dentist-card-2">
+            <div className="button-image-container">
+              <button className="doctor-btn" onClick={openModal}>
+                <span className="text">Записаться</span>
+              </button>
+              <img src={imageSrcNine} alt="Doctor 3" className="doctor-image" />
+            </div>
+            <h3 className="doctor-name">Юлия</h3>
+            <p className="doctor-position">Администратор</p>
           </div>
         </SwiperSlide>
       </Swiper>

@@ -14,10 +14,29 @@ type Swiper = any;
 
 interface PhotoSource {
   imageSrc: any;
+  imageSrc2: any;
+  imageSrc3: any;
+  imageSrc4: any;
+  imageSrc5: any;
+  imageSrc6: any;
+  imageSrc7: any;
+  imageSrc8: any;
+  imageSrc9: any;
   openModal?: any;
 }
 
-const PcGallery: React.FC<PhotoSource> = ({ imageSrc, openModal }) => {
+const PcGallery: React.FC<PhotoSource> = ({
+  imageSrc,
+  imageSrc2,
+  imageSrc3,
+  imageSrc4,
+  imageSrc5,
+  imageSrc6,
+  imageSrc7,
+  imageSrc8,
+  imageSrc9,
+  openModal,
+}) => {
   const swiperRef = React.useRef<Swiper | null>(null);
 
   const handlePrev = () => {
@@ -61,10 +80,8 @@ const PcGallery: React.FC<PhotoSource> = ({ imageSrc, openModal }) => {
               </button>
               <img src={imageSrc} alt="Doctor 1" className="doctor-image" />
             </div>
-            <h3 className="doctor-name">Тамаров Павел Сергеевич</h3>
-            <p className="doctor-position">
-              Главный врач, врач-ортопед, врач-хирург,имплантолог{" "}
-            </p>
+            <h3 className="doctor-name">Аманова Альфия Камиловна</h3>
+            <p className="doctor-position">Врач стоматолог-терапевт</p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -73,12 +90,10 @@ const PcGallery: React.FC<PhotoSource> = ({ imageSrc, openModal }) => {
               <button className="doctor-btn" onClick={openModal}>
                 <span className="text">Записаться</span>
               </button>
-              <img src={imageSrc} alt="Doctor 1" className="doctor-image" />
+              <img src={imageSrc2} alt="Doctor 1" className="doctor-image" />
             </div>
-            <h3 className="doctor-name">Тамаров Павел Сергеевич</h3>
-            <p className="doctor-position">
-              Главный врач, врач-ортопед, врач-хирург,имплантолог{" "}
-            </p>
+            <h3 className="doctor-name">Таха Дана Юрьевна</h3>
+            <p className="doctor-position">Управляющий</p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -87,7 +102,7 @@ const PcGallery: React.FC<PhotoSource> = ({ imageSrc, openModal }) => {
               <button className="doctor-btn" onClick={openModal}>
                 <span className="text">Записаться</span>
               </button>
-              <img src={imageSrc} alt="Doctor 1" className="doctor-image" />
+              <img src={imageSrc3} alt="Doctor 1" className="doctor-image" />
             </div>
             <h3 className="doctor-name">Тамаров Павел Сергеевич</h3>
             <p className="doctor-position">
@@ -101,7 +116,31 @@ const PcGallery: React.FC<PhotoSource> = ({ imageSrc, openModal }) => {
               <button className="doctor-btn">
                 <span className="text">Записаться</span>
               </button>
-              <img src={imageSrc} alt="Doctor 1" className="doctor-image" />
+              <img src={imageSrc4} alt="Doctor 1" className="doctor-image" />
+            </div>
+            <h3 className="doctor-name">Пятаев Ислам Рушанович</h3>
+            <p className="doctor-position">Стоматолог терапевт-микроскопист </p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="dentist-card">
+            <div className="button-image-container">
+              <button className="doctor-btn">
+                <span className="text">Записаться</span>
+              </button>
+              <img src={imageSrc5} alt="Doctor 1" className="doctor-image" />
+            </div>
+            <h3 className="doctor-name">Терехова Елена Юрьевна</h3>
+            <p className="doctor-position">Стоматолог-терапевт</p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="dentist-card">
+            <div className="button-image-container">
+              <button className="doctor-btn">
+                <span className="text">Записаться</span>
+              </button>
+              <img src={imageSrc6} alt="Doctor 1" className="doctor-image" />
             </div>
             <h3 className="doctor-name">Тамаров Павел Сергеевич</h3>
             <p className="doctor-position">
@@ -115,12 +154,10 @@ const PcGallery: React.FC<PhotoSource> = ({ imageSrc, openModal }) => {
               <button className="doctor-btn">
                 <span className="text">Записаться</span>
               </button>
-              <img src={imageSrc} alt="Doctor 1" className="doctor-image" />
+              <img src={imageSrc7} alt="Doctor 1" className="doctor-image" />
             </div>
-            <h3 className="doctor-name">Тамаров Павел Сергеевич</h3>
-            <p className="doctor-position">
-              Главный врач, врач-ортопед, врач-хирург,имплантолог{" "}
-            </p>
+            <h3 className="doctor-name">Врач</h3>
+            <p className="doctor-position">Стоматолог </p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -129,12 +166,22 @@ const PcGallery: React.FC<PhotoSource> = ({ imageSrc, openModal }) => {
               <button className="doctor-btn">
                 <span className="text">Записаться</span>
               </button>
-              <img src={imageSrc} alt="Doctor 1" className="doctor-image" />
+              <img src={imageSrc8} alt="Doctor 1" className="doctor-image" />
             </div>
-            <h3 className="doctor-name">Тамаров Павел Сергеевич</h3>
-            <p className="doctor-position">
-              Главный врач, врач-ортопед, врач-хирург,имплантолог{" "}
-            </p>
+            <h3 className="doctor-name">Врач</h3>
+            <p className="doctor-position">Стоматолог </p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="dentist-card">
+            <div className="button-image-container">
+              <button className="doctor-btn">
+                <span className="text">Записаться</span>
+              </button>
+              <img src={imageSrc9} alt="Doctor 1" className="doctor-image" />
+            </div>
+            <h3 className="doctor-name">Юлия</h3>
+            <p className="doctor-position">Администратор</p>
           </div>
         </SwiperSlide>
       </Swiper>

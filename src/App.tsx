@@ -80,6 +80,27 @@ const galleryTwoPic = require("./assets/gallery_two_pic.webp");
 const logoMobile: string = require("./assets/logo_mob.svg").default;
 const servicesButton: string = require("./assets/service_button.svg").default;
 
+// Doctors
+const doctorOne = require("./assets/1.webp");
+const doctorTwo = require("./assets/2.webp");
+const doctorThree = require("./assets/3.webp");
+const doctorFour = require("./assets/4.webp");
+const doctorFive = require("./assets/5.webp");
+const doctorSix = require("./assets/6.webp");
+const doctorSeven = require("./assets/7.webp");
+const doctorEight = require("./assets/8.webp");
+const doctorNine = require("./assets/9.webp");
+
+const doctorOneMob = require("./assets/01.webp");
+const doctorTwoMob = require("./assets/02.webp");
+const doctorThreeMob = require("./assets/03.webp");
+const doctorFourMob = require("./assets/04.webp");
+const doctorFiveMob = require("./assets/05.webp");
+const doctorSixMob = require("./assets/06.webp");
+const doctorSevenMob = require("./assets/07.webp");
+const doctorEightMob = require("./assets/08.webp");
+const doctorNineMob = require("./assets/09.webp");
+
 // Gallery Photos
 const galleryOne = require("./assets/gallery01.webp");
 const galleryTwo = require("./assets/gallery02.webp");
@@ -1421,11 +1442,16 @@ export default function HomePage() {
               </div>
               <div className="divider"></div>
               <Gallery
-                imageSrc={pavelGallery}
-                imageSrcTwo={pavelGallery}
-                imageSrcThree={pavelGallery}
+                imageSrc={doctorOneMob}
+                imageSrcTwo={doctorTwoMob}
+                imageSrcThree={doctorThreeMob}
                 openModal={openModal}
-                imageSrcFour={pavelGallery}
+                imageSrcFour={doctorFourMob}
+                imageSrcFive={doctorFiveMob}
+                imageSrcSix={doctorSixMob}
+                imageSrcSeven={doctorSevenMob}
+                imageSrcEight={doctorEightMob}
+                imageSrcNine={doctorNineMob}
               />
             </section>
           </div>
@@ -1435,7 +1461,18 @@ export default function HomePage() {
                 <h3 className="heading">Наши специалисты</h3>
               </div>
               <div className="divider"></div>
-              <PcGallery imageSrc={pavelGalleryPc} openModal={openModal} />
+              <PcGallery
+                imageSrc={doctorOne}
+                imageSrc2={doctorTwo}
+                imageSrc3={doctorThree}
+                imageSrc4={doctorFour}
+                imageSrc5={doctorFive}
+                imageSrc6={doctorSix}
+                imageSrc7={doctorSeven}
+                imageSrc8={doctorEight}
+                imageSrc9={doctorNine}
+                openModal={openModal}
+              />
               <div
                 className="divider"
                 style={{ marginTop: "clamp(32px,3.33312vw,128px)" }}
@@ -1641,6 +1678,7 @@ export default function HomePage() {
                       className="input-c"
                       required={true}
                       value={fullName}
+                      name="fullName"
                       onChange={(event) => setFullName(event.target.value)}
                       placeholder="Иван Иванов"
                     />
@@ -1652,6 +1690,7 @@ export default function HomePage() {
                       className="input-c"
                       required={true}
                       value={phoneNumber}
+                      name="phoneNumber"
                       onChange={(event) => setPhoneNumber(event.target.value)}
                       placeholder="+7 (925) 222-90-22"
                     />
@@ -1665,22 +1704,13 @@ export default function HomePage() {
                       placeholder="Выберите Услугу"
                       required={true}
                       value={serviceName}
+                      name="serviceName"
                       onChange={(event) => setServiceName(event.target.value)}
                       className="input-s"
                     />
                   </div>
                 </div>
-                <div className="row-c">
-                  {/* <div className="input-container services">
-                      <span className="text">Направление</span>
-                      <input
-                        type="text"
-                        placeholder="Выберите Направление"
-                        className="input-s"
-                        required
-                      />
-                    </div> */}
-                </div>
+                <div className="row-c"></div>
                 <div className="row-c">
                   <div className="input-container services">
                     <span className="text">Врач</span>
@@ -1689,6 +1719,7 @@ export default function HomePage() {
                       placeholder="Выберите Врача"
                       required={true}
                       value={doctorName}
+                      name="doctorName"
                       onChange={(event) => setDoctorName(event.target.value)}
                       className="input-s"
                     />
@@ -1699,6 +1730,7 @@ export default function HomePage() {
                     <span className="text">Комментарий</span>
                     <textarea
                       className="comment"
+                      name="comment"
                       value={comment}
                       onChange={(event) => setComment(event.target.value)}
                     />
@@ -1711,7 +1743,11 @@ export default function HomePage() {
                       Ознакомлен с Условиями обработки персональных данных
                     </span>
                   </div>
-                  <button className="golden-btn" value="Send">
+                  <button
+                    className="golden-btn"
+                    value="Send"
+                    onClick={() => console.log(form)}
+                  >
                     Записаться на прием
                     <FontAwesomeIcon
                       icon={faChevronRight}
@@ -1753,7 +1789,10 @@ export default function HomePage() {
                   </label>
                   <input
                     type="text"
-                    name="name"
+                    required={true}
+                    value={fullName}
+                    name="fullName"
+                    onChange={(event) => setFullName(event.target.value)}
                     className="input-text"
                     placeholder="Иван Иванов"
                   />
@@ -1764,7 +1803,9 @@ export default function HomePage() {
                   </label>
                   <input
                     type="tel"
-                    name="phone"
+                    value={phoneNumber}
+                    onChange={(event) => setPhoneNumber(event.target.value)}
+                    name="phoneNumber"
                     className="input-text"
                     placeholder="+7 (925) 222-90-22"
                   />
@@ -1775,7 +1816,9 @@ export default function HomePage() {
                   </label>
                   <input
                     type="text"
-                    name="service"
+                    value={serviceName}
+                    onChange={(event) => setServiceName(event.target.value)}
+                    name="serviceName"
                     placeholder="Выберите Услугу"
                     className="input-text"
                   />
@@ -1797,7 +1840,9 @@ export default function HomePage() {
                   </label>
                   <input
                     type="text"
-                    name="doctor"
+                    name="doctorName"
+                    value={doctorName}
+                    onChange={(event) => setDoctorName(event.target.value)}
                     placeholder="Выберите Врача"
                     className="input-text"
                   />
@@ -1806,7 +1851,12 @@ export default function HomePage() {
                   <label htmlFor="comment" className="la">
                     Комментарий
                   </label>
-                  <textarea name="comment" className="comment"></textarea>
+                  <textarea
+                    name="comment"
+                    value={comment}
+                    onChange={(event) => setComment(event.target.value)}
+                    className="comment"
+                  ></textarea>
                 </div>
                 <div className="checkbox-container">
                   <div className="checkbox-container-2">
