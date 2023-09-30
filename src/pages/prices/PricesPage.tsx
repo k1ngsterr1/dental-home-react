@@ -975,6 +975,117 @@ const PricesPage = () => {
                       paragraph22="Замена винта трансокклюзионной фиксации"
                       price22="500₽"
                     ></PriceTabLong>
+                    <PriceTabLong
+                      tabHeadign="Внутрикостная дентальная имплантация системой"
+                      paragraphOne="Имплантация системой Dentium SuperLine (Ю.Корея) "
+                      priceOne="35000₽"
+                      paragraphTwo="Имплантация системой NeoDent GM (Бразилия) "
+                      priceTwo="3500₽"
+                      paragraphThree="Имплантация системой Nobel Biocare (Швейцария)"
+                      priceThree="70000₽"
+                      paragraphFour="Миниимплант (ортовинт) "
+                      priceFour="9000₽"
+                    ></PriceTabLong>
+                    <PriceTabLong
+                      tabHeadign="Формирователь десны"
+                      paragraphOne="Установка формирователя десны SuperLine"
+                      priceOne="3000₽"
+                      paragraphTwo="Установка формирователя десны Strumann"
+                      priceTwo="6000₽"
+                      paragraphThree="Установка формирователя десны NeoDent GM"
+                      priceThree="3000₽"
+                      paragraphFour="Установка формирователя десны"
+                      priceFour="3000₽"
+                    ></PriceTabLong>
+                    <PriceTabLong
+                      tabHeadign="Синус-лифтинг"
+                      paragraphOne="Синус-лифтинг (без учета стоимости материалов) -закрытый"
+                      priceOne="12000₽"
+                      paragraphTwo="Синус-лифтинг (без учета стоимости материалов) -открытый "
+                      priceTwo="25000₽"
+                      paragraphThree="Направленная костная регенерация (HKP) титановой сеткой"
+                      priceThree="25000₽"
+                      paragraphFour="Подсыпка костной ткани после удаления Bio-Oss"
+                      priceFour="5000₽"
+                      paragraphFive="Костная пластика челюстно-лицевой области с применением биодеградируемых материалов (костно-пластический материал Bio-Oss 0,5 гр.)"
+                      priceFive="15000₽"
+                      paragraphSix="Костная пластика челюстно-лицевой области с применением биодеградируемых материалов (мембраны Bio-Gide) 1 шт"
+                      priceSix="22000₽"
+                      paragraphSeven="Использование хирургического шаблона от 3 зубов"
+                      priceSeven="15000₽"
+                      paragraphEight="Использование хирургического шаблона от 4 зубов "
+                      priceEight="24000₽"
+                      paragraphNine="Переустановка импланта"
+                      priceNine="7500₽"
+                    ></PriceTabLong>
+                  </div>
+                  <div
+                    className=""
+                    id="reconstruction"
+                    style={{ marginTop: "clamp(32px,3.33312vw,128px)" }}
+                  >
+                    <h2 className="heading">Реконструктивное лечение</h2>
+                    <PriceTabLong
+                      tabHeadign="Реконструктивное лечение"
+                      paragraphOne="Инъекционное введение лекарственных препаратов в челюстно-лицевую область"
+                      priceOne="380₽"
+                      paragraphTwo="Аппликация лекарственного препарата на слизистую оболочку полости рта"
+                      priceTwo="550₽"
+                      paragraphThree="Ультразвуковая обработка пародонтального кармана в области зуба с применением лекарственных средств (лечение заболеваний пародонта аппаратом `Vector Para Pro` в области 1 зуба/импланта"
+                      priceThree="800₽"
+                      paragraphFour="Ультразвуковая обработка пародонтального кармана в области зуба с применением лекарственных средств (лечение заболеваний пародонта аппаратом `Vector Para Pro` 2 челюсти)"
+                      priceFour="10000₽"
+                      paragraphFive="Лазерная физиотерапия челюстно-лицевой области (1 процедура)"
+                      priceFive="350₽"
+                    ></PriceTabLong>
+                  </div>
+                  <div
+                    className=""
+                    id="orthodontia"
+                    style={{ marginTop: "clamp(32px,3.33312vw,128px)" }}
+                  >
+                    <h2 className="heading">Ортодонтия</h2>
+                    <PriceTabLong
+                      tabHeadign="Ортодоническая коррекция с применением брекет-системы"
+                      paragraphOne="I степени сложности "
+                      priceOne="65000₽"
+                      paragraphTwo="II степени сложности"
+                      priceTwo="70000₽"
+                      paragraphThree="III степени сложности"
+                      priceThree="75000₽"
+                      paragraphFour="Фиксация брекет-системы (одна челюсть)"
+                      priceFour="80000₽"
+                      paragraphFive="Фиксация эстетической брекет-системы (одна челюсть) "
+                      priceFive="95000₽"
+                      paragraphSix="Брекет-система металлическая безлигатурная"
+                      priceSix="25000₽"
+                      paragraphSeven="Брекет-система Damon Q "
+                      priceSeven="30000₽"
+                      paragraphEight="Брекет-система сапфировая, керамическая"
+                      priceEight="32500₽"
+                      paragraphTen="Брекет-система керамическая безлигатурная"
+                      priceTen="35000₽"
+                      paragraph11="Фиксация одного брекета"
+                      price11="2500₽"
+                      paragraph12="Замена одного брекета"
+                      price12="3000₽"
+                      paragraph13="Снятие брекетов с одного зубного ряда"
+                      price13="2000₽"
+                      paragraph14="Снятие одного брекета"
+                      price14="400₽"
+                      paragraph15="Замена дуги"
+                      price15="3000₽"
+                      paragraph16="Установка открывающей, закрывающей пружины"
+                      price16="1000₽"
+                      paragraph17="Установка чейна (1 звено) "
+                      price17="130₽"
+                      paragraph18="Установка лигатуры (1 шт.) "
+                      price18="70₽"
+                      paragraph19="Наложение длинной лигатуры"
+                      price19="400₽"
+                      paragraph20="Изгиб на дуге"
+                      price20="200₽"
+                    ></PriceTabLong>
                   </div>
                 </div>
               </div>
