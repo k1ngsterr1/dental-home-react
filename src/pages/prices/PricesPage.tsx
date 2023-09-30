@@ -7,6 +7,7 @@ import { keyframes } from "@emotion/react";
 import { Reveal } from "react-awesome-reveal";
 
 import "../prices/styles/prices_styles.css";
+import { Link as ScrollLink } from "react-scroll";
 
 const logoMobile: string = require("../../assets/logo_mob.svg").default;
 
@@ -44,6 +45,38 @@ interface PriceTabProps {
   price15?: any;
   paragraph16?: any;
   price16?: any;
+  paragraph17?: any;
+  price17?: any;
+  paragraph18?: any;
+  price18?: any;
+  paragraph19?: any;
+  price19?: any;
+  paragraph20?: any;
+  price20?: any;
+  paragraph21?: any;
+  price21?: any;
+  paragraph22?: any;
+  price22?: any;
+  paragraph23?: any;
+  price23?: any;
+  paragraph24?: any;
+  price24?: any;
+  paragraph25?: any;
+  price25?: any;
+  paragraph26?: any;
+  price26?: any;
+  paragraph27?: any;
+  price27?: any;
+  paragraph28?: any;
+  price28?: any;
+  paragraph29?: any;
+  price29?: any;
+  paragraph30?: any;
+  price30?: any;
+  paragraph31?: any;
+  price31?: any;
+  paragraph32?: any;
+  price32?: any;
   style?: any;
 }
 
@@ -148,7 +181,6 @@ const PriceTabLong: React.FC<PriceTabProps> = (props) => {
           <span className="price-three">{props.price14}</span>
         </>
       )}
-
       {props.paragraph15 && (
         <>
           <p className="price-p-three">{props.paragraph15}</p>
@@ -161,18 +193,100 @@ const PriceTabLong: React.FC<PriceTabProps> = (props) => {
           <span className="price-three">{props.price16}</span>
         </>
       )}
-
-      {props.paragraph13 && (
+      {props.paragraph17 && (
         <>
-          <p className="price-p-three">{props.paragraph13}</p>
-          <span className="price-three">{props.price13}</span>
+          <p className="price-p-three">{props.paragraph17}</p>
+          <span className="price-three">{props.price17}</span>
         </>
       )}
-
-      {props.paragraph13 && (
+      {props.paragraph18 && (
         <>
-          <p className="price-p-three">{props.paragraph13}</p>
-          <span className="price-three">{props.price13}</span>
+          <p className="price-p-three">{props.paragraph18}</p>
+          <span className="price-three">{props.price18}</span>
+        </>
+      )}
+      {props.paragraph19 && (
+        <>
+          <p className="price-p-three">{props.paragraph19}</p>
+          <span className="price-three">{props.price19}</span>
+        </>
+      )}
+      {props.paragraph20 && (
+        <>
+          <p className="price-p-three">{props.paragraph20}</p>
+          <span className="price-three">{props.price20}</span>
+        </>
+      )}
+      {props.paragraph21 && (
+        <>
+          <p className="price-p-three">{props.paragraph21}</p>
+          <span className="price-three">{props.price21}</span>
+        </>
+      )}
+      {props.paragraph22 && (
+        <>
+          <p className="price-p-three">{props.paragraph22}</p>
+          <span className="price-three">{props.price22}</span>
+        </>
+      )}
+      {props.paragraph23 && (
+        <>
+          <p className="price-p-three">{props.paragraph23}</p>
+          <span className="price-three">{props.price23}</span>
+        </>
+      )}
+      {props.paragraph24 && (
+        <>
+          <p className="price-p-three">{props.paragraph24}</p>
+          <span className="price-three">{props.price24}</span>
+        </>
+      )}
+      {props.paragraph25 && (
+        <>
+          <p className="price-p-three">{props.paragraph25}</p>
+          <span className="price-three">{props.price25}</span>
+        </>
+      )}
+      {props.paragraph26 && (
+        <>
+          <p className="price-p-three">{props.paragraph26}</p>
+          <span className="price-three">{props.price26}</span>
+        </>
+      )}
+      {props.paragraph27 && (
+        <>
+          <p className="price-p-three">{props.paragraph27}</p>
+          <span className="price-three">{props.price27}</span>
+        </>
+      )}{" "}
+      {props.paragraph28 && (
+        <>
+          <p className="price-p-three">{props.paragraph28}</p>
+          <span className="price-three">{props.price28}</span>
+        </>
+      )}{" "}
+      {props.paragraph29 && (
+        <>
+          <p className="price-p-three">{props.paragraph29}</p>
+          <span className="price-three">{props.price29}</span>
+        </>
+      )}
+      {props.paragraph30 && (
+        <>
+          <p className="price-p-three">{props.paragraph30}</p>
+          <span className="price-three">{props.price30}</span>
+        </>
+      )}{" "}
+      {props.paragraph31 && (
+        <>
+          <p className="price-p-three">{props.paragraph31}</p>
+          <span className="price-three">{props.price31}</span>
+        </>
+      )}
+      {props.paragraph32 && (
+        <>
+          <p className="price-p-three">{props.paragraph32}</p>
+          <span className="price-three">{props.price32}</span>
         </>
       )}
       <button className="blue-btn">Записаться</button>
@@ -181,13 +295,6 @@ const PriceTabLong: React.FC<PriceTabProps> = (props) => {
 };
 
 const PricesPage = () => {
-  const [displayNone, setDisplayNone] = useState("");
-  const [displayNoneTwo, setDisplayNoneTwo] = useState("");
-  const [displayNoneThree, setDisplayNoneThree] = useState("");
-  const [displayNoneFour, setDisplayNoneFour] = useState("");
-  const [displayNoneFive, setDisplayNoneFive] = useState("");
-  const [displayNoneSix, setDisplayNoneSix] = useState("");
-
   const customAnimation = keyframes`
   from {
     opacity: 1;
@@ -200,751 +307,7 @@ const PricesPage = () => {
   }
 `;
 
-  const [heading, setHeading] = useState("Ортопедия");
-
-  const [serviceName, setServiceName] = useState("Ортопедия");
-  const [serviceNameTwo, setServiceNameTwo] = useState("Оттиски");
-  const [serviceNameThree, setServiceNameThree] = useState("Вкладки");
-  const [serviceNameFour, setServiceNameFour] = useState("Коронки");
-  const [serviceNameFive, setServiceNameFive] = useState(
-    "Восстановление зуба виниром E-max"
-  );
-  const [serviceNameSix, setServiceNameSix] = useState(
-    "Съемные, бюгельные протезы"
-  );
-  const [serviceNameSeven, setServiceNameSeven] = useState("Ортопедия");
-  const [serviceNameEight, setServiceNameEight] = useState("Ортопедия");
-  const [serviceNameNine, setServiceNameNine] = useState("Ортопедия");
-  const [serviceNameTen, setServiceNameTen] = useState("Ортопедия");
-  const [serviceName11, setServiceName11] = useState("Ортопедия");
-
-  const [serviceParagraph, setServiceParagraph] = useState(
-    "Повторная фиксация на постоянный цемент несъемных ортопедических конструкций"
-  );
-
-  const [serviceParagraphTwo, setServiceParagraphTwo] = useState(
-    "Фиксация на RELYX Luting несъемных ортопедических конструкций 2 000Р"
-  );
-
-  const [serviceParagraphThree, setServiceParagraphThree] = useState(
-    "Фиксация несъемных ортопедических конструкций на временный цемент Temp bond"
-  );
-
-  const [serviceParagraphFour, setServiceParagraphFour] = useState(
-    "Снятие несъемной ортопедической конструкции (1 единица) "
-  );
-
-  const [serviceParagraphFive, setServiceParagraphFive] =
-    useState("Удаление вкладки");
-
-  const [serviceParagraphSix, setServiceParagraphSix] = useState(
-    "Коррекция протеза, изготовленного в другой клинике"
-  );
-
-  const [serviceParagraphSeven, setServiceParagraphSeven] = useState(
-    "Коррекция протеза, изготовленного в другой клинике"
-  );
-
-  const [serviceParagraphEight, setServiceParagraphEight] = useState(
-    "Коррекция протеза, изготовленного в другой клинике"
-  );
-
-  const [serviceParagraphNine, setServiceParagraphNine] = useState(
-    "Коррекция протеза, изготовленного в другой клинике - 9"
-  );
-
-  const [serviceParagraphTen, setServiceParagraphTen] = useState(
-    "Коррекция протеза, изготовленного в другой клинике - 10"
-  );
-
-  const [serviceParagraph11, setServiceParagraph11] = useState(
-    "Коррекция протеза, изготовленного в другой клинике - 11"
-  );
-
-  const [serviceParagraph12, setServiceParagraph12] = useState(
-    "Коррекция протеза, изготовленного в другой клинике - 12"
-  );
-
-  const [serviceParagraph13, setServiceParagraph13] = useState(
-    "Коррекция протеза, изготовленного в другой клинике - 13"
-  );
-
-  const [serviceParagraph14, setServiceParagraph14] = useState(
-    "Снятие оттиска с одной челюсти альгинатными массами"
-  );
-
-  const [serviceParagraph15, setServiceParagraph15] = useState(
-    "Снятие оттиска с одной челюсти массой из С-силикона"
-  );
-
-  const [serviceParagraph16, setServiceParagraph16] = useState(
-    "Снятие оттиска с одной челюсти массой из А-силикона"
-  );
-
-  const [serviceParagraph17, setServiceParagraph17] =
-    useState("Прикусной блок ");
-
-  const [serviceParagraph18, setServiceParagraph18] = useState(
-    "Изготовление прикусного шаблона и индивидуальной ложки"
-  );
-
-  const [serviceParagraph19, setServiceParagraph19] = useState(
-    "Снятие оттиска с одной челюсти для изготовления силиконового ключа"
-  );
-
-  const [serviceParagraph20, setServiceParagraph20] = useState(
-    "Снятие оттиска с одной челюсти с имплантов с использованием индивидуальной ложки "
-  );
-
-  const [serviceParagraph21, setServiceParagraph21] = useState(
-    "Wax up восковое моделирование"
-  );
-
-  const [serviceParagraph22, setServiceParagraph22] = useState(
-    "Цифровой оттиск (сканирование верхней и нижней челюсти, прикус)"
-  );
-
-  const [serviceParagraph23, setServiceParagraph23] = useState(
-    "Восстановление зуба с использованием керамической вкладки (накладки) Emax"
-  );
-
-  const [serviceParagraph24, setServiceParagraph24] = useState(
-    "Восстановление зуба с использованием цельнолитой культевой вкладки"
-  );
-
-  const [serviceParagraph25, setServiceParagraph25] = useState(
-    "Восстановление зуба с использованием культевой вкладки из диоксида циркония"
-  );
-
-  const [serviceParagraph26, setServiceParagraph26] = useState(
-    "Восстановление зуба с использованием золотой вкладки (без стоимости золота)"
-  );
-
-  const [serviceParagraph27, setServiceParagraph27] = useState(
-    "Восстановление зуба коронкой временной прямым методом"
-  );
-
-  const [serviceParagraph28, setServiceParagraph28] = useState(
-    "Восстановление зуба коронкой временной лабораторным способом "
-  );
-
-  const [serviceParagraph29, setServiceParagraph29] = useState(
-    "Восстановление зуба коронкой металлокерамической класса `стандарт`"
-  );
-
-  const [serviceParagraph30, setServiceParagraph30] = useState(
-    "Восстановление зуба коронкой металлокерамической класса `премиум`"
-  );
-
-  const [serviceParagraph31, setServiceParagraph31] = useState(
-    "Восстановление зуба коронкой металлокерамической на драгоценном сплаве (без учета стоимости драгоценного металла)"
-  );
-
-  const [serviceParagraph32, setServiceParagraph32] = useState(
-    "Восстановление зуба коронкой из диоксида циркония класса `стандарт`"
-  );
-
-  const [serviceParagraph33, setServiceParagraph33] = useState(
-    "Восстановление зуба коронкой из диоксида циркония класса `премиум`"
-  );
-  const [serviceParagraph34, setServiceParagraph34] = useState(
-    "Восстановление зуба коронкой металлокерамической класса `стандарт`"
-  );
-
-  const [serviceParagraph35, setServiceParagraph35] = useState(
-    "Восстановление зуба виниром E-max класса `стандарт`"
-  );
-
-  const [serviceParagraph36, setServiceParagraph36] = useState(
-    "Восстановление зуба виниром E-max класса `премиум`"
-  );
-
-  const [serviceParagraph37, setServiceParagraph37] = useState(
-    "Диагностика прикуса при помощи миостимулятора `МИСТ ТЕНС`"
-  );
-  const [serviceParagraph38, setServiceParagraph38] = useState(
-    "Протезирование зубов полным съемным пластиночным протезом (Японский гарнитур, пластм)"
-  );
-
-  const [serviceParagraph39, setServiceParagraph39] = useState(
-    "Протезирование частичным съемным пластиночным протезом для временного замещения отсутствующих 1-3 зубов (иммедиат-протез) "
-  );
-
-  const [serviceParagraph40, setServiceParagraph40] = useState(
-    "Протезирование частичным съемным пластиночным протезом (Японский гарнитур, пластм)"
-  );
-  const [serviceParagraph41, setServiceParagraph41] = useState(
-    "Протезирование съемным бюгельным протезом кламерным"
-  );
-  const [serviceParagraph42, setServiceParagraph42] = useState(
-    "Протезирование съемным бюгельным протезом шинирующим"
-  );
-  const [serviceParagraph43, setServiceParagraph43] = useState(
-    "Протезирование съемным бюгельным протезом с замковыми креплениями Bredent "
-  );
-  const [serviceParagraph44, setServiceParagraph44] = useState(
-    "Протезирование съемным бюгельным протезом Квадротти"
-  );
-  const [serviceParagraph45, setServiceParagraph45] = useState(
-    "Изготовление ночной каппы при бруксизме"
-  );
-
-  const [serviceParagraph46, setServiceParagraph46] = useState(
-    "Изготовление каппы для отбеливания (реминерализации)"
-  );
-
-  const [serviceParagraph47, setServiceParagraph47] = useState(
-    "Изготовление спортивной каппы"
-  );
-
-  const [serviceParagraph48, setServiceParagraph48] = useState(
-    "Определение центрального соотношения целюстей и центральной окклюзии"
-  );
-
-  const [price, setPrice] = useState("1500₽");
-  const [priceTwo, setPriceTwo] = useState("2000₽");
-  const [priceThree, setPriceThree] = useState("700₽");
-  const [priceFour, setPriceFour] = useState("1000₽");
-  const [priceFive, setPriceFive] = useState("4000₽");
-  const [priceSix, setPriceSix] = useState("1500₽");
-  const [priceSeven, setPriceSeven] = useState("5500₽");
-  const [priceEight, setPriceEight] = useState("5500₽");
-  const [priceNine, setPriceNine] = useState("5500₽");
-  const [priceTen, setPriceTen] = useState("5500₽");
-  const [price11, setPrice11] = useState("5000₽");
-  const [price12, setPrice12] = useState("1500₽");
-  const [price13, setPrice13] = useState("20000₽");
-  const [price14, setPrice14] = useState("1000₽");
-  const [price15, setPrice15] = useState("1500₽");
-  const [price16, setPrice16] = useState("2000₽");
-  const [price17, setPrice17] = useState("1000₽");
-  const [price18, setPrice18] = useState("3500₽");
-  const [price19, setPrice19] = useState("1500₽");
-  const [price20, setPrice20] = useState("2500₽");
-  const [price21, setPrice21] = useState("2000₽");
-  const [price22, setPrice22] = useState("5500₽");
-  const [price23, setPrice23] = useState("25000₽");
-  const [price24, setPrice24] = useState("7000₽");
-  const [price25, setPrice25] = useState("15000₽");
-  const [price26, setPrice26] = useState("10000₽");
-  const [price27, setPrice27] = useState("2000₽");
-  const [price28, setPrice28] = useState("3500₽");
-  const [price29, setPrice29] = useState("12000₽");
-  const [price30, setPrice30] = useState("18500₽");
-  const [price31, setPrice31] = useState("18500₽");
-  const [price32, setPrice32] = useState("18000₽");
-  const [price33, setPrice33] = useState("27000₽");
-  const [price34, setPrice34] = useState("3500₽");
-  const [price35, setPrice35] = useState("25000₽");
-  const [price36, setPrice36] = useState("35000₽");
-  const [price37, setPrice37] = useState("40000₽");
-  const [price38, setPrice38] = useState("9500₽");
-  const [price39, setPrice39] = useState("40000₽");
-  const [price40, setPrice40] = useState("45000₽");
-  const [price41, setPrice41] = useState("48000₽");
-  const [price42, setPrice42] = useState("55000₽");
-  const [price43, setPrice43] = useState("45000₽");
-  const [price44, setPrice44] = useState("9000₽");
-  const [price45, setPrice45] = useState("4000₽");
-  const [price46, setPrice46] = useState("10000₽");
-  const [price47, setPrice47] = useState("0₽");
-
-  const [isToothHealingOpened, setToothHealingOpen] = useState(true);
-  const [isWhiteningOpened, setWhiteningOpen] = useState(false);
-  const [isMouthHygieneOpened, setMouthHygieneOpen] = useState(false);
-  const [isHealingInSleepOpened, setHealingInSleepOpen] = useState(false);
-  const [isVinirsOpened, setVinirsOpen] = useState(false);
-  const [isParodontHealingOpened, setParodontHealingOpen] = useState(false);
-  const [isProthesisOpened, setProthesisOpen] = useState(false);
-  const [isDiagnosisOpened, setDiagnosisOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-
-  const toothHealingExpansion = () => {
-    setToothHealingOpen(!isToothHealingOpened);
-    setWhiteningOpen(false);
-    setMouthHygieneOpen(false);
-    setHealingInSleepOpen(false);
-    setParodontHealingOpen(false);
-    setVinirsOpen(false);
-    setProthesisOpen(false);
-    setDiagnosisOpen(false);
-    setHeading("Ортопедия");
-    setServiceName("Ортопедия");
-    setServiceNameTwo("Оттиски");
-    setServiceNameThree("Вкладки");
-    setServiceParagraph(
-      "Повторная фиксация на постоянный цемент несъемных ортопедических конструкций"
-    );
-    setServiceParagraphTwo(
-      "Фиксация на RELYX Luting несъемных ортопедических конструкций"
-    );
-    setServiceParagraphThree(
-      "Фиксация несъемных ортопедических конструкций на временный цемент Temp bond "
-    );
-    setServiceParagraphFour(
-      "Снятие несъемной ортопедической конструкции (1 единица) "
-    );
-    setServiceParagraphFive("Удаление вкладки");
-    setServiceParagraphSix(
-      "Коррекция протеза, изготовленного в другой клинике"
-    );
-    setServiceParagraphSeven(
-      "Починка (перебазировка) съемного протеза лабораторным методом"
-    );
-    setServiceParagraphEight("Приварка 1 кламмера ");
-    setServiceParagraphNine("Приварка 1 зуба ");
-    setServiceParagraphTen("Замена матрицы на бюгельном протезе (1 протез)");
-    setServiceParagraph11("Изготовление каппы для депрограмирования мышц");
-    setServiceParagraph12(
-      "Коррекция съемного протеза изготовленного в другой клинике"
-    );
-    setServiceParagraph13("Каппа для стабилизации прикуса (Ортотик) ");
-    setServiceParagraph14(
-      "Снятие оттиска с одной челюсти альгинатными массами "
-    );
-    setServiceParagraph15(
-      "Снятие оттиска с одной челюсти массой из С-силикона"
-    );
-    setServiceParagraph16(
-      "Снятие оттиска с одной челюсти массой из А-силикона "
-    );
-    setServiceParagraph17("Прикусной блок");
-    setServiceParagraph18(
-      "Изготовление прикусного шаблона и индивидуальной ложки"
-    );
-    setServiceParagraph19(
-      "Снятие оттиска с одной челюсти для изготовления силиконового ключа"
-    );
-
-    setServiceParagraph20(
-      "Снятие оттиска с одной челюсти с имплантов с использованием индивидуальной ложки "
-    );
-
-    setServiceParagraph21("Wax up восковое моделирование");
-
-    setServiceParagraph22(
-      "Цифровой оттиск (сканирование верхней и нижней челюсти, прикус) "
-    );
-
-    setServiceParagraph23(
-      "Восстановление зуба с использованием керамической вкладки (накладки) Emax"
-    );
-
-    setServiceParagraph24(
-      "Восстановление зуба с использованием цельнолитой культевой вкладки"
-    );
-
-    setServiceParagraph25(
-      "Восстановление зуба с использованием культевой вкладки из диоксида циркония "
-    );
-
-    setServiceParagraph26(
-      "Восстановление зуба с использованием золотой вкладки (без стоимости золота) "
-    );
-
-    setServiceParagraph27(
-      "Восстановление зуба коронкой временной прямым методом"
-    );
-
-    setServiceParagraph28(
-      "Восстановление зуба коронкой временной лабораторным способом "
-    );
-
-    setServiceParagraph29(
-      "Восстановление зуба коронкой металлокерамической класса `стандарт`"
-    );
-
-    setServiceParagraph30(
-      "Восстановление зуба коронкой металлокерамической класса `премиум`"
-    );
-
-    setServiceParagraph31(
-      "Восстановление зуба коронкой металлокерамической на драгоценном сплаве (без учета стоимости драгоценного металла)"
-    );
-
-    setServiceParagraph32(
-      "Восстановление зуба коронкой из диоксида циркония класса `стандарт`"
-    );
-
-    setServiceParagraph33(
-      "Восстановление зуба коронкой из диоксида циркония класса `премиум`"
-    );
-
-    setServiceParagraph34(
-      "Восстановление зуба виниром E-max класса `стандарт`"
-    );
-
-    setServiceParagraph35("Восстановление зуба виниром E-max класса `премиум`");
-
-    setServiceParagraph36(
-      "Диагностика прикуса при помощи миостимулятора `МИСТ ТЕНС`"
-    );
-
-    setServiceParagraph37(
-      "Протезирование зубов полным съемным пластиночным протезом (Японский гарнитур, пластм)"
-    );
-
-    setServiceParagraph38(
-      "Протезирование зубов полным съемным пластиночным протезом (Японский гарнитур, пластм)"
-    );
-
-    setServiceParagraph39(
-      "Протезирование частичным съемным пластиночным протезом для временного замещения отсутствующих 1-3 зубов (иммедиат-протез) "
-    );
-    setServiceParagraph40(
-      "Протезирование частичным съемным пластиночным протезом (Японский гарнитур, пластм)"
-    );
-    setServiceParagraph41(
-      "Протезирование съемным бюгельным протезом кламерным"
-    );
-    setServiceParagraph42(
-      "Протезирование съемным бюгельным протезом шинирующим"
-    );
-    setServiceParagraph43(
-      "Протезирование съемным бюгельным протезом с замковыми креплениями Bredent"
-    );
-    setServiceParagraph44(
-      "Протезирование съемным бюгельным протезом Квадротти"
-    );
-    setServiceParagraph45("Изготовление ночной каппы при бруксизме");
-    setServiceParagraph46(
-      "Изготовление каппы для отбеливания (реминерализации)"
-    );
-    setServiceParagraph47("Изготовление спортивной каппы");
-    setServiceParagraph48(
-      "Определение центрального соотношения целюстей и центральной окклюзии"
-    );
-
-    setPrice("1500₽");
-    setPriceTwo("2000₽");
-    setPriceThree("700₽");
-    setPriceFour("1000₽");
-    setPriceFive("4000₽");
-    setPriceSix("1500₽");
-    setPriceSeven("5500₽");
-    setPriceEight("5500₽");
-    setPriceNine("5500₽");
-    setPriceTen("5500₽");
-    setPrice11("5000₽");
-    setPrice12("1500₽");
-    setPrice13("20000₽");
-    setPrice14("1000₽");
-    setPrice15("1500₽");
-    setPrice16("2000₽");
-    setPrice17("1000₽");
-    setPrice18("3500₽");
-    setPrice19("1500₽");
-    setPrice20("2500₽");
-    setPrice21("2000₽");
-    setPrice22("5500₽");
-    setPrice23("25000₽");
-    setPrice24("7000₽");
-    setPrice25("15000₽");
-    setPrice26("10000₽");
-    setPrice27("2000₽");
-    setPrice28("3500₽");
-    setPrice29("12000₽");
-    setPrice30("18500₽");
-    setPrice31("18000₽");
-    setPrice32("27000₽");
-    setPrice33("25000₽");
-    setPrice34("25000₽");
-    setPrice35("35000₽");
-    setPrice36("10000₽");
-    setPrice37("40000₽");
-    setPrice38("9500₽");
-    setPrice39("40000₽");
-    setPrice40("45000₽");
-    setPrice41("48000₽");
-    setPrice42("55000₽");
-    setPrice43("45000₽");
-    setPrice44("9000₽");
-    setPrice45("4000₽");
-    setPrice46("10000₽");
-    setPrice47("0₽");
-  };
-
-  const whiteningExpansion = () => {
-    setWhiteningOpen(!isWhiteningOpened);
-    setDisplayNoneTwo("none");
-    setDisplayNoneThree("none");
-    setDisplayNoneFour("none");
-    setDisplayNoneFive("none");
-    setDisplayNoneSix("none");
-    setToothHealingOpen(false);
-    setMouthHygieneOpen(false);
-    setHealingInSleepOpen(false);
-    setParodontHealingOpen(false);
-    setVinirsOpen(false);
-    setProthesisOpen(false);
-    setDiagnosisOpen(false);
-    setHeading("Консультация");
-    setServiceName("Консультация");
-    setServiceNameTwo("Консультация");
-    setServiceParagraph("");
-    setServiceParagraphTwo("");
-    setServiceParagraphThree("");
-    setServiceParagraphFour("");
-    setServiceParagraphFive("");
-    setServiceParagraphSix("");
-    setServiceParagraphSeven("");
-    setServiceParagraphEight("");
-    setServiceParagraphNine("");
-    setServiceParagraphTen("");
-    setServiceParagraph11("");
-    setServiceParagraph12("");
-    setServiceParagraph13("");
-    setServiceParagraph14(
-      "Прием (осмотр, консультация) врача-стоматолога первичный"
-    );
-    setServiceParagraph15(
-      "Диспансерный прием (осмотр, консультация) врача-стоматолога"
-    );
-    setServiceParagraph16(
-      "Профилактический прием (осмотр, консультация) врача-стоматолога"
-    );
-    setServiceParagraph17("");
-    setPrice("");
-    setPriceTwo("");
-    setPriceThree("");
-    setPriceFour("");
-    setPriceFive("");
-    setPriceSix("");
-    setPriceSeven("");
-    setPriceEight("");
-    setPriceNine("");
-    setPriceTen("");
-    setPrice11("");
-    setPrice12("");
-    setPrice13("");
-    setPrice14("1000₽");
-    setPrice15("500₽");
-    setPrice16("0₽");
-    setPrice17("");
-  };
-
-  const mouthHygieneExpansion = () => {
-    setToothHealingOpen(false);
-    setWhiteningOpen(false);
-    setMouthHygieneOpen(!isMouthHygieneOpened);
-    setHealingInSleepOpen(false);
-    setParodontHealingOpen(false);
-    setVinirsOpen(false);
-    setProthesisOpen(false);
-    setDiagnosisOpen(false);
-    setHeading("Вкладки");
-    setHeading("Вкладки");
-    setServiceName("Вкладки");
-    setServiceNameTwo("Вкладки");
-    setServiceParagraph(
-      "Восстановление зуба с использованием керамической вкладки (накладки) Emax"
-    );
-    setServiceParagraphTwo(
-      "Восстановление зуба с использованием цельнолитой культевой вкладки"
-    );
-    setServiceParagraphThree(
-      "Восстановление зуба с использованием культевой вкладки из диоксида циркония"
-    );
-    setServiceParagraphFour(
-      "Восстановление зуба с использованием золотой вкладки (без стоимости золота)"
-    );
-    setServiceParagraphFive("");
-    setServiceParagraphSix("");
-    setServiceParagraphSeven("");
-    setServiceParagraphEight("");
-    setServiceParagraphNine("");
-    setServiceParagraphTen("");
-    setServiceParagraph11("");
-    setServiceParagraph12("");
-    setServiceParagraph13("");
-    setPrice("25000₽");
-    setPriceTwo("7000₽");
-    setPriceThree("15000₽");
-    setPriceFour("10000₽");
-    setPriceFive("");
-    setPriceSix("");
-    setPriceSeven("");
-    setPriceEight("");
-    setPriceNine("");
-    setPriceTen("");
-    setPrice11("");
-    setPrice12("");
-    setPrice13("");
-  };
-
-  const healingInSleepExpansion = () => {
-    setToothHealingOpen(false);
-    setWhiteningOpen(false);
-    setMouthHygieneOpen(false);
-    setHealingInSleepOpen(!isHealingInSleepOpened);
-    setParodontHealingOpen(false);
-    setVinirsOpen(false);
-    setProthesisOpen(false);
-    setDiagnosisOpen(false);
-    setHeading("Коронки");
-  };
-
-  const parodontHealthExpansion = () => {
-    setToothHealingOpen(false);
-    setWhiteningOpen(false);
-    setMouthHygieneOpen(false);
-    setHealingInSleepOpen(false);
-    setParodontHealingOpen(!isParodontHealingOpened);
-    setVinirsOpen(false);
-    setProthesisOpen(false);
-    setDiagnosisOpen(false);
-    setHeading("Восстановление зуба виниром");
-    setServiceName("Восстановление зуба виниром");
-    setServiceNameTwo("Восстановление зуба виниром");
-    setServiceParagraph("Восстановление зуба виниром E-max класса `стандарт`");
-    setServiceParagraphTwo(
-      "Восстановление зуба виниром E-max класса `премиум`"
-    );
-    setServiceParagraphThree(
-      "Диагностика прикуса при помощи миостимулятора `МИСТ ТЕНС` "
-    );
-    setServiceParagraphFour("");
-    setServiceParagraphFive("");
-    setServiceParagraphSix("");
-    setServiceParagraphSeven("");
-    setServiceParagraphEight("");
-    setServiceParagraphNine("");
-    setServiceParagraphTen("");
-    setServiceParagraph11("");
-    setServiceParagraph12("");
-    setServiceParagraph13("");
-    setPrice("25000");
-    setPriceTwo("35000₽");
-    setPriceThree("10000₽");
-    setPriceFour("");
-    setPriceFive("");
-    setPriceSix("");
-    setPriceSeven("");
-    setPriceEight("");
-    setPriceNine("");
-    setPriceTen("");
-    setPrice11("");
-    setPrice12("");
-    setPrice13("");
-  };
-
-  const vinirExpansion = () => {
-    setToothHealingOpen(false);
-    setWhiteningOpen(false);
-    setMouthHygieneOpen(false);
-    setHealingInSleepOpen(false);
-    setParodontHealingOpen(false);
-    setVinirsOpen(!isVinirsOpened);
-    setProthesisOpen(false);
-    setDiagnosisOpen(false);
-    setHeading("Коронки");
-    setServiceName("Коронки");
-    setServiceNameTwo("Коронки");
-    setServiceParagraph(
-      "Восстановление зуба коронкой временной прямым методом"
-    );
-    setServiceParagraphTwo(
-      "Восстановление зуба коронкой временной лабораторным способом "
-    );
-    setServiceParagraphThree(
-      "Восстановление зуба коронкой металлокерамической класса `стандарт`"
-    );
-    setServiceParagraphFour(
-      "Восстановление зуба коронкой металлокерамической класса `премиум`"
-    );
-    setServiceParagraphFive(
-      "Восстановление зуба коронкой металлокерамической на драгоценном сплаве (без учета стоимости драгоценного металла)"
-    );
-    setServiceParagraphSix(
-      "Восстановление зуба коронкой из диоксида циркония класса `стандарт`"
-    );
-    setServiceParagraphSeven(
-      "Восстановление зуба коронкой из диоксида циркония класса `премиум`"
-    );
-    setServiceParagraphEight("");
-    setServiceParagraphNine("");
-    setServiceParagraphTen("");
-    setServiceParagraph11("");
-    setServiceParagraph12("");
-    setServiceParagraph13("");
-    setPrice("2000₽");
-    setPriceTwo("3500₽");
-    setPriceThree("12000₽");
-    setPriceFour("18500₽");
-    setPriceFive("18500₽");
-    setPriceSix("18000₽");
-    setPriceSeven("27000₽");
-    setPriceEight("");
-    setPriceNine("");
-    setPriceTen("");
-    setPrice11("");
-    setPrice12("");
-    setPrice13("");
-  };
-
-  const prothesisExpansion = () => {
-    setToothHealingOpen(false);
-    setWhiteningOpen(false);
-    setMouthHygieneOpen(false);
-    setHealingInSleepOpen(false);
-    setParodontHealingOpen(false);
-    setProthesisOpen(!isProthesisOpened);
-    setDiagnosisOpen(false);
-    setHeading("Восстановление зуба виниром");
-    setServiceName("Коронки");
-    setServiceNameTwo("Коронки");
-    setServiceParagraph(
-      "Восстановление зуба коронкой временной прямым методом"
-    );
-    setServiceParagraphTwo(
-      "Восстановление зуба коронкой временной лабораторным способом "
-    );
-    setServiceParagraphThree(
-      "Восстановление зуба коронкой металлокерамической класса `стандарт`"
-    );
-    setServiceParagraphFour(
-      "Восстановление зуба коронкой металлокерамической класса `премиум`"
-    );
-    setServiceParagraphFive(
-      "Восстановление зуба коронкой металлокерамической на драгоценном сплаве (без учета стоимости драгоценного металла)"
-    );
-    setServiceParagraphSix(
-      "Восстановление зуба коронкой из диоксида циркония класса `стандарт`"
-    );
-    setServiceParagraphSeven(
-      "Восстановление зуба коронкой из диоксида циркония класса `премиум`"
-    );
-    setServiceParagraphEight("");
-    setServiceParagraphNine("");
-    setServiceParagraphTen("");
-    setServiceParagraph11("");
-    setServiceParagraph12("");
-    setServiceParagraph13("");
-    setPrice("2000₽");
-    setPriceTwo("3500₽");
-    setPriceThree("12000₽");
-    setPriceFour("18500₽");
-    setPriceFive("18500₽");
-    setPriceSix("18000₽");
-    setPriceSeven("27000₽");
-    setPriceEight("");
-    setPriceNine("");
-    setPriceTen("");
-    setPrice11("");
-    setPrice12("");
-    setPrice13("");
-  };
-
-  const diagnosisExpansion = () => {
-    setToothHealingOpen(false);
-    setWhiteningOpen(false);
-    setMouthHygieneOpen(false);
-    setHealingInSleepOpen(false);
-    setParodontHealingOpen(false);
-    setProthesisOpen(false);
-    setDiagnosisOpen(!isDiagnosisOpened);
-    setHeading("Диагонстика");
-  };
 
   // Menu Function
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -1005,90 +368,83 @@ const PricesPage = () => {
             <div className="services-content">
               <div className="buttons">
                 <div className="row">
-                  <button
-                    className={
-                      isToothHealingOpened ? "button-active" : "button"
-                    }
-                    onClick={toothHealingExpansion}
+                  <ScrollLink
+                    to="features-list-mob"
+                    smooth={true}
+                    className="button"
                   >
                     Ортопедия
-                  </button>
-                  <button
-                    className={isWhiteningOpened ? "button-active" : "button"}
-                    onClick={whiteningExpansion}
+                  </ScrollLink>
+                  <ScrollLink
+                    to="features-list-mob"
+                    smooth={true}
+                    className="button"
                   >
                     Консультация
-                  </button>
-                </div>
-                <div className="row two">
-                  <button
-                    className={
-                      isMouthHygieneOpened ? "button-active" : "button"
-                    }
-                    onClick={mouthHygieneExpansion}
+                  </ScrollLink>
+                  <ScrollLink
+                    to="features-list-mob"
+                    smooth={true}
+                    className="button"
                   >
-                    Гигиена полости рта
-                  </button>
-                  <button
-                    className={isVinirsOpened ? "button-active" : "button"}
-                    onClick={vinirExpansion}
+                    Вкладки
+                  </ScrollLink>
+                  <ScrollLink
+                    to="features-list-mob"
+                    smooth={true}
+                    className="button"
                   >
-                    Виниры и коронки
-                  </button>
-                </div>
-                <div className="row two">
-                  <button
-                    className={
-                      isParodontHealingOpened ? "button-active" : "button"
-                    }
-                    onClick={parodontHealthExpansion}
+                    Коронки
+                  </ScrollLink>
+                  <ScrollLink
+                    to="features-list-mob"
+                    smooth={true}
+                    className="button"
                   >
-                    Лечение пародонта
-                  </button>
-                  <button
-                    className={isDiagnosisOpened ? "button-active" : "button"}
-                    onClick={diagnosisExpansion}
+                    Восстановлени Зуба Виниром
+                  </ScrollLink>
+                  <ScrollLink
+                    to="features-list-mob"
+                    smooth={true}
+                    className="button"
                   >
                     Диагностика
-                  </button>
+                  </ScrollLink>
                 </div>
               </div>
               <div className="heading-container">
-                <h2 className="heading">{heading}</h2>
+                <h2 className="heading">Ортопедия</h2>
               </div>
               <div className="cards">
-                <PriceTab
-                  tabHeadign={serviceName}
-                  paragraphOne={serviceParagraph}
-                  priceOne={price}
-                  paragraphTwo={serviceParagraphTwo}
-                  priceTwo={priceTwo}
-                ></PriceTab>
                 <PriceTabLong
-                  tabHeadign={serviceNameTwo}
-                  paragraphOne={serviceParagraphThree}
-                  priceOne={priceThree}
-                  paragraphTwo={serviceParagraphFour}
-                  priceTwo={priceFour}
-                  paragraphThree={serviceParagraphFive}
-                  priceThree={priceFive}
+                  tabHeadign="Ортопедия"
+                  paragraphOne="Повторная фиксация на постоянный цемент несъемных ортопедических конструкций "
+                  priceOne="1500₽"
+                  paragraphTwo="Фиксация на RELYX Luting несъемных ортопедических конструкций "
+                  priceTwo="2000₽"
+                  paragraphThree="иксация несъемных ортопедических конструкций на временный цемент Temp bond "
+                  priceThree="700₽"
+                  paragraphFour="Снятие несъемной ортопедической конструкции (1 единица) "
+                  priceFour="1000₽"
+                  paragraphFive="Удаление вкладки"
+                  priceFive="4000₽"
+                  paragraphSix="Коррекция протеза, изготовленного в другой клинике"
+                  priceSix="1500₽"
+                  paragraphSeven="Починка (перебазировка) съемного протеза лабораторным методом"
+                  priceSeven="5500₽"
+                  paragraphEight="Приварка 1 кламмера"
+                  priceEight="5500₽"
+                  paragraphNine="Приварка 1 зуба"
+                  priceNine="5500₽"
+                  paragraphTen="Замена матрицы на бюгельном протезе (1 протез)"
+                  priceTen="5500₽"
+                  paragraph11="Изготовление каппы для депрограмирования мышц"
+                  price11="5000₽"
+                  paragraph12="Коррекция съемного протеза изготовленного в другой клинике"
+                  price12="1500₽"
+                  paragraph13="Каппа для стабилизации прикуса (Ортотик)"
+                  price13="20000₽"
                 ></PriceTabLong>
-                {/* <PriceTab
-            tabHeadign={serviceName}
-            paragraphOne={serviceParagraph}
-            priceOne={price}
-            paragraphTwo={serviceParagraphTwo}
-            priceTwo={priceTwo}
-          ></PriceTab>
-          <PriceTabLong
-            tabHeadign={serviceNameTwo}
-            paragraphOne={serviceParagraphThree}
-            priceOne={priceThree}
-            paragraphTwo={serviceParagraphFour}
-            priceTwo={priceFour}
-            paragraphThree={serviceParagraphFive}
-            priceThree={priceFive}
-          ></PriceTabLong> */}
               </div>
             </div>
           </div>
@@ -1124,171 +480,502 @@ const PricesPage = () => {
               </div>
               <div className="services-content">
                 <div className="services-list">
-                  <button
-                    className={
-                      isToothHealingOpened ? "button-active" : "button"
-                    }
-                    onClick={toothHealingExpansion}
+                  <ScrollLink
+                    to="features-list-mob"
+                    smooth={true}
+                    className="button"
                   >
                     Ортопедия
-                  </button>
-                  <button
-                    className={isWhiteningOpened ? "button-active" : "button"}
-                    onClick={whiteningExpansion}
+                  </ScrollLink>
+                  <ScrollLink
+                    to="features-list-mob"
+                    smooth={true}
+                    className="button"
                   >
                     Консультация
-                  </button>
-                  <button
-                    className={
-                      isMouthHygieneOpened ? "button-active" : "button"
-                    }
-                    onClick={mouthHygieneExpansion}
+                  </ScrollLink>
+                  <ScrollLink
+                    to="features-list-mob"
+                    smooth={true}
+                    className="button"
                   >
                     Вкладки
-                  </button>
-                  <button
-                    className={isVinirsOpened ? "button-active" : "button"}
-                    onClick={vinirExpansion}
+                  </ScrollLink>
+                  <ScrollLink
+                    to="features-list-mob"
+                    smooth={true}
+                    className="button"
                   >
                     Коронки
-                  </button>
-                  <button
-                    className={
-                      isParodontHealingOpened ? "button-active" : "button"
-                    }
-                    onClick={parodontHealthExpansion}
+                  </ScrollLink>
+                  <ScrollLink
+                    to="features-list-mob"
+                    smooth={true}
+                    className="button"
                   >
-                    Восстановление Зуба Виниром
-                  </button>
-                  <button
-                    className={isDiagnosisOpened ? "button-active" : "button"}
-                    onClick={diagnosisExpansion}
+                    Восстановлени Зуба Виниром
+                  </ScrollLink>
+                  <ScrollLink
+                    to="features-list-mob"
+                    smooth={true}
+                    className="button"
                   >
                     Диагностика
-                  </button>
+                  </ScrollLink>
                   {/* <button className="button">Имплантация и хирургия</button>
             <button className="button">Исправление прикуса</button> */}
                 </div>
                 <div className="cards-list">
-                  <h2 className="heading">{heading}</h2>
-                  <PriceTabLong
-                    style={setDisplayNone}
-                    tabHeadign={serviceName}
-                    paragraphOne={serviceParagraph14}
-                    priceOne={price14}
-                    paragraphTwo={serviceParagraph15}
-                    priceTwo={price15}
-                    paragraphThree={serviceParagraph16}
-                    priceThree={price16}
-                    paragraphFour={serviceParagraph17}
-                    priceFour={price17}
-                    paragraphFive={serviceParagraphFive}
-                    priceFive={priceFive}
-                    paragraphSix={serviceParagraphSix}
-                    priceSix={priceSix}
-                    paragraphSeven={serviceParagraphSeven}
-                    priceSeven={priceSeven}
-                    paragraphEight={serviceParagraphEight}
-                    priceEight={priceEight}
-                    paragraphNine={serviceParagraphNine}
-                    priceNine={priceNine}
-                    paragraphTen={serviceParagraphTen}
-                    priceTen={priceTen}
-                    paragraph11={serviceParagraph11}
-                    price11={price11}
-                    paragraph12={serviceParagraph12}
-                    price12={price12}
-                    paragraph13={serviceParagraph13}
-                    price13={price13}
-                  ></PriceTabLong>
-                  <PriceTabLong
-                    style={setDisplayNoneTwo}
-                    tabHeadign={serviceNameTwo}
-                    paragraphOne={serviceParagraph14}
-                    priceOne={price14}
-                    paragraphTwo={serviceParagraph15}
-                    priceTwo={price15}
-                    paragraphThree={serviceParagraph16}
-                    priceThree={price16}
-                    paragraphFour={serviceParagraph17}
-                    priceFour={price17}
-                    paragraphFive={serviceParagraph18}
-                    priceFive={price18}
-                    paragraphSix={serviceParagraph19}
-                    priceSix={price19}
-                    paragraphSeven={serviceParagraph20}
-                    priceSeven={price20}
-                    paragraphEight={serviceParagraph21}
-                    priceEight={price21}
-                    paragraphNine={serviceParagraph22}
-                    priceNine={price22}
-                  ></PriceTabLong>
-                  <PriceTabLong
-                    style={setDisplayNoneThree}
-                    tabHeadign={serviceNameThree}
-                    paragraphOne={serviceParagraph23}
-                    priceOne={price23}
-                    paragraphTwo={serviceParagraph24}
-                    priceTwo={price24}
-                    paragraphThree={serviceParagraph25}
-                    priceThree={price25}
-                    paragraphFour={serviceParagraph26}
-                    priceFour={price26}
-                  ></PriceTabLong>
-                  <PriceTabLong
-                    style={setDisplayNoneFour}
-                    tabHeadign={serviceNameFour}
-                    paragraphOne={serviceParagraph27}
-                    priceOne={price27}
-                    paragraphTwo={serviceParagraph28}
-                    priceTwo={price28}
-                    paragraphThree={serviceParagraph29}
-                    priceThree={price29}
-                    paragraphFour={serviceParagraph30}
-                    priceFour={price30}
-                    paragraphFive={serviceParagraph31}
-                    priceFive={price31}
-                    paragraphSix={serviceParagraph32}
-                    priceSix={price32}
-                    paragraphSeven={serviceParagraph33}
-                    priceSeven={price33}
-                  ></PriceTabLong>
-                  <PriceTabLong
-                    style={setDisplayNoneFive}
-                    tabHeadign={serviceNameFive}
-                    paragraphOne={serviceParagraph34}
-                    priceOne={price34}
-                    paragraphTwo={serviceParagraph35}
-                    priceTwo={price35}
-                    paragraphThree={serviceParagraph36}
-                    priceThree={price36}
-                  ></PriceTabLong>
-                  <PriceTabLong
-                    style={setDisplayNoneSix}
-                    tabHeadign={serviceNameSix}
-                    paragraphOne={serviceParagraph37}
-                    priceOne={price37}
-                    paragraphTwo={serviceParagraph38}
-                    priceTwo={price38}
-                    paragraphThree={serviceParagraph39}
-                    priceThree={price39}
-                    paragraphFour={serviceParagraph40}
-                    priceFour={price40}
-                    paragraphFive={serviceParagraph41}
-                    priceFive={price41}
-                    paragraphSix={serviceParagraph42}
-                    priceSix={price42}
-                    paragraphSeven={serviceParagraph43}
-                    priceSeven={price43}
-                    paragraphEight={serviceParagraph44}
-                    priceEight={price44}
-                    paragraphTen={serviceParagraph45}
-                    priceTen={price45}
-                    paragraph11={serviceParagraph46}
-                    price11={price46}
-                    paragraph12={serviceParagraph47}
-                    price12={price47}
-                  ></PriceTabLong>
+                  <div className="" id="orthopedia">
+                    <h2 className="heading">Ортопедия</h2>
+                    <PriceTabLong
+                      tabHeadign="Ортопедия"
+                      paragraphOne="Повторная фиксация на постоянный цемент несъемных ортопедических конструкций "
+                      priceOne="1500₽"
+                      paragraphTwo="Фиксация на RELYX Luting несъемных ортопедических конструкций "
+                      priceTwo="2000₽"
+                      paragraphThree="иксация несъемных ортопедических конструкций на временный цемент Temp bond "
+                      priceThree="700₽"
+                      paragraphFour="Снятие несъемной ортопедической конструкции (1 единица) "
+                      priceFour="1000₽"
+                      paragraphFive="Удаление вкладки"
+                      priceFive="4000₽"
+                      paragraphSix="Коррекция протеза, изготовленного в другой клинике"
+                      priceSix="1500₽"
+                      paragraphSeven="Починка (перебазировка) съемного протеза лабораторным методом"
+                      priceSeven="5500₽"
+                      paragraphEight="Приварка 1 кламмера"
+                      priceEight="5500₽"
+                      paragraphNine="Приварка 1 зуба"
+                      priceNine="5500₽"
+                      paragraphTen="Замена матрицы на бюгельном протезе (1 протез)"
+                      priceTen="5500₽"
+                      paragraph11="Изготовление каппы для депрограмирования мышц"
+                      price11="5000₽"
+                      paragraph12="Коррекция съемного протеза изготовленного в другой клинике"
+                      price12="1500₽"
+                      paragraph13="Каппа для стабилизации прикуса (Ортотик)"
+                      price13="20000₽"
+                    ></PriceTabLong>
+                    <PriceTabLong
+                      tabHeadign="Оттиски"
+                      paragraphOne="Снятие оттиска с одной челюсти альгинатными массами"
+                      priceOne="1000₽"
+                      paragraphTwo="Снятие оттиска с одной челюсти массой из С-силикона"
+                      priceTwo="1500₽"
+                      paragraphThree="Снятие оттиска с одной челюсти массой из А-силикона"
+                      priceThree="2000₽"
+                      paragraphFour="Прикусной блок"
+                      priceFour="1000₽"
+                      paragraphFive="Изготовление прикусного шаблона и индивидуальной ложки"
+                      priceFive="3500₽"
+                      paragraphSix="Снятие оттиска с одной челюсти для изготовления силиконового ключа"
+                      priceSix="1500₽"
+                      paragraphSeven="Снятие оттиска с одной челюсти с имплантов с использованием индивидуальной ложки"
+                      priceSeven="2500₽"
+                      paragraphEight="Wax up восковое моделирование"
+                      priceEight="2000₽"
+                      paragraphNine="Цифровой оттиск (сканирование верхней и нижней челюсти, прикус)"
+                      priceNine="5500₽"
+                      paragraphTen="Замена матрицы на бюгельном протезе (1 протез)"
+                      priceTen="5500₽"
+                    ></PriceTabLong>
+                    <PriceTabLong
+                      tabHeadign="Вкладки"
+                      paragraphOne="Восстановление зуба с использованием керамической вкладки (накладки) Emax"
+                      priceOne="25000₽"
+                      paragraphTwo="Восстановление зуба с использованием цельнолитой культевой вкладки"
+                      priceTwo="7000₽"
+                      paragraphThree="Восстановление зуба с использованием культевой вкладки из диоксида циркония "
+                      priceThree="15000₽"
+                      paragraphFour="Восстановление зуба с использованием золотой вкладки (без стоимости золота)"
+                      priceFour="10000₽"
+                    ></PriceTabLong>
+                    <PriceTabLong
+                      tabHeadign="Коронки"
+                      paragraphOne="Восстановление зуба коронкой временной прямым методом"
+                      priceOne="2000₽"
+                      paragraphTwo="Восстановление зуба коронкой временной лабораторным способом "
+                      priceTwo="3500₽"
+                      paragraphThree="Восстановление зуба коронкой металлокерамической класса `стандарт`"
+                      priceThree="12000₽"
+                      paragraphFour="Восстановление зуба коронкой металлокерамической класса `премиум`"
+                      priceFour="18000₽"
+                      paragraphFive="Восстановление зуба коронкой металлокерамической на драгоценном сплаве (без учета стоимости драгоценного металла)"
+                      priceFive="18500₽"
+                      paragraphSix="Восстановление зуба коронкой из диоксида циркония класса `стандарт`"
+                      priceSix="18000₽"
+                      paragraphSeven="Восстановление зуба коронкой из диоксида циркония класса `премиум`"
+                      priceSeven="27000₽"
+                    ></PriceTabLong>
+                    <PriceTabLong
+                      tabHeadign="Восстановление зуба виниром E-max"
+                      paragraphOne="Восстановление зуба виниром E-max класса `стандарт`"
+                      priceOne="25000₽"
+                      paragraphTwo="Восстановление зуба виниром E-max класса `премиум`"
+                      priceTwo="35000₽"
+                      paragraphThree="Диагностика прикуса при помощи миостимулятора `МИСТ ТЕНС`"
+                      priceThree="10000₽"
+                    ></PriceTabLong>
+                    <PriceTabLong
+                      tabHeadign="Съемные, Бюгельные Протезы"
+                      paragraphOne="Протезирование зубов полным съемным пластиночным протезом (Японский гарнитур, пластм)"
+                      priceOne="40000₽"
+                      paragraphTwo="Протезирование частичным съемным пластиночным протезом для временного замещения 
+                      отсутствующих 1-3 зубов (иммедиат-протез)"
+                      priceTwo="9500₽"
+                      paragraphThree="Протезирование частичным съемным пластиночным протезом (Японский гарнитур, пластм)"
+                      priceThree="40000₽"
+                      paragraphFour="Протезирование съемным бюгельным протезом кламерным"
+                      priceFour="45000₽"
+                      paragraphFive="Протезирование съемным бюгельным протезом шинирующим "
+                      priceFive="48000₽"
+                      paragraphSix="Протезирование съемным бюгельным протезом с замковыми креплениями Bredent "
+                      priceSix="55000₽"
+                      paragraphSeven="Протезирование съемным бюгельным протезом Квадротти"
+                      priceSeven="45000₽"
+                      paragraphEight="Изготовление ночной каппы при бруксизме "
+                      priceEight="9000₽"
+                      paragraphNine="Изготовление каппы для отбеливания (реминерализации)"
+                      priceNine="4000₽"
+                      paragraphTen="Изготовление спортивной каппы"
+                      priceTen="10000₽"
+                      paragraph11="Определение центрального соотношения целюстей и центральной окклюзии"
+                      price11="0₽"
+                    ></PriceTabLong>
+                  </div>
+                  <div
+                    className=""
+                    id="consultations"
+                    style={{ marginTop: "clamp(32px,3.33312vw,128px)" }}
+                  >
+                    <h2 className="heading">Консултация</h2>
+                    <PriceTabLong
+                      tabHeadign="Консультация"
+                      paragraphOne="Прием (осмотр, консультация) врача-стоматолога первичный"
+                      priceOne="1000₽"
+                      paragraphTwo="Диспансерный прием (осмотр, консультация) врача-стоматолога "
+                      priceTwo="500₽"
+                      paragraphThree="Профилактический прием (осмотр, консультация) врача-стоматолога "
+                      priceThree="0₽"
+                    ></PriceTabLong>
+                  </div>
+                  <div
+                    className=""
+                    id="xray"
+                    style={{ marginTop: "clamp(32px,3.33312vw,128px)" }}
+                  >
+                    <h2 className="heading">Рентгенология</h2>
+                    <PriceTabLong
+                      tabHeadign="Рентгенология"
+                      paragraphOne="Радиовизиография"
+                      priceOne="400₽"
+                      paragraphTwo="Получение снимка на электронный адрес "
+                      priceTwo="100₽"
+                      paragraphThree="Запись на электронный носитель CD"
+                      priceThree="300₽"
+                      paragraphFour="Запись на электронный носитель USB"
+                      priceFour="500₽"
+                      paragraphFive="Повторный диагностический снимок"
+                      priceFive="0₽"
+                    ></PriceTabLong>
+                  </div>
+                  <div
+                    className=""
+                    id="xray"
+                    style={{ marginTop: "clamp(32px,3.33312vw,128px)" }}
+                  >
+                    <h2 className="heading">Исследования и диагностика</h2>
+                    <PriceTabLong
+                      tabHeadign="Исследования и диагностика"
+                      paragraphOne="Исследование на диагностических моделях челюстей"
+                      priceOne="500₽"
+                      paragraphTwo="Витальное окрашивание твердых тканей зуба"
+                      priceTwo="380₽"
+                      paragraphThree="Исследование кариозных полостей с использованием стоматологического зонда"
+                      priceThree="70₽"
+                      paragraphFour="Термодиагностика зуба"
+                      priceFour="50₽"
+                      paragraphFive="Определение прикуса"
+                      priceFive="500₽"
+                      paragraphSix="Определение вида смыкания зубных рядов с помощью лицевой дуги"
+                      priceSix="1500₽"
+                      paragraphSeven="Перкуссия зубов"
+                      priceSeven="40₽"
+                      paragraphEight="Электроодонтометрия зуба (ЭОД)"
+                      priceEight="120₽"
+                      paragraphNine="Определение индексов гигиены полости рта"
+                      priceNine="250₽"
+                    ></PriceTabLong>
+                  </div>
+                  <div
+                    className=""
+                    id="anasthetics"
+                    style={{ marginTop: "clamp(32px,3.33312vw,128px)" }}
+                  >
+                    <h2 className="heading">Анестезия</h2>
+                    <PriceTabLong
+                      tabHeadign="Анестезия"
+                      paragraphOne="Проводниковая анестезия"
+                      priceOne="800₽"
+                      paragraphTwo="Аппликационная анестезия "
+                      priceTwo="150₽"
+                      paragraphThree="Инфильтрационная анестезия"
+                      priceThree="700₽"
+                    ></PriceTabLong>
+                  </div>
+                  <div
+                    className=""
+                    id="therapy"
+                    style={{ marginTop: "clamp(32px,3.33312vw,128px)" }}
+                  >
+                    <h2 className="heading">Терапия</h2>
+                    <PriceTabLong
+                      tabHeadign="Восстановлени зуба пломбой"
+                      paragraphOne="Применение системы Коффердам, Роббердам "
+                      priceOne="500₽"
+                      paragraphTwo="Применение системы OptraGate "
+                      priceTwo="300₽"
+                      paragraphThree="Микроабразия эмали (1 зуб)"
+                      priceThree="1500₽"
+                      paragraphFour="Восстановление зуба пломбой I, V, VI класс по Блэку с использованием материалов из фотополимеров SonicFill, Asteria"
+                      priceFour="3900₽"
+                      paragraphFive="Восстановление зуба пломбой I, V, VI класс по Блэку с использованием материалов из фотополимеров Filtek, Gradia"
+                      priceFive="3500₽"
+                      paragraphSix="Восстановление зуба виниром, полукоронкой из фотополимерного материала прямым методом"
+                      priceSix="7500₽"
+                      paragraphSeven="Избирательное пришлифовывание твердых тканей зуба"
+                      priceSeven="250₽"
+                      paragraphEight="Восстановление зуба пломбировочным материалом с использованием титановых штифтов"
+                      priceEight="5500₽"
+                      paragraphNine="Восстановление зуба пломбировочным материалом с использованием стекловолоконных штифтов"
+                      priceNine="7000₽"
+                      paragraphTen="Снятие временной пломбы"
+                      priceTen="350₽"
+                      paragraph11="Трепанация (препарирование) зуба"
+                      price11="600₽"
+                      paragraph12="Восстановление зуба пломбой с нарушением контактоного пункта II, III класс по Блэку с использованием материалов из фотополимеров Filtek, Gradia"
+                      price12="4000₽"
+                      paragraph13="Восстановление зуба пломбой с нарушением контактоного пункта II, III класс по Блэку с использованием материалов из фотополимеров SonicFill, Asteria"
+                      price13="4300₽"
+                      paragraph14="Восстановление зуба пломбой IV класс по Блэку с использованием материалов из фотополимеров Filtek, Gradia "
+                      price14="4400₽"
+                      paragraph15="Восстановление зуба пломбой IV класс по Блэку с использованием материалов из фотополимеров Asteria"
+                      price15="4900₽"
+                      paragraph16="Восстановление зуба пломбой с использованием материалов из фотополимеров Filtek Flow"
+                      price16="1900₽"
+                      paragraph17="Наложение лечебной или изолирующей прокладки"
+                      price17="550₽"
+                    ></PriceTabLong>
+                    <PriceTabLong
+                      tabHeadign="Лечение осложнений кариеса"
+                      paragraphOne="Наложение девитализирующей пасты"
+                      priceOne="500₽"
+                      paragraphTwo="Пломбирование корневого канала зуба под контролем апекс-локатора (процедура)"
+                      priceTwo="350₽"
+                      paragraphThree="Наложение временной пломбы "
+                      priceThree="600₽"
+                      paragraphFour="Пломбирование корневого канала зуба пастой (1 канал)"
+                      priceFour="300₽"
+                      paragraphFive="Пломбирование корневого канала зуба пастой с гуттаперчевыми штифтами (1 канал)"
+                      priceFive="900₽"
+                      paragraphSix="Закрытие перформации стенки корневого канала зуба"
+                      priceSix="1500₽"
+                      paragraphSeven="Инструментальная и медикаментозная обработка хорошо проходимого корневого канала (1к.)"
+                      priceSeven="800₽"
+                      paragraphEight="Инструментальная и медикаментозная обработка плохо проходимого корневого канала (1к.)"
+                      priceEight="1100₽"
+                      paragraphNine="Фиксация внутриканального штифта"
+                      priceNine="1500₽"
+                      paragraphTen="Удаление внутриканального штифта "
+                      priceTen="2100₽"
+                      paragraph11="Временное пломбирование лекарственным препаратом корневого канала ( 1 канал)"
+                      price11="700₽"
+                      paragraph12="Распломбировка корневого канала ранеее леченного пастой (1 канал) "
+                      price12="600₽"
+                      paragraph13="Распломбировка корневого канала ранеее леченного фосфат-цементом/резорцин-формалиновым методом (1 канал)"
+                      price13="1300₽"
+                      paragraph14="Депофорез корневого канала зуба "
+                      price14="300₽"
+                      paragraph15="Ультразвуковое расширение корневого канала зуба (1 канал) "
+                      price15="300₽"
+                      paragraph16="Механическая и медикаментозная обработка корневого канала"
+                      price16="1500₽"
+                      paragraph17="Пломбировка корневого канала гуттаперчивый штифт+паста"
+                      price17="1500₽"
+                      paragraph18="Временная пломбировка корневого канала Metapex/Colasep"
+                      price18="500₽"
+                    ></PriceTabLong>
+                    <PriceTabLong
+                      tabHeadign="Эндодоническое лечение"
+                      paragraphOne="Эндодоническое лечение одноканального зуба"
+                      priceOne="4400₽"
+                      paragraphTwo="Эндодоническое лечение двухканального зуба"
+                      priceTwo="8800₽"
+                      paragraphThree="Эндодоническое лечение трехканального зуб"
+                      priceThree="12000₽"
+                      paragraphFour="Эндодоническое лечение четырехканального зуба"
+                      priceFour="16000₽"
+                      paragraphFive="Эндодоническое лечение пятиканального зуба"
+                      priceFive="20000₽"
+                      paragraphSix="Эндодоническое лечение одноканального зуба (периодонтит)"
+                      priceSix="6000₽"
+                      paragraphSeven="Эндодоническое лечение двухканального зуба (периодонтит)"
+                      priceSeven="10000₽"
+                      paragraphEight="Эндодоническое лечение трехканального зуба (периодонтит)"
+                      priceEight="14000₽"
+                      paragraphNine="Эндодоническое лечение четырехканального зуба (периодонтит)"
+                      priceNine="18000₽"
+                      paragraphTen="Эндодоническое лечение пятиканального зуба (периодонтит)"
+                      priceTen="22000₽"
+                    ></PriceTabLong>
+                  </div>
+                  <div
+                    className=""
+                    id="restavration"
+                    style={{ marginTop: "clamp(32px,3.33312vw,128px)" }}
+                  >
+                    <h2 className="heading">Реставрации</h2>
+                    <PriceTabLong
+                      tabHeadign="Реставрации"
+                      paragraphOne="Реставрация 1 степени сложности"
+                      priceOne="4000₽"
+                      paragraphTwo="Реставрация 2 степени сложности"
+                      priceTwo="4900₽"
+                      paragraphThree="Реставрация 3 степени сложности "
+                      priceThree="5500₽"
+                      paragraphFour="Художественная реставрация зуба "
+                      priceFour="7500₽"
+                    ></PriceTabLong>
+                  </div>
+                  <div
+                    className=""
+                    id="surgery"
+                    style={{ marginTop: "clamp(32px,3.33312vw,128px)" }}
+                  >
+                    <h2 className="heading">Хирургия</h2>
+                    <PriceTabLong
+                      tabHeadign="Хирургия"
+                      paragraphOne="Удаление временного зуба I степени сложности"
+                      priceOne="1200₽"
+                      paragraphTwo="Удаление временного зуба II степени сложности"
+                      priceTwo="1800₽"
+                      paragraphThree="Удаление временного зуба с сохраненными корнями"
+                      priceThree="2200₽"
+                      paragraphFour="Удаление постоянного зуба простое"
+                      priceFour="2400₽"
+                      paragraphFive="Удаление постоянного зуба I степени сложности"
+                      priceFive="3000₽"
+                      paragraphSix="Удаление постоянного зуба II степени сложности"
+                      priceSix="4000₽"
+                      paragraphSeven="даление постоянного зуба III степени сложности"
+                      priceSeven="5500₽"
+                      paragraphEight="Удаление зуба сложное с разъединением корней "
+                      priceEight="4500₽"
+                      paragraphNine="Резекция верхушки корня (1 корень)"
+                      priceNine="8500₽"
+                      paragraphTen="Вскрытие и дренирование одонтогенного абсцесса"
+                      priceTen="1200₽"
+                      paragraph11="Отсроченный кюретаж лунки удаленного зуба"
+                      price11="1000₽"
+                      paragraph12="Удаление новообразований челюстно-лицевой области"
+                      price12="5000₽"
+                      paragraph13="Цистотомия, цистэктомия"
+                      price13="8000₽"
+                      paragraph14="Временное шинирование при заболеваниях пародонта ( 1 единица)"
+                      price14="1500₽"
+                      paragraph15="Операция удаления ретинированного, дистопированного или сверхкомплектного зуба"
+                      price15="9500₽"
+                      paragraph16="Удаление имплантата"
+                      price16="5000₽"
+                      paragraph17="Пластика уздечки языка"
+                      price17="3000₽"
+                      paragraph18="Пластика уздечки губы"
+                      price18="3000₽"
+                      paragraph19="Вестибулопластика"
+                      price19="10000₽"
+                      paragraph20="Лечение перикоронита (промывание, рассечение и/или иссечение капюшона)"
+                      price20="1500₽"
+                      paragraph21="Остановка луночного кровотечения с использованием гемостатических материалов"
+                      price21="700₽"
+                      paragraph22="Закрытие соустья с гайморовой пазухой"
+                      price22="3000₽"
+                      paragraph23="Наложение шва на слизистую оболочку рта"
+                      price23="500₽"
+                      paragraph24="Открытый кюретаж при заболеваниях пародонта в области 1 зуба"
+                      price24="2500₽"
+                      paragraph25="Закрытый кюретаж при заболеваниях пародонта в области 1 зуба"
+                      price25="2000₽"
+                      paragraph26="Пластика мягких тканей в области зуба или имплантата "
+                      price26="7000₽"
+                      paragraph27="Снятие швов"
+                      price27="0₽"
+                      paragraph28="Антисептическая обработка патологических карманов"
+                      price28="1200₽"
+                      paragraph29="Удаление экзостоза в области 1 зуба"
+                      price29="1500₽"
+                      paragraph30="Хирургическое удлинение в области 1 зуба"
+                      price30="5000₽"
+                      paragraph31="Закрытый кюретаж в области 1 зуба"
+                      price31="20000₽"
+                      paragraph32="Закрытие рецессии в обл. 1-3 рядом стоящих зубов "
+                      price32="20000₽"
+                    ></PriceTabLong>
+                  </div>
+                  <div
+                    className=""
+                    id="implantology"
+                    style={{ marginTop: "clamp(32px,3.33312vw,128px)" }}
+                  >
+                    <h2 className="heading">Имплантология</h2>
+                    <PriceTabLong
+                      tabHeadign="Протезирование на имплантах"
+                      paragraphOne="Протезирование зуба с импользованием имплантата временной коронкой+временный абатмен "
+                      priceOne="8500₽"
+                      paragraphTwo="Единица промежуточной части временного мостовидного протеза с опорой на имплантах"
+                      priceTwo="4500₽"
+                      paragraphThree="Протезирование зуба с использованием имплантата коронкой металлокерамической класса `Стандарт` (трансокклюзионная фиксация)"
+                      priceThree="25000₽"
+                      paragraphFour="Протезирование зуба с использованием имплантата коронкой металлокерамической класса `Эстетик` (трансокклюзионная фиксация)"
+                      priceFour="31000₽"
+                      paragraphFive="Протезирование зуба с использованием имплантата коронкой металлокерамической класса `стандарт`(цементная фиксация) на индивидуальном абатменте"
+                      priceFive="31000₽"
+                      paragraphSix="Единица промежуточной части мостовидного протеза класса `Стандарт` (металлокерамика) с опорой на имплантах"
+                      priceSix="17000₽"
+                      paragraphSeven="Единица промежуточной части мостовидного протеза класса `Премиум` (металлокерамика) с опорой на имплантах"
+                      priceSeven="21000₽"
+                      paragraphEight="Протезирование зуба с использованием имплантата коронкой из диоксида циркония класса `Стандарт` (трансокклюзионная фиксация)"
+                      priceEight="33000₽"
+                      paragraphNine="Протезирование зуба с использованием имплантата коронкой из диоксида циркония на титановом основаниее класса `Премиум` (трансокклюзионная фиксация)"
+                      priceNine="37500₽"
+                      paragraphTen="Протезирование зуба с использованием имплантата коронкой из диоксида циркония класса `Стандарт` (цементная фиксация) на индивидуальном абатмене"
+                      priceTen="39000₽"
+                      paragraph11="Протезирование зуба с использованием имплантата коронкой из диоксида циркония класса `Премиум` (цементная фиксация) на индивидуальном абатмене"
+                      price11="45000₽"
+                      paragraph12="Единица промежуточной части мостовидного протеза из диоксида циркония класса `Стандарт` с опорой на имплантатах "
+                      price12="22000₽"
+                      paragraph13="Единица промежуточной части мостовидного протеза из диоксида циркония класса `Премиум` с опорой на имплантатах "
+                      price13="26000₽"
+                      paragraph14="Протезирование зуба с использованием имплантата коронкой E-max на титановом основании класса `Премиум` (трансокклюзионная фиксация)"
+                      price14="30000₽"
+                      paragraph15="Индивидуальный абатмен из диоксида циркония "
+                      price15="15000₽"
+                      paragraph16="Протезирование полным условно-съемным протезом с опорой на имплантатах (балочная конструкция) мультиюниты оплачиваются отдельно"
+                      price16="185000₽"
+                      paragraph17="Протезирование полным несъемным протезом с опорой на имплантатах на мультиюнитах (мультиюниты оплачиваются отдельно)"
+                      price17="185000₽"
+                      paragraph18="Стоимость мультиюнита (1 единица)"
+                      price18="20000₽"
+                      paragraph19="Протезирование полным съемным протезом на имплантатах с замковым креплением (люкаторная система замков)"
+                      price19="120000₽"
+                      paragraph20="Протезирование полным съемным протезом на имплантатах на аттачментах"
+                      price20="95000₽"
+                      paragraph21="Временный несъемный протез на имлантатах"
+                      price21="80000₽"
+                      paragraph22="Замена винта трансокклюзионной фиксации"
+                      price22="500₽"
+                    ></PriceTabLong>
+                  </div>
                 </div>
               </div>
             </main>
