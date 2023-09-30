@@ -57,43 +57,31 @@ const Menu: React.FC<MenuProps> = ({
               <Link to="/" className="golden-link">
                 Главная
               </Link>
-              <ScrollLink
-                to="features-list-mob"
-                smooth={true}
-                className="golden-link l"
-                onClick={closeMenu}
-              >
+              <Link to="/clinics" className="golden-link l" onClick={closeMenu}>
                 О клинике
-              </ScrollLink>
-              <ScrollLink
-                to="doctors"
-                smooth={true}
+              </Link>
+              <Link
+                to="/doctors"
                 className="golden-link l "
                 onClick={closeMenu}
               >
                 Врачи
-              </ScrollLink>
+              </Link>
               <Link to="/prices" className="golden-link l">
                 Цены
               </Link>
             </div>
             <div className="column-two">
-              <ScrollLink
-                to="review"
-                smooth={true}
-                className="golden-link l"
-                onClick={closeMenu}
-              >
+              <Link to="/reviews" className="golden-link l" onClick={closeMenu}>
                 Отзывы
-              </ScrollLink>
-              <ScrollLink
-                to="contacts"
-                smooth={true}
+              </Link>
+              <Link
+                to="/contacts"
                 className="golden-link l"
                 onClick={closeMenu}
               >
                 Контакты
-              </ScrollLink>
+              </Link>
             </div>
           </div>
         </div>
@@ -149,46 +137,41 @@ const Menu: React.FC<MenuProps> = ({
               <Link to="/" className="golden-link">
                 Главная
               </Link>
-              <ScrollLink
-                to="features-list-pc"
-                smooth={true}
+              <Link
+                to="/clinics"
                 style={{ cursor: "pointer" }}
                 onClick={closePcMenu}
                 className="golden-link l"
               >
                 О клинике
-              </ScrollLink>
-              <ScrollLink
-                to="doctors"
+              </Link>
+              <Link
+                to="/doctors"
                 style={{ cursor: "pointer" }}
-                smooth={true}
                 onClick={closePcMenu}
                 className="golden-link l"
               >
                 Врачи
-              </ScrollLink>
+              </Link>
               <Link to="/prices" className="golden-link l">
                 Цены
               </Link>
-
-              <ScrollLink
-                to="review"
-                smooth={true}
+              <Link
+                to="/reviews"
                 style={{ cursor: "pointer" }}
                 onClick={closePcMenu}
                 className="golden-link l"
               >
                 Отзывы{" "}
-              </ScrollLink>
-              <ScrollLink
-                to="contacts"
-                smooth={true}
+              </Link>
+              <Link
+                to="/contacts"
                 style={{ cursor: "pointer" }}
                 onClick={closePcMenu}
                 className="golden-link l"
               >
                 Контакты
-              </ScrollLink>
+              </Link>
               <div className="medias">
                 <FontAwesomeIcon
                   icon={faVk}
@@ -287,24 +270,24 @@ const Menu: React.FC<MenuProps> = ({
               <Link to="/" className="link">
                 Главная
               </Link>
-              <ScrollLink to="features" className="link">
+              <Link to="/clinics" className="link">
                 О клинике
-              </ScrollLink>
-              <ScrollLink to="doctors" className="link">
+              </Link>
+              <Link to="/doctors" className="link">
                 Врачи
-              </ScrollLink>
-              <Link to="/" className="link">
+              </Link>
+              <Link to="/prices" className="link">
                 Цены
               </Link>
-              <Link to="/" className="link">
+              <Link to="/works" className="link">
                 Работы
               </Link>
-              <ScrollLink to="reviews" className="link">
+              <Link to="/reviews" className="link">
                 Отзывы
-              </ScrollLink>
-              <ScrollLink to="contacts" className="link">
+              </Link>
+              <Link to="/contacts" className="link">
                 Контакты
-              </ScrollLink>
+              </Link>
             </nav>
             <FontAwesomeIcon
               className="icon"
