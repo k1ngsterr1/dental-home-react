@@ -499,31 +499,78 @@ const PricesPage = () => {
                     smooth={true}
                     className="button"
                   >
-                    Вкладки
+                    Рентгенология
                   </ScrollLink>
                   <ScrollLink
                     to="features-list-mob"
                     smooth={true}
                     className="button"
                   >
-                    Коронки
+                    Исследования и диагностика
                   </ScrollLink>
                   <ScrollLink
                     to="features-list-mob"
                     smooth={true}
                     className="button"
                   >
-                    Восстановлени Зуба Виниром
+                    Анестезия
                   </ScrollLink>
                   <ScrollLink
                     to="features-list-mob"
                     smooth={true}
                     className="button"
                   >
-                    Диагностика
+                    Терапия
                   </ScrollLink>
-                  {/* <button className="button">Имплантация и хирургия</button>
-            <button className="button">Исправление прикуса</button> */}
+                  <ScrollLink
+                    to="features-list-mob"
+                    smooth={true}
+                    className="button"
+                  >
+                    Реставрации
+                  </ScrollLink>
+                  <ScrollLink
+                    to="features-list-mob"
+                    smooth={true}
+                    className="button"
+                  >
+                    Хирургия
+                  </ScrollLink>
+                  <ScrollLink
+                    to="features-list-mob"
+                    smooth={true}
+                    className="button"
+                  >
+                    Имплантология
+                  </ScrollLink>
+                  <ScrollLink
+                    to="features-list-mob"
+                    smooth={true}
+                    className="button"
+                  >
+                    Реконструктивное лечение
+                  </ScrollLink>
+                  <ScrollLink
+                    to="features-list-mob"
+                    smooth={true}
+                    className="button"
+                  >
+                    Ортодонтия
+                  </ScrollLink>
+                  <ScrollLink
+                    to="features-list-mob"
+                    smooth={true}
+                    className="button"
+                  >
+                    Профилактика и гигиена
+                  </ScrollLink>
+                  <ScrollLink
+                    to="features-list-mob"
+                    smooth={true}
+                    className="button"
+                  >
+                    Отбеливание
+                  </ScrollLink>
                 </div>
                 <div className="cards-list">
                   <div className="" id="orthopedia">
