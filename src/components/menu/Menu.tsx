@@ -21,6 +21,7 @@ interface MenuProps {
   toggleMenu?: any;
   isMenuPcOpen?: any;
   togglePcMenu?: any;
+  openModal?: any;
 }
 
 const services: string = require("../../assets/services.svg").default;
@@ -30,6 +31,7 @@ const Menu: React.FC<MenuProps> = ({
   toggleMenu,
   isMenuPcOpen,
   togglePcMenu,
+  openModal,
 }) => {
   const closeMenu = () => {
     if (isMenuOpen) {
@@ -124,7 +126,14 @@ const Menu: React.FC<MenuProps> = ({
           </div>
         </div>
         <div className="buttons">
-          <div className="button">Записать на прием</div>
+          <ScrollLink
+            className="button"
+            smooth={true}
+            onClick={closeMenu}
+            to="form"
+          >
+            Записать на прием
+          </ScrollLink>
           <Link to="/child-dental" className="button child">
             Детская стоматология
           </Link>
@@ -361,7 +370,9 @@ const Menu: React.FC<MenuProps> = ({
                   </Link>
                 </div>
               </div>
-              <button className="child-button">Детская стоматология</button>
+              <Link className="child-button" to="/child-dental">
+                Детская стоматология
+              </Link>
               <a href="tel:+7 (925) 222-90-22" className="tel">
                 +7 (925) 222-90-22
               </a>

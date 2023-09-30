@@ -1663,7 +1663,12 @@ export default function HomePage() {
               </div>
             </section>
           </div>
-          <div className="form-pc-screen" ref={form} onSubmit={sendEmail}>
+          <div
+            className="form-pc-screen"
+            id="form-screen"
+            ref={form}
+            onSubmit={sendEmail}
+          >
             <section className="content">
               <div className="heading-container">
                 <h5 className="heading">Записаться На Прием</h5>
@@ -1776,7 +1781,7 @@ export default function HomePage() {
               </div>
             </section>
           </div>
-          <div className="form-screen">
+          <div className="form-screen" id="form">
             <section className="content">
               <div className="form-heading-container">
                 <h3 className="form-heading">Записаться На Прием</h3>

@@ -774,6 +774,18 @@ body .loader .loader-container .loading-heading {
   text-transform: capitalize;
   margin-top: clamp(16px, 1.66656vw, 64px) !important;
 }
+body .services-modal-button {
+  display: none !important;
+  position: fixed !important;
+  right: clamp(16px, 1.66656vw, 64px);
+  bottom: clamp(16px, 1.66656vw, 64px);
+  z-index: 10000;
+  cursor: pointer;
+  transition: transform 0.7s ease-in-out;
+}
+body .services-modal-button:hover {
+  transform: rotate(360deg);
+}
 @media screen and (min-width: 1024px) {
   body .screen {
     width: 100%;
@@ -1868,22 +1880,23 @@ body .loader .loader-container .loading-heading {
     text-transform: capitalize;
     margin-top: clamp(16px, 1.66656vw, 64px);
   }
-}
-body .services-modal-button {
-  position: fixed !important;
-  right: clamp(16px, 1.66656vw, 64px);
-  bottom: clamp(16px, 1.66656vw, 64px);
-  z-index: 10000;
-  cursor: pointer;
-  transition: transform 0.7s ease-in-out;
-}
-body .services-modal-button:hover {
-  transform: rotate(360deg);
-}
-body .all-screen-content {
-  width: 100%;
-  height: 100%;
-  position: relative !important;
+  body .services-modal-button {
+    display: flex !important;
+    position: fixed !important;
+    right: clamp(16px, 1.66656vw, 64px);
+    bottom: clamp(16px, 1.66656vw, 64px);
+    z-index: 10000;
+    cursor: pointer;
+    transition: transform 0.7s ease-in-out;
+  }
+  body .services-modal-button:hover {
+    transform: rotate(360deg);
+  }
+  body .all-screen-content {
+    width: 100%;
+    height: 100%;
+    position: relative !important;
+  }
 }
 @media screen and (min-width: 480px) and (max-width: 1024px) {
   body .screen {
