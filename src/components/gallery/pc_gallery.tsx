@@ -13,15 +13,15 @@ import "./styles/pc_gallery_styles.css";
 type Swiper = any;
 
 interface PhotoSource {
-  imageSrc: any;
-  imageSrc2: any;
-  imageSrc3: any;
-  imageSrc4: any;
-  imageSrc5: any;
-  imageSrc6: any;
-  imageSrc7: any;
-  imageSrc8: any;
-  imageSrc9: any;
+  imageSrc?: any;
+  imageSrc2?: any;
+  imageSrc3?: any;
+  imageSrc4?: any;
+  imageSrc5?: any;
+  imageSrc6?: any;
+  imageSrc7?: any;
+  imageSrc8?: any;
+  imageSrc9?: any;
   openModal?: any;
 }
 

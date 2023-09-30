@@ -15,25 +15,34 @@ import { MDBCheckbox } from "mdb-react-ui-kit";
 
 import emailjs from "@emailjs/browser";
 
-import ReviewGallery from "../../components/reviews/ReviewGallery";
-import ServiceGallery from "../../components/gallery/services_gallery";
+import Gallery from "../../components/gallery/gallery";
 import Footer from "../../components/footer/Footer";
 
-import "./styles/works_styles.css";
+import "./styles/doctors_styles.css";
 
-const serviceOnePc = require("../../assets/service_1.webp");
-const serviceTwoPc = require("../../assets/service_2.webp");
-const serviceThreePc = require("../../assets/service_3.webp");
-const serviceFourPc = require("../../assets/service_4.webp");
+const DoctorOnePc = require("../../assets/1.webp");
+const DoctorTwoPc = require("../../assets/2.webp");
+const DoctorThreePc = require("../../assets/3.webp");
+const DoctorFourPc = require("../../assets/4.webp");
+const DoctorFivePc = require("../../assets/5.webp");
+const DoctorSixPc = require("../../assets/6.webp");
+const DoctorSevenPc = require("../../assets/7.webp");
+const DoctorEightPc = require("../../assets/8.webp");
+const DoctorNinePc = require("../../assets/9.webp");
 
-const serviceOneMob = require("../../assets/service_mob_01.webp");
-const serviceTwoMob = require("../../assets/service_mob_02.webp");
-const serviceThreeMob = require("../../assets/service_mob_03.webp");
-const serviceFourMob = require("../../assets/service_mob_04.webp");
+const doctorOneMob = require("../../assets/01.webp");
+const doctorTwoMob = require("../../assets/02.webp");
+const doctorThreeMob = require("../../assets/03.webp");
+const doctorFourMob = require("../../assets/04.webp");
+const doctorFiveMob = require("../../assets/05.webp");
+const doctorSixMob = require("../../assets/06.webp");
+const doctorSevenMob = require("../../assets/07.webp");
+const doctorEightMob = require("../../assets/08.webp");
+const doctorNineMob = require("../../assets/09.webp");
 
 const logoMobile: string = require("../../assets/logo_mob.svg").default;
 
-const WorksPage = () => {
+const DoctorsPage = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMenuPcOpen, setIsMenuPcOpen] = useState(false);
@@ -118,19 +127,24 @@ const WorksPage = () => {
                   Главная
                 </Link>
                 <div className="circle"></div>
-                <Link to="/works" className="prices-link">
-                  Работы
+                <Link to="/doctors" className="prices-link">
+                  Врачи
                 </Link>
               </div>
-              <h1 className="heading">Работы</h1>
+              <h1 className="heading">Врачи</h1>
               <div className="divider-container">
                 <div className="divider"></div>
               </div>
-              <ServiceGallery
-                imageSrc={serviceOneMob}
-                imageSrcTwo={serviceTwoMob}
-                imageSrcThree={serviceThreeMob}
-                imageSrcFour={serviceFourMob}
+              <Gallery
+                imageSrc={doctorOneMob}
+                imageSrcTwo={doctorTwoMob}
+                imageSrcThree={doctorThreeMob}
+                imageSrcFour={doctorFourMob}
+                imageSrcFive={doctorFiveMob}
+                imageSrcSix={doctorSixMob}
+                imageSrcSeven={doctorSevenMob}
+                imageSrcEight={doctorEightMob}
+                imageSrcNine={doctorNineMob}
               />
               <div className="form-screen">
                 <section className="content">
@@ -244,29 +258,71 @@ const WorksPage = () => {
                     Главная
                   </Link>
                   <div className="bread-dot"></div>
-                  <Link className="link-prices" to="/works">
-                    Работы
+                  <Link className="link-prices" to="/doctors">
+                    Врачи
                   </Link>
                 </div>
                 <div className="heading-container">
-                  <h1 className="heading">Работы</h1>
+                  <h1 className="heading">Врачи</h1>
                 </div>
                 <div className="divider-container">
                   <div className="divider"></div>
                 </div>
               </div>
-              <div className="works-container">
-                <div className="row">
-                  <div className="photos">
-                    <img className="img" src={serviceOnePc}></img>
-                    <img className="img" src={serviceTwoPc}></img>
+              <div className="doctors-container">
+                <div className="doctors-row">
+                  <div className="doctor">
+                    <img className="img" src={DoctorOnePc}></img>
+                    <span className="name">Аманова Альфия Камиловна</span>
+                    <span className="who">Врач стоматолог-терапевт</span>
+                  </div>
+                  <div className="doctor">
+                    <img className="img" src={DoctorTwoPc}></img>
+                    <span className="name">Таха Дана Юрьевна</span>
+                    <span className="who">Управляющий</span>
+                  </div>
+                  <div className="doctor">
+                    <img className="img" src={DoctorThreePc}></img>
+                    <span className="name">Тамаров Павел Сергеевич</span>
+                    <span className="who">
+                      Главный врач, врач-ортопед, врач-хирург, имплантолог
+                    </span>
                   </div>
                 </div>
-                <div className="row">
-                  {" "}
-                  <div className="photos two">
-                    <img className="img" src={serviceThreePc}></img>
-                    <img className="img" src={serviceFourPc}></img>
+                <div className="doctors-row two">
+                  <div className="doctor">
+                    <img className="img" src={DoctorFourPc}></img>
+                    <span className="name">Пятаев Ислам Рушанович</span>
+                    <span className="who">
+                      Стоматолог терапевт-микроскопист
+                    </span>
+                  </div>
+                  <div className="doctor">
+                    <img className="img" src={DoctorFivePc}></img>
+                    <span className="name">Терехова Елена Юрьевна</span>
+                    <span className="who">Стоматолог-терапевт</span>
+                  </div>
+                  <div className="doctor">
+                    <img className="img" src={DoctorSixPc}></img>
+                    <span className="name">Врач</span>
+                    <span className="who">Стоматолог</span>
+                  </div>
+                </div>
+                <div className="doctors-row two">
+                  <div className="doctor">
+                    <img className="img" src={DoctorSevenPc}></img>
+                    <span className="name">Врач</span>
+                    <span className="who">Стоматолог</span>
+                  </div>
+                  <div className="doctor">
+                    <img className="img" src={DoctorEightPc}></img>
+                    <span className="name">Врач</span>
+                    <span className="who">Стоматолог</span>
+                  </div>
+                  <div className="doctor">
+                    <img className="img" src={DoctorNinePc}></img>
+                    <span className="name">Юлия</span>
+                    <span className="who">Администратор</span>
                   </div>
                 </div>
               </div>
@@ -389,4 +445,4 @@ const WorksPage = () => {
   );
 };
 
-export default WorksPage;
+export default DoctorsPage;

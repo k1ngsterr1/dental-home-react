@@ -15,6 +15,7 @@ import ReviewGallery from "../../../components/reviews/ReviewGallery";
 import Footer from "../../../components/footer/Footer";
 import Gallery from "../../../components/gallery/gallery";
 import ServiceGallery from "../../../components/gallery/services_gallery";
+import PcServiceGallery from "../../../components/gallery/pc_services_gallery";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faC, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
@@ -22,9 +23,18 @@ import "../../../components/service_template/styles/services_styles.css";
 
 const pavelGallery = require("../../../assets/pavel_gallery.webp");
 const pavelGalleryPc = require("../../../assets/pavel_pc.webp");
-const serviceOne = require("../../../assets/serviceOne.webp");
-const serviceTwo = require("../../../assets/serviceTwo.webp");
-const ServiceOnePc = require("../../../assets/service_pc.webp");
+
+const mainService = require("../../../assets/service_pc.webp");
+
+const serviceOnePc = require("../../../assets/service_1.webp");
+const serviceTwoPc = require("../../../assets/service_2.webp");
+const ServiceThreePc = require("../../../assets/service_3.webp");
+const ServiceFourPc = require("../../../assets/service_4.webp");
+
+const serviceOneMob = require("../../../assets/service_mob_01.webp");
+const serviceTwoMob = require("../../../assets/service_mob_02.webp");
+const serviceThreeMob = require("../../../assets/service_mob_03.webp");
+const serviceFourMob = require("../../../assets/service_mob_04.webp");
 
 const TeethHealing = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -257,9 +267,10 @@ const TeethHealing = () => {
             <h4 className="heading">Работы</h4>
             <div className="divider"></div>
             <ServiceGallery
-              imageSrc={serviceOne}
-              imageSrcTwo={serviceTwo}
-              imageSrcThree={serviceOne}
+              imageSrc={serviceOneMob}
+              imageSrcTwo={serviceTwoMob}
+              imageSrcThree={serviceOneMob}
+              imageSrcFour={serviceFourMob}
             />
           </div>
           <div className="services-gallery">
@@ -309,7 +320,7 @@ const TeethHealing = () => {
               </button>
             </div>
             <img
-              src={ServiceOnePc}
+              src={mainService}
               alt="service"
               className="service-image"
             ></img>
@@ -455,6 +466,12 @@ const TeethHealing = () => {
               </div>
             </div>
           </div>
+          <PcServiceGallery
+            imageSrc={serviceOnePc}
+            imageSrc2={serviceTwoPc}
+            imageSrc3={ServiceThreePc}
+            imageSrc4={ServiceFourPc}
+          ></PcServiceGallery>
         </div>
       </main>
       <Footer />

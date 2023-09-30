@@ -338,6 +338,7 @@ const ReviewsPage = () => {
                 onSubmit={sendEmail}
                 style={{
                   borderTop: "none",
+                  marginTop: "clamp(32px,3.33312vw,128px)",
                   marginBottom: "clamp(64px,6.666666666666667vw,256px)",
                 }}
               >

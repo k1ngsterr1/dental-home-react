@@ -8,32 +8,34 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 
-import "./styles/gallery_styles.css";
-
-const pavel = require("../../assets/pavel_gallery.webp");
+import "./styles/pc_gallery_styles.css";
 
 type Swiper = any;
 
-SwiperCore.use([Navigation, Pagination]);
-
 interface PhotoSource {
-  imageSrc: any;
-  imageSrcTwo?: any;
-  imageSrcThree?: any;
-  imageSrcFour?: any;
-  imageSrcFive?: any;
-  imageSrcSix?: any;
-  imageSrcSeven?: any;
+  imageSrc?: any;
+  imageSrc2?: any;
+  imageSrc3?: any;
+  imageSrc4?: any;
+  imageSrc5?: any;
+  imageSrc6?: any;
+  imageSrc7?: any;
+  imageSrc8?: any;
+  imageSrc9?: any;
+  openModal?: any;
 }
 
-const Gallery: React.FC<PhotoSource> = ({
+const PcServiceGallery: React.FC<PhotoSource> = ({
   imageSrc,
-  imageSrcTwo,
-  imageSrcThree,
-  imageSrcFour,
-  imageSrcFive,
-  imageSrcSix,
-  imageSrcSeven,
+  imageSrc2,
+  imageSrc3,
+  imageSrc4,
+  imageSrc5,
+  imageSrc6,
+  imageSrc7,
+  imageSrc8,
+  imageSrc9,
+  openModal,
 }) => {
   const swiperRef = React.useRef<Swiper | null>(null);
 
@@ -50,23 +52,25 @@ const Gallery: React.FC<PhotoSource> = ({
   };
 
   return (
-    <div className="gallery">
+    <div
+      className="pc-gallery"
+      style={{ marginBottom: "clamp(64px,6.66624vw,256px)" }}
+    >
       <div className="gallery-nav">
         <button className="previous" onClick={handlePrev}>
-          <FontAwesomeIcon icon={faChevronLeft} />
+          <FontAwesomeIcon className="icon" icon={faChevronLeft} />
         </button>
         <button className="next" onClick={handleNext}>
-          <FontAwesomeIcon icon={faChevronRight} />
+          <FontAwesomeIcon className="icon" icon={faChevronRight} />
         </button>
       </div>
       <Swiper
-        spaceBetween={-80}
-        slidesPerView={1}
-        threshold={0.5}
+        spaceBetween={0}
+        slidesPerView={3}
         navigation={false} // Disable Swiper navigation (we're using custom buttons)
         pagination={{ clickable: true }}
         direction="horizontal"
-        className="mySwiper2"
+        className="mySwiper3"
         onSwiper={(swiper: any) => {
           swiperRef.current = swiper;
         }}
@@ -79,27 +83,23 @@ const Gallery: React.FC<PhotoSource> = ({
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="dentist-card-2">
+          <div className="dentist-card">
             <div className="button-image-container">
-              <img src={imageSrcTwo} alt="Doctor 2" className="doctor-image" />
+              <img src={imageSrc2} alt="Doctor 1" className="doctor-image" />
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="dentist-card-2">
+          <div className="dentist-card">
             <div className="button-image-container">
-              <img
-                src={imageSrcThree}
-                alt="Doctor 3"
-                className="doctor-image"
-              />
+              <img src={imageSrc3} alt="Doctor 1" className="doctor-image" />
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="dentist-card-2">
+          <div className="dentist-card">
             <div className="button-image-container">
-              <img src={imageSrcFour} alt="Doctor 3" className="doctor-image" />
+              <img src={imageSrc4} alt="Doctor 1" className="doctor-image" />
             </div>
           </div>
         </SwiperSlide>
@@ -108,4 +108,4 @@ const Gallery: React.FC<PhotoSource> = ({
   );
 };
 
-export default Gallery;
+export default PcServiceGallery;
