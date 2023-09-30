@@ -4,6 +4,7 @@ import Header from "../../components/header/header";
 import { keyframes } from "@emotion/react";
 import { Reveal } from "react-awesome-reveal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Bounce, Fade, Zoom } from "react-awesome-reveal";
 import {
   faPlus,
   faMinus,
@@ -12,17 +13,22 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import { MDBCheckbox } from "mdb-react-ui-kit";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore from "swiper";
+import { Navigation, Pagination } from "swiper/modules";
 
 import emailjs from "@emailjs/browser";
 
 import ReviewGallery from "../../components/reviews/ReviewGallery";
 import ServiceGallery from "../../components/gallery/services_gallery";
 import Gallery from "../../components/gallery/gallery";
+import ReviewGalleryDesktop from "../../components/reviews/ReviewGalleryDesktop";
+import PcGallery from "../../components/gallery/pc_gallery";
 import ClinicGalleryOne from "../../components/clinic_gallery_1/clinicGalleryOne";
 import ClinicGalleryTwo from "../../components/clinic_gallery_2/clinicGalleryTwo";
 import Footer from "../../components/footer/Footer";
 
-// import "./styles/works_styles.css";
+import "./styles/clinics_styles.css";
 
 const doctorOneMob = require("../../assets/01.webp");
 const doctorTwoMob = require("../../assets/02.webp");
@@ -33,6 +39,20 @@ const doctorSixMob = require("../../assets/06.webp");
 const doctorSevenMob = require("../../assets/07.webp");
 const doctorEightMob = require("../../assets/08.webp");
 const doctorNineMob = require("../../assets/09.webp");
+
+const doctorOnePc = require("../../assets/1.webp");
+const doctorTwoPc = require("../../assets/2.webp");
+const doctorThreePc = require("../../assets/3.webp");
+const doctorFourPc = require("../../assets/4.webp");
+const doctorFivePc = require("../../assets/5.webp");
+const doctorSixPc = require("../../assets/6.webp");
+const doctorSevenPc = require("../../assets/7.webp");
+const doctorEightPc = require("../../assets/8.webp");
+const doctorNinePc = require("../../assets/9.webp");
+
+const featuresPhotoPc = require("../../assets/features_image.webp");
+const galleryOnePic = require("../../assets/gallery_one_pic.webp");
+const galleryTwoPic = require("../../assets/gallery_two_pic.webp");
 
 const serviceOneMob = require("../../assets/service_mob_01.webp");
 const serviceTwoMob = require("../../assets/service_mob_02.webp");
@@ -78,6 +98,8 @@ const pavel = require("../../assets/pavel.webp");
 const featuresPhoto = require("../../assets/features_photo.png");
 const logoMobile: string = require("../../assets/logo_mob.svg").default;
 const bulb: string = require("../../assets/bulb.svg");
+
+type Swiper = any;
 
 const ClinicsPage = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -399,29 +421,423 @@ const ClinicsPage = () => {
               </div>
             </main>
           </div>
-          <div className="pc-content-c">
-            <main className="main-content">
-              {" "}
-              <Header
-                isMenuPcOpen={isMenuPcOpen}
-                togglePcMenu={togglePcMenu}
-              ></Header>
-              <div className="upper-content">
+          <div className="pc-content-c" style={{ width: "100%" }}>
+            <main className="main-content" style={{ width: "100%" }}>
+              <div
+                className="header-container"
+                style={{ width: "71.82291666666667%", margin: "auto" }}
+              >
+                <Header
+                  isMenuPcOpen={isMenuPcOpen}
+                  togglePcMenu={togglePcMenu}
+                ></Header>
+              </div>
+              <div
+                className="upper-content"
+                style={{
+                  width: "71.82291666666667%",
+                  margin: "auto",
+                  marginTop: "clamp(32px,3.33312vw,128px)",
+                }}
+              >
                 <div className="bread-dots-container">
                   <Link className="link" to="/">
                     Главная
                   </Link>
                   <div className="bread-dot"></div>
-                  <Link className="link-prices" to="/works">
-                    Работы
+                  <Link className="link-prices" to="/clinics">
+                    О клиниках
                   </Link>
                 </div>
                 <div className="heading-container">
-                  <h1 className="heading">Работы</h1>
+                  <h1 className="heading">О Клиниках</h1>
                 </div>
                 <div className="divider-container">
                   <div className="divider"></div>
                 </div>
+              </div>
+              <div
+                className="dental-home-gallery-pc"
+                style={{
+                  width: "100%",
+                  marginBottom: "clamp(32px,3.33312vw,128px)",
+                }}
+              >
+                <section className="content">
+                  <div className="heading-container">
+                    <h4 className="heading">Клиники Dental Home </h4>
+                  </div>
+                  <div className="galleries-container">
+                    <div className="gallery-one">
+                      <h6 className="g-heading">
+                        Клиника на Советском проспекте, 5
+                      </h6>
+                      <Swiper
+                        slidesPerView={1}
+                        spaceBetween={30}
+                        loop={true}
+                        pagination={{
+                          clickable: true,
+                        }}
+                        navigation={true}
+                        modules={[Pagination, Navigation]}
+                        style={
+                          {
+                            "--swiper-pagination-color": "#E8CB6C",
+                            "--swiper-navigation-color": "#E8CB6C",
+                          } as React.CSSProperties
+                        }
+                        className="mySwiper4"
+                      >
+                        <SwiperSlide>
+                          <img
+                            className="swiper-image"
+                            src={galleryOnePic}
+                            alt="image"
+                          ></img>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <img
+                            className="swiper-image"
+                            src={galleryOnePic}
+                            alt="image"
+                          ></img>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <img
+                            className="swiper-image"
+                            src={galleryOnePic}
+                            alt="image"
+                          ></img>
+                        </SwiperSlide>
+                      </Swiper>
+                    </div>
+                    <div className="gallery-two">
+                      <h6 className="g-heading">Клиника на Рощинской, 9</h6>
+                      <Swiper
+                        slidesPerView={1}
+                        spaceBetween={30}
+                        loop={true}
+                        pagination={{
+                          clickable: true,
+                        }}
+                        navigation={true}
+                        modules={[Pagination, Navigation]}
+                        style={
+                          {
+                            "--swiper-pagination-color": "#E8CB6C",
+                            "--swiper-navigation-color": "#E8CB6C",
+                          } as React.CSSProperties
+                        }
+                        className="mySwiper5"
+                      >
+                        <SwiperSlide>
+                          <img
+                            className="swiper-image"
+                            src={galleryTwoPic}
+                            alt="image"
+                          ></img>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <img
+                            className="swiper-image"
+                            src={galleryTwoPic}
+                            alt="image"
+                          ></img>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <img
+                            className="swiper-image"
+                            src={galleryTwoPic}
+                            alt="image"
+                          ></img>
+                        </SwiperSlide>
+                      </Swiper>
+                    </div>
+                  </div>
+                  <div className="btn-container">
+                    <button className="gold-btn">Записаться на прием</button>
+                  </div>
+                </section>
+              </div>
+              <div className="pc-features-screen" id="features-list-pc">
+                <section className="features-content">
+                  <Fade triggerOnce={true} direction="left">
+                    <img
+                      className="features-image"
+                      src={featuresPhotoPc}
+                      style={{
+                        // transform: `translateY(${topPosition}px)`,
+                        position: "sticky",
+                        top: "128px",
+                      }}
+                      alt="features-photo-pc"
+                    ></img>
+                  </Fade>
+                  <div className="features-list">
+                    <Fade triggerOnce={true} direction="right" delay={100}>
+                      <h2 className="features-heading">Преимущества</h2>
+                    </Fade>
+                    <div className="list-content">
+                      <Fade triggerOnce={true} direction="right" delay={200}>
+                        <div className="list-01">
+                          <div className="divider-container">
+                            <div className="divider"></div>
+                            <span className="number">01</span>
+                          </div>
+                          <Fade
+                            triggerOnce={true}
+                            direction="right"
+                            delay={300}
+                            style={{
+                              width: "100%",
+                              display: "flex",
+                              justifyContent: "flex-end",
+                            }}
+                          >
+                            <p className="list-p">
+                              Современная клиника с самым передовым
+                              оборудованием
+                            </p>
+                          </Fade>
+                        </div>
+                      </Fade>
+                      <div className="list-02">
+                        <Fade triggerOnce={true} direction="right" delay={400}>
+                          <div className="divider-container">
+                            <div className="divider"></div>
+                            <span className="number">02</span>
+                          </div>
+                        </Fade>
+                        <Fade
+                          triggerOnce={true}
+                          direction="right"
+                          delay={500}
+                          style={{
+                            width: "100%",
+                            display: "flex",
+                            justifyContent: "flex-end",
+                          }}
+                        >
+                          <p className="list-p l">
+                            Тщательно соблюдаем требование санитарии и гигиены,
+                            что обеспечиваем и контролируем с помощью автоклавов
+                            последнего поколения
+                          </p>
+                        </Fade>
+                      </div>
+                      <div className="list-02">
+                        <Fade triggerOnce={true} direction="right" delay={600}>
+                          <div className="divider-container">
+                            <div className="divider"></div>
+                            <span className="number">03</span>
+                          </div>
+                        </Fade>
+                        <Fade
+                          triggerOnce={true}
+                          direction="right"
+                          delay={700}
+                          style={{
+                            width: "100%",
+                            display: "flex",
+                            justifyContent: "flex-end",
+                          }}
+                        >
+                          <p className="list-p l">
+                            Используем только качественные и надёжные материалы,
+                            подтверждённые российскими и международными
+                            сертификатами{" "}
+                          </p>
+                        </Fade>
+                      </div>
+                      <div className="list-02">
+                        <Fade triggerOnce={true} direction="right" delay={800}>
+                          <div className="divider-container">
+                            <div className="divider"></div>
+                            <span className="number">04</span>
+                          </div>
+                        </Fade>
+                        <Fade
+                          triggerOnce={true}
+                          direction="right"
+                          delay={900}
+                          style={{
+                            width: "100%",
+                            display: "flex",
+                            justifyContent: "flex-end",
+                          }}
+                        >
+                          <p className="list-p">
+                            Индивидуальный подход к каждому клиенту{" "}
+                          </p>
+                        </Fade>
+                      </div>
+                      <div className="list-02">
+                        <Fade triggerOnce={true} direction="right" delay={1000}>
+                          <div className="divider-container">
+                            <div className="divider"></div>
+                            <span className="number">05</span>
+                          </div>
+                        </Fade>
+                        <Fade
+                          triggerOnce={true}
+                          direction="right"
+                          delay={1100}
+                          style={{
+                            width: "100%",
+                            display: "flex",
+                            justifyContent: "flex-end",
+                          }}
+                        >
+                          <p className="list-p l">
+                            Каждый кабинет оснащен современным оборудованием
+                            лучших мировых производителей.
+                          </p>
+                        </Fade>
+                        <Fade
+                          triggerOnce={true}
+                          direction="right"
+                          delay={1200}
+                          style={{
+                            width: "100%",
+                            display: "flex",
+                            justifyContent: "flex-end",
+                          }}
+                        >
+                          <p className="list-p-gold">
+                            Мы используем самые эффективные и безопасные
+                            обезболивающие методики при протезировании лечении
+                            зубов.
+                          </p>
+                        </Fade>
+                      </div>
+                      <div className="list-02">
+                        <Fade triggerOnce={true} direction="right" delay={1300}>
+                          <div className="divider-container">
+                            <div className="divider"></div>
+                            <span className="number">06</span>
+                          </div>
+                        </Fade>
+                        <Fade
+                          triggerOnce={true}
+                          direction="right"
+                          delay={800}
+                          style={{
+                            width: "100%",
+                            display: "flex",
+                            justifyContent: "flex-end",
+                          }}
+                        >
+                          <p className="list-p l">
+                            Медицинское учреждениепремиум-класса
+                          </p>
+                        </Fade>
+                        <Fade
+                          triggerOnce={true}
+                          direction="right"
+                          delay={800}
+                          style={{
+                            width: "100%",
+                            display: "flex",
+                            justifyContent: "flex-end",
+                          }}
+                        >
+                          <p className="list-p-gold">
+                            У нас Вы можете воспользоваться широким спектром
+                            самых востребованных в современной стоматологии
+                            услуг.
+                          </p>
+                        </Fade>
+                      </div>
+                      <div className="list-02 squares">
+                        <Fade triggerOnce={true} direction="right" delay={800}>
+                          <div className="divider-container">
+                            <div className="divider"></div>
+                            <span className="number">07</span>
+                          </div>
+                        </Fade>
+                        <Fade
+                          triggerOnce={true}
+                          direction="right"
+                          delay={800}
+                          style={{
+                            width: "100%",
+                            display: "flex",
+                            justifyContent: "flex-end",
+                          }}
+                        >
+                          <p className="list-p">Наши преимущества</p>
+                        </Fade>
+                        <Fade triggerOnce={true} direction="right" delay={800}>
+                          <div className="square-row first">
+                            <div className="square">
+                              <span className="number">01</span>
+                              <span className="gold-p">
+                                Удобное расположение
+                              </span>
+                            </div>
+                            <div className="square left">
+                              <span className="number">02</span>
+                              <span className="gold-p">Домашняя атмосфера</span>
+                            </div>
+                          </div>
+                        </Fade>
+                        <Fade triggerOnce={true} direction="right" delay={800}>
+                          <div className="square-row second">
+                            <div className="square ">
+                              <span className="number">03</span>
+                              <span className="gold-p">
+                                Все стоматологические процедуры
+                              </span>
+                            </div>
+                            <div className="square left">
+                              <span className="number">04</span>
+                              <span className="gold-p">
+                                Современное обородувоние
+                              </span>
+                            </div>
+                          </div>
+                        </Fade>
+                      </div>
+                      <Fade triggerOnce={true} direction="right" delay={800}>
+                        <button className="golden-btn">
+                          Записаться на прием
+                        </button>
+                      </Fade>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div
+                className="gallery-screen"
+                style={{
+                  width: "71.82291666666667%",
+                  margin: "auto",
+                  marginTop: "clamp(32px,3.33312vw,128px)",
+                }}
+              >
+                <PcGallery
+                  imageSrc={doctorOnePc}
+                  imageSrc2={doctorTwoPc}
+                  imageSrc3={doctorThreePc}
+                  imageSrc4={doctorFourPc}
+                  imageSrc5={doctorFivePc}
+                  imageSrc6={doctorSixPc}
+                  imageSrc7={doctorSevenPc}
+                  imageSrc8={doctorEightPc}
+                  imageSrc9={doctorNinePc}
+                ></PcGallery>
+              </div>
+              <div
+                className="review-screen"
+                style={{
+                  width: "71.82291666666667%",
+                  margin: "auto",
+                  marginTop: "clamp(32px,3.33312vw,128px)",
+                  borderTop: "1px solid #8A8D95",
+                }}
+              >
+                <ReviewGalleryDesktop />
               </div>
               <div
                 className="form-pc-screen"

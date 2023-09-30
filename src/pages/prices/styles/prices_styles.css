@@ -232,7 +232,7 @@ body .screen .content .services-content .cards .price-tab .blue-btn:hover, body 
     display: flex;
   }
   body .screen .pc-content-c .main-content {
-    width: 71.8229166667% !important;
+    width: 71.8229166667%;
     height: auto;
     display: flex;
     flex-direction: column;

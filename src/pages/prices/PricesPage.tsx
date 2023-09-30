@@ -1093,7 +1093,10 @@ const PricesPage = () => {
             </div>
           </div>
           <div className="pc-content-c">
-            <main className="main-content">
+            <main
+              className="main-content"
+              style={{ width: "71.82291666666667%" }}
+            >
               <Header
                 isMenuPcOpen={isMenuPcOpen}
                 togglePcMenu={togglePcMenu}
