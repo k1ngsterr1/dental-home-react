@@ -1086,6 +1086,102 @@ const PricesPage = () => {
                       paragraph20="Изгиб на дуге"
                       price20="200₽"
                     ></PriceTabLong>
+                    <PriceTabLong
+                      tabHeadign="Ретенция"
+                      paragraphOne="Несъмныйретейнер на 1 зубной ряд"
+                      priceOne="7000₽"
+                      paragraphTwo="Ретенционный съемный аппарат на 1 зубной ряд "
+                      priceTwo="8000₽"
+                      paragraphThree="Снятие ретейнера"
+                      priceThree="5000₽"
+                      paragraphFour="Починка несъемного ретейнера"
+                      priceFour="2000₽"
+                      paragraphFive="Изготовление ретенционной каппы"
+                      priceFive="6500₽"
+                    ></PriceTabLong>
+                    <PriceTabLong
+                      tabHeadign="Дополнительные приспособления"
+                      paragraphOne="Лечение с помощью аппарат Марко-Росса "
+                      priceOne="29000₽"
+                      paragraphTwo="Активация ортодонтического винта"
+                      priceTwo="2500₽"
+                      paragraphThree="Аппарат для дистализации моляров"
+                      priceThree="33000₽"
+                      paragraphFour="Лечение с помощью небного бюгеля"
+                      priceFour="4000₽"
+                      paragraphFive="Межчелюстные тяги"
+                      priceFive="500₽"
+                      paragraphSix="Изготовление коронки ортодонической"
+                      priceSix="5000₽"
+                      paragraphSeven="Изготовление кольца-петли ортодонического"
+                      priceSeven="9000₽"
+                      paragraphEight="Повторная фиксация кольца-петли ортодонического"
+                      priceEight="2000₽"
+                      paragraphNine="Снятие оттиска с одной челюсти альгинатными массами "
+                      priceNine="500₽"
+                      paragraphTen="Изготовление прикусного шаблона"
+                      priceTen="500₽"
+                      paragraph11="Антропометрические исследования (компьютерный анализ ТРГ головы) "
+                      price11="2000₽"
+                      paragraph12="Изготовление контрольной модели (из гипса) "
+                      price12="500₽"
+                      paragraph13="Прием (осмотр, наблюдение) врача-ортодонта первичный"
+                      price13="1000₽"
+                      paragraph14="Прием (осмотр, наблюдение) врача-ортодонта повторный"
+                      price14="700₽"
+                    ></PriceTabLong>
+                  </div>
+                  <div
+                    className=""
+                    id="orthodontia"
+                    style={{ marginTop: "clamp(32px,3.33312vw,128px)" }}
+                  >
+                    <h2 className="heading">Профилактика и гигиена</h2>
+                    <PriceTabLong
+                      tabHeadign="Профилактика и гигиена"
+                      paragraphOne="Глубокое фторирование эмали зуба Seal&Protect (1 ед.)"
+                      priceOne="300₽"
+                      paragraphTwo="Местное применение реминилизирующих препаратов (процедура)"
+                      priceTwo="500₽"
+                      paragraphThree="Обучение гигиене полости рта и зубов индивидуально, подбор средств и предметов гигиены полости рта"
+                      priceThree="400₽"
+                      paragraphFour="Профессиональная гигиена полости рта и зубов (ультразвуковое удаление зубных отложений, AirFlow, полировка, покрытие зубов реминилизирующими препаратами)"
+                      priceFour="5500₽"
+                      paragraphFive="Профессиональная гигиена полости рта при регулярном профосмотре (1 раз в 6 месяцев)"
+                      priceFive="5500₽"
+                      paragraphSix="Снятие мягких зубных отложений щеткой + пастой, полировка (1 зуб)"
+                      priceSix="50₽"
+                      paragraphSeven="Профессиональная гигиена воздушноабразивным аппаратом AirFlow (1 челюсть)"
+                      priceSeven="2500₽"
+                      paragraphEight="Снятие зубных отложений пастой, полировка, покрытие `Fluocal gel` (2 челюсти) 1й сеанс"
+                      priceEight="2500₽"
+                      paragraphTen="Снятие зубных отложений пастой, полировка, покрытие `Fluocal gel` последующий сеанс"
+                      priceTen="1500₽"
+                      paragraph11="Запечатывание фиссуры зуба герметиком (1 ед.) "
+                      price11="2000₽"
+                      paragraph12="Ультразвуковое удаление наддесневых и поддесневых зубных отложений в области 1 зуба"
+                      price12="150₽"
+                    ></PriceTabLong>
+                  </div>
+                  <div
+                    className=""
+                    id="orthodontia"
+                    style={{ marginTop: "clamp(32px,3.33312vw,128px)" }}
+                  >
+                    <h2 className="heading">Отбеливание</h2>
+                    <PriceTabLong
+                      tabHeadign="Профилактика и гигиена"
+                      paragraphOne="Профессиональное отбеливание зубов клиническое - система `ZOOM`"
+                      priceOne="21500₽"
+                      paragraphTwo="Капповое домашнее отбеливание (включая стоимость изготовления капп и набор отбеливающего геля) 2 челюсти"
+                      priceTwo="9900₽"
+                      paragraphThree="Профессиональное отбеливание зубов клиническое- система `Amazing White`"
+                      priceThree="11000₽"
+                      paragraphFour="Внутриканальное отбеливание (первый сеанс) "
+                      priceFour="1900₽"
+                      paragraphFive="Внутриканальное отбеливание (последующий сеанс)"
+                      priceFive="1000₽"
+                    ></PriceTabLong>
                   </div>
                 </div>
               </div>
