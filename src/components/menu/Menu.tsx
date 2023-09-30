@@ -103,20 +103,6 @@ const Menu: React.FC<MenuProps> = ({
           <a className="phone link" href="tel:+79252229022">
             +7 (925) 222-90-22
           </a>
-          {/* <div className="geo-row second">
-            <FontAwesomeIcon
-              icon={faMapPin}
-              className="geo-icon"
-            ></FontAwesomeIcon>
-            <span className="text">
-              Московская область, г. Ивантеевка, Советский проспект 5
-            </span>
-          </div>
-          <span className="dark schedule">Пн-Вс - 9:00-21:00</span>
-          <span className="dark free">Бесплатная парковка</span>
-          <a className="phone link" href="tel:">
-            +7(925) 925 99 55
-          </a> */}
           <div className="social-media">
             <FontAwesomeIcon
               icon={faVk}
@@ -126,12 +112,7 @@ const Menu: React.FC<MenuProps> = ({
           </div>
         </div>
         <div className="buttons">
-          <ScrollLink
-            className="button"
-            smooth={true}
-            onClick={closeMenu}
-            to="form"
-          >
+          <ScrollLink className="button" to="form-screen" onClick={closeMenu}>
             Записать на прием
           </ScrollLink>
           <Link to="/child-dental" className="button child">
@@ -269,7 +250,17 @@ const Menu: React.FC<MenuProps> = ({
           <img className="services" src={services} alt="services"></img>
         </Link>
         <img src={logo} alt="logo" className="logo" />
-        <button className="form-btn">Записаться на прием</button>
+        <button
+          className="form-btn"
+          onClick={openModal}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          Записаться на прием
+        </button>
       </div>
       <div className="menu-tablet">
         <div className="menu-content">

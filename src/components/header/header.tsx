@@ -84,7 +84,11 @@ const Header: React.FC<HeaderProps> = ({
         </div>
         {isMenuOpen && (
           <Fade delay={300}>
-            <Menu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />{" "}
+            <Menu
+              openModal={openModal}
+              isMenuOpen={isMenuOpen}
+              toggleMenu={toggleMenu}
+            />{" "}
           </Fade>
         )}
       </div>
@@ -122,7 +126,11 @@ const Header: React.FC<HeaderProps> = ({
           </div>
           {isMenuPcOpen && (
             <Fade>
-              <Menu isMenuPcOpen={isMenuPcOpen} togglePcMenu={togglePcMenu} />
+              <Menu
+                openModal={openModal}
+                isMenuPcOpen={isMenuPcOpen}
+                togglePcMenu={togglePcMenu}
+              />
             </Fade>
           )}
         </div>
@@ -160,7 +168,11 @@ const Header: React.FC<HeaderProps> = ({
             </div>
             {isMenuPcOpen && (
               <Fade>
-                <Menu isMenuPcOpen={isMenuPcOpen} togglePcMenu={togglePcMenu} />
+                <Menu
+                  openModal={openModal}
+                  isMenuPcOpen={isMenuPcOpen}
+                  togglePcMenu={togglePcMenu}
+                />
               </Fade>
             )}
           </div>

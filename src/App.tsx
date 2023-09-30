@@ -1781,7 +1781,7 @@ export default function HomePage() {
               </div>
             </section>
           </div>
-          <div className="form-screen" id="form">
+          <div className="form-screen" id="form-screen-mob">
             <section className="content">
               <div className="form-heading-container">
                 <h3 className="form-heading">Записаться На Прием</h3>
