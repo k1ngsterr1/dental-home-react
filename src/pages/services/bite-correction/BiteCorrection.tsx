@@ -267,10 +267,7 @@ const BiteCorrection = () => {
                 </span>
                 <span className="price">2000₽</span>
               </section>
-              <section className="tab-three">
-                <span className="text">Снятие одного брекета</span>
-                <span className="price">400₽</span>
-              </section>
+              <section className="tab-three"></section>
               <section className="tab-three">
                 <span className="text">Замена дуги</span>
                 <span className="price">3000₽</span>
@@ -676,82 +673,226 @@ const BiteCorrection = () => {
                 </p>
               </div>
               <div className="price-tab" id="prices">
-                <h4 className="price-heading">Профилактика и гигиена</h4>
+                <h4 className="price-heading">
+                  Ортодоническая коррекция с применением брекет-системы
+                </h4>
                 <div className="prices">
                   <div className="price-row">
-                    <span className="text">
-                      Глубокое фторирование эмали зуьа Seal&Protect (1 ед.)
-                    </span>
-                    <span className="price">300 ₽</span>
+                    <span className="text">I степений сложности</span>
+                    <span className="price">65000₽</span>
                   </div>
                   <div className="price-row">
-                    <span className="text">
-                      Местное применение реминилизрующих препаратов (процедура)
-                    </span>
-                    <span className="price">500 ₽</span>
+                    <span className="text">II степений сложности</span>
+                    <span className="price">70000₽</span>
                   </div>
                   <div className="price-row ">
-                    <span className="text">
-                      Обучение гигиене полости рта и зубов индивидуально, подбор
-                      средств и предметов гигиены полости рта
-                    </span>
-                    <span className="price">500 ₽</span>
+                    <span className="text">III степений сложности</span>
+                    <span className="price">75000₽</span>
                   </div>
                   <div className="price-row">
                     <span className="text">
-                      Профессиональная гигиена полости рта и
-                      зубов(ультразвуковое удаление зубных отложений, AirFlow,
-                      полировка, покрытие зубов реминилизирующими препаратами)
+                      Фиксация брекет-системы (одна челюсть)
                     </span>
-                    <span className="price">5 500 ₽</span>
+                    <span className="price">80 000₽</span>
                   </div>
                   <div className="price-row">
                     <span className="text">
-                      Профессиональная гигиена полости рта при регулярном
-                      профосмотре(1 раз в 6 месяцев)
+                      Фиксация эстетической брекет-системы (одна челюсть)
                     </span>
-                    <span className="price">5 500 ₽</span>
+                    <span className="price">95 000₽</span>
                   </div>
                   <div className="price-row">
                     <span className="text">
-                      Снятие мягких зубных отложений щеткой + пастой, полировка
-                      (1 зуб)
+                      Брекет-система металлическая безлигатурная
                     </span>
-                    <span className="price">50₽</span>
+                    <span className="price">25 000₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">Брекет-система Damon Q</span>
+                    <span className="price">30 000₽</span>
                   </div>
                   <div className="price-row">
                     <span className="text">
-                      Профессиональная гигиена воздушноабразивным аппаратом
-                      AirFlow (1 челюсть)
+                      Брекет-система сапфировая, керамическая
                     </span>
-                    <span className="price">2500₽</span>
+                    <span className="price">32 500₽</span>
                   </div>
                   <div className="price-row">
                     <span className="text">
-                      Снятие зубных отложений пастой, полировка, покрытие
-                      "Fluocal gel" (2 челюсти) 1й сеанс
+                      Брекет-система керамическая безлигатурная
                     </span>
-                    <span className="price">2500₽</span>
+                    <span className="price">35 000₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">Фиксация одного брекета</span>
+                    <span className="price">2 500₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">Замена одного брекета</span>
+                    <span className="price">3 000₽</span>
                   </div>
                   <div className="price-row">
                     <span className="text">
-                      Снятие зубных отложений пастой, полировка, покрытие
-                      "Fluocal gel" последующий сеанс
-                    </span>
-                    <span className="price">2500₽</span>
-                  </div>
-                  <div className="price-row">
-                    <span className="text">
-                      Запечатывание фиссуры зуба герметиком (1 ед.)
+                      Снятие брекетов с одного зубного ряда
                     </span>
                     <span className="price">2000₽</span>
                   </div>
                   <div className="price-row">
+                    <span className="text">Снятие одного брекета</span>
+                    <span className="price">400₽</span>
+                  </div>
+                  <div className="price-row">
                     <span className="text">
-                      Ультразвуковое удаление наддесневых и поддесневых зубных
-                      отложений в области 1 зуба
+                      Установка открывающей, закрывающей пружины
                     </span>
-                    <span className="price">150₽</span>
+                    <span className="price">1000₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">Установка чейна(1 звено)</span>
+                    <span className="price">130₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">Установка лигатуры (1 шт.)</span>
+                    <span className="price">70₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">Наложение длинной лигатуры</span>
+                    <span className="price">400₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">Изгиб на дуге</span>
+                    <span className="price last">200₽</span>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="price-tab"
+                id="prices"
+                style={{ marginTop: "clamp(16px,1.66656vw,64px)" }}
+              >
+                <h4 className="price-heading">Ретенция</h4>
+                <div className="prices">
+                  <div className="price-row">
+                    <span className="text">
+                      Несъемный ретейнер на 1 зубной ряд
+                    </span>
+                    <span className="price">7 000₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">II степений сложности</span>
+                    <span className="price">70000₽</span>
+                  </div>
+                  <div className="price-row ">
+                    <span className="text">
+                      Ретенционный съемный аппарат на 1 зубной ряд
+                    </span>
+                    <span className="price">8 000₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">Снятие ретейнера</span>
+                    <span className="price">5 000₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">Починка несъемного ретейнера</span>
+                    <span className="price">2 000₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Изготовление ретенционной каппы
+                    </span>
+                    <span className="price last">6 500₽</span>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="price-tab"
+                id="prices"
+                style={{ marginTop: "clamp(16px,1.66656vw,64px)" }}
+              >
+                <h4 className="price-heading">Дополнительные приспособления</h4>
+                <div className="prices">
+                  <div className="price-row">
+                    <span className="text">
+                      Лечение с помощью аппарат Марко-Росса
+                    </span>
+                    <span className="price">29 000₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Активация ортодонтического винта
+                    </span>
+                    <span className="price">2 500₽</span>
+                  </div>
+                  <div className="price-row ">
+                    <span className="text">
+                      Аппарат для дистализации моляров
+                    </span>
+                    <span className="price">33 000₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Лечение с помощью небного бюгеля
+                    </span>
+                    <span className="price">4 000₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">Межчелюстные тяги</span>
+                    <span className="price">500₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Изготовление коронки ортодонической
+                    </span>
+                    <span className="price">5 000₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Изготовление кольца-петли ортодонического
+                    </span>
+                    <span className="price">9 000₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Повторная фиксация кольца-петли ортодонического
+                    </span>
+                    <span className="price">2 000₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Снятие оттиска с одной челюсти альгинатными массами
+                    </span>
+                    <span className="price">500₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Изготовление прикусного шаблона
+                    </span>
+                    <span className="price">500₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Антропометрические исследования (компьютерный анализ ТРГ
+                      головы)
+                    </span>
+                    <span className="price">2 000₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Изготовление контрольной модел (из гипса)
+                    </span>
+                    <span className="price">500₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Прием (осмотр, наблюдение) врача-ортодонта первичный
+                    </span>
+                    <span className="price">1000₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Прием (осмотр, наблюдение) врача-ортодонта повторный
+                    </span>
+                    <span className="price last">700₽</span>
                   </div>
                 </div>
               </div>

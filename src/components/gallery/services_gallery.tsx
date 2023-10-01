@@ -60,7 +60,7 @@ const Gallery: React.FC<PhotoSource> = ({
         </button>
       </div>
       <Swiper
-        spaceBetween={-80}
+        spaceBetween={-40}
         slidesPerView={1}
         threshold={0.5}
         navigation={false} // Disable Swiper navigation (we're using custom buttons)

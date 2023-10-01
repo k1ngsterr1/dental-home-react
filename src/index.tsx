@@ -18,6 +18,7 @@ import ClinicsPage from "./pages/clinics/ClinicsPage";
 import Whitening from "./pages/services/whitening/Whitening";
 import Hygiene from "./pages/services/hygiene/Hygiene";
 import BiteCorrection from "./pages/services/bite-correction/BiteCorrection";
+import ProstheticsPage from "./pages/services/prosthetics/ProstheticsPage";
 
 ReactDOM.render(
   <Router>
@@ -39,6 +40,7 @@ ReactDOM.render(
         element={<BiteCorrection />}
       ></Route>
       <Route path="/services/teeth-healing" element={<TeethHealing />}></Route>
+      <Route path="/services/prosthetics" element={<ProstheticsPage />}></Route>
     </Routes>
   </Router>,
   document.getElementById("root")
