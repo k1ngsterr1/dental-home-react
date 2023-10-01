@@ -13,6 +13,11 @@ import "./styles/clinic_gallery_one.css";
 type Swiper = any;
 
 const galleryOnePic = require("../../assets/gallery_one_pic.webp");
+const galleryTwoPic = require("../../assets/gallery_c02.webp");
+const galleryThreePic = require("../../assets/gallery_c03.webp");
+const galleryFourPic = require("../../assets/gallery_c04.webp");
+const galleryFivePic = require("../../assets/gallery_c05.webp");
+
 const clinic = require("../../assets/dental_clinic_one.webp");
 const example = require("../../assets/example.webp");
 
@@ -58,10 +63,16 @@ const ClinicGalleryOne: React.FC = () => {
           <img className="swiper-image" src={galleryOnePic} alt="image"></img>
         </SwiperSlide>
         <SwiperSlide>
-          <img className="swiper-image" src={galleryOnePic} alt="image"></img>
+          <img className="swiper-image" src={galleryTwoPic} alt="image"></img>
         </SwiperSlide>
         <SwiperSlide>
-          <img className="swiper-image" src={galleryOnePic} alt="image"></img>
+          <img className="swiper-image" src={galleryThreePic} alt="image"></img>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img className="swiper-image" src={galleryFourPic} alt="image"></img>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img className="swiper-image" src={galleryFivePic} alt="image"></img>
         </SwiperSlide>
       </Swiper>
     </div>

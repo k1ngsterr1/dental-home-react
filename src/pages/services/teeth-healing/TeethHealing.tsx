@@ -189,9 +189,11 @@ const TeethHealing = () => {
               </p>
             </section>
             <div className="divider"></div>
-            <div className="plate" style={{ width: "90%" }}>
+            <div className="plate">
               <section className="tab-one">
-                <h5 className="plate-heading">Восстановление зуба пломбой</h5>
+                <h5 className="plate-heading" style={{ width: "90%" }}>
+                  Восстановление зуба пломбой
+                </h5>
                 <span className="text">
                   Применение системы Коффердам, Роббердам
                 </span>
@@ -682,10 +684,10 @@ const TeethHealing = () => {
                 </Link>
                 <div className="circle"></div>
                 <Link to="/services/teeth-healing" className="link active">
-                  Лечение кариеса
+                  Лечение зубов
                 </Link>
               </div>
-              <h1 className="heading">Лечение кариеса</h1>
+              <h1 className="heading">Лечение зубов</h1>
               <button className="button">
                 <span className="text">Записаться</span>
                 <FontAwesomeIcon
@@ -704,225 +706,367 @@ const TeethHealing = () => {
             <div className="services-list">
               <span className="text">Содержание</span>
               <div className="buttons">
-                <Button
-                  to=""
-                  value={"Основная информация"}
-                  className="button"
-                ></Button>
-                <Button to="" value={"Цены"} className="button"></Button>
-                <Button to="" value={"Врачи"} className="button"></Button>
-                <Button to="" value={"Работы"} className="button"></Button>
-                <Button to="" value={"Отзывы"} className="button"></Button>
-                <Button to="" value={"Контакты"} className="button"></Button>
-                <Button
-                  to=""
-                  value={"Записаться на прием"}
-                  className="button"
-                ></Button>
+                <ScrollLink to="information" className="button">
+                  Основная информация
+                </ScrollLink>
+                <ScrollLink to="prices" className="button">
+                  Цены
+                </ScrollLink>
+                <ScrollLink to="works" className="button">
+                  Работы
+                </ScrollLink>
+                <ScrollLink to="doctors" className="button">
+                  Врачи
+                </ScrollLink>
+                <ScrollLink to="reviews" className="button">
+                  Отзывы
+                </ScrollLink>
+                <ScrollLink to="form-screen" className="button">
+                  Записаться на прием
+                </ScrollLink>
               </div>
             </div>
-            <div className="services-information">
+            <div className="services-information" id="information">
               <span className="text">Об услуге</span>
               <div className="information-one">
-                <h3 className="heading-info">Лечение кариеса</h3>
+                <h3 className="heading-info">Лечение зубов</h3>
                 <p className="p-info">
-                  Кариес не терпит промедления. Он довольно быстро может перейти
-                  от легкого дефекта эмали к серьезным поражениям зуба с
-                  обширным воспалением. Без качественного и своевременного
-                  лечения развивающийся процесс грозит потерей зуба. В нашей
-                  клинике специалисты борются за каждый зуб, используя самые
-                  современные методы лечения кариеса.
+                  Клиника Dental Home в Ивантеевке предлагает современное и
+                  инновационное лечение зубов, которое обеспечивает высокую
+                  эффективность и безопасность. Наша команда опытных
+                  стоматологов специализируется на проведении широкого спектра
+                  стоматологических процедур, включая хирургическое лечение
+                  зубов.
                 </p>
               </div>
               <div className="information-two">
-                <h3 className="heading-info two">Причины появления кариеса</h3>
+                <h3 className="heading-info two">
+                  {" "}
+                  Преимущества лечения зубов в клинике Dental Home в Ивантеевке
+                </h3>
                 <p className="p-info two">
-                  Основная причина связана с бактериями, которые скапливаются в
-                  зубном налете. Они питаются сахарами из потребляемой человеком
-                  пищи и выделяют кислоту, разрушающую эмаль. Чтобы ослабить
-                  негативный эффект, важно регулярно очищать ротовую полость,
-                  удаляя налет. Если гигиена страдает, то сразу повышается риск
-                  развития кариеса. Дополнительные причины возникновения:
-                  неправильное питание с обилием сладкого, серьезный дефицит
-                  минеральных веществ, перенесенные тяжелые заболевания. Эмаль
-                  зубов ослабевает, как и иммунная система. В результате
-                  кариесогенные бактерии начинают размножаться, а эмаль уже не
-                  может противостоять их активности. Недостаточная выработка
-                  слюны и нарушение ее состава тоже могут способствовать
-                  появлению кариеса. Слюна является природной защитой от
-                  кариеса. Она призвана омывать зубы, способствовать
-                  реминерализации эмали, а также защищать слизистую полости рта
-                  от повреждений. Другие причины появления кариеса: Неправильный
-                  прикус (неадекватное распределение нагрузки на зубы
-                  провоцирует повреждения эмали) Скученность зубов (их
-                  аномальное расположение приводит к скоплению налета и остатков
-                  пищи, усложняя гигиену) Нарушение бактериального баланса
-                  полости рта (баланс полезных и вредных бактерий сдвигается в
-                  сторону последних; местная иммунная защита ослабевает)
-                  Проблемы с минеральным обменом (дефицит фтора, кальция и
-                  других элементов, важных для прочности эмали)
-                </p>
-              </div>
-              <div className="information-two">
-                <h3 className="heading-info two">Виды кариеса</h3>
-                <p className="p-info two">
-                  Кариес бывает: начальный, поверхностный, средний и глубокий.
-                  Каждый из видов требует своего подхода в лечении. Это
-                  обусловлено тем, какие ткани зуба вовлекаются в патологический
-                  процесс. При начальном кариесе поверхность зуба пока еще
-                  гладкая, без видимых признаков разрушения. Однако на ней есть
-                  пятно белого цвета (так называемая стадия пятна). Если не
-                  начать лечение, пятно темнеет и становится шероховатым.
-                  <br></br>
-                  <br></br>
-                  Поверхностный кариес - следующая стадия. Здесь все еще
-                  страдает только эмаль, но уже происходит образование кариозных
-                  полостей. Пациент начинает жаловаться на болезненные ощущения
-                  при контакте с внешними раздражителями (сладкое, кислое,
-                  горячее, холодное). Впрочем, жалобы могут отсутствовать.
-                  <br></br>
-                  <br></br>
-                  Средний кариес - это поражение верхнего слоя дентина, который
-                  расположен под эмалью зуба. Болевые ощущения при контакте с
-                  раздражителями становятся все более сильными, а на зубе видна
-                  невооруженным глазом темная полость.
-                  <br></br>
-                  <br></br>
-                  Наконец, глубокий кариес, представляет последнюю стадию. Здесь
-                  кариозный процесс проникает вглубь зуба, затрагивая внутренние
-                  слои дентина. Зуб болит сам, и появляется реальный риск
-                  пульпита (воспаления пульпы).
-                  <br></br>
-                  <br></br>
-                  Также в зависимости от локализации в тканях зуба кариес бывает
-                  фиссурным, контактным, пришеечным и кариесом корня.
-                </p>
-              </div>
-              <div className="information-two">
-                <h3 className="heading-info two">Профилактика</h3>
-                <p className="p-info two">
-                  Профилактические мероприятия позволяют значительно снизить
-                  риск развития кариеса, даже у людей, к нему предрасположенных.
-                  Все они опираются на профессиональную профилактику (в
-                  стоматологии) и профилактику в домашних условиях. Первая
-                  включает регулярную профессиональную гигиену полости рта.
-                  График гигиенических процедур назначается индивидуально в
-                  зависимости от клинической картины.
-                  <br></br>
-                  <br></br>К примеру, хроническое течение болезней десен может
-                  потребовать более частых визитов в клинику для профгигиены и
-                  пародонтологической чистки. В ходе самой профгигиены врач не
-                  только удаляет бактериальный налет, стоящий за развитием
-                  кариеса, но и укрепляет эмаль. Используются специальные
-                  фторсодержащие средства, позволяющие ее реминерализировать.
-                  <br></br>
-                  <br></br>
-                  Также необходимы регулярные профилактические визиты, в ходе
-                  которых врач проведет осмотр полости рта, возможно,
-                  скорректирует гигиену (поможет подобрать более подходящие
-                  средства для домашнего ухода) и выявит проблемы на ранней
-                  стадии развития. Если обнаружить кариес на стадии пятна,
-                  пломбировка и прочие мероприятия не понадобятся. Домашняя
-                  профилактика, в первую очередь, включает гигиену. Это
-                  регулярное очищение полости рта с использованием правильно
-                  подобранных средств. Еще важно сбалансированное питание и
-                  поддержание баланса витаминов и микроэлементов, входящих в
-                  состав эмали.
-                  <br></br>
-                  <br></br>
-                  Ортодонтическое лечение (исправление прикуса) - отдельный
-                  вопрос. Вследствие неправильного распределения нагрузки на
-                  зубы может развиваться клиновидный дефект, который со временем
-                  грозит переродиться в кариес. А в случае скученности зубов -
-                  один из распространенных ортодонтических дефектов - гигиена
-                  затруднена. Это автоматически ставит данные зубы под угрозу
-                  кариеса.
+                  Лечение зубов в клинике Dental Home в Ивантеевке имеет
+                  множество преимуществ, делающих нашу клинику предпочтительным
+                  выбором для пациентов. Во-первых, мы используем только самые
+                  современные методики и технологии, чтобы обеспечить
+                  максимальную эффективность и безопасность процедур. Наша
+                  клиника оснащена передовым оборудованием, которое позволяет
+                  нам точно диагностировать и эффективно лечить любые
+                  заболевания зубов.
+                  <br />
+                  <br />
+                  Во-вторых, наша команда стоматологов обладает высокой
+                  квалификацией и многолетним опытом работы. Мы постоянно
+                  совершенствуем свои навыки и следим за новейшими тенденциями в
+                  стоматологии, чтобы предоставлять нашим пациентам самое
+                  качественное лечение. Заголовок 3: Клиника Dental Home: ваш
+                  надежный партнер в лечении зубов в Ивантеевке Клиника Dental
+                  Home является вашим надежным партнером в лечении зубов в
+                  Ивантеевке. Мы ценим доверие каждого пациента и гарантируем
+                  индивидуальный подход к каждому случаю. Наша цель - обеспечить
+                  каждому пациенту здоровую и красивую улыбку.
+                  <br />
+                  <br />
+                  Мы предлагаем широкий спектр стоматологических услуг, включая
+                  хирургическое лечение зубов, имплантацию, ортодонтию,
+                  эстетическую реконструкцию и многое другое. Наша клиника
+                  оснащена современным оборудованием, что позволяет нам
+                  проводить процедуры с высокой точностью и комфортом для
+                  пациента.
+                  <br />
+                  <br />
+                  Если вам необходимо лечение зубов в Ивантеевке, обратитесь в
+                  клинику Dental Home. Мы гарантируем высокое качество работы,
+                  индивидуальный подход и отличный результат. Доверьте свое
+                  здоровье нам и получите здоровую и красивую улыбку, которой
+                  будете гордиться!
                 </p>
               </div>
               <div className="divider"></div>
-              <section className="information-qa">
-                <h3 className="heading-info">Вопрос-Ответ</h3>
-                <div className="questions">
-                  <h4 className="question-heading">
-                    <strong>
-                      1. В каких случаях лечение кариеса зубов может проводиться
-                      в седации?
-                    </strong>
-                  </h4>
-                  <p className="answer-paragraph">
-                    Если вы испытываете сильную тревогу от одной мысли о
-                    посещении клиники или предстоит объемное, длительное лечение
-                    (устранение кариеса на нескольких зубах), вам может быть
-                    показано лечение в седации. Благодаря этому подходу пациент
-                    максимально расслабляется, тревога уходит, и высидеть в
-                    кресле стоматолога длительное время становится проще.
-                  </p>
-                  <h4 className="question-heading">
-                    <strong>
-                      2. Обязательно ли устранять кариес на стадии пятна?
-                    </strong>
-                  </h4>
-                  <p className="answer-paragraph">
-                    В стоматологии безотказно действует принцип: чем раньше, тем
-                    лучше. Устранить проблему на начальном этапе развития не
-                    только проще и менее травматично для тканей, но и дешевле.
-                    Серьезные поражения с разрушением коронковой части зуба и
-                    осложнениями в виде пульпита могут потребовать больших
-                    вложений.
-                  </p>
-                  <h4 className="question-heading">
-                    <strong>
-                      3. Каковы цены на лечение кариеса в Москве, в вашей
-                      клинике?
-                    </strong>
-                  </h4>
-                  <p className="answer-paragraph">
-                    Со всеми актуальными предложениями по методам лечения
-                    кариеса в стоматологической клинике Inwhite Medical вы
-                    можете ознакомиться здесь. В целом стоит отметить, что
-                    итоговая стоимость будет складываться из степени развития
-                    кариозного поражения и метода анестезии.
-                  </p>
-                  <h4 className="question-heading">
-                    <strong>
-                      4. Можно ли лечить кариес под общим наркозом?
-                    </strong>
-                  </h4>
-                  <p className="answer-paragraph">
-                    Да, он позволяет провести достаточно объемные и сложные
-                    процедуры. Поэтому за одно посещение возможно решить сразу
-                    несколько проблем. Лечение в наркозе безопасно и четко
-                    контролируется анестезиологической бригадой и специальным
-                    оборудованием. Цена в Москве, в клинике Inwhite Medical, на
-                    лечение под наркозом зависит от продолжительности процедуры.
-                    Рассчитать стоимость поможет ваш лечащий врач, исходя из
-                    объема предстоящей работы.
-                  </p>
-                </div>
-              </section>
-              <div className="price-tab">
-                <h4 className="price-heading">Лечение кариеса</h4>
+              <div className="price-tab" id="prices">
+                <h4 className="price-heading">Восстановление зуба пломбой</h4>
                 <div className="prices">
                   <div className="price-row">
                     <span className="text">
-                      Восстановление зуба пломбой, лечение кариеса IV класс по
-                      Блэку, МОД / А16.07.002.006
+                      Применение системы Коффердам, Роббердам
                     </span>
-                    <span className="price">22 500 ₽</span>
+                    <span className="price">500 ₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">Применение системы OptraGate</span>
+                    <span className="price">300 ₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">Микроабразия эмали (1 зуб)</span>
+                    <span className="price">1 500 ₽</span>
                   </div>
                   <div className="price-row">
                     <span className="text">
-                      Восстановление зуба пломбой, лечение кариеса IV класс по
-                      Блэку, МОД / А16.07.002.006
+                      Восстановление зуба пломбой I, V, VI класс по Блэку с
+                      использованием материалов из фотополимеров SonicFill,
+                      Asteria
                     </span>
-                    <span className="price">22 500 ₽</span>
+                    <span className="price">3 900 ₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Восстановление зуба пломбой I, V, VI класс по Блэку с
+                      использованием материалов из фотополимеров Filtek, Gradia
+                    </span>
+                    <span className="price">3 500 ₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Восстановление зуба виниром, полукоронкой из
+                      фотополимерного материала прямым методом
+                    </span>
+                    <span className="price">7 500 ₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      МИзбирательное пришлифовывание твердых тканей зуба{" "}
+                    </span>
+                    <span className="price">250 ₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Восстановление зуба пломбировочным материалом с
+                      использованием титановых штифтов{" "}
+                    </span>
+                    <span className="price">5 500 ₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Восстановление зуба пломбировочным материалом с
+                      использованием стекловолоконных штифтов{" "}
+                    </span>
+                    <span className="price">7 000 ₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">Снятие временной пломбы</span>
+                    <span className="price">350₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      репанация (препарирование) зуба
+                    </span>
+                    <span className="price">600₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Восстановление зуба пломбой с нарушением контактоного
+                      пункта II, III класс по Блэку с использованием материалов
+                      из фотополимеров Filtek, Gradia
+                    </span>
+                    <span className="price">4 000 ₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Восстановление зуба пломбой с нарушением контактоного
+                      пункта II, III класс по Блэку с использованием материалов
+                      из фотополимеров SonicFill, Asteria
+                    </span>
+                    <span className="price">4 300 ₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Восстановление зуба пломбой IV класс по Блэку с
+                      использованием материалов из фотополимеров Filtek, Gradia
+                    </span>
+                    <span className="price">4 400 ₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Восстановление зуба пломбой IV класс по Блэку с
+                      использованием материалов из фотополимеров Asteria
+                    </span>
+                    <span className="price">4 900 ₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Восстановление зуба пломбой с использованием материалов из
+                      фотополимеров Filtek Flow
+                    </span>
+                    <span className="price">1 900 ₽</span>
                   </div>
                   <div className="price-row last">
                     <span className="text">
-                      Восстановление зуба пломбой, лечение кариеса IV класс по
-                      Блэку, МОД / А16.07.002.006
+                      Наложение лечебной или изолирующей прокладки
                     </span>
-                    <span className="price">22 500 ₽</span>
+                    <span className="price last">550 ₽</span>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="price-tab"
+                style={{ marginTop: "clamp(32px,3.33312vw,128px)" }}
+              >
+                <h4 className="price-heading">Лечение осложнений кариеса</h4>
+                <div className="prices">
+                  <div className="price-row">
+                    <span className="text">
+                      Наложение девитализирующей пасты
+                    </span>
+                    <span className="price">500 ₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Пломбирование корневого канала зуба под контролем
+                      апекс-локатора (процедура){" "}
+                    </span>
+                    <span className="price">350 ₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">Наложение временной пломбы</span>
+                    <span className="price">600 ₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Пломбирование корневого канала зуба пастой (1 канал) a
+                    </span>
+                    <span className="price">300 ₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Пломбирование корневого канала зуба пастой с
+                      гуттаперчевыми штифтами (1 канал)
+                    </span>
+                    <span className="price"> 900 ₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Закрытие перформации стенки корневого канала зуба
+                    </span>
+                    <span className="price">1 500 ₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Инструментальная и медикаментозная обработка хорошо
+                      проходимого корневого канала (1к)
+                    </span>
+                    <span className="price">800 ₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Инструментальная и медикаментозная обработка плохо
+                      проходимого корневого канала (1к.)
+                    </span>
+                    <span className="price">1 100 ₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Фиксация внутриканального штифта
+                    </span>
+                    <span className="price">1 500 ₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Удаление внутриканального штифта{" "}
+                    </span>
+                    <span className="price">2 100₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Временное пломбирование лекарственным препаратом корневого
+                      канала ( 1 канал){" "}
+                    </span>
+                    <span className="price">700₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Распломбировка корневого канала ранеее леченного пастой (1
+                      канал)
+                    </span>
+                    <span className="price">600 ₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Распломбировка корневого канала ранеее леченного
+                      фосфат-цементом/резорцин-формалиновым методом (1 канал)
+                    </span>
+                    <span className="price">1 300 ₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Депофорез корневого канала зуба
+                    </span>
+                    <span className="price"> 300 ₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Ультразвуковое расширение корневого канала зуба (1 канал)
+                    </span>
+                    <span className="price">300 ₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Механическая и медикаментозная обработка корневого канала
+                    </span>
+                    <span className="price">1 500 ₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Пломбировка корневого канала гуттаперчивый штифт+паста
+                    </span>
+                    <span className="price">1 500 ₽</span>
+                  </div>
+                  <div className="price-row last">
+                    <span className="text">
+                      Временная пломбировка корневого канала Metapex/Colasept
+                    </span>
+                    <span className="price last">500 ₽</span>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="price-tab"
+                style={{ marginTop: "clamp(32px,3.33312vw,128px)" }}
+              >
+                <h4 className="price-heading">Реставрации</h4>
+                <div className="prices">
+                  <div className="price-row">
+                    <span className="text">
+                      Реставрация 1 степени сложности
+                    </span>
+                    <span className="price">4 000 ₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Реставрация 2 степени сложности
+                    </span>
+                    <span className="price">4 900 ₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Реставрация 3 степени сложности
+                    </span>
+                    <span className="price">5 500 ₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Художественная реставрация зуба
+                    </span>
+                    <span className="price last">7 500 ₽</span>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="price-tab"
+                style={{ marginTop: "clamp(32px,3.33312vw,128px)" }}
+              >
+                <h4 className="price-heading">Анестезия</h4>
+                <div className="prices">
+                  <div className="price-row">
+                    <span className="text">Проводниковая анестезия</span>
+                    <span className="price">800 ₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">Аппликационная анестезия</span>
+                    <span className="price last">150 ₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">Инфильтрационная анестезия</span>
+                    <span className="price last"> 700 ₽</span>
                   </div>
                 </div>
               </div>
@@ -930,6 +1074,7 @@ const TeethHealing = () => {
           </div>
           <div
             className="gallery"
+            id="works"
             style={{
               borderTop: "1px solid #202637",
               marginTop: "clamp(32px,3.33312vw,128px)",
@@ -943,6 +1088,7 @@ const TeethHealing = () => {
             ></PcServiceGallery>
           </div>
           <div
+            id="doctors"
             className="gallery"
             style={{
               borderTop: "1px solid #202637",
@@ -961,6 +1107,7 @@ const TeethHealing = () => {
             />
             <div
               className="gallery"
+              id="reviews"
               style={{
                 borderTop: "1px solid #202637",
                 marginTop: "clamp(32px,3.33312vw,128px)",

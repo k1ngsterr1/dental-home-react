@@ -638,8 +638,8 @@ body .mySwiper4 .swiper-image, body .mySwiper5 .swiper-image {
   height: clamp(283.5px, 29.52936vw, 1134px) !important;
 }
 body .modal {
-  width: 90%;
-  height: auto;
+  width: 85%;
+  height: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -664,12 +664,14 @@ body .modal .modal-content {
   background-color: #202637;
 }
 body .modal .modal-content .logo {
-  margin-top: clamp(16px, 7.47648vw, 64px);
-  margin-bottom: clamp(16px, 7.47648vw, 64px);
+  width: 64px;
+  height: 64px;
+  margin-top: clamp(8px, 3.73824vw, 32px);
+  margin-bottom: clamp(8px, 3.73824vw, 32px);
 }
 body .modal .modal-content .text {
   font-family: Merriweather;
-  font-size: clamp(11px, 5.14008vw, 44px);
+  font-size: clamp(8px, 3.73824vw, 32px);
   color: #E8CB6C;
   font-style: normal;
   font-weight: 700;
@@ -679,7 +681,7 @@ body .modal .modal-content .text {
 }
 body .modal .modal-content .additional-text {
   color: #F4F4F4;
-  margin-top: clamp(16px, 7.47648vw, 64px);
+  margin-top: clamp(8px, 3.73824vw, 32px);
   margin-bottom: clamp(8px, 3.73824vw, 32px);
   text-align: center;
   font-family: Raleway;
@@ -740,6 +742,7 @@ body .modal .modal-content .phone-btn {
   margin-top: clamp(8px, 3.73824vw, 32px);
 }
 body .modal .modal-content .phone-btn .icon {
+  margin-right: clamp(4px, 1.86912vw, 16px);
   color: #202637;
 }
 body .loader {
@@ -1747,6 +1750,7 @@ body .services-modal-button:hover {
     height: clamp(230px, 23.9568vw, 920px);
     display: flex;
     flex-direction: row;
+    overflow-x: hidden;
     margin: auto !important;
     position: fixed;
     top: 0px;
@@ -1845,6 +1849,7 @@ body .services-modal-button:hover {
     margin-top: clamp(8px, 0.83328vw, 32px);
   }
   body .modal .modal-content .phone-btn .icon {
+    margin-right: clamp(4px, 0.41664vw, 16px);
     color: #202637;
   }
   body .loader {

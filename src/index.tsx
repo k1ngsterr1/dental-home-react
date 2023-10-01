@@ -21,6 +21,10 @@ import BiteCorrection from "./pages/services/bite-correction/BiteCorrection";
 import ProstheticsPage from "./pages/services/prosthetics/ProstheticsPage";
 import VinirsPage from "./pages/services/vinirs/VinirsPage";
 import Surgery from "./pages/services/surgery/Surgery";
+import DiagnosticPage from "./pages/services/diagnostic/DiagnosticPage";
+import ChildBiteCorrection from "./pages/services/child-bite-correction/ChildBite";
+import ChildSurgery from "./pages/services/child-surgery/ChildSurgery";
+import ChildTeeth from "./pages/services/child-teeth-healing/ChildTeeth";
 
 ReactDOM.render(
   <Router>
@@ -45,6 +49,13 @@ ReactDOM.render(
       <Route path="/services/prosthetics" element={<ProstheticsPage />}></Route>
       <Route path="/services/vinirs" element={<VinirsPage />}></Route>
       <Route path="/services/surgery" element={<Surgery />}></Route>
+      <Route path="/services/diagnostic" element={<DiagnosticPage />}></Route>
+      <Route
+        path="/services/child-bite-correction"
+        element={<ChildBiteCorrection />}
+      ></Route>
+      <Route path="/services/child-surgery" element={<ChildSurgery />}></Route>
+      <Route path="/services/child-teeth" element={<ChildTeeth />}></Route>
     </Routes>
   </Router>,
   document.getElementById("root")

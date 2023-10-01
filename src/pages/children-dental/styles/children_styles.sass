@@ -187,13 +187,27 @@ body
                             width: 100%
                             height: auto
                             display: flex
+                            flex-direction: row
                             align-items: center
                             justify-content: space-between
 
-                            .square
-                                width: clamp(181px,18.85296vw,724px)
-                                height: clamp(181px,18.85296vw,724px)
-                                background-color: gray
+                            .square-cont
+                                width: auto
+                                height: auto
+                                display: flex
+                                flex-direction: column
+                                cursor: pointer
+                                align-items: flex-start
+
+                                .square
+                                    width: clamp(181px,18.85296vw,724px)
+                                    height: clamp(181px,18.85296vw,724px)
+
+                                .text
+                                    margin-top: $m8
+                                    color: $dark_blue
+                                    font-family: Merriweather
+                                    font-size: 23px
 
                         .two
                             margin-top: $m32

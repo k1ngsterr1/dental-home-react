@@ -208,30 +208,27 @@ const Menu: React.FC<MenuProps> = ({
               <Link to="/services/teeth-healing" className="golden-link">
                 Лечение зубов
               </Link>
-              <a href="" className="golden-link l">
+              <Link to="/services/whitening" className="golden-link l">
                 Отбеливние
-              </a>
-              <a href="" className="golden-link l">
+              </Link>
+              <Link to="/services/hygiene" className="golden-link l">
                 Гигиена полости рта
-              </a>
-              <a href="" className="golden-link l">
-                Лечение зубов во сне
-              </a>
-              <a href="" className="golden-link l">
-                Виниры и коронки
-              </a>
-              <a href="" className="golden-link l">
-                Лечение пародонта
-              </a>
-              <a href="" className="golden-link l">
-                Протезирование зубов
-              </a>
-              <a href="" className="golden-link l">
+              </Link>
+              <Link to="/services/diagnostic" className="golden-link l">
                 Диагностика
-              </a>
-              <a href="" className="golden-link l">
+              </Link>
+              <Link to="/services/vinirs" className="golden-link l">
+                Виниры и коронки
+              </Link>
+              <Link to="/services/surgery" className="golden-link l">
+                Хирургия
+              </Link>
+              <Link to="/services/prothetics" className="golden-link l">
+                Протезирование зубов
+              </Link>
+              <Link to="/services/bite-corrections" className="golden-link l">
                 Исправление прикуса
-              </a>
+              </Link>
               <a href="tel:+79252229022" className="phone-number">
                 +7 (925) 222-90-22
               </a>

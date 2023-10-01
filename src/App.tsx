@@ -40,6 +40,7 @@ import "./styles/main/main.css";
 // import { link } from "fs";
 
 import emailjs from "@emailjs/browser";
+import { send } from "emailjs-com";
 
 interface Tabprops {
   number: string;
@@ -90,6 +91,12 @@ const doctorSix = require("./assets/6.webp");
 const doctorSeven = require("./assets/7.webp");
 const doctorEight = require("./assets/8.webp");
 const doctorNine = require("./assets/9.webp");
+
+// Gallery
+const galleryTwoPicture = require("./assets/gallery_c02.webp");
+const galleryThreePicture = require("./assets/gallery_c03.webp");
+const galleryFourPicture = require("./assets/gallery_c04.webp");
+const galleryFivePicture = require("./assets/gallery_c05.webp");
 
 const doctorOneMob = require("./assets/01.webp");
 const doctorTwoMob = require("./assets/02.webp");
@@ -221,6 +228,7 @@ export default function HomePage() {
   const [comment, setComment] = useState("");
 
   const form: RefObject<HTMLDivElement> = useRef(null);
+  const phoneForm = useRef<HTMLFormElement>(null);
 
   function sendEmail(e: any) {
     e.preventDefault();
@@ -243,15 +251,23 @@ export default function HomePage() {
       .catch((err) => console.log(err));
   }
 
-  // interface Service {
-  //   slug: string;
-  //   name: string;
-  // }
+  function sendPhoneRequest(e: any) {
+    e.preventDefault();
+    setFullName("");
+    setPhoneNumber("");
 
-  // const services: Service[] = [
-  //   { slug: "teeth-healing", name: "Teeth Healing Service" },
-  //   // Add more services here
-  // ];
+    emailjs
+      .sendForm(
+        "service_kwh5orp",
+        "template_rgnaux5",
+        e.target,
+        "b-K7bdT7JW4cqcN4y"
+      )
+      .then((res) => {
+        console.log("SUCCESS");
+      })
+      .catch((err) => console.log(err));
+  }
 
   const toothHealingExpansion = () => {
     setToothHealingOpen(true);
@@ -387,11 +403,10 @@ export default function HomePage() {
     setOpen(false);
   };
 
-  // const navigate = useNavigate()
-
-  // function navigateToServices(){
-  //   navigate("")
-  // }
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    setIsMenuPcOpen(false);
+  };
 
   useEffect(() => {
     let previousScrollY = 0;
@@ -1161,7 +1176,7 @@ export default function HomePage() {
                   <button onMouseEnter={toothHealingExpansion} className="btn">
                     <div className="btn-content">
                       <Link
-                        to="/services/teeth-healing"
+                        to="/services/vinirs"
                         className={
                           isToothHealingOpened ? "text-active" : "text-inactive"
                         }
@@ -1172,13 +1187,14 @@ export default function HomePage() {
                   </button>
                   <button onMouseEnter={whiteningExpansion} className="btn one">
                     <div className="btn-content">
-                      <span
+                      <Link
+                        to="/services/diagnostic"
                         className={
                           isWhiteningOpened ? "text-active" : "text-inactive"
                         }
                       >
                         Консультации
-                      </span>
+                      </Link>
                     </div>
                   </button>
                   <button
@@ -1186,13 +1202,14 @@ export default function HomePage() {
                     className="btn one"
                   >
                     <div className="btn-content">
-                      <span
+                      <Link
+                        to="/services/whitening"
                         className={
                           isMouthHygieneOpened ? "text-active" : "text-inactive"
                         }
                       >
-                        Рентгенолоия
-                      </span>
+                        Отбеливание
+                      </Link>
                     </div>
                   </button>
                   <button
@@ -1200,26 +1217,28 @@ export default function HomePage() {
                     className="btn one"
                   >
                     <div className="btn-content">
-                      <span
+                      <Link
+                        to="/services/surgery"
                         className={
                           isHealingInSleepOpened
                             ? "text-active"
                             : "text-inactive"
                         }
                       >
-                        Исследования и диагностика
-                      </span>
+                        Хирургия
+                      </Link>
                     </div>
                   </button>
                   <button onMouseEnter={vinirExpansion} className="btn one">
                     <div className="btn-content">
-                      <span
+                      <Link
+                        to="/services/prosthetics"
                         className={
                           isVinirsOpened ? "text-active" : "text-inactive"
                         }
                       >
-                        Анестезия
-                      </span>
+                        Протезирование
+                      </Link>
                     </div>
                   </button>
                   <button
@@ -1227,187 +1246,224 @@ export default function HomePage() {
                     className="btn one"
                   >
                     <div className="btn-content">
-                      <span
+                      <Link
+                        to="/services/bite-correction"
                         className={
                           isParodontHealingOpened
                             ? "text-active"
                             : "text-inactive"
                         }
                       >
-                        Терапия
-                      </span>
+                        Ортодонтия
+                      </Link>
                     </div>
                   </button>
                   <button onMouseEnter={prothesisExpansion} className="btn one">
                     <div className="btn-content">
-                      <span
+                      <Link
+                        to="/services/hygiene"
                         className={
                           isProthesisOpened ? "text-active" : "text-inactive"
                         }
                       >
-                        Реставрации
-                      </span>
-                    </div>
-                  </button>
-                  <button
-                    onMouseEnter={diagnosisExpansion}
-                    className="btn one bottom"
-                  >
-                    <div className="btn-content">
-                      <span
-                        className={
-                          isDiagnosisOpened ? "text-active" : "text-inactive"
-                        }
-                      >
-                        Хирургия
-                      </span>
+                        Профилактика и гигиена
+                      </Link>
                     </div>
                   </button>
                 </div>
                 {isToothHealingOpened && (
                   <Fade direction="right">
                     <div className="expanded-tab">
-                      <button className="golden-btn">Подробнее</button>
+                      <Link
+                        className="golden-btn"
+                        to="/services/vinirs"
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                        }}
+                      >
+                        Подробнее
+                      </Link>
                       <div className="row"></div>
-                      <span className="row-text">Лечение зубов во сне</span>
-                      <a href="" className="gold-text one">
-                        Удаление зуба под седацией
-                      </a>
-                      <a href="" className="gold-text two">
-                        Удаление зуба под общим наркозом
-                      </a>
-                      <a href="" className="gold-text two">
-                        Лечение зубов под седацией
-                      </a>
-                      <a href="" className="gold-text two">
-                        Лечение зубов под наркозом у взрослых
-                      </a>
+                      <span className="row-text">Виниры и коронки</span>
+                      <Link to="/services/vinirs" className="gold-text one">
+                        Оттиски
+                      </Link>
+                      <Link to="/services/vinirs" className="gold-text one">
+                        Вкладки
+                      </Link>
+                      <Link to="/services/vinirs" className="gold-text two">
+                        Коронки
+                      </Link>
+                      <Link to="/services/vinirs" className="gold-text two">
+                        Восстановление зуба виниром E-max
+                      </Link>
+                      <Link to="/services/vinirs" className="gold-text two">
+                        Съемные, бюгельные протезы
+                      </Link>
                     </div>
                   </Fade>
                 )}
                 {isWhiteningOpened && (
                   <Fade direction="right">
                     <div className="expanded-tab">
-                      <button className="golden-btn">Подробнее</button>
+                      <Link
+                        className="golden-btn"
+                        to="/services/diagnostic"
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                        }}
+                      >
+                        Подробнее
+                      </Link>
                       <div className="row"></div>
-                      <span className="row-text">Лечение зубов во сне</span>
-                      <a href="" className="gold-text">
-                        Удаление зуба под седацией
-                      </a>
-                      <a href="" className="gold-text">
-                        Удаление зуба под общим наркозом
-                      </a>
-                      <a href="" className="gold-text">
-                        Лечение зубов под седацией
-                      </a>
-                      <a href="" className="gold-text">
-                        Лечение зубов под наркозом у взрослых
-                      </a>
+                      <span className="row-text">Диагностика</span>
+                      <Link to="/services/diagnostic" className="gold-text two">
+                        Рентгенолоия
+                      </Link>
+                      <Link to="/services/diagnostic" className="gold-text two">
+                        Исследования и диагностика
+                      </Link>
                     </div>
                   </Fade>
                 )}
                 {isMouthHygieneOpened && (
                   <Fade direction="right">
                     <div className="expanded-tab">
-                      <button className="golden-btn">Подробнее</button>
+                      <Link
+                        className="golden-btn"
+                        to="/services/whitening"
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                        }}
+                      >
+                        Подробнее
+                      </Link>
                       <div className="row"></div>
-                      <span className="row-text">Лечение зубов во сне</span>
-                      <a href="" className="gold-text">
-                        Удаление зуба под седацией
-                      </a>
-                      <a href="" className="gold-text">
-                        Удаление зуба под общим наркозом
-                      </a>
-                      <a href="" className="gold-text">
-                        Лечение зубов под седацией
-                      </a>
-                      <a href="" className="gold-text">
-                        Лечение зубов под наркозом у взрослых
-                      </a>
+                      <span className="row-text">Отбеливание</span>
+                      <Link to="services/whitening" className="gold-text">
+                        Отбеливание
+                      </Link>
                     </div>
                   </Fade>
                 )}
                 {isHealingInSleepOpened && (
                   <Fade direction="right">
                     <div className="expanded-tab">
-                      <button className="golden-btn">Подробнее</button>
+                      <Link
+                        className="golden-btn"
+                        to="/services/surgery"
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                        }}
+                      >
+                        Подробнее
+                      </Link>
                       <div className="row"></div>
-                      <span className="row-text">Лечение зубов во сне</span>
-                      <a href="" className="gold-text">
-                        Удаление зуба под седацией
-                      </a>
-                      <a href="" className="gold-text">
-                        Удаление зуба под общим наркозом
-                      </a>
-                      <a href="" className="gold-text">
-                        Лечение зубов под седацией
-                      </a>
-                      <a href="" className="gold-text">
-                        Лечение зубов под наркозом у взрослых
-                      </a>
+                      <span className="row-text">Хирургия</span>
+                      <Link to="/services/surgery" className="gold-text">
+                        Хирургия
+                      </Link>
                     </div>
                   </Fade>
                 )}
                 {isVinirsOpened && (
                   <Fade direction="right">
                     <div className="expanded-tab">
-                      <button className="golden-btn">Подробнее</button>
+                      <Link
+                        className="golden-btn"
+                        to="/services/prosthetics"
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                        }}
+                      >
+                        Подробнее
+                      </Link>
                       <div className="row"></div>
-                      <span className="row-text">Лечение зубов во сне</span>
-                      <a href="" className="gold-text">
-                        Удаление зуба под седацией
-                      </a>
-                      <a href="" className="gold-text">
-                        Удаление зуба под общим наркозом
-                      </a>
-                      <a href="" className="gold-text">
-                        Лечение зубов под седацией
-                      </a>
-                      <a href="" className="gold-text">
-                        Лечение зубов под наркозом у взрослых
-                      </a>
+                      <span className="row-text">Протезирование</span>
+                      <Link to="/services/prosthetics" className="gold-text">
+                        Протезирование на имплантах
+                      </Link>
+                      <Link to="/services/prosthetics" className="gold-text">
+                        Внутрикостная дентальная имплантация системой
+                      </Link>
+                      <Link to="/services/prosthetics" className="gold-text">
+                        Формирователь десны
+                      </Link>
+                      <Link to="/services/prosthetics" className="gold-text">
+                        Синус-лифтинг
+                      </Link>
+                      <Link to="/services/prosthetics" className="gold-text">
+                        Реконструктивное лечение
+                      </Link>
                     </div>
                   </Fade>
                 )}
                 {isParodontHealingOpened && (
                   <Fade direction="right">
                     <div className="expanded-tab">
-                      <button className="golden-btn">Подробнее</button>
+                      <Link
+                        className="golden-btn"
+                        to="/services/bite-correction"
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                        }}
+                      >
+                        Подробнее
+                      </Link>
                       <div className="row"></div>
-                      <span className="row-text">Лечение зубов во сне</span>
-                      <a href="" className="gold-text">
-                        Удаление зуба под седацией
-                      </a>
-                      <a href="" className="gold-text">
-                        Удаление зуба под общим наркозом
-                      </a>
-                      <a href="" className="gold-text">
-                        Лечение зубов под седацией
-                      </a>
-                      <a href="" className="gold-text">
-                        Лечение зубов под наркозом у взрослых
-                      </a>
+                      <span className="row-text">Исправление прикуса</span>
+                      <Link
+                        to="/services/bite-correction"
+                        className="gold-text"
+                      >
+                        Ортодоническая коррекция с применением брекет-системы
+                      </Link>
+                      <Link
+                        to="/services/bite-correction"
+                        className="gold-text"
+                      >
+                        Ретенция
+                      </Link>
+                      <Link
+                        to="/services/bite-correction"
+                        className="gold-text"
+                      >
+                        Дополнительные приспособления
+                      </Link>
                     </div>
                   </Fade>
                 )}
                 {isProthesisOpened && (
                   <Fade direction="right">
                     <div className="expanded-tab">
-                      <button className="golden-btn">Подробнее</button>
+                      <Link
+                        className="golden-btn"
+                        to="/services/hygiene"
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                        }}
+                      >
+                        Подробнее
+                      </Link>
                       <div className="row"></div>
-                      <span className="row-text">Лечение зубов во сне</span>
-                      <a href="" className="gold-text">
-                        Удаление зуба под седацией
-                      </a>
-                      <a href="" className="gold-text">
-                        Удаление зуба под общим наркозом
-                      </a>
-                      <a href="" className="gold-text">
-                        Лечение зубов под седацией
-                      </a>
-                      <a href="" className="gold-text">
-                        Лечение зубов под наркозом у взрослых
-                      </a>
+                      <span className="row-text">Профилактика и гигиена</span>
+                      <Link to="/services/hygiene" className="gold-text">
+                        Профилактика и гигиена
+                      </Link>
                     </div>
                   </Fade>
                 )}
@@ -1515,14 +1571,24 @@ export default function HomePage() {
                       Звоните с 9:00 до 21:00 <strong>8 (925) 222-90-22</strong>{" "}
                       или оставьте заявку, мы вам перезвоним
                     </span>
-                    <div className="input-container">
+                    <form
+                      className="input-container"
+                      ref={phoneForm}
+                      onSubmit={sendPhoneRequest}
+                    >
                       <input
                         type="tel"
+                        name="phoneNumber"
+                        value={phoneNumber}
                         className="telephone-input"
+                        required={true}
+                        onChange={(event) => setPhoneNumber(event.target.value)}
                         placeholder="+7 (925) 222-90-22"
                       />
-                      <button className="form-btn">Записать на осмотр</button>
-                    </div>
+                      <button className="form-btn" value="Send">
+                        Записать на осмотр
+                      </button>
+                    </form>
                   </div>
                   <img className="form-image" src={formImage} alt="image"></img>
                 </div>
@@ -1566,14 +1632,28 @@ export default function HomePage() {
                     <SwiperSlide>
                       <img
                         className="swiper-image"
-                        src={galleryOnePic}
+                        src={galleryTwoPicture}
                         alt="image"
                       ></img>
                     </SwiperSlide>
                     <SwiperSlide>
                       <img
                         className="swiper-image"
-                        src={galleryOnePic}
+                        src={galleryThreePicture}
+                        alt="image"
+                      ></img>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img
+                        className="swiper-image"
+                        src={galleryFourPicture}
+                        alt="image"
+                      ></img>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img
+                        className="swiper-image"
+                        src={galleryFivePicture}
                         alt="image"
                       ></img>
                     </SwiperSlide>
@@ -1748,11 +1828,7 @@ export default function HomePage() {
                       Ознакомлен с Условиями обработки персональных данных
                     </span>
                   </div>
-                  <button
-                    className="golden-btn"
-                    value="Send"
-                    onClick={() => console.log(form)}
-                  >
+                  <button className="golden-btn" value="Send">
                     Записаться на прием
                     <FontAwesomeIcon
                       icon={faChevronRight}
@@ -1781,7 +1857,12 @@ export default function HomePage() {
               </div>
             </section>
           </div>
-          <div className="form-screen" id="form-screen-mob">
+          <div
+            className="form-screen"
+            id="form-screen-mob"
+            ref={form}
+            onSubmit={sendEmail}
+          >
             <section className="content">
               <div className="form-heading-container">
                 <h3 className="form-heading">Записаться На Прием</h3>
@@ -1874,7 +1955,7 @@ export default function HomePage() {
                     />
                   </div>
                 </div>
-                <button className="form-button" onClick={sendEmail}>
+                <button className="form-button" value="Send">
                   Записаться на прием
                   <FontAwesomeIcon
                     className="icon"
@@ -1893,6 +1974,7 @@ export default function HomePage() {
             to="services"
             smooth={true}
             className="services-modal-button"
+            onClick={closeMenu}
           >
             <Bounce delay={300} triggerOnce={true}>
               <img
@@ -1925,7 +2007,7 @@ export default function HomePage() {
                 <span className="additional-text">
                   Оставьте свой номер и мы перезвоним вам
                 </span>
-                <div className="input-container">
+                <form className="input-container" onSubmit={sendPhoneRequest}>
                   <label htmlFor="phone-number-input" className="label">
                     Ваш номер телефона*
                   </label>
@@ -1934,17 +2016,20 @@ export default function HomePage() {
                     name="phone-number-input"
                     className="phone-number-input"
                     placeholder="+7 (925) 222-90-22"
+                    required={true}
+                    value={phoneNumber}
+                    onChange={(event) => setPhoneNumber(event.target.value)}
                     style={{ textAlign: "center" }}
                     id=""
                   />
-                  <button className="phone-btn">
+                  <button className="phone-btn" value="Send">
                     <FontAwesomeIcon
                       icon={faPhone}
                       className="icon"
                     ></FontAwesomeIcon>
                     Хорошо жду звонка
                   </button>
-                </div>
+                </form>
               </div>
             </div>
           </Popup>

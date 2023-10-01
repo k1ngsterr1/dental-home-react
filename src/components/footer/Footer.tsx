@@ -169,12 +169,12 @@ const Footer = () => {
           <p className="p-nav">Пн-Вс - 9:00-21:00</p>
           <p className="p-nav">Бесплатная парковка</p>
           <div className="links-conditional">
-            <a href="" className="conditional">
+            <Link to="/services/privacy" className="conditional">
               Политика конфиденциальности
-            </a>
-            <a href="" className="conditional cond">
+            </Link>
+            <Link to="/services/privacy" className="conditional cond">
               Политика обработки ПД
-            </a>
+            </Link>
           </div>
         </div>
       </div>

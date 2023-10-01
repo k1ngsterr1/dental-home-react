@@ -388,6 +388,12 @@ body .screen .services-pc {
   margin-top: clamp(16px, 7.47648vw, 64px);
   text-decoration: underline;
 }
+.review-gallery .tablet {
+  display: none;
+}
+.review-gallery .pc-header {
+  display: none;
+}
 
 @media screen and (min-width: 1024px) {
   .screen {
@@ -396,6 +402,12 @@ body .screen .services-pc {
   }
   .screen .services-screen-mobile {
     display: none;
+  }
+  .screen .tablet {
+    display: none;
+  }
+  .screen .pc-header {
+    display: flex;
   }
   .screen .services-pc {
     width: 100% !important;

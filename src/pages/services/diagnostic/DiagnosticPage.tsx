@@ -61,7 +61,7 @@ const serviceTwoMob = require("../../../assets/service_mob_02.webp");
 const serviceThreeMob = require("../../../assets/service_mob_03.webp");
 const serviceFourMob = require("../../../assets/service_mob_04.webp");
 
-const Surgery = () => {
+const DiagnosticPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMenuPcOpen, setIsMenuPcOpen] = useState(false);
 
@@ -125,11 +125,11 @@ const Surgery = () => {
                 Услуги
               </Link>
               <div className="circle"></div>
-              <Link to="/services/surgery" className="link active">
-                Хирургия
+              <Link to="/services/diagnostic" className="link active">
+                Диагностика
               </Link>
             </div>
-            <h1 className="heading">Хирургия</h1>
+            <h1 className="heading">Диагностика</h1>
             <button className="golden-button">
               <span className="text">Записаться</span>
               <FontAwesomeIcon
@@ -145,244 +145,217 @@ const Surgery = () => {
             </div>
             <section className="information">
               <h3 className="information-heading">
-                Хирургическое лечение заболеваний зубов в Ивантеевке
+                Современная диагностика заболеваний зубов в клинике Dental Home
+                в Ивантеевке
               </h3>
               <p className="information-paragraph">
-                Эффективность и безопасность Хирургическое лечение заболеваний
-                зубов является одной из наиболее эффективных и безопасных
-                методик в стоматологии. Врачи нашей клиники Dental Home в
-                Ивантеевке специализируются на проведении хирургических
-                вмешательств, которые позволяют успешно решить самые сложные
-                проблемы с зубами и тканями ротовой полости.
-                <br />
-                <br />
-                Оперативная терапия применяется в случаях, когда консервативное
-                лечение не может обеспечить полное исцеление. Наши специалисты
-                проводят хирургическое лечение воспалительных процессов, удаляют
-                зубы, а также выполняют пластические операции для устранения
-                дефектов.
+                Клиника Dental Home в Ивантеевке предлагает современные методы
+                диагностики заболеваний зубов, которые позволяют точно
+                определить причину проблемы и разработать эффективный план
+                лечения. Наша команда специалистов использует передовое
+                оборудование и технологии, чтобы обеспечить максимальную
+                точность и надежность диагностики.
               </p>
             </section>
             <div className="divider"></div>
             <section className="information">
               <h3 className="information-heading">
-                Преимущества хирургического лечения зубов в Ивантеевке
+                Комплексный подход к диагностике заболеваний зубов в клинике
+                Dental Home в Ивантеевке
               </h3>
               <p className="information-paragraph">
-                Хирургическое лечение зубов в Ивантеевке имеет ряд преимуществ,
-                которые делают эту процедуру предпочтительной для многих
-                пациентов. Во-первых, оперативная терапия позволяет решить самые
-                сложные проблемы с зубами, такие как дистопированные и
-                ретинированные зубы, сильно разрушенные поддесневые или
-                коронковые части, значительная подвижность зубов на фоне
-                тяжелого пародонтита и другие.
+                В клинике Dental Home в Ивантеевке мы применяем комплексный
+                подход к диагностике заболеваний зубов. Наша команда проводит
+                тщательное обследование пациента, используя различные методы и
+                инструменты, чтобы получить полную картину состояния зубов и
+                десен. Мы также уделяем особое внимание анализу рентгеновских
+                снимков и других специальных исследований, чтобы выявить скрытые
+                проблемы и предотвратить их развитие.
               </p>
             </section>
             <div className="divider"></div>
             <section className="information">
               <h3 className="information-heading">
-                Клиника Dental Home: лидер в хирургическом лечении зубов в
-                Ивантеевке
+                Преимущества диагностики заболеваний зубов в клинике Dental Home
+                в Ивантеевке
               </h3>
               <p className="information-paragraph">
-                Клиника Dental Home в Ивантеевке является лидером в области
-                хирургического лечения зубов. Наша команда опытных специалистов
-                обладает высокой квалификацией и профессиональными навыками, что
-                позволяет нам успешно проводить самые сложные операции. Мы
-                используем современное оборудование и передовые технологии,
-                чтобы обеспечить максимальную эффективность и безопасность
-                процедуры. Кроме того, мы придерживаемся индивидуального подхода
-                к каждому пациенту, учитывая его желания и потребности. Если вам
-                необходимо провести хирургическое лечение зубов в Ивантеевке,
-                обратитесь в нашу клинику Dental Home. Мы гарантируем высокое
-                качество работы, безопасность процедуры и отличный результат.
-                Доверьте свое здоровье нам и получите красивую и здоровую
-                улыбку!
+                Диагностика заболеваний зубов в клинике Dental Home в Ивантеевке
+                имеет ряд преимуществ, делающих нашу клинику лучшим выбором для
+                пациентов. Во-первых, мы используем самые современные методы и
+                технологии, которые позволяют нам обнаруживать проблемы на
+                ранних стадиях и предотвращать их развитие. Наша команда
+                специалистов обладает высокой квалификацией и опытом работы, что
+                гарантирует точность и надежность результатов диагностики.
+                <br />
+                <br />
+                Во-вторых, мы предлагаем индивидуальный подход к каждому
+                пациенту. Мы учитываем все особенности здоровья и историю
+                болезни каждого пациента, чтобы разработать оптимальный план
+                лечения. Мы также обеспечиваем постоянное мониторинг состояния
+                зубов и десен, чтобы предотвратить возникновение новых проблем.
+                <br />
+                <br />
+                Если вам необходима диагностика заболевания зубов в Ивантеевке,
+                обратитесь в клинику Dental Home. Мы гарантируем высокое
+                качество работы, точность диагностики и эффективное лечение.
+                Доверьте свое здоровье опытным специалистам и получите здоровую
+                и красивую улыбку, о которой всегда мечтали.
               </p>
             </section>
             <div className="divider"></div>
             <div className="plate">
               <section className="tab-one">
-                <h5 className="plate-heading">Хирургия</h5>
+                <h5 className="plate-heading" style={{ width: "90%" }}>
+                  Консультации
+                </h5>
                 <span className="text">
-                  Удаление временного зуба I степени сложности
+                  Прием (осмотр, консультация) врача-стоматолога первичный
                 </span>
-                <span className="price">1 200₽</span>
+                <span className="price">1000 ₽</span>
               </section>
               <section className="tab-two">
                 <span className="text">
-                  Удаление временного зуба II степени сложности
+                  Диспансерный прием (осмотр, консультация) врача-стоматолога{" "}
                 </span>
-                <span className="price">1 800₽</span>
+                <span className="price">500 ₽</span>
               </section>
               <section className="tab-three">
                 <span className="text">
-                  Удаление временного зуба с сохраненными корнями
+                  Профилактический прием (осмотр, консультация)
+                  врача-стоматолога
                 </span>
-                <span className="price">2 200₽</span>
+                <span className="price last">0 ₽</span>
+              </section>
+            </div>
+            <div
+              className="plate"
+              style={{ marginTop: "clamp(16px,7.47648vw,64px)" }}
+            >
+              <section className="tab-one">
+                <h5 className="plate-heading" style={{ width: "90%" }}>
+                  Рентгенолоия
+                </h5>
+                <span className="text">Радиовизиография</span>
+                <span className="price">400 ₽</span>
+              </section>
+              <section className="tab-two">
+                <span className="text">
+                  Получение снимка на электронный адрес
+                </span>
+                <span className="price">100 ₽</span>
               </section>
               <section className="tab-three">
-                <span className="text">Удаление постоянного зуба простое</span>
-                <span className="price">2 400₽</span>
+                <span className="text">Запись на электронный носитель CD</span>
+                <span className="price">300 ₽</span>
+              </section>
+              <section className="tab-three">
+                <span className="text">Запись на электронный носитель USB</span>
+                <span className="price">500 ₽</span>
+              </section>
+              <section className="tab-three">
+                <span className="text">Повторный диагностический снимок</span>
+                <span className="price last"> 0 ₽</span>
+              </section>
+            </div>
+            <div
+              className="plate"
+              style={{ marginTop: "clamp(16px,7.47648vw,64px)" }}
+            >
+              <section className="tab-one">
+                <h5 className="plate-heading" style={{ width: "90%" }}>
+                  Исследования и диагностика
+                </h5>
+                <span className="text">
+                  Исследование на диагностических моделях челюстей
+                </span>
+                <span className="price"> 500 ₽</span>
+              </section>
+              <section className="tab-two">
+                <span className="text">
+                  Витальное окрашивание твердых тканей зуба
+                </span>
+                <span className="price">380 ₽</span>
               </section>
               <section className="tab-three">
                 <span className="text">
-                  Удаление постоянного зуба I степени сложности{" "}
+                  Исследование кариозных полостей с использованием
+                  стоматологического зонда
                 </span>
-                <span className="price">3 000₽</span>
+                <span className="price">70 ₽</span>
+              </section>
+              <section className="tab-three">
+                <span className="text">Термодиагностика зуба</span>
+                <span className="price">50 ₽</span>
+              </section>
+
+              <section className="tab-three">
+                <span className="text">Определение прикуса</span>
+                <span className="price"> 500 ₽</span>
               </section>
               <section className="tab-three">
                 <span className="text">
-                  Удаление постоянного зуба II степени сложности
+                  Определение вида смыкания зубных рядов с помощью лицевой дуги
                 </span>
-                <span className="price">4 000₽</span>
+                <span className="price">1 500 ₽</span>
+              </section>
+              <section className="tab-three">
+                <span className="text">Перкуссия зубов</span>
+                <span className="price">40 ₽</span>
+              </section>
+              <section className="tab-three">
+                <span className="text">Электроодонтометрия зуба (ЭОД)</span>
+                <span className="price">120 ₽</span>
               </section>
               <section className="tab-three">
                 <span className="text">
-                  Удаление постоянного зуба III степени сложности
+                  Определение индексов гигиены полости рта
                 </span>
-                <span className="price">5 500₽</span>
+                <span className="price last">250 ₽</span>
+              </section>
+            </div>
+            <div
+              className="plate"
+              style={{ marginTop: "clamp(16px,7.47648vw,64px)" }}
+            >
+              <section className="tab-one">
+                <h5 className="plate-heading" style={{ width: "90%" }}>
+                  Реставрации
+                </h5>
+                <span className="text">Реставрация 1 степени сложности</span>
+                <span className="price">4 000 ₽</span>
+              </section>
+              <section className="tab-two">
+                <span className="text">Реставрация 2 степени сложности</span>
+                <span className="price">4 900 ₽</span>
               </section>
               <section className="tab-three">
-                <span className="text">
-                  Удаление зуба сложное с разъединением корней
-                </span>
-                <span className="price">4 500₽</span>
+                <span className="text">Реставрация 3 степени сложности</span>
+                <span className="price">5 500 ₽</span>
               </section>
               <section className="tab-three">
-                <span className="text">
-                  Резекция верхушки корня (1 корень){" "}
-                </span>
-                <span className="price">8 500₽</span>
+                <span className="text">Художественная реставрация зуба</span>
+                <span className="price last">7 500 ₽</span>
+              </section>
+            </div>
+            <div
+              className="plate"
+              style={{ marginTop: "clamp(16px,7.47648vw,64px)" }}
+            >
+              <section className="tab-one">
+                <h5 className="plate-heading" style={{ width: "90%" }}>
+                  Анестезия
+                </h5>
+                <span className="text">Проводниковая анестезия</span>
+                <span className="price"> 800 ₽</span>
+              </section>
+              <section className="tab-two">
+                <span className="text">Аппликационная анестезия</span>
+                <span className="price">150 ₽</span>
               </section>
               <section className="tab-three">
-                <span className="text">
-                  {" "}
-                  Вскрытие и дренирование одонтогенного абсцесса
-                </span>
-                <span className="price">1 200₽</span>
-              </section>
-              <section className="tab-three">
-                <span className="text">
-                  {" "}
-                  Отсроченный кюретаж лунки удаленного зуба
-                </span>
-                <span className="price">1 000₽</span>
-              </section>
-              <section className="tab-three">
-                <span className="text">
-                  Удаление новообразований челюстно-лицевой области
-                </span>
-                <span className="price">5 000₽</span>
-              </section>
-              <section className="tab-three">
-                <span className="text">Цистотомия, цистэктомия</span>
-                <span className="price ">8 000₽</span>
-              </section>
-              <section className="tab-three">
-                <span className="text">
-                  Временное шинирование при заболеваниях пародонта ( 1 единица)
-                </span>
-                <span className="price ">1 500₽</span>
-              </section>
-              <section className="tab-three">
-                <span className="text">
-                  Операция удаления ретинированного, дистопированного или
-                  сверхкомплектного зуба
-                </span>
-                <span className="price ">9 500₽</span>
-              </section>
-              <section className="tab-three">
-                <span className="text">Удаление имплантата </span>
-                <span className="price ">5 000₽</span>
-              </section>
-              <section className="tab-three">
-                <span className="text">Пластика уздечки языка</span>
-                <span className="price ">3 000₽</span>
-              </section>
-              <section className="tab-three">
-                <span className="text">Пластика уздечки губы </span>
-                <span className="price ">3 000₽</span>
-              </section>
-              <section className="tab-three">
-                <span className="text">Вестибулопластика</span>
-                <span className="price ">10 000₽</span>
-              </section>
-              <section className="tab-three">
-                <span className="text">
-                  Лечение перикоронита (промывание, рассечение и/или иссечение
-                  капюшона)
-                </span>
-                <span className="price ">1 500₽</span>
-              </section>
-              <section className="tab-three">
-                <span className="text">
-                  Остановка луночного кровотечения с использованием
-                  гемостатических материалов
-                </span>
-                <span className="price ">700₽</span>
-              </section>
-              <section className="tab-three">
-                <span className="text">
-                  Закрытие соустья с гайморовой пазухой{" "}
-                </span>
-                <span className="price ">3 000₽</span>
-              </section>
-              <section className="tab-three">
-                <span className="text">
-                  Наложение шва на слизистую оболочку рта{" "}
-                </span>
-                <span className="price "> 500₽</span>
-              </section>
-              <section className="tab-three">
-                <span className="text">
-                  Открытый кюретаж при заболеваниях пародонта в области 1 зуба
-                </span>
-                <span className="price ">2 500₽</span>
-              </section>
-              <section className="tab-three">
-                <span className="text">
-                  Закрытый кюретаж при заболеваниях пародонта в области 1 зуба
-                </span>
-                <span className="price ">2 000₽</span>
-              </section>
-              <section className="tab-three">
-                <span className="text">
-                  Пластика мягких тканей в области зуба или имплантата
-                </span>
-                <span className="price ">7 000₽</span>
-              </section>
-              <section className="tab-three">
-                <span className="text">Снятие швов</span>
-                <span className="price ">0₽</span>
-              </section>
-              <section className="tab-three">
-                <span className="text">
-                  Антисептическая обработка патологических карманов{" "}
-                </span>
-                <span className="price ">1 200₽</span>
-              </section>
-              <section className="tab-three">
-                <span className="text">
-                  Удаление экзостоза в области 1 зуба
-                </span>
-                <span className="price ">1 500₽</span>
-              </section>
-              <section className="tab-three">
-                <span className="text">
-                  Хирургическое удлинение в области 1 зуба
-                </span>
-                <span className="price ">5 000₽</span>
-              </section>
-              <section className="tab-three">
-                <span className="text">Закрытый кюретаж в области 1 зуба</span>
-                <span className="price ">20 000₽</span>
-              </section>
-              <section className="tab-three">
-                <span className="text">
-                  Закрытие рецессии в обл. 1-3 рядом стоящих зубов{" "}
-                </span>
-                <span className="price last">20 000₽</span>
+                <span className="text">Инфильтрационная анестезия</span>
+                <span className="price last"> 700 ₽</span>
               </section>
             </div>
           </div>
@@ -542,13 +515,11 @@ const Surgery = () => {
                   Услуги
                 </Link>
                 <div className="circle"></div>
-                <Link to="/services/surgery" className="link active">
-                  Хирургия
+                <Link to="/services/diagnostic" className="link active">
+                  Диагностика
                 </Link>
               </div>
-              <h1 className="heading" style={{ width: "30%" }}>
-                Хирургия
-              </h1>
+              <h1 className="heading">Диагностика</h1>
               <button className="button">
                 <span className="text">Записаться</span>
                 <FontAwesomeIcon
@@ -568,26 +539,27 @@ const Surgery = () => {
               <span className="text">Содержание</span>
               <div className="buttons">
                 <ScrollLink
-                  to="information"
+                  to=""
+                  value={"Основная информация"}
                   className="button"
-                  style={{ width: "110%" }}
                 >
                   Основная информация
                 </ScrollLink>
-                <ScrollLink to="doctors" className="button">
-                  Врачи
+                <ScrollLink to="" value={"Цены"} className="button">
+                  Цены
                 </ScrollLink>
-                <ScrollLink to="prices" className="button">
-                  Цена
-                </ScrollLink>
-                <ScrollLink to="works" className="button">
+                <ScrollLink to="" value={"Работы"} className="button">
                   Работы
                 </ScrollLink>
-                <ScrollLink to="reviews" className="button">
+                <ScrollLink to="" value={"Врачи"} className="button">
+                  Врачи
+                </ScrollLink>
+
+                <ScrollLink to="" value={"Отзывы"} className="button">
                   Отзывы
                 </ScrollLink>
                 <ScrollLink
-                  to="form-screen"
+                  to=""
                   value={"Записаться на прием"}
                   className="button"
                 >
@@ -595,254 +567,206 @@ const Surgery = () => {
                 </ScrollLink>
               </div>
             </div>
-            <div className="services-information" id="information">
+            <div className="services-information">
               <span className="text">Об услуге</span>
               <div className="information-one">
                 <h3 className="heading-info">
-                  Хирургическое лечение заболеваний зубов в Ивантеевке
+                  {" "}
+                  Современная диагностика заболеваний зубов в клинике Dental
+                  Home в Ивантеевке
                 </h3>
                 <p className="p-info">
-                  Эффективность и безопасность Хирургическое лечение заболеваний
-                  зубов является одной из наиболее эффективных и безопасных
-                  методик в стоматологии. Врачи нашей клиники Dental Home в
-                  Ивантеевке специализируются на проведении хирургических
-                  вмешательств, которые позволяют успешно решить самые сложные
-                  проблемы с зубами и тканями ротовой полости.
-                  <br />
-                  <br />
-                  Оперативная терапия применяется в случаях, когда
-                  консервативное лечение не может обеспечить полное исцеление.
-                  Наши специалисты проводят хирургическое лечение воспалительных
-                  процессов, удаляют зубы, а также выполняют пластические
-                  операции для устранения дефектов.
-                </p>
-              </div>
-              <div className="information-two">
-                <h3 className="heading-info two">
-                  Преимущества хирургического лечения зубов в Ивантеевке{" "}
-                </h3>
-                <p className="p-info two">
-                  Хирургическое лечение зубов в Ивантеевке имеет ряд
-                  преимуществ, которые делают эту процедуру предпочтительной для
-                  многих пациентов. Во-первых, оперативная терапия позволяет
-                  решить самые сложные проблемы с зубами, такие как
-                  дистопированные и ретинированные зубы, сильно разрушенные
-                  поддесневые или коронковые части, значительная подвижность
-                  зубов на фоне тяжелого пародонтита и другие.
+                  Клиника Dental Home в Ивантеевке предлагает современные методы
+                  диагностики заболеваний зубов, которые позволяют точно
+                  определить причину проблемы и разработать эффективный план
+                  лечения. Наша команда специалистов использует передовое
+                  оборудование и технологии, чтобы обеспечить максимальную
+                  точность и надежность диагностики.
                 </p>
               </div>
               <div className="information-two">
                 <h3 className="heading-info two">
                   {" "}
-                  Клиника Dental Home: лидер в хирургическом лечении зубов в
-                  Ивантеевке
+                  Комплексный подход к диагностике заболеваний зубов в клинике
+                  Dental Home в Ивантеевке
                 </h3>
                 <p className="p-info two">
-                  Клиника Dental Home в Ивантеевке является лидером в области
-                  хирургического лечения зубов. Наша команда опытных
-                  специалистов обладает высокой квалификацией и
-                  профессиональными навыками, что позволяет нам успешно
-                  проводить самые сложные операции. Мы используем современное
-                  оборудование и передовые технологии, чтобы обеспечить
-                  максимальную эффективность и безопасность процедуры. Кроме
-                  того, мы придерживаемся индивидуального подхода к каждому
-                  пациенту, учитывая его желания и потребности. Если вам
-                  необходимо провести хирургическое лечение зубов в Ивантеевке,
-                  обратитесь в нашу клинику Dental Home. Мы гарантируем высокое
-                  качество работы, безопасность процедуры и отличный результат.
-                  Доверьте свое здоровье нам и получите красивую и здоровую
-                  улыбку!
+                  В клинике Dental Home в Ивантеевке мы применяем комплексный
+                  подход к диагностике заболеваний зубов. Наша команда проводит
+                  тщательное обследование пациента, используя различные методы и
+                  инструменты, чтобы получить полную картину состояния зубов и
+                  десен. Мы также уделяем особое внимание анализу рентгеновских
+                  снимков и других специальных исследований, чтобы выявить
+                  скрытые проблемы и предотвратить их развитие.
                 </p>
               </div>
-
-              <div className="price-tab" id="prices">
-                <h4 className="price-heading">Хирургия</h4>
+              <div className="information-two">
+                <h3 className="heading-info two">
+                  {" "}
+                  Преимущества диагностики заболеваний зубов в клинике Dental
+                  Home в Ивантеевке
+                </h3>
+                <p className="p-info two">
+                  Диагностика заболеваний зубов в клинике Dental Home в
+                  Ивантеевке имеет ряд преимуществ, делающих нашу клинику лучшим
+                  выбором для пациентов. Во-первых, мы используем самые
+                  современные методы и технологии, которые позволяют нам
+                  обнаруживать проблемы на ранних стадиях и предотвращать их
+                  развитие. Наша команда специалистов обладает высокой
+                  квалификацией и опытом работы, что гарантирует точность и
+                  надежность результатов диагностики.
+                  <br />
+                  <br />
+                  Во-вторых, мы предлагаем индивидуальный подход к каждому
+                  пациенту. Мы учитываем все особенности здоровья и историю
+                  болезни каждого пациента, чтобы разработать оптимальный план
+                  лечения. Мы также обеспечиваем постоянное мониторинг состояния
+                  зубов и десен, чтобы предотвратить возникновение новых
+                  проблем.
+                  <br />
+                  <br />
+                  Если вам необходима диагностика заболевания зубов в
+                  Ивантеевке, обратитесь в клинику Dental Home. Мы гарантируем
+                  высокое качество работы, точность диагностики и эффективное
+                  лечение. Доверьте свое здоровье опытным специалистам и
+                  получите здоровую и красивую улыбку, о которой всегда мечтали.
+                </p>
+              </div>
+              <div className="divider"></div>
+              <div className="price-tab">
+                <h4 className="price-heading">Консультации</h4>
                 <div className="prices">
                   <div className="price-row">
                     <span className="text">
-                      Удаление временного зуба I степени сложности
+                      Прием (осмотр, консультация) врача-стоматолога первичный
                     </span>
-                    <span className="price">1 200₽</span>
+                    <span className="price">1000 ₽</span>
                   </div>
                   <div className="price-row">
                     <span className="text">
-                      Удаление временного зуба II степени сложности
+                      Диспансерный прием (осмотр, консультация)
+                      врача-стоматолога{" "}
                     </span>
-                    <span className="price">1 800₽</span>
-                  </div>
-                  <div className="price-row ">
-                    <span className="text">
-                      Удаление временного зуба с сохраненными корнями
-                    </span>
-                    <span className="price">2 200₽</span>
+                    <span className="price">500 ₽</span>
                   </div>
                   <div className="price-row">
                     <span className="text">
-                      Удаление постоянного зуба простое
+                      Профилактический прием (осмотр, консультация)
+                      врача-стоматолога
                     </span>
-                    <span className="price">2 400₽</span>
+                    <span className="price last">0 ₽</span>
                   </div>
+                </div>
+              </div>
+              <div
+                className="price-tab"
+                style={{ marginTop: "clamp(32px,3.33312vw,128px)" }}
+              >
+                <h4 className="price-heading">Рентгенолоия</h4>
+                <div className="prices">
                   <div className="price-row">
-                    <span className="text">Удаление вкладки</span>
-                    <span className="price">4 000₽</span>
+                    <span className="text">Радиовизиография</span>
+                    <span className="price">400 ₽</span>
                   </div>
                   <div className="price-row">
                     <span className="text">
-                      Удаление постоянного зуба I степени сложности{" "}
+                      Получение снимка на электронный адрес
                     </span>
-                    <span className="price">3 000₽</span>
+                    <span className="price">100 ₽</span>
                   </div>
                   <div className="price-row">
                     <span className="text">
-                      Удаление постоянного зуба II степени сложности
+                      Запись на электронный носитель CD
                     </span>
-                    <span className="price">4 000₽</span>
+                    <span className="price">300 ₽</span>
                   </div>
                   <div className="price-row">
                     <span className="text">
-                      Удаление постоянного зуба III степени сложности
+                      Запись на электронный носитель USB
                     </span>
-                    <span className="price">5 500₽</span>
+                    <span className="price">500 ₽</span>
                   </div>
                   <div className="price-row">
                     <span className="text">
-                      Удаление зуба сложное с разъединением корней
+                      Повторный диагностический снимок
                     </span>
-                    <span className="price">4 500₽</span>
+                    <span className="price last"> 0 ₽</span>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="price-tab"
+                style={{ marginTop: "clamp(32px,3.33312vw,128px)" }}
+              >
+                <h4 className="price-heading">Исследования и диагностика</h4>
+                <div className="prices">
+                  <div className="price-row">
+                    <span className="text">
+                      Исследование на диагностических моделях челюстей
+                    </span>
+                    <span className="price"> 500 ₽</span>
                   </div>
                   <div className="price-row">
                     <span className="text">
-                      Резекция верхушки корня (1 корень){" "}
+                      Витальное окрашивание твердых тканей зуба
                     </span>
-                    <span className="price">8 500₽</span>
+                    <span className="price">380 ₽</span>
                   </div>
                   <div className="price-row">
                     <span className="text">
-                      {" "}
-                      Вскрытие и дренирование одонтогенного абсцесса
+                      Исследование кариозных полостей с использованием
+                      стоматологического зонда
                     </span>
-                    <span className="price">1 200₽</span>
+                    <span className="price">70 ₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">Термодиагностика зуба</span>
+                    <span className="price">50 ₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">Определение прикуса</span>
+                    <span className="price"> 500 ₽</span>
                   </div>
                   <div className="price-row">
                     <span className="text">
-                      {" "}
-                      Отсроченный кюретаж лунки удаленного зуба
+                      Определение вида смыкания зубных рядов с помощью лицевой
+                      дуги
                     </span>
-                    <span className="price">1 000₽</span>
+                    <span className="price">1 500 ₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">Перкуссия зубов</span>
+                    <span className="price">40 ₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">Электроодонтометрия зуба (ЭОД)</span>
+                    <span className="price">120 ₽</span>
                   </div>
                   <div className="price-row">
                     <span className="text">
-                      Удаление новообразований челюстно-лицевой области
+                      Определение индексов гигиены полости рта
                     </span>
-                    <span className="price">5 000₽</span>
+                    <span className="price last">250 ₽</span>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="price-tab"
+                style={{ marginTop: "clamp(32px,3.33312vw,128px)" }}
+              >
+                <h4 className="price-heading">Анестезия</h4>
+                <div className="prices">
+                  <div className="price-row">
+                    <span className="text">Проводниковая анестезия</span>
+                    <span className="price">800 ₽</span>
                   </div>
                   <div className="price-row">
-                    <span className="text">Цистотомия, цистэктомия</span>
-                    <span className="price ">8 000₽</span>
+                    <span className="text">Аппликационная анестезия</span>
+                    <span className="price last">150 ₽</span>
                   </div>
                   <div className="price-row">
-                    <span className="text">
-                      Временное шинирование при заболеваниях пародонта ( 1
-                      единица)
-                    </span>
-                    <span className="price ">1 500₽</span>
-                  </div>
-                  <div className="price-row">
-                    <span className="text">
-                      Операция удаления ретинированного, дистопированного или
-                      сверхкомплектного зуба
-                    </span>
-                    <span className="price ">9 500₽</span>
-                  </div>
-                  <div className="price-row">
-                    <span className="text">Удаление имплантата </span>
-                    <span className="price ">5 000₽</span>
-                  </div>
-                  <div className="price-row">
-                    <span className="text">Пластика уздечки языка</span>
-                    <span className="price ">3 000₽</span>
-                  </div>
-                  <div className="price-row">
-                    <span className="text">Пластика уздечки губы </span>
-                    <span className="price ">3 000₽</span>
-                  </div>
-                  <div className="price-row">
-                    <span className="text">Вестибулопластика</span>
-                    <span className="price ">10 000₽</span>
-                  </div>
-                  <div className="price-row">
-                    <span className="text">
-                      Лечение перикоронита (промывание, рассечение и/или
-                      иссечение капюшона)
-                    </span>
-                    <span className="price ">1 500₽</span>
-                  </div>
-                  <div className="price-row">
-                    <span className="text">
-                      Остановка луночного кровотечения с использованием
-                      гемостатических материалов
-                    </span>
-                    <span className="price ">700₽</span>
-                  </div>
-                  <div className="price-row">
-                    <span className="text">
-                      Закрытие соустья с гайморовой пазухой{" "}
-                    </span>
-                    <span className="price ">3 000₽</span>
-                  </div>
-                  <div className="price-row">
-                    <span className="text">
-                      Наложение шва на слизистую оболочку рта{" "}
-                    </span>
-                    <span className="price "> 500₽</span>
-                  </div>
-                  <div className="price-row">
-                    <span className="text">
-                      Открытый кюретаж при заболеваниях пародонта в области 1
-                      зуба
-                    </span>
-                    <span className="price ">2 500₽</span>
-                  </div>
-                  <div className="price-row">
-                    <span className="text">
-                      Закрытый кюретаж при заболеваниях пародонта в области 1
-                      зуба
-                    </span>
-                    <span className="price ">2 000₽</span>
-                  </div>
-                  <div className="price-row">
-                    <span className="text">
-                      Пластика мягких тканей в области зуба или имплантата
-                    </span>
-                    <span className="price ">7 000₽</span>
-                  </div>
-                  <div className="price-row">
-                    <span className="text">Снятие швов</span>
-                    <span className="price ">0₽</span>
-                  </div>
-                  <div className="price-row">
-                    <span className="text">
-                      Антисептическая обработка патологических карманов{" "}
-                    </span>
-                    <span className="price ">1 200₽</span>
-                  </div>
-                  <div className="price-row">
-                    <span className="text">
-                      Удаление экзостоза в области 1 зуба
-                    </span>
-                    <span className="price ">1 500₽</span>
-                  </div>
-                  <div className="price-row">
-                    <span className="text">
-                      Хирургическое удлинение в области 1 зуба
-                    </span>
-                    <span className="price ">5 000₽</span>
-                  </div>
-                  <div className="price-row">
-                    <span className="text">
-                      Закрытый кюретаж в области 1 зуба
-                    </span>
-                    <span className="price last">20 000₽</span>
+                    <span className="text">Инфильтрационная анестезия</span>
+                    <span className="price last"> 700 ₽</span>
                   </div>
                 </div>
               </div>
@@ -850,7 +774,6 @@ const Surgery = () => {
           </div>
           <div
             className="gallery"
-            id="works"
             style={{
               borderTop: "1px solid #202637",
               marginTop: "clamp(32px,3.33312vw,128px)",
@@ -865,7 +788,6 @@ const Surgery = () => {
           </div>
           <div
             className="gallery"
-            id="doctors"
             style={{
               borderTop: "1px solid #202637",
             }}
@@ -883,7 +805,6 @@ const Surgery = () => {
             />
             <div
               className="gallery"
-              id="reviews"
               style={{
                 borderTop: "1px solid #202637",
                 marginTop: "clamp(32px,3.33312vw,128px)",
@@ -1004,4 +925,4 @@ const Surgery = () => {
   );
 };
 
-export default Surgery;
+export default DiagnosticPage;

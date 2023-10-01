@@ -658,7 +658,7 @@ const VinirsPage = () => {
         <div className="pc-content">
           <Header
             isMenuPcOpen={isMenuPcOpen}
-            toggleMenu={togglePcMenu}
+            togglePcMenu={togglePcMenu}
           ></Header>
           <div className="upper-content">
             <div className="heading-container">

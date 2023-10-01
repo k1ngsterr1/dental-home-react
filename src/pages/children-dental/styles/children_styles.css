@@ -179,13 +179,27 @@ body .screen-children .footer .pc-content {
     width: 100%;
     height: auto;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
   }
-  body .screen-children .pc-screen .service-container .squares-container .row .square {
+  body .screen-children .pc-screen .service-container .squares-container .row .square-cont {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    align-items: flex-start;
+  }
+  body .screen-children .pc-screen .service-container .squares-container .row .square-cont .square {
     width: clamp(181px, 18.85296vw, 724px);
     height: clamp(181px, 18.85296vw, 724px);
-    background-color: gray;
+  }
+  body .screen-children .pc-screen .service-container .squares-container .row .square-cont .text {
+    margin-top: clamp(4px, 0.41664vw, 16px);
+    color: #202637;
+    font-family: Merriweather;
+    font-size: 23px;
   }
   body .screen-children .pc-screen .service-container .squares-container .two {
     margin-top: clamp(16px, 1.66656vw, 64px);
