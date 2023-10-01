@@ -1,7 +1,15 @@
 import React, { useState, useRef, RefObject } from "react";
 
 import { Link } from "react-router-dom";
-import { Link as ScrollLink } from "react-scroll";
+import {
+  Button,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+  Link as ScrollLink,
+} from "react-scroll";
 import { MDBCheckbox } from "mdb-react-ui-kit";
 import emailjs from "@emailjs/browser";
 
@@ -53,7 +61,7 @@ const serviceTwoMob = require("../../../assets/service_mob_02.webp");
 const serviceThreeMob = require("../../../assets/service_mob_03.webp");
 const serviceFourMob = require("../../../assets/service_mob_04.webp");
 
-const Whitening = () => {
+const BiteCorrection = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMenuPcOpen, setIsMenuPcOpen] = useState(false);
 
@@ -117,11 +125,11 @@ const Whitening = () => {
                 Услуги
               </Link>
               <div className="circle"></div>
-              <Link to="/services/whitening" className="link active">
-                Отбеливание
+              <Link to="/services/bite-correction" className="link active">
+                Исправление прикуса
               </Link>
             </div>
-            <h1 className="heading">Отбеливание</h1>
+            <h1 className="heading">Исправление прикуса</h1>
             <button className="golden-button">
               <span className="text">Записаться</span>
               <FontAwesomeIcon
@@ -137,120 +145,266 @@ const Whitening = () => {
             </div>
             <section className="information">
               <h3 className="information-heading">
-                Отбеливание Zoom, Amazing White
+                Методы исправления прикуса
               </h3>
               <p className="information-paragraph">
-                Методика отбеливания позволяет достичь максимального эффекта
-                отбеливания за короткое время. Процедура отбеливания проводится
-                с использованием специальной лампы, которая активирует гель и
-                усиливает его действие. Благодаря этому, результат отбеливания
-                становится заметным уже после первого сеанса.
+                Современная стоматология предлагает различные методы исправления
+                неправильного прикуса, в зависимости от его типа и сложности.
               </p>
             </section>
             <div className="divider"></div>
             <section className="information">
-              <h3 className="information-heading">
-                Преимущества профессионального отбеливания зубов в Ивантеевке
-              </h3>
+              <h3 className="information-heading">Ортодонтическое лечение</h3>
               <p className="information-paragraph">
-                Профессиональное отбеливание зубов в Ивантеевке в клинике Dental
-                Home имеет ряд преимуществ перед самостоятельным использованием
-                отбеливающих средств. Во-первых, стоматолог проводит
-                предварительную диагностику и определяет возможность проведения
-                процедуры отбеливания. Это позволяет избежать негативных
-                последствий и достичь максимального эффекта. Во-вторых,
-                профессиональное отбеливание выполняется с использованием
-                высококачественных материалов и современного оборудования, что
-                гарантирует безопасность и эффективность процедуры. Кроме того,
-                стоматолог контролирует процесс отбеливания и может внести
-                корректировки в зависимости от индивидуальных особенностей
-                пациента.
+                Одним из самых распространенных методов исправления прикуса
+                является ортодонтическое лечение. С помощью брекет-систем,
+                съемных и невидимых эстетических аппаратов стоматологи могут
+                корректировать положение зубов и челюстей, чтобы достичь
+                правильного прикуса. Ортодонтическое лечение может занять от
+                нескольких месяцев до нескольких лет, в зависимости от сложности
+                случая.
               </p>
             </section>
             <div className="divider"></div>
             <section className="information">
-              <h3 className="information-heading">Выводы</h3>
+              <h3 className="information-heading">Хирургическое лечение</h3>
               <p className="information-paragraph">
-                Отбеливание зубов в Ивантеевке - это безопасная и эффективная
-                процедура, которая позволяет достичь идеальной белой улыбки.
-                Профессиональное отбеливание в клинике Dental Home проводится с
-                использованием современных методик и материалов, что гарантирует
-                высокий результат. Пациенты могут быть уверены в безопасности
-                процедуры и длительном сохранении эффекта отбеливания.
-                Обратившись в нашу клинику, вы получите профессиональную помощь
-                и качественное обслуживание от опытных стоматологов.
+                В некоторых случаях, когда ортодонтическое лечение не может
+                достичь желаемого результата, может потребоваться хирургическое
+                вмешательство. Хирургическое лечение может включать перенос
+                костной ткани, коррекцию формы челюстей или удаление зубов. Этот
+                метод используется для более серьезных дефектов прикуса.
               </p>
             </section>
             <div className="divider"></div>
             <section className="information">
-              <h3 className="information-heading">Профилактика</h3>
+              <h3 className="information-heading">Протезирование</h3>
               <p className="information-paragraph">
-                Профилактические мероприятия позволяют значительно снизить риск
-                развития кариеса, даже у людей, к нему предрасположенных. Все
-                они опираются на профессиональную профилактику (в стоматологии)
-                и профилактику в домашних условиях. Первая включает регулярную
-                профессиональную гигиену полости рта. График гигиенических
-                процедур назначается индивидуально в зависимости от клинической
-                картины. К примеру, хроническое течение болезней десен может
-                потребовать более частых визитов в клинику для профгигиены и
-                пародонтологической чистки. В ходе самой профгигиены врач не
-                только удаляет бактериальный налет, стоящий за развитием
-                кариеса, но и укрепляет эмаль. Используются специальные
-                фторсодержащие средства, позволяющие ее реминерализировать.
-                Также необходимы регулярные профилактические визиты, в ходе
-                которых врач проведет осмотр полости рта, возможно,
-                скорректирует гигиену (поможет подобрать более подходящие
-                средства для домашнего ухода) и выявит проблемы на ранней стадии
-                развития. Если обнаружить кариес на стадии пятна, пломбировка и
-                прочие мероприятия не понадобятся. Домашняя профилактика, в
-                первую очередь, включает гигиену. Это регулярное очищение
-                полости рта с использованием правильно подобранных средств. Еще
-                важно сбалансированное питание и поддержание баланса витаминов и
-                микроэлементов, входящих в состав эмали. Ортодонтическое лечение
-                (исправление прикуса) - отдельный вопрос. Вследствие
-                неправильного распределения нагрузки на зубы может развиваться
-                клиновидный дефект, который со временем грозит переродиться в
-                кариес. А в случае скученности зубов - один из распространенных
-                ортодонтических дефектов - гигиена затруднена. Это автоматически
-                ставит данные зубы под угрозу кариеса.
+                Если неправильный прикус связан с отсутствием зубов или их
+                повреждением, то может потребоваться протезирование. С помощью
+                зубных протезов, коронок и мостов стоматологи восстанавливают
+                функциональность и эстетику зубочелюстной системы, что влияет на
+                правильное смыкание зубов.
+              </p>
+            </section>
+            <div className="divider"></div>
+            <section className="information">
+              <h3 className="information-heading">Заключение</h3>
+              <p className="information-paragraph">
+                Исправление неправильного прикуса является важным шагом для
+                поддержания здоровья зубочелюстной системы и общего благополучия
+                организма. Современная стоматология предлагает различные методы
+                исправления прикуса, включая ортодонтическое лечение,
+                хирургическое вмешательство и протезирование. Обратившись в нашу
+                клинику в Ивантеевке, вы получите высококачественное лечение от
+                опытных специалистов, которые помогут вам достичь правильного
+                прикуса и улучшить вашу улыбку.
               </p>
             </section>
 
             <div className="divider"></div>
             <div className="plate">
               <section className="tab-one">
-                <h5 className="plate-heading">Отбеливание</h5>
-                <span className="text">
-                  Профессиональное отбеливание зубов клиническое - система
-                  "ZOOM"
-                </span>
-                <span className="price">21 500 ₽</span>
+                <h5 className="plate-heading">
+                  Ортодоническая коррекция с применением брекет-системы
+                </h5>
+                <span className="text">I степений сложности</span>
+                <span className="price">65000₽</span>
               </section>
               <section className="tab-two">
-                <span className="text">
-                  Капповое домашнее отбеливание зубов клиническое - система
-                  "ZOOM"
-                </span>
-                <span className="price">9 990 ₽</span>
+                <span className="text">II степений сложности</span>
+                <span className="price">70000₽</span>
+              </section>
+              <section className="tab-three">
+                <span className="text">III степений сложности</span>
+                <span className="price">75000₽</span>
               </section>
               <section className="tab-three">
                 <span className="text">
-                  Профессиональное отбеливание зубов в клиническое - система
-                  "Amazing White"
+                  Фиксация брекет-системы (одна челюсть)
                 </span>
-                <span className="price">11 000 ₽</span>
+                <span className="price">80 000₽</span>
               </section>
-              <section className="tab-three" style={{ marginTop: "0px" }}>
+              <section className="tab-three">
                 <span className="text">
-                  Внутриканальное отбеливание (первый сеанс)
+                  Фиксация эстетической брекет-системы (одна челюсть)
                 </span>
-                <span className="price ">1 900 ₽</span>
+                <span className="price">95 000₽</span>
               </section>
-              <section className="tab-three" style={{ marginTop: "0px" }}>
+              <section className="tab-three">
                 <span className="text">
-                  Внутриканальное отбеливание (последующий сеанс)
+                  Брекет-система металлическая безлигатурная
                 </span>
-                <span className="price last">1 000₽</span>
+                <span className="price">25 000₽</span>
+              </section>
+              <section className="tab-three">
+                <span className="text">Брекет-система Damon Q</span>
+                <span className="price">30 000₽</span>
+              </section>
+              <section className="tab-three">
+                <span className="text">
+                  Брекет-система сапфировая, керамическая
+                </span>
+                <span className="price">32 500₽</span>
+              </section>
+              <section className="tab-three">
+                <span className="text">
+                  Брекет-система керамическая безлигатурная
+                </span>
+                <span className="price">35 000₽</span>
+              </section>
+              <section className="tab-three">
+                <span className="text">Фиксация одного брекета</span>
+                <span className="price">2 500₽</span>
+              </section>
+              <section className="tab-three">
+                <span className="text">Замена одного брекета</span>
+                <span className="price">3 000₽</span>
+              </section>
+              <section className="tab-three">
+                <span className="text">
+                  Снятие брекетов с одного зубного ряда
+                </span>
+                <span className="price">2000₽</span>
+              </section>
+              <section className="tab-three">
+                <span className="text">Снятие одного брекета</span>
+                <span className="price">400₽</span>
+              </section>
+              <section className="tab-three">
+                <span className="text">Замена дуги</span>
+                <span className="price">3000₽</span>
+              </section>
+              <section className="tab-three">
+                <span className="text">
+                  Установка открывающей, закрывающей пружины
+                </span>
+                <span className="price">1000₽</span>
+              </section>
+              <section className="tab-three">
+                <span className="text">Установка чейна(1 звено)</span>
+                <span className="price">130₽</span>
+              </section>
+              <section className="tab-three">
+                <span className="text">Установка лигатуры (1 шт.)</span>
+                <span className="price">70₽</span>
+              </section>
+              <section className="tab-three">
+                <span className="text">Наложение длинной лигатуры</span>
+                <span className="price">400₽</span>
+              </section>
+              <section className="tab-three">
+                <span className="text">Изгиб на дуге</span>
+                <span className="price last">200₽</span>
+              </section>
+            </div>
+            <div
+              className="plate"
+              style={{ marginTop: "clamp(16px,7.47648vw,64px)" }}
+            >
+              <section className="tab-one">
+                <h5 className="plate-heading">Ретенция</h5>
+                <span className="text">Несъемный ретейнер на 1 зубной ряд</span>
+                <span className="price">7 000₽</span>
+              </section>
+              <section className="tab-two">
+                <span className="text">
+                  Ретенционный съемный аппарат на 1 зубной ряд
+                </span>
+                <span className="price">8 000₽</span>
+              </section>
+              <section className="tab-three">
+                <span className="text">Снятие ретейнера</span>
+                <span className="price">5 000₽</span>
+              </section>
+              <section className="tab-three">
+                <span className="text">Починка несъемного ретейнера</span>
+                <span className="price">2 000₽</span>
+              </section>
+              <section className="tab-three">
+                <span className="text">Изготовление ретенционной каппы</span>
+                <span className="price last">6 500₽</span>
+              </section>
+            </div>
+            <div
+              className="plate"
+              style={{ marginTop: "clamp(16px,7.47648vw,64px)" }}
+            >
+              <section className="tab-one">
+                <h5 className="plate-heading">Дополнитеьные приспособления</h5>
+                <span className="text">
+                  Леченте с помощью аппарат Марко-Росса
+                </span>
+                <span className="price">29 000₽</span>
+              </section>
+              <section className="tab-two">
+                <span className="text">Активация ортодонтического винта</span>
+                <span className="price">2 500₽</span>
+              </section>
+              <section className="tab-three">
+                <span className="text">Аппарат для дистализации моляров</span>
+                <span className="price">33 000₽</span>
+              </section>
+              <section className="tab-three">
+                <span className="text">Лечение с помощью небного бюгеля</span>
+                <span className="price">4 000₽</span>
+              </section>
+              <section className="tab-three">
+                <span className="text">Межчелюстные тяги</span>
+                <span className="price">500₽</span>
+              </section>
+              <section className="tab-three">
+                <span className="text">
+                  Изготовление коронки ортодонической
+                </span>
+                <span className="price">5 000₽</span>
+              </section>
+              <section className="tab-three">
+                <span className="text">
+                  Изготовление кольца-петли ортодонического
+                </span>
+                <span className="price">9 000₽</span>
+              </section>
+              <section className="tab-three">
+                <span className="text">
+                  Повторная фиксация кольца-петли ортодонического
+                </span>
+                <span className="price">2 000₽</span>
+              </section>
+              <section className="tab-three">
+                <span className="text">
+                  Снятие оттиска с одной челюсти альгинатными массами
+                </span>
+                <span className="price">500₽</span>
+              </section>
+              <section className="tab-three">
+                <span className="text">Изготовление прикусного шаблона</span>
+                <span className="price">500₽</span>
+              </section>
+              <section className="tab-three">
+                <span className="text">
+                  Антропометрические исследования (компьютерный анализ ТРГ
+                  головы)
+                </span>
+                <span className="price">2 000₽</span>
+              </section>
+              <section className="tab-three">
+                <span className="text">
+                  Изготовление контрольной модел (из гипса)
+                </span>
+                <span className="price">500₽</span>
+              </section>
+              <section className="tab-three">
+                <span className="text">
+                  Прием (осмотр, наблюдение) врача-ортодонта первичный
+                </span>
+                <span className="price">1000₽</span>
+              </section>
+              <section className="tab-three">
+                <span className="text">
+                  Прием (осмотр, наблюдение) врача-ортодонта повторный
+                </span>
+                <span className="price last">700₽</span>
               </section>
             </div>
           </div>
@@ -410,11 +564,13 @@ const Whitening = () => {
                   Услуги
                 </Link>
                 <div className="circle"></div>
-                <Link to="/services/whitening" className="link active">
-                  отбеливание
+                <Link to="/services/bite-correction" className="link active">
+                  Исправление прикуса
                 </Link>
               </div>
-              <h1 className="heading">Отбеливание</h1>
+              <h1 className="heading" style={{ width: "30%" }}>
+                Исправление прикуса
+              </h1>
               <button className="button">
                 <span className="text">Записаться</span>
                 <FontAwesomeIcon
@@ -464,87 +620,138 @@ const Whitening = () => {
             <div className="services-information" id="information">
               <span className="text">Об услуге</span>
               <div className="information-one">
-                <h3 className="heading-info">
-                  Отбеливание Zoom, Amazing White
-                </h3>
+                <h3 className="heading-info">Методы исправления прикуса</h3>
                 <p className="p-info">
-                  Методика отбеливания позволяет достичь максимального эффекта
-                  отбеливания за короткое время. Процедура отбеливания
-                  проводится с использованием специальной лампы, которая
-                  активирует гель и усиливает его действие. Благодаря этому,
-                  результат отбеливания становится заметным уже после первого
-                  сеанса.
+                  Современная стоматология предлагает различные методы
+                  исправления неправильного прикуса, в зависимости от его типа и
+                  сложности.
                 </p>
               </div>
               <div className="information-two">
-                <h3 className="heading-info two">
-                  Преимущества профессионального отбеливания зубов в Ивантеевке
-                </h3>
+                <h3 className="heading-info two">Ортодонтическое лечение</h3>
                 <p className="p-info two">
-                  Профессиональное отбеливание зубов в Ивантеевке в клинике
-                  Dental Home имеет ряд преимуществ перед самостоятельным
-                  использованием отбеливающих средств. Во-первых, стоматолог
-                  проводит предварительную диагностику и определяет возможность
-                  проведения процедуры отбеливания. Это позволяет избежать
-                  негативных последствий и достичь максимального эффекта.
-                  Во-вторых, профессиональное отбеливание выполняется с
-                  использованием высококачественных материалов и современного
-                  оборудования, что гарантирует безопасность и эффективность
-                  процедуры. Кроме того, стоматолог контролирует процесс
-                  отбеливания и может внести корректировки в зависимости от
-                  индивидуальных особенностей пациента.
+                  Одним из самых распространенных методов исправления прикуса
+                  является ортодонтическое лечение. С помощью брекет-систем,
+                  съемных и невидимых эстетических аппаратов стоматологи могут
+                  корректировать положение зубов и челюстей, чтобы достичь
+                  правильного прикуса. Ортодонтическое лечение может занять от
+                  нескольких месяцев до нескольких лет, в зависимости от
+                  сложности случая.
                 </p>
               </div>
               <div className="information-two">
-                <h3 className="heading-info two">Выводы</h3>
+                <h3 className="heading-info two">Хирургическое лечение</h3>
                 <p className="p-info two">
-                  Отбеливание зубов в Ивантеевке - это безопасная и эффективная
-                  процедура, которая позволяет достичь идеальной белой улыбки.
-                  Профессиональное отбеливание в клинике Dental Home проводится
-                  с использованием современных методик и материалов, что
-                  гарантирует высокий результат. Пациенты могут быть уверены в
-                  безопасности процедуры и длительном сохранении эффекта
-                  отбеливания. Обратившись в нашу клинику, вы получите
-                  профессиональную помощь и качественное обслуживание от опытных
-                  стоматологов.
+                  В некоторых случаях, когда ортодонтическое лечение не может
+                  достичь желаемого результата, может потребоваться
+                  хирургическое вмешательство. Хирургическое лечение может
+                  включать перенос костной ткани, коррекцию формы челюстей или
+                  удаление зубов. Этот метод используется для более серьезных
+                  дефектов прикуса.
                 </p>
               </div>
-
+              <div className="information-two">
+                <h3 className="heading-info two">Протезирование</h3>
+                <p className="p-info two">
+                  Если неправильный прикус связан с отсутствием зубов или их
+                  повреждением, то может потребоваться протезирование. С помощью
+                  зубных протезов, коронок и мостов стоматологи восстанавливают
+                  функциональность и эстетику зубочелюстной системы, что влияет
+                  на правильное смыкание зубов.
+                </p>
+              </div>
+              <div className="divider"></div>
+              <div className="information-two">
+                <h3 className="heading-info two">Заключение</h3>
+                <p className="p-info two">
+                  Исправление неправильного прикуса является важным шагом для
+                  поддержания здоровья зубочелюстной системы и общего
+                  благополучия организма. Современная стоматология предлагает
+                  различные методы исправления прикуса, включая ортодонтическое
+                  лечение, хирургическое вмешательство и протезирование.
+                  Обратившись в нашу клинику в Ивантеевке, вы получите
+                  высококачественное лечение от опытных специалистов, которые
+                  помогут вам достичь правильного прикуса и улучшить вашу
+                  улыбку.
+                </p>
+              </div>
               <div className="price-tab" id="prices">
-                <h4 className="price-heading">Отбеливание</h4>
+                <h4 className="price-heading">Профилактика и гигиена</h4>
                 <div className="prices">
                   <div className="price-row">
                     <span className="text">
-                      Профессиональное отбеливание зубов клиническое - система
-                      "ZOOM"
+                      Глубокое фторирование эмали зуьа Seal&Protect (1 ед.)
                     </span>
-                    <span className="price">21 500 ₽</span>
+                    <span className="price">300 ₽</span>
                   </div>
                   <div className="price-row">
                     <span className="text">
-                      Капповое домашнее отбеливание(включая стоимость
-                      изготовления капп и набор отбеливающего геля) 2 челюсти
+                      Местное применение реминилизрующих препаратов (процедура)
                     </span>
-                    <span className="price">9 900 ₽</span>
+                    <span className="price">500 ₽</span>
+                  </div>
+                  <div className="price-row ">
+                    <span className="text">
+                      Обучение гигиене полости рта и зубов индивидуально, подбор
+                      средств и предметов гигиены полости рта
+                    </span>
+                    <span className="price">500 ₽</span>
                   </div>
                   <div className="price-row">
                     <span className="text">
-                      Профессиональное отбеливание зубов клиническое - система
-                      "Amazing White"
+                      Профессиональная гигиена полости рта и
+                      зубов(ультразвуковое удаление зубных отложений, AirFlow,
+                      полировка, покрытие зубов реминилизирующими препаратами)
                     </span>
-                    <span className="price">11 000 ₽</span>
+                    <span className="price">5 500 ₽</span>
                   </div>
                   <div className="price-row">
                     <span className="text">
-                      Внутриканальное отбеливание(первый сеанс)
+                      Профессиональная гигиена полости рта при регулярном
+                      профосмотре(1 раз в 6 месяцев)
                     </span>
-                    <span className="price">1 900 ₽</span>
+                    <span className="price">5 500 ₽</span>
                   </div>
-                  <div className="price-row last">
+                  <div className="price-row">
                     <span className="text">
-                      Внутриканальное отбеливание (последующий сеанс)
+                      Снятие мягких зубных отложений щеткой + пастой, полировка
+                      (1 зуб)
                     </span>
-                    <span className="price">1 000 ₽</span>
+                    <span className="price">50₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Профессиональная гигиена воздушноабразивным аппаратом
+                      AirFlow (1 челюсть)
+                    </span>
+                    <span className="price">2500₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Снятие зубных отложений пастой, полировка, покрытие
+                      "Fluocal gel" (2 челюсти) 1й сеанс
+                    </span>
+                    <span className="price">2500₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Снятие зубных отложений пастой, полировка, покрытие
+                      "Fluocal gel" последующий сеанс
+                    </span>
+                    <span className="price">2500₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Запечатывание фиссуры зуба герметиком (1 ед.)
+                    </span>
+                    <span className="price">2000₽</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="text">
+                      Ультразвуковое удаление наддесневых и поддесневых зубных
+                      отложений в области 1 зуба
+                    </span>
+                    <span className="price">150₽</span>
                   </div>
                 </div>
               </div>
@@ -706,4 +913,4 @@ const Whitening = () => {
   );
 };
 
-export default Whitening;
+export default BiteCorrection;

@@ -17,12 +17,13 @@ import ContactsPage from "./pages/contacts/ContactsPage";
 import ClinicsPage from "./pages/clinics/ClinicsPage";
 import Whitening from "./pages/services/whitening/Whitening";
 import Hygiene from "./pages/services/hygiene/Hygiene";
+import BiteCorrection from "./pages/services/bite-correction/BiteCorrection";
 
 ReactDOM.render(
   <Router>
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/services/teeth-healing" element={<TeethHealing />}></Route>
+
       <Route path="/children-dental" element={<ChildDental />}></Route>
       <Route path="/prices" element={<PricesPage />}></Route>
       <Route path="/privacy" element={<Privacy />}></Route>
@@ -33,6 +34,11 @@ ReactDOM.render(
       <Route path="/contacts" element={<ContactsPage />}></Route>
       <Route path="/services/whitening" element={<Whitening />}></Route>
       <Route path="/services/hygiene" element={<Hygiene />}></Route>
+      <Route
+        path="/services/bite-correction"
+        element={<BiteCorrection />}
+      ></Route>
+      <Route path="/services/teeth-healing" element={<TeethHealing />}></Route>
     </Routes>
   </Router>,
   document.getElementById("root")
