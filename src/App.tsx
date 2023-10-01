@@ -57,6 +57,7 @@ interface ExpandedService {
   href: string;
   href_2?: string;
   href_3?: string;
+  openModal?: any;
   href_4?: string;
 }
 
@@ -152,7 +153,9 @@ const ExpandedTab: React.FC<ExpandedService> = (props) => {
           <a className="golden-link">Цены</a>
         </div>
       </div>
-      <button className="golden-button">Запись на прием</button>
+      <button className="golden-button" onClick={props.openModal}>
+        Запись на прием
+      </button>
       <div className="text_divider">
         <div className="divider"></div>
         <div className="row_text">
@@ -160,18 +163,18 @@ const ExpandedTab: React.FC<ExpandedService> = (props) => {
         </div>
       </div>
       <div className="links-container">
-        <a href={props.href} className="golden-link">
+        <Link to={props.href} className="golden-link">
           {props.link_text}
-        </a>
-        <a href={props.href} className="golden-link">
-          {props.link_text}
-        </a>
-        <a href={props.href} className="golden-link">
-          {props.link_text}
-        </a>
-        <a href={props.href} className="golden-link">
-          {props.link_text}
-        </a>
+        </Link>
+        <Link to={props.href} className="golden-link">
+          {props.link_text_2}
+        </Link>
+        <Link to={props.href} className="golden-link">
+          {props.link_text_3}
+        </Link>
+        <Link to={props.href} className="golden-link">
+          {props.link_text_4}
+        </Link>
       </div>
     </div>
   );
@@ -928,7 +931,7 @@ export default function HomePage() {
                         isToothHealingOpened ? "text-active" : "text-inactive"
                       }
                     >
-                      Лечение зубов
+                      Ортопедия
                     </span>
                     <FontAwesomeIcon
                       icon={isToothHealingOpened ? faMinus : faPlus}
@@ -938,15 +941,16 @@ export default function HomePage() {
                 </button>
                 {isToothHealingOpened && (
                   <ExpandedTab
-                    service_text="Лечение зубов во сне"
-                    link_text="Удаление зуба под седацией"
-                    link_text_2="Удаление зуба под общим наркозом"
-                    link_text_3="Лечение зубов под седацией"
-                    link_text_4="Лечение зубов под наркозом у взрослых"
-                    href=""
-                    href_2=""
-                    href_3=""
-                    href_4=""
+                    service_text="Виниры и коронки"
+                    link_text="Оттиски"
+                    link_text_2="Вкладки"
+                    link_text_3="Коронки"
+                    link_text_4="Восстановление зуба виниром E-max"
+                    openModal={openModal}
+                    href="/services/vinirs"
+                    href_2="/services/vinirs"
+                    href_3="/services/vinirs"
+                    href_4="/services/vinirs"
                   />
                 )}
                 <button onClick={whiteningExpansion} className="btn">
@@ -956,7 +960,7 @@ export default function HomePage() {
                         isWhiteningOpened ? "text-active" : "text-inactive"
                       }
                     >
-                      Отбеливание
+                      Консультации
                     </span>
                     <FontAwesomeIcon
                       icon={isWhiteningOpened ? faMinus : faPlus}
@@ -966,15 +970,16 @@ export default function HomePage() {
                 </button>
                 {isWhiteningOpened && (
                   <ExpandedTab
-                    service_text="Лечение зубов во сне"
-                    link_text="Удаление зуба под седацией"
-                    link_text_2="Удаление зуба под общим наркозом"
-                    link_text_3="Лечение зубов под седацией"
-                    link_text_4="Лечение зубов под наркозом у взрослых"
-                    href=""
-                    href_2=""
-                    href_3=""
-                    href_4=""
+                    service_text="Диагностика"
+                    link_text="Рентгенолоия"
+                    link_text_2="Исследования и диагностика"
+                    link_text_3=""
+                    link_text_4=""
+                    openModal={openModal}
+                    href="/services/diagnostic"
+                    href_2="/services/diagnostic"
+                    href_3="/services/diagnostic"
+                    href_4="/services/diagnostic"
                   />
                 )}
                 <button onClick={mouthHygieneExpansion} className="btn">
@@ -984,7 +989,7 @@ export default function HomePage() {
                         isMouthHygieneOpened ? "text-active" : "text-inactive"
                       }
                     >
-                      Гигиена полости рта
+                      Отбеливание
                     </span>
                     <FontAwesomeIcon
                       icon={isMouthHygieneOpened ? faMinus : faPlus}
@@ -994,15 +999,13 @@ export default function HomePage() {
                 </button>
                 {isMouthHygieneOpened && (
                   <ExpandedTab
-                    service_text="Лечение зубов во сне"
-                    link_text="Удаление зуба под седацией"
-                    link_text_2="Удаление зуба под общим наркозом"
-                    link_text_3="Лечение зубов под седацией"
-                    link_text_4="Лечение зубов под наркозом у взрослых"
-                    href=""
-                    href_2=""
-                    href_3=""
-                    href_4=""
+                    service_text="Отбеливание"
+                    link_text="Отбеливание"
+                    openModal={openModal}
+                    href="/services/whitening"
+                    href_2="/services/whitening"
+                    href_3="/services/whitening"
+                    href_4="/services/whitening"
                   />
                 )}
                 <button onClick={healingInSleepExpansion} className="btn">
@@ -1013,7 +1016,7 @@ export default function HomePage() {
                         isHealingInSleepOpened ? "text-active" : "text-inactive"
                       }
                     >
-                      Лечение зубов во сне
+                      Хирургия
                     </span>
                     <FontAwesomeIcon
                       icon={isHealingInSleepOpened ? faMinus : faPlus}
@@ -1023,15 +1026,13 @@ export default function HomePage() {
                 </button>
                 {isHealingInSleepOpened && (
                   <ExpandedTab
-                    service_text="Лечение зубов во сне"
-                    link_text="Удаление зуба под седацией"
-                    link_text_2="Удаление зуба под общим наркозом"
-                    link_text_3="Лечение зубов под седацией"
-                    link_text_4="Лечение зубов под наркозом у взрослых"
-                    href=""
-                    href_2=""
-                    href_3=""
-                    href_4=""
+                    service_text="Хирургия"
+                    link_text="Хирургия"
+                    openModal={openModal}
+                    href="/services/surgery"
+                    href_2="/services/surgery"
+                    href_3="/services/surgery"
+                    href_4="/services/surgery"
                   />
                 )}
                 <button onClick={vinirExpansion} className="btn">
@@ -1041,7 +1042,7 @@ export default function HomePage() {
                         isVinirsOpened ? "text-active" : "text-inactive"
                       }
                     >
-                      Виниры и коронки
+                      Протезирование
                     </span>
                     <FontAwesomeIcon
                       icon={isVinirsOpened ? faMinus : faPlus}
@@ -1051,15 +1052,15 @@ export default function HomePage() {
                 </button>
                 {isVinirsOpened && (
                   <ExpandedTab
-                    service_text="Лечение зубов во сне"
-                    link_text="Удаление зуба под седацией"
-                    link_text_2="Удаление зуба под общим наркозом"
-                    link_text_3="Лечение зубов под седацией"
-                    link_text_4="Лечение зубов под наркозом у взрослых"
-                    href=""
-                    href_2=""
-                    href_3=""
-                    href_4=""
+                    service_text="Протезирование"
+                    link_text="Протезирование на имплантах"
+                    link_text_2="Внутрикостная дентальная имплантация системой"
+                    link_text_3="Формирователь десны"
+                    link_text_4="Синус-лифтинг"
+                    href="/services/prosthetics"
+                    href_2="/services/prosthetics"
+                    href_3="/services/prosthetics"
+                    href_4="/services/prosthetics"
                   />
                 )}
                 <button onClick={parodontHealthExpansion} className="btn">
@@ -1071,7 +1072,7 @@ export default function HomePage() {
                           : "text-inactive"
                       }
                     >
-                      Лечение пародонта
+                      Ортодонтия
                     </span>
                     <FontAwesomeIcon
                       icon={isParodontHealingOpened ? faMinus : faPlus}
@@ -1081,15 +1082,15 @@ export default function HomePage() {
                 </button>
                 {isParodontHealingOpened && (
                   <ExpandedTab
-                    service_text="Лечение зубов во сне"
-                    link_text="Удаление зуба под седацией"
-                    link_text_2="Удаление зуба под общим наркозом"
-                    link_text_3="Лечение зубов под седацией"
-                    link_text_4="Лечение зубов под наркозом у взрослых"
-                    href=""
-                    href_2=""
-                    href_3=""
-                    href_4=""
+                    service_text="Исправление прикуса"
+                    link_text="Ортодоническая коррекция с применением брекет-системы"
+                    link_text_2="Ретенция"
+                    link_text_3="Дополнительные приспособления"
+                    link_text_4=""
+                    href="/services/bite-correction"
+                    href_2="/services/bite-correction"
+                    href_3="/services/bite-correction"
+                    href_4="/services/bite-correction"
                   />
                 )}
                 <button onClick={prothesisExpansion} className="btn">
@@ -1099,7 +1100,7 @@ export default function HomePage() {
                         isProthesisOpened ? "text-active" : "text-inactive"
                       }
                     >
-                      Протезирование зубов
+                      Профилактика и гигиена
                     </span>
                     <FontAwesomeIcon
                       icon={isProthesisOpened ? faMinus : faPlus}
@@ -1109,15 +1110,15 @@ export default function HomePage() {
                 </button>
                 {isProthesisOpened && (
                   <ExpandedTab
-                    service_text="Лечение зубов во сне"
-                    link_text="Удаление зуба под седацией"
-                    link_text_2="Удаление зуба под общим наркозом"
-                    link_text_3="Лечение зубов под седацией"
-                    link_text_4="Лечение зубов под наркозом у взрослых"
-                    href=""
-                    href_2=""
-                    href_3=""
-                    href_4=""
+                    service_text="Профилактика и гигиена"
+                    link_text="Профилактика и гигиена"
+                    link_text_2=""
+                    link_text_3=""
+                    link_text_4=""
+                    href="/services/hygiene"
+                    href_2="/services/hygiene"
+                    href_3="/services/hygiene"
+                    href_4="/services/hygiene"
                   />
                 )}
                 <button onClick={diagnosisExpansion} className="btn">

@@ -5,13 +5,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faV } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faVk } from "@fortawesome/free-brands-svg-icons";
 
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 
 import "../footer/styles/footer_styles.css";
 import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
   function navigateToVk() {
     window.open("https://vk.com/dentalhomeclinik");
   }
@@ -104,12 +106,12 @@ const Footer = () => {
           <span className="contact-text two">Пн-Вс - 9:00-21:00</span>
           <span className="contact-text two">Бесплатная парковка</span>
           <div className="policy-row">
-            <a href="" className="policy-text">
+            <Link to="/privacy" className="policy-text">
               Политика конфиденциальности
-            </a>
-            <a href="" className="policy-text">
+            </Link>
+            <Link to="/privacy" className="policy-text">
               Политика обработки ПД
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -169,10 +171,10 @@ const Footer = () => {
           <p className="p-nav">Пн-Вс - 9:00-21:00</p>
           <p className="p-nav">Бесплатная парковка</p>
           <div className="links-conditional">
-            <Link to="/services/privacy" className="conditional">
+            <Link to="/privacy" className="conditional">
               Политика конфиденциальности
             </Link>
-            <Link to="/services/privacy" className="conditional cond">
+            <Link to="/privacy" className="conditional cond">
               Политика обработки ПД
             </Link>
           </div>

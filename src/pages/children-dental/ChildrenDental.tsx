@@ -140,12 +140,31 @@ const ChildDental = () => {
             <button className="golden-button">Записаться на прием</button>
             <div className="services">
               <h2 className="service-heading">Наши услуги</h2>
-
               <div className="service-squares">
-                <div className="service-square">Исправление прикуса</div>
-                <div className="service-square">Хирургия</div>
-                <div className="service-square">Лечение зубов</div>
-                <div className="service-square">Диагностика</div>
+                <div className="service-cont">
+                  <img src={Child01} className="img" alt="child" />
+                  <span className="text">Исправление прикуса</span>
+                </div>
+                <div className="service-cont">
+                  <img src={Child02} className="img" alt="child" />
+                  <span className="text">Хирургия</span>
+                </div>
+                <div className="service-cont">
+                  <img src={Child03} className="img" alt="child" />
+                  <span className="text">Лечение зубов</span>
+                </div>
+                <div className="service-cont">
+                  <img src={Child04} className="img" alt="child" />
+                  <span className="text">Детская гигиена полости рта</span>
+                </div>
+                <div className="service-cont">
+                  <img src={Child05} className="img" alt="child" />
+                  <span className="text">Лечение</span>
+                </div>
+                <div className="service-cont">
+                  <img src={Child05} className="img" alt="child" />
+                  <span className="text">Гигиена полости</span>
+                </div>
               </div>
             </div>
           </div>
@@ -159,8 +178,16 @@ const ChildDental = () => {
               <div className="heading-container">
                 <h1 className="heading">Dental Home - Детская стоматология</h1>
                 <div className="button-row">
-                  <button className="golden-button">Запись на прием</button>
-                  <button className="square-video">
+                  <button className="golden-button" onClick={openModal}>
+                    Запись на прием
+                  </button>
+                  <button
+                    className="square-video"
+                    onClick={() =>
+                      (window.location.href =
+                        "https://www.youtube.com/watch?v=3iBZgLHeOO4")
+                    }
+                  >
                     <FontAwesomeIcon
                       className="icon"
                       icon={faPlay}
@@ -191,18 +218,29 @@ const ChildDental = () => {
                     <img src={Child02} className="square" alt="child"></img>
                     <span className="text">Хирургия</span>
                   </div>
-                  <div className="square-cont">
+                  <div
+                    className="square-cont"
+                    onClick={() => navigate("/services/child-teeth")}
+                  >
                     <img src={Child03} className="square" alt="child"></img>
                     <span className="text">Лечение зубов</span>
                   </div>
                 </div>
                 <div className="row two">
-                  <div className="square-cont">
+                  <div
+                    className="square-cont"
+                    onClick={() => navigate("/services/child-hygiene")}
+                  >
                     <img src={Child04} className="square" alt="child"></img>
                     <span className="text">Детская гигиена полости рта</span>
                   </div>
                   <div className="square-cont">
-                    <img src={Child05} className="square" alt="child"></img>
+                    <img
+                      src={Child05}
+                      className="square"
+                      alt="child"
+                      onClick={() => navigate("/services/child-sleep")}
+                    ></img>
                     <span className="text">Лечение во сне</span>
                   </div>
                   <div className="square-cont">
