@@ -15,6 +15,8 @@ import WorksPage from "./pages/works/worksPage";
 import DoctorsPage from "./pages/doctors/DoctorsPage";
 import ContactsPage from "./pages/contacts/ContactsPage";
 import ClinicsPage from "./pages/clinics/ClinicsPage";
+import Whitening from "./pages/services/whitening/Whitening";
+import Hygiene from "./pages/services/hygiene/Hygiene";
 
 ReactDOM.render(
   <Router>
@@ -29,6 +31,8 @@ ReactDOM.render(
       <Route path="/doctors" element={<DoctorsPage />}></Route>
       <Route path="/clinics" element={<ClinicsPage />}></Route>
       <Route path="/contacts" element={<ContactsPage />}></Route>
+      <Route path="/services/whitening" element={<Whitening />}></Route>
+      <Route path="/services/hygiene" element={<Hygiene />}></Route>
     </Routes>
   </Router>,
   document.getElementById("root")

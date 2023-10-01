@@ -101,6 +101,9 @@ body
                             margin-left: clamp(13.5px,6.30828vw,54px)
                             transition: 0.3s all
 
+                .tablet
+                    display: none
+
                 .information-container
                     width: 100%
                     height: auto
@@ -561,7 +564,7 @@ body
                         margin-top: $m16
                         margin-bottom: $m32
 
-                    .information-one, .information-two
+                    .information-one, .information-two, .information-qa
                         width: 100%
                         display: flex
                         flex-direction: row
@@ -578,7 +581,7 @@ body
                             font-weight: 700
                             line-height: 137.4%
 
-                        .p-info
+                        .p-info, .answer-paragraph
                             width: clamp(260px,27.0816vw,1040px)
                             color: $dark_blue
                             font-family: Raleway
@@ -588,34 +591,88 @@ body
                             line-height: 137.4%
                             margin-bottom: $m64
 
+                        .question-heading
+                            color: rgba(32, 38, 55, 0.80)
+                            font-family: Raleway
+                            font-size: clamp(10px,1.0416vw,40px)
+                            font-style: normal
+                            font-weight: 500
+                            line-height: 137.4%
+
                         .two
                             margin-top: $m64
+
+                    .information-qa
+                        margin-top: $m64
+
+                        .questions
+                            width: clamp(260px,27.0816vw,1040px)
+
+                    .price-tab
+                        width: clamp(444px,46.24704vw,1776px)
+                        height: auto
+                        border-radius: 8px
+                        display: flex
+                        flex-direction: column
+                        justify-content: flex-start
+                        background: rgba(32, 38, 55, 0.55)
+                        margin-top: $m64
+
+                        .price-heading
+                            color: $white
+                            font-family: Merriweather
+                            font-size: clamp(13px,1.35408vw,52px)
+                            font-style: normal
+                            font-weight: 700
+                            line-height: 137.4%
+                            margin-top: $m32
+                            margin-left: $m32
+
+                        .prices
+                            display: flex
+                            flex-direction: column
+
+                            .price-row
+                                width: 92.7927927927928%
+                                display: flex
+                                flex-direction: row
+                                align-items: center
+                                justify-content: space-between
+                                margin-left: $m32
+
+                                .text
+                                    width: 64.19902912621359%
+                                    color: $white !important
+                                    font-family: Raleway
+                                    font-size: 18px
+                                    font-style: normal
+                                    font-weight: 600
+                                    line-height: 137.4%
+
+                                .price
+                                    color: $white
+                                    font-family: Raleway
+                                    font-size: clamp(10.5px,1.09368vw,42px)
+                                    font-style: normal
+                                    font-weight: 600
+                                    line-height: 137.4%
+
+                            .last
+                                margin-bottom: $m16
 
 @media screen and (min-width: 480px) and (max-width: 1024px)
 
     .screen
+        display: flex !important
 
         .services-screen-mobile
-            display: flex
-            flex-direction: column
+            display: flex !important
 
-            .pc-content
+            .content
+                display: flex !important
 
-                .golden-button
-                    width: clamp(121px,31.510416666666668vw,484px) !important
-                    height: auto
-                    border-radius: 10px !important
-                    justify-content: center !important
+                .header-container
+                    display: none !important
 
-                    .text
-                        width: 100% !important
-                        justify-content: center !important
-                        margin-left: 0px !important
-                        text-align: center !important
-                        font-size: clamp(15px,3.90625vw,60px) !important
-
-                    .icon
-                        margin-left: clamp(16px,4.166666666666667vw,64px) !important
-
-        .services-pc
-            display: none
+                .tablet
+                    display: flex !important

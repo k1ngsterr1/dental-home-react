@@ -89,6 +89,9 @@ body .screen .services-screen-mobile .content .heading-container .golden-button 
   margin-left: clamp(13.5px, 6.30828vw, 54px);
   transition: 0.3s all;
 }
+body .screen .services-screen-mobile .content .tablet {
+  display: none;
+}
 body .screen .services-screen-mobile .content .information-container {
   width: 100%;
   height: auto;
@@ -564,7 +567,7 @@ body .screen .services-pc {
     margin-top: clamp(8px, 0.83328vw, 32px);
     margin-bottom: clamp(16px, 1.66656vw, 64px);
   }
-  .screen .services-pc .services-content .services-information .information-one, .screen .services-pc .services-content .services-information .information-two {
+  .screen .services-pc .services-content .services-information .information-one, .screen .services-pc .services-content .services-information .information-two, .screen .services-pc .services-content .services-information .information-qa {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -572,7 +575,7 @@ body .screen .services-pc {
     justify-content: space-between;
     border-bottom: 1px solid #202637;
   }
-  .screen .services-pc .services-content .services-information .information-one .heading-info, .screen .services-pc .services-content .services-information .information-two .heading-info {
+  .screen .services-pc .services-content .services-information .information-one .heading-info, .screen .services-pc .services-content .services-information .information-two .heading-info, .screen .services-pc .services-content .services-information .information-qa .heading-info {
     width: clamp(142px, 14.79072vw, 568px) !important;
     color: #202637;
     font-family: Merriweather;
@@ -581,7 +584,7 @@ body .screen .services-pc {
     font-weight: 700;
     line-height: 137.4%;
   }
-  .screen .services-pc .services-content .services-information .information-one .p-info, .screen .services-pc .services-content .services-information .information-two .p-info {
+  .screen .services-pc .services-content .services-information .information-one .p-info, .screen .services-pc .services-content .services-information .information-one .answer-paragraph, .screen .services-pc .services-content .services-information .information-two .p-info, .screen .services-pc .services-content .services-information .information-two .answer-paragraph, .screen .services-pc .services-content .services-information .information-qa .p-info, .screen .services-pc .services-content .services-information .information-qa .answer-paragraph {
     width: clamp(260px, 27.0816vw, 1040px);
     color: #202637;
     font-family: Raleway;
@@ -591,32 +594,90 @@ body .screen .services-pc {
     line-height: 137.4%;
     margin-bottom: clamp(32px, 3.33312vw, 128px);
   }
-  .screen .services-pc .services-content .services-information .information-one .two, .screen .services-pc .services-content .services-information .information-two .two {
+  .screen .services-pc .services-content .services-information .information-one .question-heading, .screen .services-pc .services-content .services-information .information-two .question-heading, .screen .services-pc .services-content .services-information .information-qa .question-heading {
+    color: rgba(32, 38, 55, 0.8);
+    font-family: Raleway;
+    font-size: clamp(10px, 1.0416vw, 40px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 137.4%;
+  }
+  .screen .services-pc .services-content .services-information .information-one .two, .screen .services-pc .services-content .services-information .information-two .two, .screen .services-pc .services-content .services-information .information-qa .two {
     margin-top: clamp(32px, 3.33312vw, 128px);
   }
-}
-@media screen and (min-width: 480px) and (max-width: 1024px) {
-  .screen .services-screen-mobile {
+  .screen .services-pc .services-content .services-information .information-qa {
+    margin-top: clamp(32px, 3.33312vw, 128px);
+  }
+  .screen .services-pc .services-content .services-information .information-qa .questions {
+    width: clamp(260px, 27.0816vw, 1040px);
+  }
+  .screen .services-pc .services-content .services-information .price-tab {
+    width: clamp(444px, 46.24704vw, 1776px);
+    height: auto;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: rgba(32, 38, 55, 0.55);
+    margin-top: clamp(32px, 3.33312vw, 128px);
+  }
+  .screen .services-pc .services-content .services-information .price-tab .price-heading {
+    color: #F4F4F4;
+    font-family: Merriweather;
+    font-size: clamp(13px, 1.35408vw, 52px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 137.4%;
+    margin-top: clamp(16px, 1.66656vw, 64px);
+    margin-left: clamp(16px, 1.66656vw, 64px);
+  }
+  .screen .services-pc .services-content .services-information .price-tab .prices {
     display: flex;
     flex-direction: column;
   }
-  .screen .services-screen-mobile .pc-content .golden-button {
-    width: clamp(121px, 31.5104166667vw, 484px) !important;
-    height: auto;
-    border-radius: 10px !important;
-    justify-content: center !important;
+  .screen .services-pc .services-content .services-information .price-tab .prices .price-row {
+    width: 92.7927927928%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: clamp(16px, 1.66656vw, 64px);
   }
-  .screen .services-screen-mobile .pc-content .golden-button .text {
-    width: 100% !important;
-    justify-content: center !important;
-    margin-left: 0px !important;
-    text-align: center !important;
-    font-size: clamp(15px, 3.90625vw, 60px) !important;
+  .screen .services-pc .services-content .services-information .price-tab .prices .price-row .text {
+    width: 64.1990291262%;
+    color: #F4F4F4 !important;
+    font-family: Raleway;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 137.4%;
   }
-  .screen .services-screen-mobile .pc-content .golden-button .icon {
-    margin-left: clamp(16px, 4.1666666667vw, 64px) !important;
+  .screen .services-pc .services-content .services-information .price-tab .prices .price-row .price {
+    color: #F4F4F4;
+    font-family: Raleway;
+    font-size: clamp(10.5px, 1.09368vw, 42px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 137.4%;
   }
-  .screen .services-pc {
-    display: none;
+  .screen .services-pc .services-content .services-information .price-tab .prices .last {
+    margin-bottom: clamp(8px, 0.83328vw, 32px);
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 1024px) {
+  .screen {
+    display: flex !important;
+  }
+  .screen .services-screen-mobile {
+    display: flex !important;
+  }
+  .screen .services-screen-mobile .content {
+    display: flex !important;
+  }
+  .screen .services-screen-mobile .content .header-container {
+    display: none !important;
+  }
+  .screen .services-screen-mobile .content .tablet {
+    display: flex !important;
   }
 }/*# sourceMappingURL=services_styles.css.map */
