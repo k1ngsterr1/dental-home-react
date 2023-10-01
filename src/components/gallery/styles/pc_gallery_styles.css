@@ -125,14 +125,6 @@
     text-decoration-line: underline;
     text-transform: capitalize;
   }
-  body .mySwiper3-double {
-    width: clamp(444px, 46.24704vw, 1776px);
-    display: flex;
-    margin-left: 500px;
-    flex-direction: row;
-    justify-content: space-between;
-    border: 2px solid red;
-  }
 }
 @media screen and (min-width: 480px) and (max-width: 1024px) {
   body .mySwiper3 {
