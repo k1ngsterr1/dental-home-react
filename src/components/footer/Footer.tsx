@@ -66,29 +66,26 @@ const Footer = () => {
           <h5 className="information">Информация</h5>
           <div className="links-container">
             <div className="link-column-one">
-              <ScrollLink to="services" className="l">
-                Услуги
-              </ScrollLink>
-              <ScrollLink to="features" className="l two">
+              <Link to="/clinics" className="l two">
                 О клинике
-              </ScrollLink>
-              <ScrollLink to="doctors" className="l two">
+              </Link>
+              <Link to="/doctors" className="l two">
                 Врачи
-              </ScrollLink>
+              </Link>
               <Link to="/prices" className="l two">
                 Цены
               </Link>
             </div>
             <div className="link-column-two">
-              <a href="" className="l">
+              <Link to="/works" className="l">
                 Работы
-              </a>
-              <Link to="/prices" className="l two">
+              </Link>
+              <Link to="/reviews" className="l two">
                 Отзывы
               </Link>
-              <ScrollLink to="contacts" className="l two">
+              <Link to="/contacts" className="l two">
                 Контакты
-              </ScrollLink>
+              </Link>
             </div>
           </div>
         </div>
@@ -137,27 +134,25 @@ const Footer = () => {
         </div>
         <div className="column">
           <h6 className="information">Информация</h6>
-          <ScrollLink className="link-nav" to="services">
-            Услуги
-          </ScrollLink>
-          <ScrollLink className="link-nav" to="features">
+
+          <Link className="link-nav" to="/clinics">
             О клинике
-          </ScrollLink>
-          <ScrollLink className="link-nav" to="doctors">
+          </Link>
+          <Link to="/doctors" className="link-nav">
             Врачи
-          </ScrollLink>
+          </Link>
           <Link className="link-nav" to="/prices">
             Цены
           </Link>
-          <a className="link-nav" href="">
+          <Link className="link-nav" to="/works">
             Работы
-          </a>
-          <ScrollLink className="link-nav" to="reviews">
+          </Link>
+          <Link className="link-nav" to="/reviews">
             Отзывы
-          </ScrollLink>
-          <ScrollLink className="link-nav" to="footer">
+          </Link>
+          <Link className="link-nav" to="/contacts">
             Контакты
-          </ScrollLink>
+          </Link>
         </div>
         <div className="column">
           <h6 className="information">Контакты</h6>

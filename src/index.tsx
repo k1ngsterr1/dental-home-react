@@ -1,6 +1,12 @@
 import React from "react";
+import { useEffect } from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -28,11 +34,21 @@ import ChildTeeth from "./pages/services/child-teeth-healing/ChildTeeth";
 import ChildHygiene from "./pages/services/child-hygiene/ChildHygiene";
 import ChildSleep from "./pages/services/child-healing-insleep/ChildSleep";
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 ReactDOM.render(
   <Router>
+    <ScrollToTop></ScrollToTop>
     <Routes>
       <Route path="/" element={<Home />} />
-
       <Route path="/children-dental" element={<ChildDental />}></Route>
       <Route path="/prices" element={<PricesPage />}></Route>
       <Route path="/privacy" element={<Privacy />}></Route>

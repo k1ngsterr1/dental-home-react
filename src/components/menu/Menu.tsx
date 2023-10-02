@@ -98,6 +98,16 @@ const Menu: React.FC<MenuProps> = ({
               Московская область, г. Ивантеевка, Советский проспект 5
             </span>
           </div>
+          <div className="geo-row">
+            <FontAwesomeIcon
+              icon={faMapPin}
+              className="geo-icon"
+            ></FontAwesomeIcon>
+            <span className="text" style={{ marginTop: "16px" }}>
+              Московская область, г. Ивантеевка, Рощинская 9
+            </span>
+          </div>
+
           <span className="dark schedule">Пн-Вс - 9:00-21:00</span>
           <span className="dark free">Бесплатная парковка</span>
           <a className="phone link" href="tel:+79252229022">

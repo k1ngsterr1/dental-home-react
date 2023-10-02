@@ -655,7 +655,7 @@ export default function HomePage() {
                 ></FeatureLong>
                 <FeatureLong
                   number="04"
-                  text="Современное обородувоние"
+                  text="Современное обородувание"
                 ></FeatureLong>
               </div>
               <button className="golden-button" onClick={openPopupWindow}>
@@ -1121,37 +1121,9 @@ export default function HomePage() {
                     href_4="/services/hygiene"
                   />
                 )}
-                <button onClick={diagnosisExpansion} className="btn">
-                  <div className="btn-content">
-                    <span
-                      className={
-                        isDiagnosisOpened ? "text-active" : "text-inactive"
-                      }
-                    >
-                      Диагностика
-                    </span>
-                    <FontAwesomeIcon
-                      icon={isDiagnosisOpened ? faMinus : faPlus}
-                      className="golden-icon"
-                    />
-                  </div>
-                </button>
-                {isDiagnosisOpened && (
-                  <ExpandedTab
-                    service_text="Лечение зубов во сне"
-                    link_text="Удаление зуба под седацией"
-                    link_text_2="Удаление зуба под общим наркозом"
-                    link_text_3="Лечение зубов под седацией"
-                    link_text_4="Лечение зубов под наркозом у взрослых"
-                    href=""
-                    href_2=""
-                    href_3=""
-                    href_4=""
-                  />
-                )}
               </div>
               <div className="link-container">
-                <a className="golden-link">Страница всех услуг</a>
+                {/* <a className="golden-link">Страница всех услуг</a> */}
               </div>
             </section>
           </div>
