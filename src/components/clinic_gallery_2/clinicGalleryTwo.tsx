@@ -9,6 +9,20 @@ import "./styles/gallery_styles_two.css";
 
 const galleryTwoPic = require("../../assets/gallery_two_pic.webp");
 
+const gallerySTwoPicM = require("../../assets/galleryS_02m.webp");
+const gallerySThreePicM = require("../../assets/galleryS_03m.webp");
+const gallerySFourPicM = require("../../assets/galleryS_04m.webp");
+const gallerySFivePicM = require("../../assets/galleryS_05m.webp");
+const gallerySSixPicM = require("../../assets/galleryS_06m.webp");
+const gallerySSevenPicM = require("../../assets/galleryS_07m.webp");
+
+const gallery02 = require("../../assets/galleryS_02.webp");
+const gallery03 = require("../../assets/galleryS_03.webp");
+const gallery04 = require("../../assets/galleryS_04.webp");
+const gallery05 = require("../../assets/galleryS_05.webp");
+const gallery06 = require("../../assets/galleryS_06.webp");
+const gallery07 = require("../../assets/galleryS_07.webp");
+
 const ClinicGalleryTwo: React.FC = () => {
   return (
     <div className="clinic-gallery">
@@ -50,10 +64,38 @@ const ClinicGalleryTwo: React.FC = () => {
           <img className="swiper-image" src={galleryTwoPic} alt="image"></img>
         </SwiperSlide>
         <SwiperSlide>
-          <img className="swiper-image" src={galleryTwoPic} alt="image"></img>
+          <img className="swiper-image" src={gallerySTwoPicM} alt="image"></img>
         </SwiperSlide>
         <SwiperSlide>
-          <img className="swiper-image" src={galleryTwoPic} alt="image"></img>
+          <img
+            className="swiper-image"
+            src={gallerySThreePicM}
+            alt="image"
+          ></img>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            className="swiper-image"
+            src={gallerySFourPicM}
+            alt="image"
+          ></img>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            className="swiper-image"
+            src={gallerySFivePicM}
+            alt="image"
+          ></img>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img className="swiper-image" src={gallerySSixPicM} alt="image"></img>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            className="swiper-image"
+            src={gallerySSevenPicM}
+            alt="image"
+          ></img>
         </SwiperSlide>
       </Swiper>
     </div>

@@ -648,7 +648,7 @@ body
 
     .modal
         width: 85%
-        height: 80%
+        height: 70%
         display: flex
         flex-direction: column
         align-items: center
@@ -670,11 +670,13 @@ body
             display: flex
             flex-direction: column
             align-items: center
+            margin-top: $m64mob
             background-color: $dark_blue
 
             .logo
                 width: 64px
                 height: 64px
+                display: none
                 margin-top: $m16mob
                 margin-bottom: $m16mob
 
@@ -692,6 +694,7 @@ body
                 color: $white
                 margin-top: $m16mob
                 margin-bottom: $m16mob
+                display: none
                 text-align: center
                 font-family: Raleway
                 font-size: clamp(7.5px,3.5046vw,30px)
@@ -1772,6 +1775,7 @@ body
                 background-color: $dark_blue
 
                 .logo
+                    display: flex !important
                     margin-top: $m32
                     margin-bottom: $m32
 
@@ -1788,6 +1792,7 @@ body
                 .additional-text
                     color: $white
                     margin-top: $m32
+                    display: flex
                     margin-bottom: $m16
                     text-align: center
                     font-family: Raleway

@@ -639,7 +639,7 @@ body .mySwiper4 .swiper-image, body .mySwiper5 .swiper-image {
 }
 body .modal {
   width: 85%;
-  height: 80%;
+  height: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -661,11 +661,13 @@ body .modal .modal-content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: clamp(32px, 14.95296vw, 128px);
   background-color: #202637;
 }
 body .modal .modal-content .logo {
   width: 64px;
   height: 64px;
+  display: none;
   margin-top: clamp(8px, 3.73824vw, 32px);
   margin-bottom: clamp(8px, 3.73824vw, 32px);
 }
@@ -683,6 +685,7 @@ body .modal .modal-content .additional-text {
   color: #F4F4F4;
   margin-top: clamp(8px, 3.73824vw, 32px);
   margin-bottom: clamp(8px, 3.73824vw, 32px);
+  display: none;
   text-align: center;
   font-family: Raleway;
   font-size: clamp(7.5px, 3.5046vw, 30px);
@@ -1773,6 +1776,7 @@ body .services-modal-button:hover {
     background-color: #202637;
   }
   body .modal .modal-content .logo {
+    display: flex !important;
     margin-top: clamp(16px, 1.66656vw, 64px);
     margin-bottom: clamp(16px, 1.66656vw, 64px);
   }
@@ -1789,6 +1793,7 @@ body .services-modal-button:hover {
   body .modal .modal-content .additional-text {
     color: #F4F4F4;
     margin-top: clamp(16px, 1.66656vw, 64px);
+    display: flex;
     margin-bottom: clamp(8px, 0.83328vw, 32px);
     text-align: center;
     font-family: Raleway;

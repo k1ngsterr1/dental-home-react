@@ -109,6 +109,13 @@ const doctorSevenMob = require("./assets/07.webp");
 const doctorEightMob = require("./assets/08.webp");
 const doctorNineMob = require("./assets/09.webp");
 
+const gallery02 = require("./assets/galleryS_02.webp");
+const gallery03 = require("./assets/galleryS_03.webp");
+const gallery04 = require("./assets/galleryS_04.webp");
+const gallery05 = require("./assets/galleryS_05.webp");
+const gallery06 = require("./assets/galleryS_06.webp");
+const gallery07 = require("./assets/galleryS_07.webp");
+
 // Gallery Photos
 const galleryOne = require("./assets/gallery01.webp");
 const galleryTwo = require("./assets/gallery02.webp");
@@ -1661,14 +1668,42 @@ export default function HomePage() {
                     <SwiperSlide>
                       <img
                         className="swiper-image"
-                        src={galleryTwoPic}
+                        src={gallery02}
                         alt="image"
                       ></img>
                     </SwiperSlide>
                     <SwiperSlide>
                       <img
                         className="swiper-image"
-                        src={galleryTwoPic}
+                        src={gallery03}
+                        alt="image"
+                      ></img>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img
+                        className="swiper-image"
+                        src={gallery04}
+                        alt="image"
+                      ></img>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img
+                        className="swiper-image"
+                        src={gallery05}
+                        alt="image"
+                      ></img>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img
+                        className="swiper-image"
+                        src={gallery06}
+                        alt="image"
+                      ></img>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img
+                        className="swiper-image"
+                        src={gallery07}
                         alt="image"
                       ></img>
                     </SwiperSlide>
