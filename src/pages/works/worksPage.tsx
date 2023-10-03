@@ -32,6 +32,7 @@ const serviceThreeMob = require("../../assets/service_mob_03.webp");
 const serviceFourMob = require("../../assets/service_mob_04.webp");
 
 const logoMobile: string = require("../../assets/logo_mob.svg").default;
+const modalImage: string = require("../../assets/example_modal.webp");
 
 const WorksPage = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -87,6 +88,41 @@ const WorksPage = () => {
       .catch((err) => console.log(err));
   }
 
+  const [open, setOpen] = useState(false);
+
+  const phoneForm = useRef<HTMLFormElement>(null);
+
+  function openPopupWindow() {
+    setOpen(true);
+  }
+
+  function sendPhoneRequest(e: any) {
+    e.preventDefault();
+    setFullName("");
+    setPhoneNumber("");
+
+    emailjs
+      .sendForm(
+        "service_kwh5orp",
+        "template_rgnaux5",
+        e.target,
+        "b-K7bdT7JW4cqcN4y"
+      )
+      .then((res) => {
+        console.log("SUCCESS");
+      })
+      .catch((err) => console.log(err));
+  }
+
+  const openModal = () => {
+    console.log("Opening modal");
+    setOpen(true);
+  };
+
+  const closeModal = () => {
+    setOpen(false);
+  };
+
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
@@ -111,7 +147,20 @@ const WorksPage = () => {
       ) : (
         <div className="screen">
           <div className="content">
-            <Header isMenuOpen={isMenuOpen} toggleMenu={toggleMenu}></Header>
+            <div className="header-container" style={{ width: "100%" }}>
+              <Header
+                isMenuOpen={isMenuOpen}
+                openModal={openModal}
+                toggleMenu={toggleMenu}
+              ></Header>
+            </div>
+            <div className="tablet" style={{ width: "100%" }}>
+              <Header
+                isMenuPcOpen={isMenuPcOpen}
+                openModal={openModal}
+                togglePcMenu={togglePcMenu}
+              ></Header>
+            </div>
             <main className="main-content">
               <div className="bread-dots">
                 <Link to="/" className="main-link">

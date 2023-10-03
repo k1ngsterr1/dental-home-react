@@ -639,14 +639,16 @@ body .mySwiper4 .swiper-image, body .mySwiper5 .swiper-image {
 }
 body .modal {
   width: 85%;
-  height: 70%;
+  height: 70vh;
+  overflow-y: hidden !important;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: auto !important;
   position: fixed;
   right: 0 !important;
-  bottom: 0 !important;
+  bottom: 20% !important;
+  margin-bottom: 0px !important;
   border-radius: 28px;
   background-color: #202637;
   box-shadow: 0px 15px 31px 0px rgba(0, 0, 0, 0.25);
@@ -655,13 +657,21 @@ body .modal .modal-img {
   width: 100% !important;
   height: clamp(200px, 93.456vw, 800px) !important;
 }
+body .modal .gold-cross {
+  font-size: clamp(16px, 7.47648vw, 64px);
+  color: #202637;
+  position: absolute;
+  right: clamp(8px, 3.73824vw, 32px);
+  top: clamp(8px, 3.73824vw, 32px);
+}
 body .modal .modal-content {
   width: 90%;
   height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: clamp(32px, 14.95296vw, 128px);
+  margin-top: clamp(16px, 7.47648vw, 64px);
+  margin-bottom: 0px;
   background-color: #202637;
 }
 body .modal .modal-content .logo {
@@ -1766,12 +1776,16 @@ body .services-modal-button:hover {
     width: clamp(236px, 24.58176vw, 944px) !important;
     height: 100% !important;
   }
+  body .modal .gold-cross {
+    display: none;
+  }
   body .modal .modal-content {
     width: 90%;
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 0px !important;
     border-radius: 28px !important;
     background-color: #202637;
   }

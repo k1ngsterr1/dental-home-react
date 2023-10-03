@@ -3,7 +3,7 @@ import Header from "../../components/header/header";
 import Footer from "../../components/footer/Footer";
 import "./styles/children_styles.css";
 import Popup from "reactjs-popup";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { keyframes } from "@emotion/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faVideo, faPlay } from "@fortawesome/free-solid-svg-icons";
@@ -123,12 +123,20 @@ const ChildDental = () => {
       ) : (
         <div className="screen-children">
           <div className="mob-screen">
-            <Header
-              toggleMenu={toggleMenu}
-              isMenuOpen={isMenuOpen}
-              openModal={openModal}
-            ></Header>
-
+            <div className="header-container" style={{ width: "100%" }}>
+              <Header
+                isMenuOpen={isMenuOpen}
+                openModal={openModal}
+                toggleMenu={toggleMenu}
+              ></Header>
+            </div>
+            <div className="tablet" style={{ width: "100%" }}>
+              <Header
+                isMenuPcOpen={isMenuPcOpen}
+                openModal={openModal}
+                togglePcMenu={togglePcMenu}
+              ></Header>
+            </div>
             <div className="heading-content">
               <h1 className="heading">Dental Home - Детская стоматология</h1>
             </div>
@@ -200,7 +208,17 @@ const ChildDental = () => {
             <div className="service-container">
               <div className="heading-container">
                 <h2 className="services-heading">Наши Услуги</h2>
-                <button className="button">Прайс лист</button>
+                <Link
+                  className="button"
+                  to="/prices"
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  Прайс лист
+                </Link>
               </div>
               <div className="squares-container">
                 <div className="row">
@@ -268,7 +286,7 @@ const ChildDental = () => {
                 alt="modal-picture"
               ></img>
               <div className="modal-content">
-                <img className="logo" src={logoMobile} alt="logotype"></img>
+                {/* <img className="logo" src={logoMobile} alt="logotype"></img> */}
                 <span className="text">
                   Хотите получить бесплатную консультацию?
                 </span>
@@ -296,6 +314,13 @@ const ChildDental = () => {
                       className="icon"
                     ></FontAwesomeIcon>
                     Хорошо жду звонка
+                  </button>
+                  <button className="phone-btn" value="Send">
+                    <FontAwesomeIcon
+                      icon={faPlay}
+                      className="icon"
+                    ></FontAwesomeIcon>
+                    Видеоролик
                   </button>
                 </form>
               </div>

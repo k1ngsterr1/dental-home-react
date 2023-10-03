@@ -16,9 +16,8 @@ import { MDBCheckbox } from "mdb-react-ui-kit";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore from "swiper";
 import { Navigation, Pagination } from "swiper/modules";
-
+import Popup from "reactjs-popup";
 import emailjs from "@emailjs/browser";
-
 import ReviewGallery from "../../components/reviews/ReviewGallery";
 import ServiceGallery from "../../components/gallery/services_gallery";
 import Gallery from "../../components/gallery/gallery";
@@ -98,6 +97,7 @@ const pavel = require("../../assets/pavel.webp");
 const featuresPhoto = require("../../assets/features_photo.png");
 const logoMobile: string = require("../../assets/logo_mob.svg").default;
 const bulb: string = require("../../assets/bulb.svg");
+const modalImage: string = require("../../assets/example_modal.webp");
 
 type Swiper = any;
 
@@ -113,18 +113,6 @@ const ClinicsPage = () => {
   const togglePcMenu = () => {
     setIsMenuPcOpen(!isMenuPcOpen);
   };
-
-  const customAnimation = keyframes`
-    from {
-      opacity: 1;
-      transform: translate3d(0px, 0px, 0);
-    }
-    
-    to {
-      opacity: 0;
-      transform: translate3d(-2000, 0, 0);
-    }
-    `;
 
   const [fullName, setFullName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -155,6 +143,53 @@ const ClinicsPage = () => {
       .catch((err) => console.log(err));
   }
 
+  const [open, setOpen] = useState(false);
+
+  const phoneForm = useRef<HTMLFormElement>(null);
+
+  const customAnimation = keyframes`
+  from {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(-2000, 0, 0);
+  }
+`;
+
+  function openPopupWindow() {
+    setOpen(true);
+  }
+
+  function sendPhoneRequest(e: any) {
+    e.preventDefault();
+    setFullName("");
+    setPhoneNumber("");
+
+    emailjs
+      .sendForm(
+        "service_kwh5orp",
+        "template_rgnaux5",
+        e.target,
+        "b-K7bdT7JW4cqcN4y"
+      )
+      .then((res) => {
+        console.log("SUCCESS");
+      })
+      .catch((err) => console.log(err));
+  }
+
+  const openModal = () => {
+    console.log("Opening modal");
+    setOpen(true);
+  };
+
+  const closeModal = () => {
+    setOpen(false);
+  };
+
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
@@ -179,11 +214,19 @@ const ClinicsPage = () => {
       ) : (
         <div className="screen">
           <div className="content" style={{ width: "100%" }}>
-            <div
-              className="headercontainer"
-              style={{ width: "90%", margin: "auto" }}
-            >
-              <Header isMenuOpen={isMenuOpen} toggleMenu={toggleMenu}></Header>
+            <div className="header-container" style={{ width: "100%" }}>
+              <Header
+                isMenuOpen={isMenuOpen}
+                openModal={openModal}
+                toggleMenu={toggleMenu}
+              ></Header>
+            </div>
+            <div className="tablet" style={{ width: "100%" }}>
+              <Header
+                isMenuPcOpen={isMenuPcOpen}
+                openModal={openModal}
+                togglePcMenu={togglePcMenu}
+              ></Header>
             </div>
             <main className="main-content">
               <div
@@ -288,7 +331,9 @@ const ClinicsPage = () => {
                       text="Современное обородувоние"
                     ></FeatureLong>
                   </div>
-                  <button className="golden-button">Записаться на прием</button>
+                  <button className="golden-button" onClick={openModal}>
+                    Записаться на прием
+                  </button>
                 </section>
               </div>
               <div
@@ -429,6 +474,7 @@ const ClinicsPage = () => {
               >
                 <Header
                   isMenuPcOpen={isMenuPcOpen}
+                  openModal={openModal}
                   togglePcMenu={togglePcMenu}
                 ></Header>
               </div>
@@ -556,7 +602,9 @@ const ClinicsPage = () => {
                     </div>
                   </div>
                   <div className="btn-container">
-                    <button className="gold-btn">Записаться на прием</button>
+                    <button className="gold-btn" onClick={openModal}>
+                      Записаться на прием
+                    </button>
                   </div>
                 </section>
               </div>
@@ -800,7 +848,7 @@ const ClinicsPage = () => {
                         </Fade>
                       </div>
                       <Fade triggerOnce={true} direction="right" delay={800}>
-                        <button className="golden-btn">
+                        <button className="golden-btn" onClick={openModal}>
                           Записаться на прием
                         </button>
                       </Fade>
@@ -952,6 +1000,55 @@ const ClinicsPage = () => {
             </main>
           </div>
           <Footer></Footer>
+          <Popup
+            open={open}
+            closeOnDocumentClick
+            onClose={closeModal}
+            modal
+            nested
+            className="popup-container"
+            position="center center"
+          >
+            <div className="modal">
+              <img
+                className="modal-img"
+                src={modalImage}
+                alt="modal-picture"
+              ></img>
+              <div className="modal-content">
+                <img className="logo" src={logoMobile} alt="logotype"></img>
+                <span className="text">
+                  Хотите получить бесплатную консультацию?
+                </span>
+                <span className="additional-text">
+                  Оставьте свой номер и мы перезвоним вам
+                </span>
+                <form className="input-container" onSubmit={sendPhoneRequest}>
+                  <label htmlFor="phone-number-input" className="label">
+                    Ваш номер телефона*
+                  </label>
+                  <input
+                    type="tel"
+                    name="phoneNumber"
+                    className="phone-number-input"
+                    placeholder="+7 (925) 222-90-22"
+                    required={true}
+                    value={phoneNumber}
+                    onChange={(event) => setPhoneNumber(event.target.value)}
+                    style={{ textAlign: "center" }}
+                    id=""
+                  />
+                  <button className="phone-btn" value="Send">
+                    <FontAwesomeIcon
+                      icon={faPhone}
+                      className="icon"
+                    ></FontAwesomeIcon>
+                    Хорошо жду звонка
+                  </button>
+                </form>
+              </div>
+            </div>
+          </Popup>
         </div>
       )}
     </div>

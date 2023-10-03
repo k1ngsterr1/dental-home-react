@@ -70,6 +70,8 @@ const serviceTwoMob = require("../../../assets/service_mob_02.webp");
 const serviceThreeMob = require("../../../assets/service_mob_03.webp");
 const serviceFourMob = require("../../../assets/service_mob_04.webp");
 
+const diagnosticPc = require("../../../assets/diagnostic_pc.webp");
+
 const DiagnosticPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMenuPcOpen, setIsMenuPcOpen] = useState(false);
@@ -186,12 +188,14 @@ const DiagnosticPage = () => {
               <div className="header-container" style={{ width: "100%" }}>
                 <Header
                   isMenuOpen={isMenuOpen}
+                  openModal={openModal}
                   toggleMenu={toggleMenu}
                 ></Header>
               </div>
               <div className="tablet" style={{ width: "100%" }}>
                 <Header
                   isMenuPcOpen={isMenuPcOpen}
+                  openModal={openModal}
                   togglePcMenu={togglePcMenu}
                 ></Header>
               </div>
@@ -210,7 +214,7 @@ const DiagnosticPage = () => {
                   </Link>
                 </div>
                 <h1 className="heading">Диагностика</h1>
-                <button className="golden-button">
+                <button className="golden-button" onClick={openModal}>
                   <span className="text">Записаться</span>
                   <FontAwesomeIcon
                     icon={faChevronRight}
@@ -474,12 +478,13 @@ const DiagnosticPage = () => {
                 <div className="divider"></div>
                 <Gallery
                   imageSrc={doctorOneMob}
-                  imageSrcTwo={doctorTwoMob}
+                  // imageSrcTwo={doctorTwoMob}
                   imageSrcThree={doctorThreeMob}
                   imageSrcFour={doctorFourMob}
                   imageSrcFive={doctorFiveMob}
                   imageSrcSix={doctorSixMob}
                   imageSrcSeven={doctorSevenMob}
+                  openModal={openModal}
                   imageSrcEight={doctorEightMob}
                   imageSrcNine={doctorNineMob}
                 />
@@ -608,6 +613,7 @@ const DiagnosticPage = () => {
             <div className="pc-content">
               <Header
                 isMenuPcOpen={isMenuPcOpen}
+                openModal={openModal}
                 togglePcMenu={togglePcMenu}
               ></Header>
               <div className="upper-content">
@@ -626,7 +632,7 @@ const DiagnosticPage = () => {
                     </Link>
                   </div>
                   <h1 className="heading">Диагностика</h1>
-                  <button className="button">
+                  <button className="button" onClick={openModal}>
                     <span className="text">Записаться</span>
                     <FontAwesomeIcon
                       icon={faChevronRight}
@@ -635,7 +641,7 @@ const DiagnosticPage = () => {
                   </button>
                 </div>
                 <img
-                  src={mainService}
+                  src={diagnosticPc}
                   alt="service"
                   className="service-image"
                 ></img>
@@ -907,7 +913,7 @@ const DiagnosticPage = () => {
               >
                 <PcGallery
                   imageSrc={doctorOne}
-                  imageSrc2={doctorTwo}
+                  // imageSrc2={doctorTwo}
                   imageSrc3={doctorThree}
                   imageSrc4={doctorFour}
                   imageSrc5={doctorFive}
@@ -915,6 +921,7 @@ const DiagnosticPage = () => {
                   imageSrc7={doctorSeven}
                   imageSrc8={doctorEight}
                   imageSrc9={doctorNine}
+                  openModal={openModal}
                 />
                 <div
                   className="gallery"
@@ -1071,7 +1078,7 @@ const DiagnosticPage = () => {
                   </label>
                   <input
                     type="tel"
-                    name="phone-number-input"
+                    name="phoneNumber"
                     className="phone-number-input"
                     placeholder="+7 (925) 222-90-22"
                     required={true}

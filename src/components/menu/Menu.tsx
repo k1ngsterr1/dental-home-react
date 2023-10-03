@@ -39,6 +39,12 @@ const Menu: React.FC<MenuProps> = ({
     }
   };
 
+  const closeMenuOpenModal = () => {
+    if (isMenuOpen) {
+      toggleMenu();
+    }
+  };
+
   const closePcMenu = () => {
     if (isMenuPcOpen) {
       togglePcMenu();
@@ -122,10 +128,10 @@ const Menu: React.FC<MenuProps> = ({
           </div>
         </div>
         <div className="buttons">
-          <ScrollLink className="button" to="form-screen" onClick={closeMenu}>
+          <ScrollLink className="button" to="form-screen" onClick={openModal}>
             Записать на прием
           </ScrollLink>
-          <Link to="/child-dental" className="button child">
+          <Link to="/children-dental" className="button child">
             Детская стоматология
           </Link>
         </div>
@@ -219,7 +225,7 @@ const Menu: React.FC<MenuProps> = ({
                 Лечение зубов
               </Link>
               <Link to="/services/whitening" className="golden-link l">
-                Отбеливние
+                Отбеливание
               </Link>
               <Link to="/services/hygiene" className="golden-link l">
                 Гигиена полости рта
@@ -233,10 +239,10 @@ const Menu: React.FC<MenuProps> = ({
               <Link to="/services/surgery" className="golden-link l">
                 Хирургия
               </Link>
-              <Link to="/services/prothetics" className="golden-link l">
+              <Link to="/services/prosthetics" className="golden-link l">
                 Протезирование зубов
               </Link>
-              <Link to="/services/bite-corrections" className="golden-link l">
+              <Link to="/services/bite-correction" className="golden-link l">
                 Исправление прикуса
               </Link>
               <a href="tel:+79252229022" className="phone-number">
@@ -249,13 +255,15 @@ const Menu: React.FC<MenuProps> = ({
               <Link to="/children-dental" className="child-button">
                 <img className="icon" src={childIcon}></img>
               </Link>
-              <span className="child-text">Детская стоматология</span>
+              <Link className="child-text" to="/children-dental">
+                Детская стоматология
+              </Link>
             </div>
           </div>
         </div>
-        <Link to="/services/teeth-healing">
+        <ScrollLink to="service" onClick={closeMenu}>
           <img className="services" src={services} alt="services"></img>
-        </Link>
+        </ScrollLink>
         <img src={logo} alt="logo" className="logo" />
         <button
           className="form-btn"
@@ -368,7 +376,7 @@ const Menu: React.FC<MenuProps> = ({
                   </Link>
                 </div>
               </div>
-              <Link className="child-button" to="/child-dental">
+              <Link className="child-button" to="/children-dental">
                 Детская стоматология
               </Link>
               <a href="tel:+7 (925) 222-90-22" className="tel">

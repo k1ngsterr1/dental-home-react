@@ -85,7 +85,7 @@ const Gallery: React.FC<PhotoSource> = ({
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
+        {/* <SwiperSlide>
           <div className="dentist-card-2">
             <div className="button-image-container">
               <img
@@ -95,7 +95,7 @@ const Gallery: React.FC<PhotoSource> = ({
               />
             </div>
           </div>
-        </SwiperSlide>
+        </SwiperSlide> */}
         <SwiperSlide>
           <div className="dentist-card-2">
             <div className="button-image-container">

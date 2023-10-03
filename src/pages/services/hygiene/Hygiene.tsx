@@ -71,6 +71,8 @@ const serviceTwoMob = require("../../../assets/service_mob_02.webp");
 const serviceThreeMob = require("../../../assets/service_mob_03.webp");
 const serviceFourMob = require("../../../assets/service_mob_04.webp");
 
+const hygienePc = require("../../../assets/hygiene_pc.webp");
+
 const logoMobile: string = require("../../../assets/logo_mob.svg").default;
 
 const Hygiene = () => {
@@ -420,13 +422,14 @@ const Hygiene = () => {
                 <div className="divider"></div>
                 <Gallery
                   imageSrc={doctorOneMob}
-                  imageSrcTwo={doctorTwoMob}
+                  // imageSrcTwo={doctorTwoMob}
                   imageSrcThree={doctorThreeMob}
                   imageSrcFour={doctorFourMob}
                   imageSrcFive={doctorFiveMob}
                   imageSrcSix={doctorSixMob}
                   imageSrcSeven={doctorSevenMob}
                   imageSrcEight={doctorEightMob}
+                  openModal={openModal}
                   imageSrcNine={doctorNineMob}
                 />
               </div>
@@ -584,7 +587,7 @@ const Hygiene = () => {
                   </button>
                 </div>
                 <img
-                  src={mainService}
+                  src={hygienePc}
                   alt="service"
                   className="service-image"
                 ></img>
@@ -802,7 +805,8 @@ const Hygiene = () => {
               >
                 <PcGallery
                   imageSrc={doctorOne}
-                  imageSrc2={doctorTwo}
+                  // imageSrc2={doctorTwo}
+                  openModal={openModal}
                   imageSrc3={doctorThree}
                   imageSrc4={doctorFour}
                   imageSrc5={doctorFive}
@@ -967,7 +971,7 @@ const Hygiene = () => {
                   </label>
                   <input
                     type="tel"
-                    name="phone-number-input"
+                    name="phoneNumber"
                     className="phone-number-input"
                     placeholder="+7 (925) 222-90-22"
                     required={true}

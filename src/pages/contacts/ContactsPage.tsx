@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, RefObject } from "react";
 import { Link } from "react-router-dom";
 import { YMaps, Map, Placemark } from "react-yandex-maps";
 import Header from "../../components/header/header";
+import Popup from "reactjs-popup";
 import { keyframes } from "@emotion/react";
 import { Reveal } from "react-awesome-reveal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -50,6 +51,7 @@ const doctorSixPc = require("../../assets/6.webp");
 const doctorSevenPc = require("../../assets/7.webp");
 const doctorEightPc = require("../../assets/8.webp");
 const doctorNinePc = require("../../assets/9.webp");
+const modalImage = require("../../assets/example_modal.webp");
 
 const featuresPhotoPc = require("../../assets/features_image.webp");
 const galleryOnePic = require("../../assets/gallery_one_pic.webp");
@@ -103,7 +105,6 @@ const bulb: string = require("../../assets/bulb.svg");
 type Swiper = any;
 
 const ContactsPage = () => {
-  const [isLoading, setIsLoading] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMenuPcOpen, setIsMenuPcOpen] = useState(false);
 
@@ -177,6 +178,43 @@ const ContactsPage = () => {
       .catch((err) => console.log(err));
   }
 
+  const [open, setOpen] = useState(false);
+
+  const phoneForm = useRef<HTMLFormElement>(null);
+
+  function openPopupWindow() {
+    setOpen(true);
+  }
+
+  function sendPhoneRequest(e: any) {
+    e.preventDefault();
+    setFullName("");
+    setPhoneNumber("");
+
+    emailjs
+      .sendForm(
+        "service_kwh5orp",
+        "template_rgnaux5",
+        e.target,
+        "b-K7bdT7JW4cqcN4y"
+      )
+      .then((res) => {
+        console.log("SUCCESS");
+      })
+      .catch((err) => console.log(err));
+  }
+
+  const openModal = () => {
+    console.log("Opening modal");
+    setOpen(true);
+  };
+
+  const closeModal = () => {
+    setOpen(false);
+  };
+
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
@@ -201,11 +239,19 @@ const ContactsPage = () => {
       ) : (
         <div className="screen">
           <div className="content" style={{ width: "100%" }}>
-            <div
-              className="headercontainer"
-              style={{ width: "90%", margin: "auto" }}
-            >
-              <Header isMenuOpen={isMenuOpen} toggleMenu={toggleMenu}></Header>
+            <div className="header-container" style={{ width: "100%" }}>
+              <Header
+                isMenuOpen={isMenuOpen}
+                openModal={openModal}
+                toggleMenu={toggleMenu}
+              ></Header>
+            </div>
+            <div className="tablet" style={{ width: "100%" }}>
+              <Header
+                isMenuPcOpen={isMenuPcOpen}
+                openModal={openModal}
+                togglePcMenu={togglePcMenu}
+              ></Header>
             </div>
             <main className="main-content">
               <div
@@ -362,6 +408,7 @@ const ContactsPage = () => {
               >
                 <Header
                   isMenuPcOpen={isMenuPcOpen}
+                  openModal={openModal}
                   togglePcMenu={togglePcMenu}
                 ></Header>
               </div>
@@ -541,6 +588,55 @@ const ContactsPage = () => {
             </main>
           </div>
           <Footer></Footer>
+          <Popup
+            open={open}
+            closeOnDocumentClick
+            onClose={closeModal}
+            modal
+            nested
+            className="popup-container"
+            position="center center"
+          >
+            <div className="modal">
+              <img
+                className="modal-img"
+                src={modalImage}
+                alt="modal-picture"
+              ></img>
+              <div className="modal-content">
+                <img className="logo" src={logoMobile} alt="logotype"></img>
+                <span className="text">
+                  Хотите получить бесплатную консультацию?
+                </span>
+                <span className="additional-text">
+                  Оставьте свой номер и мы перезвоним вам
+                </span>
+                <form className="input-container" onSubmit={sendPhoneRequest}>
+                  <label htmlFor="phone-number-input" className="label">
+                    Ваш номер телефона*
+                  </label>
+                  <input
+                    type="tel"
+                    name="phoneNumber"
+                    className="phone-number-input"
+                    placeholder="+7 (925) 222-90-22"
+                    required={true}
+                    value={phoneNumber}
+                    onChange={(event) => setPhoneNumber(event.target.value)}
+                    style={{ textAlign: "center" }}
+                    id=""
+                  />
+                  <button className="phone-btn" value="Send">
+                    <FontAwesomeIcon
+                      icon={faPhone}
+                      className="icon"
+                    ></FontAwesomeIcon>
+                    Хорошо жду звонка
+                  </button>
+                </form>
+              </div>
+            </div>
+          </Popup>
         </div>
       )}
     </div>

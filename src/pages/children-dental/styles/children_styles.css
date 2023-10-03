@@ -217,7 +217,7 @@ body .screen-children .pc-screen {
     margin-top: clamp(4px, 0.41664vw, 16px);
     color: #202637;
     font-family: Merriweather;
-    font-size: 23px;
+    font-size: clamp(11.5px, 1.1979166667vw, 46px);
   }
   body .screen-children .pc-screen .service-container .squares-container .two {
     margin-top: clamp(16px, 1.66656vw, 64px);

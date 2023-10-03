@@ -20,6 +20,8 @@ import {
   faPhone,
   faChevronLeft,
   faChevronRight,
+  faCross,
+  faClose,
 } from "@fortawesome/free-solid-svg-icons";
 import "swiper/css";
 import Gallery from "./components/gallery/gallery";
@@ -508,7 +510,20 @@ export default function HomePage() {
         // <Fade direction="up" triggerOnce={true} duration={1000}>
         <div className="all-screen-content">
           <section className="content">
-            <Header isMenuOpen={isMenuOpen} toggleMenu={toggleMenu}></Header>
+            <div className="header-container" style={{ width: "100%" }}>
+              <Header
+                isMenuOpen={isMenuOpen}
+                openModal={openModal}
+                toggleMenu={toggleMenu}
+              ></Header>
+            </div>
+            <div className="tablet" style={{ width: "100%" }}>
+              <Header
+                isMenuPcOpen={isMenuPcOpen}
+                openModal={openModal}
+                togglePcMenu={togglePcMenu}
+              ></Header>
+            </div>
             <div className="heading-container">
               <Fade direction="up">
                 <h1 className="dental">Dental</h1>
@@ -638,7 +653,7 @@ export default function HomePage() {
                 <div className="divider"></div>
                 <FeatureTab
                   number="06"
-                  text="Медицинское учреждениепремиум-класса"
+                  text="Медицинское учреждение премиум-класса"
                   goldText="У нас Вы можете воспользоваться широким спектром самых востребованных в современной стоматологии услуг."
                 ></FeatureTab>
                 <div className="text_divider">
@@ -1479,7 +1494,7 @@ export default function HomePage() {
               <div className="divider"></div>
               <Gallery
                 imageSrc={doctorOneMob}
-                imageSrcTwo={doctorTwoMob}
+                // imageSrcTwo={doctorTwoMob}
                 imageSrcThree={doctorThreeMob}
                 openModal={openModal}
                 imageSrcFour={doctorFourMob}
@@ -1499,7 +1514,7 @@ export default function HomePage() {
               <div className="divider"></div>
               <PcGallery
                 imageSrc={doctorOne}
-                imageSrc2={doctorTwo}
+                // imageSrc2={doctorTwo}
                 imageSrc3={doctorThree}
                 imageSrc4={doctorFour}
                 imageSrc5={doctorFive}
@@ -2007,6 +2022,11 @@ export default function HomePage() {
                 src={modalImage}
                 alt="modal-picture"
               ></img>
+              <FontAwesomeIcon
+                icon={faClose}
+                onClick={closeModal}
+                className="gold-cross"
+              ></FontAwesomeIcon>
               <div className="modal-content">
                 <img className="logo" src={logoMobile} alt="logotype"></img>
                 <span className="text">
@@ -2021,7 +2041,7 @@ export default function HomePage() {
                   </label>
                   <input
                     type="tel"
-                    name="phone-number-input"
+                    name="phoneNumber"
                     className="phone-number-input"
                     placeholder="+7 (925) 222-90-22"
                     required={true}

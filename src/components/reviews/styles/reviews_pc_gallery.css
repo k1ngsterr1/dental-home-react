@@ -67,6 +67,7 @@ body .reviews .mySwiper6 .review-tab .review-content .review-date .screenshot-co
   width: clamp(58.5px, 6.09336vw, 234px);
   height: clamp(12.5px, 1.302vw, 50px);
   display: flex;
+  cursor: pointer;
   align-items: center;
   justify-content: center;
   background: linear-gradient(90deg, #E8CB6C 0%, #B29D55 100%);

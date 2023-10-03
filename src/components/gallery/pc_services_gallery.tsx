@@ -89,13 +89,13 @@ const PcServiceGallery: React.FC<PhotoSource> = ({
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
+        {/* <SwiperSlide>
           <div className="dentist-card">
             <div className="button-image-container">
               <img src={imageSrc3} alt="Doctor 1" className="doctor-image" />
             </div>
           </div>
-        </SwiperSlide>
+        </SwiperSlide> */}
         <SwiperSlide>
           <div className="dentist-card">
             <div className="button-image-container">

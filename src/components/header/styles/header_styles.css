@@ -25,6 +25,9 @@ body .header .header-mob .hamburger-button {
 body .header .header-tablet {
   display: none;
 }
+body .tablet {
+  display: none;
+}
 
 @media screen and (min-width: 1024px) {
   .header {
@@ -117,7 +120,7 @@ body .header .header-tablet {
   }
   .header .header-tablet .tablet-content .logo {
     width: clamp(45px, 11.71875vw, 180px);
-    height: clamp(52px, 13.5416666667vw, 208px);
+    height: clamp(57.5px, 13.671875vw, 210px);
   }
   .header .header-tablet .tablet-content .header-content {
     width: auto;
@@ -131,6 +134,7 @@ body .header .header-tablet {
     font-family: Raleway;
     font-size: clamp(10px, 2.6041666667vw, 40px);
     font-style: normal;
+    display: none;
     font-weight: 400;
     line-height: normal;
     margin-right: clamp(8px, 2.0833333333vw, 32px);
@@ -141,7 +145,7 @@ body .header .header-tablet {
     border-radius: 6px;
     color: #F4F4F4;
     font-family: Raleway;
-    font-size: 18px;
+    font-size: clamp(9px, 2.34375vw, 36px);
     font-style: normal;
     font-weight: 500;
     line-height: 137.4%;

@@ -1,15 +1,22 @@
-"use client";
-import React, { useEffect, useState } from "react";
+import React, { useState, useRef, RefObject, useEffect } from "react";
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/Footer";
 import { Link } from "react-router-dom";
 import { keyframes } from "@emotion/react";
 import { Reveal } from "react-awesome-reveal";
-
+import Popup from "reactjs-popup";
 import "../prices/styles/prices_styles.css";
 import { Link as ScrollLink } from "react-scroll";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import emailjs from "@emailjs/browser";
+import {
+  faPlus,
+  faMinus,
+  faPhone,
+  faChevronLeft,
+} from "@fortawesome/free-solid-svg-icons";
 const logoMobile: string = require("../../assets/logo_mob.svg").default;
+const modalImage: string = require("../../assets/example_modal.webp");
 
 interface PriceTabProps {
   tabHeadign: any;
@@ -78,6 +85,7 @@ interface PriceTabProps {
   paragraph32?: any;
   price32?: any;
   style?: any;
+  openModal?: any;
 }
 
 const PriceTab: React.FC<PriceTabProps> = (props) => {
@@ -289,7 +297,9 @@ const PriceTabLong: React.FC<PriceTabProps> = (props) => {
           <span className="price-three">{props.price32}</span>
         </>
       )}
-      <button className="blue-btn">Записаться</button>
+      <button className="blue-btn" onClick={props.openModal}>
+        Записаться
+      </button>
     </div>
   );
 };
@@ -308,6 +318,47 @@ const PricesPage = () => {
 `;
 
   const [isLoading, setIsLoading] = useState(true);
+
+  const [open, setOpen] = useState(false);
+
+  const [fullName, setFullName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [serviceName, setServiceName] = useState("");
+  const [doctorName, setDoctorName] = useState("");
+  const [comment, setComment] = useState("");
+
+  const phoneForm = useRef<HTMLFormElement>(null);
+
+  function openPopupWindow() {
+    setOpen(true);
+  }
+
+  function sendPhoneRequest(e: any) {
+    e.preventDefault();
+    setFullName("");
+    setPhoneNumber("");
+
+    emailjs
+      .sendForm(
+        "service_kwh5orp",
+        "template_rgnaux5",
+        e.target,
+        "b-K7bdT7JW4cqcN4y"
+      )
+      .then((res) => {
+        console.log("SUCCESS");
+      })
+      .catch((err) => console.log(err));
+  }
+
+  const openModal = () => {
+    console.log("Opening modal");
+    setOpen(true);
+  };
+
+  const closeModal = () => {
+    setOpen(false);
+  };
 
   // Menu Function
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -345,7 +396,20 @@ const PricesPage = () => {
       ) : (
         <div className="screen">
           <div className="content">
-            <Header isMenuOpen={isMenuOpen} toggleMenu={toggleMenu}></Header>
+            <div className="header-container" style={{ width: "100%" }}>
+              <Header
+                isMenuOpen={isMenuOpen}
+                openModal={openModal}
+                toggleMenu={toggleMenu}
+              ></Header>
+            </div>
+            <div className="tablet" style={{ width: "100%" }}>
+              <Header
+                isMenuPcOpen={isMenuPcOpen}
+                openModal={openModal}
+                togglePcMenu={togglePcMenu}
+              ></Header>
+            </div>
             <main className="main-content">
               <div className="bread-dots">
                 <Link to="/" className="main-link">
@@ -471,6 +535,7 @@ const PricesPage = () => {
                     price12="1500₽"
                     paragraph13="Каппа для стабилизации прикуса (Ортотик)"
                     price13="20000₽"
+                    openModal={openModal}
                   ></PriceTabLong>
                   <PriceTabLong
                     tabHeadign="Оттиски"
@@ -494,6 +559,7 @@ const PricesPage = () => {
                     priceNine="5500₽"
                     paragraphTen="Замена матрицы на бюгельном протезе (1 протез)"
                     priceTen="5500₽"
+                    openModal={openModal}
                   ></PriceTabLong>
                   <PriceTabLong
                     tabHeadign="Вкладки"
@@ -505,6 +571,7 @@ const PricesPage = () => {
                     priceThree="15000₽"
                     paragraphFour="Восстановление зуба с использованием золотой вкладки (без стоимости золота)"
                     priceFour="10000₽"
+                    openModal={openModal}
                   ></PriceTabLong>
                   <PriceTabLong
                     tabHeadign="Коронки"
@@ -522,6 +589,7 @@ const PricesPage = () => {
                     priceSix="18000₽"
                     paragraphSeven="Восстановление зуба коронкой из диоксида циркония класса `премиум`"
                     priceSeven="27000₽"
+                    openModal={openModal}
                   ></PriceTabLong>
                   <PriceTabLong
                     tabHeadign="Восстановление зуба виниром E-max"
@@ -531,6 +599,7 @@ const PricesPage = () => {
                     priceTwo="35000₽"
                     paragraphThree="Диагностика прикуса при помощи миостимулятора `МИСТ ТЕНС`"
                     priceThree="10000₽"
+                    openModal={openModal}
                   ></PriceTabLong>
                   <PriceTabLong
                     tabHeadign="Съемные, Бюгельные Протезы"
@@ -557,6 +626,7 @@ const PricesPage = () => {
                     priceTen="10000₽"
                     paragraph11="Определение центрального соотношения целюстей и центральной окклюзии"
                     price11="0₽"
+                    openModal={openModal}
                   ></PriceTabLong>
                 </div>
                 <div
@@ -573,6 +643,7 @@ const PricesPage = () => {
                     priceTwo="500₽"
                     paragraphThree="Профилактический прием (осмотр, консультация) врача-стоматолога "
                     priceThree="0₽"
+                    openModal={openModal}
                   ></PriceTabLong>
                 </div>
                 <div
@@ -593,6 +664,7 @@ const PricesPage = () => {
                     priceFour="500₽"
                     paragraphFive="Повторный диагностический снимок"
                     priceFive="0₽"
+                    openModal={openModal}
                   ></PriceTabLong>
                 </div>
                 <div
@@ -621,6 +693,7 @@ const PricesPage = () => {
                     priceEight="120₽"
                     paragraphNine="Определение индексов гигиены полости рта"
                     priceNine="250₽"
+                    openModal={openModal}
                   ></PriceTabLong>
                 </div>
                 <div
@@ -637,6 +710,7 @@ const PricesPage = () => {
                     priceTwo="150₽"
                     paragraphThree="Инфильтрационная анестезия"
                     priceThree="700₽"
+                    openModal={openModal}
                   ></PriceTabLong>
                 </div>
                 <div
@@ -681,6 +755,7 @@ const PricesPage = () => {
                     price16="1900₽"
                     paragraph17="Наложение лечебной или изолирующей прокладки"
                     price17="550₽"
+                    openModal={openModal}
                   ></PriceTabLong>
                   <PriceTabLong
                     tabHeadign="Лечение осложнений кариеса"
@@ -720,6 +795,7 @@ const PricesPage = () => {
                     price17="1500₽"
                     paragraph18="Временная пломбировка корневого канала Metapex/Colasep"
                     price18="500₽"
+                    openModal={openModal}
                   ></PriceTabLong>
                   <PriceTabLong
                     tabHeadign="Эндодоническое лечение"
@@ -743,6 +819,7 @@ const PricesPage = () => {
                     priceNine="18000₽"
                     paragraphTen="Эндодоническое лечение пятиканального зуба (периодонтит)"
                     priceTen="22000₽"
+                    openModal={openModal}
                   ></PriceTabLong>
                 </div>
                 <div
@@ -761,6 +838,7 @@ const PricesPage = () => {
                     priceThree="5500₽"
                     paragraphFour="Художественная реставрация зуба "
                     priceFour="7500₽"
+                    openModal={openModal}
                   ></PriceTabLong>
                 </div>
                 <div
@@ -835,6 +913,7 @@ const PricesPage = () => {
                     price31="20000₽"
                     paragraph32="Закрытие рецессии в обл. 1-3 рядом стоящих зубов "
                     price32="20000₽"
+                    openModal={openModal}
                   ></PriceTabLong>
                 </div>
                 <div
@@ -889,6 +968,7 @@ const PricesPage = () => {
                     price21="80000₽"
                     paragraph22="Замена винта трансокклюзионной фиксации"
                     price22="500₽"
+                    openModal={openModal}
                   ></PriceTabLong>
                   <PriceTabLong
                     tabHeadign="Внутрикостная дентальная имплантация системой"
@@ -900,6 +980,7 @@ const PricesPage = () => {
                     priceThree="70000₽"
                     paragraphFour="Миниимплант (ортовинт) "
                     priceFour="9000₽"
+                    openModal={openModal}
                   ></PriceTabLong>
                   <PriceTabLong
                     tabHeadign="Формирователь десны"
@@ -911,6 +992,7 @@ const PricesPage = () => {
                     priceThree="3000₽"
                     paragraphFour="Установка формирователя десны"
                     priceFour="3000₽"
+                    openModal={openModal}
                   ></PriceTabLong>
                   <PriceTabLong
                     tabHeadign="Синус-лифтинг"
@@ -932,6 +1014,7 @@ const PricesPage = () => {
                     priceEight="24000₽"
                     paragraphNine="Переустановка импланта"
                     priceNine="7500₽"
+                    openModal={openModal}
                   ></PriceTabLong>
                 </div>
                 <div
@@ -952,6 +1035,7 @@ const PricesPage = () => {
                     priceFour="10000₽"
                     paragraphFive="Лазерная физиотерапия челюстно-лицевой области (1 процедура)"
                     priceFive="350₽"
+                    openModal={openModal}
                   ></PriceTabLong>
                 </div>
                 <div
@@ -1000,6 +1084,7 @@ const PricesPage = () => {
                     price19="400₽"
                     paragraph20="Изгиб на дуге"
                     price20="200₽"
+                    openModal={openModal}
                   ></PriceTabLong>
                   <PriceTabLong
                     tabHeadign="Ретенция"
@@ -1013,6 +1098,7 @@ const PricesPage = () => {
                     priceFour="2000₽"
                     paragraphFive="Изготовление ретенционной каппы"
                     priceFive="6500₽"
+                    openModal={openModal}
                   ></PriceTabLong>
                   <PriceTabLong
                     tabHeadign="Дополнительные приспособления"
@@ -1044,6 +1130,7 @@ const PricesPage = () => {
                     price13="1000₽"
                     paragraph14="Прием (осмотр, наблюдение) врача-ортодонта повторный"
                     price14="700₽"
+                    openModal={openModal}
                   ></PriceTabLong>
                 </div>
                 <div
@@ -1076,6 +1163,7 @@ const PricesPage = () => {
                     price11="2000₽"
                     paragraph12="Ультразвуковое удаление наддесневых и поддесневых зубных отложений в области 1 зуба"
                     price12="150₽"
+                    openModal={openModal}
                   ></PriceTabLong>
                 </div>
                 <div
@@ -1099,6 +1187,7 @@ const PricesPage = () => {
                     priceFour="1900₽"
                     paragraphFive="Внутриканальное отбеливание (последующий сеанс)"
                     priceFive="1000₽"
+                    openModal={openModal}
                   ></PriceTabLong>
                 </div>
               </div>
@@ -1111,6 +1200,7 @@ const PricesPage = () => {
             >
               <Header
                 isMenuPcOpen={isMenuPcOpen}
+                openModal={openModal}
                 togglePcMenu={togglePcMenu}
               ></Header>
               <div className="upper-content">
@@ -1136,64 +1226,84 @@ const PricesPage = () => {
               </div>
               <div className="services-content">
                 <div className="services-list">
-                  <ScrollLink to="orthopedia" smooth={true} className="button">
+                  <ScrollLink
+                    to="orthopedia-pc"
+                    smooth={true}
+                    className="button"
+                  >
                     Ортопедия
                   </ScrollLink>
                   <ScrollLink
-                    to="consultations"
+                    to="consultations-pc"
                     smooth={true}
                     className="button"
                   >
                     Консультация
                   </ScrollLink>
-                  <ScrollLink to="xray" smooth={true} className="button">
+                  <ScrollLink to="xray-pc" smooth={true} className="button">
                     Рентгенология
                   </ScrollLink>
-                  <ScrollLink to="diagnostic" smooth={true} className="button">
+                  <ScrollLink
+                    to="diagnostic-pc"
+                    smooth={true}
+                    className="button"
+                  >
                     Исследования и диагностика
                   </ScrollLink>
-                  <ScrollLink to="anasthetics" smooth={true} className="button">
+                  <ScrollLink
+                    to="anasthetics-pc"
+                    smooth={true}
+                    className="button"
+                  >
                     Анестезия
                   </ScrollLink>
-                  <ScrollLink to="therapy" smooth={true} className="button">
+                  <ScrollLink to="therapy-pc" smooth={true} className="button">
                     Терапия
                   </ScrollLink>
                   <ScrollLink
-                    to="restavration"
+                    to="restavration-pc"
                     smooth={true}
                     className="button"
                   >
                     Реставрации
                   </ScrollLink>
-                  <ScrollLink to="surgery" smooth={true} className="button">
+                  <ScrollLink to="surgery-pc" smooth={true} className="button">
                     Хирургия
                   </ScrollLink>
                   <ScrollLink
-                    to="implantology"
+                    to="implantology-pc"
                     smooth={true}
                     className="button"
                   >
                     Имплантология
                   </ScrollLink>
                   <ScrollLink
-                    to="reconstruction"
+                    to="reconstruction-pc"
                     smooth={true}
                     className="button"
                   >
                     Реконструктивное лечение
                   </ScrollLink>
-                  <ScrollLink to="orthodontia" smooth={true} className="button">
+                  <ScrollLink
+                    to="orthodontia-pc"
+                    smooth={true}
+                    className="button"
+                  >
                     Ортодонтия
                   </ScrollLink>
-                  <ScrollLink to="hygiene" smooth={true} className="button">
+                  <ScrollLink to="hygiene-pc" smooth={true} className="button">
                     Профилактика и гигиена
                   </ScrollLink>
-                  <ScrollLink to="whitening" smooth={true} className="button">
+                  <ScrollLink
+                    to="whitening-pc"
+                    smooth={true}
+                    className="button"
+                  >
                     Отбеливание
                   </ScrollLink>
                 </div>
                 <div className="cards-list">
-                  <div className="" id="orthopedia">
+                  <div className="" id="orthopedia-pc">
                     <h2 className="heading">Ортопедия</h2>
                     <PriceTabLong
                       tabHeadign="Ортопедия"
@@ -1223,6 +1333,7 @@ const PricesPage = () => {
                       price12="1500₽"
                       paragraph13="Каппа для стабилизации прикуса (Ортотик)"
                       price13="20000₽"
+                      openModal={openModal}
                     ></PriceTabLong>
                     <PriceTabLong
                       tabHeadign="Оттиски"
@@ -1246,6 +1357,7 @@ const PricesPage = () => {
                       priceNine="5500₽"
                       paragraphTen="Замена матрицы на бюгельном протезе (1 протез)"
                       priceTen="5500₽"
+                      openModal={openModal}
                     ></PriceTabLong>
                     <PriceTabLong
                       tabHeadign="Вкладки"
@@ -1257,6 +1369,7 @@ const PricesPage = () => {
                       priceThree="15000₽"
                       paragraphFour="Восстановление зуба с использованием золотой вкладки (без стоимости золота)"
                       priceFour="10000₽"
+                      openModal={openModal}
                     ></PriceTabLong>
                     <PriceTabLong
                       tabHeadign="Коронки"
@@ -1274,6 +1387,7 @@ const PricesPage = () => {
                       priceSix="18000₽"
                       paragraphSeven="Восстановление зуба коронкой из диоксида циркония класса `премиум`"
                       priceSeven="27000₽"
+                      openModal={openModal}
                     ></PriceTabLong>
                     <PriceTabLong
                       tabHeadign="Восстановление зуба виниром E-max"
@@ -1283,6 +1397,7 @@ const PricesPage = () => {
                       priceTwo="35000₽"
                       paragraphThree="Диагностика прикуса при помощи миостимулятора `МИСТ ТЕНС`"
                       priceThree="10000₽"
+                      openModal={openModal}
                     ></PriceTabLong>
                     <PriceTabLong
                       tabHeadign="Съемные, Бюгельные Протезы"
@@ -1309,11 +1424,12 @@ const PricesPage = () => {
                       priceTen="10000₽"
                       paragraph11="Определение центрального соотношения целюстей и центральной окклюзии"
                       price11="0₽"
+                      openModal={openModal}
                     ></PriceTabLong>
                   </div>
                   <div
                     className=""
-                    id="consultations"
+                    id="consultations-pc"
                     style={{ marginTop: "clamp(32px,3.33312vw,128px)" }}
                   >
                     <h2 className="heading">Консултация</h2>
@@ -1325,11 +1441,12 @@ const PricesPage = () => {
                       priceTwo="500₽"
                       paragraphThree="Профилактический прием (осмотр, консультация) врача-стоматолога "
                       priceThree="0₽"
+                      openModal={openModal}
                     ></PriceTabLong>
                   </div>
                   <div
                     className=""
-                    id="xray"
+                    id="xray-pc"
                     style={{ marginTop: "clamp(32px,3.33312vw,128px)" }}
                   >
                     <h2 className="heading">Рентгенология</h2>
@@ -1345,11 +1462,12 @@ const PricesPage = () => {
                       priceFour="500₽"
                       paragraphFive="Повторный диагностический снимок"
                       priceFive="0₽"
+                      openModal={openModal}
                     ></PriceTabLong>
                   </div>
                   <div
                     className=""
-                    id="diagnostic"
+                    id="diagnostic-pc"
                     style={{ marginTop: "clamp(32px,3.33312vw,128px)" }}
                   >
                     <h2 className="heading">Исследования и диагностика</h2>
@@ -1373,11 +1491,12 @@ const PricesPage = () => {
                       priceEight="120₽"
                       paragraphNine="Определение индексов гигиены полости рта"
                       priceNine="250₽"
+                      openModal={openModal}
                     ></PriceTabLong>
                   </div>
                   <div
                     className=""
-                    id="anasthetics"
+                    id="anasthetics-pc"
                     style={{ marginTop: "clamp(32px,3.33312vw,128px)" }}
                   >
                     <h2 className="heading">Анестезия</h2>
@@ -1389,11 +1508,12 @@ const PricesPage = () => {
                       priceTwo="150₽"
                       paragraphThree="Инфильтрационная анестезия"
                       priceThree="700₽"
+                      openModal={openModal}
                     ></PriceTabLong>
                   </div>
                   <div
                     className=""
-                    id="therapy"
+                    id="therapy-pc"
                     style={{ marginTop: "clamp(32px,3.33312vw,128px)" }}
                   >
                     <h2 className="heading">Терапия</h2>
@@ -1433,6 +1553,7 @@ const PricesPage = () => {
                       price16="1900₽"
                       paragraph17="Наложение лечебной или изолирующей прокладки"
                       price17="550₽"
+                      openModal={openModal}
                     ></PriceTabLong>
                     <PriceTabLong
                       tabHeadign="Лечение осложнений кариеса"
@@ -1472,6 +1593,7 @@ const PricesPage = () => {
                       price17="1500₽"
                       paragraph18="Временная пломбировка корневого канала Metapex/Colasep"
                       price18="500₽"
+                      openModal={openModal}
                     ></PriceTabLong>
                     <PriceTabLong
                       tabHeadign="Эндодоническое лечение"
@@ -1495,11 +1617,12 @@ const PricesPage = () => {
                       priceNine="18000₽"
                       paragraphTen="Эндодоническое лечение пятиканального зуба (периодонтит)"
                       priceTen="22000₽"
+                      openModal={openModal}
                     ></PriceTabLong>
                   </div>
                   <div
                     className=""
-                    id="restavration"
+                    id="restavration-pc"
                     style={{ marginTop: "clamp(32px,3.33312vw,128px)" }}
                   >
                     <h2 className="heading">Реставрации</h2>
@@ -1513,11 +1636,12 @@ const PricesPage = () => {
                       priceThree="5500₽"
                       paragraphFour="Художественная реставрация зуба "
                       priceFour="7500₽"
+                      openModal={openModal}
                     ></PriceTabLong>
                   </div>
                   <div
                     className=""
-                    id="surgery"
+                    id="surgery-pc"
                     style={{ marginTop: "clamp(32px,3.33312vw,128px)" }}
                   >
                     <h2 className="heading">Хирургия</h2>
@@ -1587,11 +1711,12 @@ const PricesPage = () => {
                       price31="20000₽"
                       paragraph32="Закрытие рецессии в обл. 1-3 рядом стоящих зубов "
                       price32="20000₽"
+                      openModal={openModal}
                     ></PriceTabLong>
                   </div>
                   <div
                     className=""
-                    id="implantology"
+                    id="implantology-pc"
                     style={{ marginTop: "clamp(32px,3.33312vw,128px)" }}
                   >
                     <h2 className="heading">Имплантология</h2>
@@ -1641,6 +1766,7 @@ const PricesPage = () => {
                       price21="80000₽"
                       paragraph22="Замена винта трансокклюзионной фиксации"
                       price22="500₽"
+                      openModal={openModal}
                     ></PriceTabLong>
                     <PriceTabLong
                       tabHeadign="Внутрикостная дентальная имплантация системой"
@@ -1652,6 +1778,7 @@ const PricesPage = () => {
                       priceThree="70000₽"
                       paragraphFour="Миниимплант (ортовинт) "
                       priceFour="9000₽"
+                      openModal={openModal}
                     ></PriceTabLong>
                     <PriceTabLong
                       tabHeadign="Формирователь десны"
@@ -1663,6 +1790,7 @@ const PricesPage = () => {
                       priceThree="3000₽"
                       paragraphFour="Установка формирователя десны"
                       priceFour="3000₽"
+                      openModal={openModal}
                     ></PriceTabLong>
                     <PriceTabLong
                       tabHeadign="Синус-лифтинг"
@@ -1684,11 +1812,12 @@ const PricesPage = () => {
                       priceEight="24000₽"
                       paragraphNine="Переустановка импланта"
                       priceNine="7500₽"
+                      openModal={openModal}
                     ></PriceTabLong>
                   </div>
                   <div
                     className=""
-                    id="reconstruction"
+                    id="reconstruction-pc"
                     style={{ marginTop: "clamp(32px,3.33312vw,128px)" }}
                   >
                     <h2 className="heading">Реконструктивное лечение</h2>
@@ -1704,11 +1833,12 @@ const PricesPage = () => {
                       priceFour="10000₽"
                       paragraphFive="Лазерная физиотерапия челюстно-лицевой области (1 процедура)"
                       priceFive="350₽"
+                      openModal={openModal}
                     ></PriceTabLong>
                   </div>
                   <div
                     className=""
-                    id="orthodontia"
+                    id="orthodontia-pc"
                     style={{ marginTop: "clamp(32px,3.33312vw,128px)" }}
                   >
                     <h2 className="heading">Ортодонтия</h2>
@@ -1752,6 +1882,7 @@ const PricesPage = () => {
                       price19="400₽"
                       paragraph20="Изгиб на дуге"
                       price20="200₽"
+                      openModal={openModal}
                     ></PriceTabLong>
                     <PriceTabLong
                       tabHeadign="Ретенция"
@@ -1765,6 +1896,7 @@ const PricesPage = () => {
                       priceFour="2000₽"
                       paragraphFive="Изготовление ретенционной каппы"
                       priceFive="6500₽"
+                      openModal={openModal}
                     ></PriceTabLong>
                     <PriceTabLong
                       tabHeadign="Дополнительные приспособления"
@@ -1796,11 +1928,12 @@ const PricesPage = () => {
                       price13="1000₽"
                       paragraph14="Прием (осмотр, наблюдение) врача-ортодонта повторный"
                       price14="700₽"
+                      openModal={openModal}
                     ></PriceTabLong>
                   </div>
                   <div
                     className=""
-                    id="hygiene"
+                    id="hygiene-pc"
                     style={{ marginTop: "clamp(32px,3.33312vw,128px)" }}
                   >
                     <h2 className="heading">Профилактика и гигиена</h2>
@@ -1828,11 +1961,12 @@ const PricesPage = () => {
                       price11="2000₽"
                       paragraph12="Ультразвуковое удаление наддесневых и поддесневых зубных отложений в области 1 зуба"
                       price12="150₽"
+                      openModal={openModal}
                     ></PriceTabLong>
                   </div>
                   <div
                     className=""
-                    id="whitening"
+                    id="whitening-pc"
                     style={{
                       marginTop: "clamp(32px,3.33312vw,128px)",
                       marginBottom: "clamp(32px,3.33312vw,128px)",
@@ -1851,6 +1985,7 @@ const PricesPage = () => {
                       priceFour="1900₽"
                       paragraphFive="Внутриканальное отбеливание (последующий сеанс)"
                       priceFive="1000₽"
+                      openModal={openModal}
                     ></PriceTabLong>
                   </div>
                 </div>
@@ -1858,6 +1993,55 @@ const PricesPage = () => {
             </main>
           </div>
           <Footer />
+          <Popup
+            open={open}
+            closeOnDocumentClick
+            onClose={closeModal}
+            modal
+            nested
+            className="popup-container"
+            position="center center"
+          >
+            <div className="modal">
+              <img
+                className="modal-img"
+                src={modalImage}
+                alt="modal-picture"
+              ></img>
+              <div className="modal-content">
+                <img className="logo" src={logoMobile} alt="logotype"></img>
+                <span className="text">
+                  Хотите получить бесплатную консультацию?
+                </span>
+                <span className="additional-text">
+                  Оставьте свой номер и мы перезвоним вам
+                </span>
+                <form className="input-container" onSubmit={sendPhoneRequest}>
+                  <label htmlFor="phone-number-input" className="label">
+                    Ваш номер телефона*
+                  </label>
+                  <input
+                    type="tel"
+                    name="phoneNumber"
+                    className="phone-number-input"
+                    placeholder="+7 (925) 222-90-22"
+                    required={true}
+                    value={phoneNumber}
+                    onChange={(event) => setPhoneNumber(event.target.value)}
+                    style={{ textAlign: "center" }}
+                    id=""
+                  />
+                  <button className="phone-btn" value="Send">
+                    <FontAwesomeIcon
+                      icon={faPhone}
+                      className="icon"
+                    ></FontAwesomeIcon>
+                    Хорошо жду звонка
+                  </button>
+                </form>
+              </div>
+            </div>
+          </Popup>
         </div>
       )}
     </div>

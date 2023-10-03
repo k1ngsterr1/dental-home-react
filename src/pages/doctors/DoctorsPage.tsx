@@ -14,7 +14,7 @@ import {
 import { MDBCheckbox } from "mdb-react-ui-kit";
 
 import emailjs from "@emailjs/browser";
-
+import Popup from "reactjs-popup";
 import Gallery from "../../components/gallery/gallery";
 import Footer from "../../components/footer/Footer";
 
@@ -41,6 +41,7 @@ const doctorEightMob = require("../../assets/08.webp");
 const doctorNineMob = require("../../assets/09.webp");
 
 const logoMobile: string = require("../../assets/logo_mob.svg").default;
+const modalImage: string = require("../../assets/example_modal.webp");
 
 const DoctorsPage = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -96,6 +97,41 @@ const DoctorsPage = () => {
       .catch((err) => console.log(err));
   }
 
+  const [open, setOpen] = useState(false);
+
+  const phoneForm = useRef<HTMLFormElement>(null);
+
+  function openPopupWindow() {
+    setOpen(true);
+  }
+
+  function sendPhoneRequest(e: any) {
+    e.preventDefault();
+    setFullName("");
+    setPhoneNumber("");
+
+    emailjs
+      .sendForm(
+        "service_kwh5orp",
+        "template_rgnaux5",
+        e.target,
+        "b-K7bdT7JW4cqcN4y"
+      )
+      .then((res) => {
+        console.log("SUCCESS");
+      })
+      .catch((err) => console.log(err));
+  }
+
+  const openModal = () => {
+    console.log("Opening modal");
+    setOpen(true);
+  };
+
+  const closeModal = () => {
+    setOpen(false);
+  };
+
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
@@ -120,7 +156,20 @@ const DoctorsPage = () => {
       ) : (
         <div className="screen">
           <div className="content">
-            <Header isMenuOpen={isMenuOpen} toggleMenu={toggleMenu}></Header>
+            <div className="header-container" style={{ width: "100%" }}>
+              <Header
+                isMenuOpen={isMenuOpen}
+                openModal={openModal}
+                toggleMenu={toggleMenu}
+              ></Header>
+            </div>
+            <div className="tablet" style={{ width: "100%" }}>
+              <Header
+                isMenuPcOpen={isMenuPcOpen}
+                openModal={openModal}
+                togglePcMenu={togglePcMenu}
+              ></Header>
+            </div>
             <main className="main-content">
               <div className="bread-dots">
                 <Link to="/" className="main-link">
@@ -137,8 +186,9 @@ const DoctorsPage = () => {
               </div>
               <Gallery
                 imageSrc={doctorOneMob}
-                imageSrcTwo={doctorTwoMob}
+                // imageSrcTwo={doctorTwoMob}
                 imageSrcThree={doctorThreeMob}
+                openModal={openModal}
                 imageSrcFour={doctorFourMob}
                 imageSrcFive={doctorFiveMob}
                 imageSrcSix={doctorSixMob}
@@ -250,6 +300,7 @@ const DoctorsPage = () => {
               {" "}
               <Header
                 isMenuPcOpen={isMenuPcOpen}
+                openModal={openModal}
                 togglePcMenu={togglePcMenu}
               ></Header>
               <div className="upper-content">
@@ -276,11 +327,11 @@ const DoctorsPage = () => {
                     <span className="name">Аманова Альфия Камиловна</span>
                     <span className="who">Врач стоматолог-терапевт</span>
                   </div>
-                  <div className="doctor">
+                  {/* <div className="doctor">
                     <img className="img" src={DoctorTwoPc}></img>
                     <span className="name">Таха Дана Юрьевна</span>
                     <span className="who">Управляющий</span>
-                  </div>
+                  </div> */}
                   <div className="doctor">
                     <img className="img" src={DoctorThreePc}></img>
                     <span className="name">Тамаров Павел Сергеевич</span>
@@ -297,11 +348,11 @@ const DoctorsPage = () => {
                       Стоматолог терапевт-микроскопист
                     </span>
                   </div>
-                  <div className="doctor">
+                  {/* <div className="doctor">
                     <img className="img" src={DoctorFivePc}></img>
                     <span className="name">Терехова Елена Юрьевна</span>
                     <span className="who">Стоматолог-терапевт</span>
-                  </div>
+                  </div> */}
                   <div className="doctor">
                     <img className="img" src={DoctorSixPc}></img>
                     <span className="name">Врач</span>
@@ -439,6 +490,55 @@ const DoctorsPage = () => {
             </main>
           </div>
           <Footer></Footer>
+          <Popup
+            open={open}
+            closeOnDocumentClick
+            onClose={closeModal}
+            modal
+            nested
+            className="popup-container"
+            position="center center"
+          >
+            <div className="modal">
+              <img
+                className="modal-img"
+                src={modalImage}
+                alt="modal-picture"
+              ></img>
+              <div className="modal-content">
+                <img className="logo" src={logoMobile} alt="logotype"></img>
+                <span className="text">
+                  Хотите получить бесплатную консультацию?
+                </span>
+                <span className="additional-text">
+                  Оставьте свой номер и мы перезвоним вам
+                </span>
+                <form className="input-container" onSubmit={sendPhoneRequest}>
+                  <label htmlFor="phone-number-input" className="label">
+                    Ваш номер телефона*
+                  </label>
+                  <input
+                    type="tel"
+                    name="phoneNumber"
+                    className="phone-number-input"
+                    placeholder="+7 (925) 222-90-22"
+                    required={true}
+                    value={phoneNumber}
+                    onChange={(event) => setPhoneNumber(event.target.value)}
+                    style={{ textAlign: "center" }}
+                    id=""
+                  />
+                  <button className="phone-btn" value="Send">
+                    <FontAwesomeIcon
+                      icon={faPhone}
+                      className="icon"
+                    ></FontAwesomeIcon>
+                    Хорошо жду звонка
+                  </button>
+                </form>
+              </div>
+            </div>
+          </Popup>
         </div>
       )}
     </div>
