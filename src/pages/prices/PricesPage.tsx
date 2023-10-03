@@ -634,7 +634,7 @@ const PricesPage = () => {
                   id="consultations"
                   style={{ marginTop: "clamp(32px,3.33312vw,128px)" }}
                 >
-                  <h2 className="heading">Консултация</h2>
+                  <h2 className="heading">Консультация</h2>
                   <PriceTabLong
                     tabHeadign="Консультация"
                     paragraphOne="Прием (осмотр, консультация) врача-стоматолога первичный"
@@ -1432,7 +1432,7 @@ const PricesPage = () => {
                     id="consultations-pc"
                     style={{ marginTop: "clamp(32px,3.33312vw,128px)" }}
                   >
-                    <h2 className="heading">Консултация</h2>
+                    <h2 className="heading">Консультация</h2>
                     <PriceTabLong
                       tabHeadign="Консультация"
                       paragraphOne="Прием (осмотр, консультация) врача-стоматолога первичный"
