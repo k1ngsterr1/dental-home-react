@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 
+// Text
+
 // import img from "next/image";
 import Header from "./components/header/header";
 import Popup from "reactjs-popup";
