@@ -261,7 +261,7 @@ const Menu: React.FC<MenuProps> = ({
             </div>
           </div>
         </div>
-        <ScrollLink to="service" onClick={closeMenu}>
+        <ScrollLink to="services" onClick={closePcMenu}>
           <img className="services" src={services} alt="services"></img>
         </ScrollLink>
         <img src={logo} alt="logo" className="logo" />

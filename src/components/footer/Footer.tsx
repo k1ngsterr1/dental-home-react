@@ -66,7 +66,7 @@ const Footer = () => {
           <h5 className="information">Информация</h5>
           <div className="links-container">
             <div className="link-column-one">
-              <Link to="/clinics" className="l two">
+              <Link to="/clinics" className="l ">
                 О клинике
               </Link>
               <Link to="/doctors" className="l two">
