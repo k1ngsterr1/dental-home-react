@@ -647,7 +647,7 @@ body .modal {
   margin: auto !important;
   position: fixed;
   right: 0 !important;
-  bottom: 20% !important;
+  bottom: 10% !important;
   margin-bottom: 0px !important;
   border-radius: 28px;
   background-color: #202637;
@@ -801,6 +801,49 @@ body .services-modal-button {
 }
 body .services-modal-button:hover {
   transform: rotate(360deg);
+}
+body .video-modal {
+  width: 85%;
+  height: 70vh;
+  overflow-y: hidden !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto !important;
+  position: fixed;
+  right: 0 !important;
+  left: 0 !important;
+  bottom: 10% !important;
+  margin-bottom: 0px !important;
+  border-radius: 28px;
+  background-color: #202637;
+  box-shadow: 0px 15px 31px 0px rgba(0, 0, 0, 0.25);
+}
+body .video-modal .video {
+  width: 90%;
+  height: clamp(175px, 81.774vw, 700px);
+}
+body .video-modal .phone-btn {
+  width: 90%;
+  height: clamp(30px, 14.0184vw, 120px);
+  display: flex;
+  background-color: #E8CB6C;
+  border-radius: 7px;
+  align-items: center;
+  justify-content: center;
+  color: #202637;
+  font-family: Raleway;
+  font-size: clamp(8.5px, 3.97188vw, 34px);
+  border: none;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 137.4%;
+  margin-top: clamp(8px, 3.73824vw, 32px);
+}
+body .video-modal .phone-btn .icon {
+  margin-right: clamp(4px, 1.86912vw, 16px);
+  color: #202637;
 }
 @media screen and (min-width: 1024px) {
   body .screen {
@@ -1920,6 +1963,49 @@ body .services-modal-button:hover {
     width: 100%;
     height: 100%;
     position: relative !important;
+  }
+  body .video-modal {
+    width: 40%;
+    height: 80vh;
+    overflow-y: hidden !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto !important;
+    position: fixed;
+    right: 0 !important;
+    left: 0 !important;
+    bottom: 10% !important;
+    margin-bottom: 0px !important;
+    border-radius: 28px;
+    background-color: #202637;
+    box-shadow: 0px 15px 31px 0px rgba(0, 0, 0, 0.25);
+  }
+  body .video-modal .video {
+    width: 60%;
+    height: clamp(200px, 20.832vw, 800px);
+  }
+  body .video-modal .phone-btn {
+    width: 35%;
+    height: clamp(30px, 3.1248vw, 120px);
+    display: flex;
+    background-color: #E8CB6C;
+    border-radius: 7px;
+    align-items: center;
+    justify-content: center;
+    color: #202637;
+    font-family: Raleway;
+    font-size: clamp(8.5px, 0.88536vw, 34px);
+    border: none;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 137.4%;
+    margin-top: clamp(8px, 3.73824vw, 32px);
+  }
+  body .video-modal .phone-btn .icon {
+    margin-right: clamp(4px, 1.86912vw, 16px);
+    color: #202637;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 1024px) {

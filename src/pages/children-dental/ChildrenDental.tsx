@@ -39,6 +39,7 @@ const ChildDental = () => {
   const [isMenuPcOpen, setIsMenuPcOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [open, setOpen] = useState(false);
+  const [videoOpen, setVideoOpen] = useState(false);
 
   const phoneForm = useRef<HTMLFormElement>(null);
 
@@ -79,6 +80,10 @@ const ChildDental = () => {
     setOpen(false);
   };
 
+  const closeVideoModal = () => {
+    setVideoOpen(false);
+  };
+
   const customAnimation = keyframes`
   from {
     opacity: 1;
@@ -91,12 +96,22 @@ const ChildDental = () => {
   }
 `;
 
+  const openVideoLink = () => {
+    window.open("https://www.youtube.com/watch?v=3iBZgLHeOO4", "_blank");
+  };
+
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
     }, 1500);
 
-    return () => {};
+    const timerId = setTimeout(() => {
+      setVideoOpen(true);
+    }, 3000); // 3000ms = 3s
+
+    return () => {
+      clearTimeout(timerId);
+    };
   }, []);
 
   const toggleMenu = () => {
@@ -150,28 +165,58 @@ const ChildDental = () => {
               <h2 className="service-heading">Наши услуги</h2>
               <div className="service-squares">
                 <div className="service-cont">
-                  <img src={Child01} className="img" alt="child" />
+                  <img
+                    src={Child01}
+                    onClick={() => navigate("/services/child-bite-correction")}
+                    className="img"
+                    alt="child"
+                  />
                   <span className="text">Исправление прикуса</span>
                 </div>
                 <div className="service-cont">
-                  <img src={Child02} className="img" alt="child" />
+                  <img
+                    src={Child02}
+                    onClick={() => navigate("/services/child-surgery")}
+                    className="img"
+                    alt="child"
+                  />
                   <span className="text">Хирургия</span>
                 </div>
                 <div className="service-cont">
-                  <img src={Child03} className="img" alt="child" />
+                  <img
+                    src={Child03}
+                    onClick={() => navigate("/services/child-teeth-healing")}
+                    className="img"
+                    alt="child"
+                  />
                   <span className="text">Лечение зубов</span>
                 </div>
                 <div className="service-cont">
-                  <img src={Child04} className="img" alt="child" />
+                  <img
+                    src={Child04}
+                    onClick={() => navigate("/services/child-hygiene")}
+                    className="img"
+                    alt="child"
+                  />
                   <span className="text">Детская гигиена полости рта</span>
                 </div>
                 <div className="service-cont">
-                  <img src={Child05} className="img" alt="child" />
-                  <span className="text">Лечение</span>
+                  <img
+                    src={Child05}
+                    onClick={() => navigate("/services/child-sleep")}
+                    className="img"
+                    alt="child"
+                  />
+                  <span className="text">Лечение во сне</span>
                 </div>
                 <div className="service-cont">
-                  <img src={Child05} className="img" alt="child" />
-                  <span className="text">Гигиена полости</span>
+                  <img
+                    src={Child06}
+                    onClick={() => navigate("/services/child-hygiene")}
+                    className="img"
+                    alt="child"
+                  />
+                  <span className="text">Гигиена полости рта</span>
                 </div>
               </div>
             </div>
@@ -315,15 +360,37 @@ const ChildDental = () => {
                     ></FontAwesomeIcon>
                     Хорошо жду звонка
                   </button>
-                  <button className="phone-btn" value="Send">
-                    <FontAwesomeIcon
-                      icon={faPlay}
-                      className="icon"
-                    ></FontAwesomeIcon>
-                    Видеоролик
-                  </button>
                 </form>
               </div>
+            </div>
+          </Popup>
+          <Popup
+            open={videoOpen}
+            closeOnDocumentClick
+            onClose={closeVideoModal}
+            modal
+            nested
+            className="popup-container"
+            position="center center"
+          >
+            <div className="video-modal">
+              <iframe
+                className="video"
+                src="https://www.youtube.com/embed/3iBZgLHeOO4"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              ></iframe>
+              <button
+                className="phone-btn"
+                value="Send"
+                onClick={openVideoLink}
+              >
+                <FontAwesomeIcon
+                  icon={faPlay}
+                  className="icon"
+                ></FontAwesomeIcon>
+                Видео
+              </button>
             </div>
           </Popup>
         </div>

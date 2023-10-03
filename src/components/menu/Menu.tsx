@@ -100,9 +100,7 @@ const Menu: React.FC<MenuProps> = ({
               icon={faMapPin}
               className="geo-icon"
             ></FontAwesomeIcon>
-            <span className="text">
-              Московская область, г. Ивантеевка, Советский проспект 5
-            </span>
+            <span className="text">г. Ивантеевка, Советский проспект 5</span>
           </div>
           <div className="geo-row">
             <FontAwesomeIcon
@@ -110,21 +108,21 @@ const Menu: React.FC<MenuProps> = ({
               className="geo-icon"
             ></FontAwesomeIcon>
             <span className="text" style={{ marginTop: "16px" }}>
-              Московская область, г. Ивантеевка, Рощинская 9
+              г. Ивантеевка, Рощинская 9
             </span>
           </div>
-
           <span className="dark schedule">Пн-Вс - 9:00-21:00</span>
-          <span className="dark free">Бесплатная парковка</span>
-          <a className="phone link" href="tel:+79252229022">
-            +7 (925) 222-90-22
-          </a>
-          <div className="social-media">
-            <FontAwesomeIcon
-              icon={faVk}
-              className="icon"
-              onClick={navigateToVk}
-            ></FontAwesomeIcon>
+          <div className="row-c">
+            <a className="phone link" href="tel:+79252229022">
+              +7 (925) 222-90-22
+            </a>{" "}
+            <div className="social-media">
+              <FontAwesomeIcon
+                icon={faVk}
+                className="icon"
+                onClick={navigateToVk}
+              ></FontAwesomeIcon>
+            </div>
           </div>
         </div>
         <div className="buttons">

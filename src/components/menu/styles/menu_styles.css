@@ -107,7 +107,14 @@ body .menu-screen .menu-mob .geo-content .schedule {
 body .menu-screen .menu-mob .geo-content .free {
   margin-top: clamp(16px, 7.47648vw, 64px);
 }
-body .menu-screen .menu-mob .geo-content .phone {
+body .menu-screen .menu-mob .geo-content .row-c {
+  width: 100%;
+  display: flex;
+  flex-direction: row !important;
+  align-items: center;
+}
+body .menu-screen .menu-mob .geo-content .row-c .phone {
+  width: 60%;
   color: #E8CB6C;
   font-family: Merriweather;
   font-size: clamp(9px, 4.20552vw, 36px);
@@ -115,21 +122,21 @@ body .menu-screen .menu-mob .geo-content .phone {
   font-weight: 700;
   line-height: normal;
   text-decoration-line: underline;
-  margin-top: clamp(16px, 7.47648vw, 64px);
   margin-left: clamp(12.5px, 5.841vw, 50px);
 }
-body .menu-screen .menu-mob .geo-content .social-media {
+body .menu-screen .menu-mob .geo-content .row-c .social-media {
   display: flex;
   align-items: center;
   margin-top: clamp(16px, 7.47648vw, 64px);
   margin-bottom: clamp(16px, 7.47648vw, 64px);
+  margin-left: clamp(4px, 1.86912vw, 16px);
   margin-left: clamp(12.5px, 5.841vw, 50px);
 }
-body .menu-screen .menu-mob .geo-content .social-media .icon {
+body .menu-screen .menu-mob .geo-content .row-c .social-media .icon {
   color: #E8CB6C;
   font-size: clamp(16px, 7.47648vw, 64px);
 }
-body .menu-screen .menu-mob .geo-content .social-media .insta {
+body .menu-screen .menu-mob .geo-content .row-c .social-media .insta {
   margin-left: clamp(8px, 3.73824vw, 32px);
 }
 body .menu-screen .menu-mob .buttons {
@@ -137,7 +144,7 @@ body .menu-screen .menu-mob .buttons {
   height: auto;
   display: flex;
   position: absolute;
-  bottom: 0;
+  bottom: clamp(60px, 28.0368vw, 240px);
   flex-direction: column;
   justify-content: flex-end;
 }
