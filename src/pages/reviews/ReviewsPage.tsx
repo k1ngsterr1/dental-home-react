@@ -38,10 +38,7 @@ const ReviewTab: React.FC<ReviewTabProps> = (props) => {
       <div className="review-content">
         <div className="review-date">
           <span className="date">{props.date}</span>
-          <div
-            className="screenshot-container"
-            onClick={() => (window.location.href = props.navigate)}
-          >
+          <div className="screenshot-container" onClick={props.navigate}>
             <span className="screenshot">Скриншот</span>
           </div>
         </div>
@@ -113,6 +110,16 @@ const ReviewsPage = () => {
 
   const [open, setOpen] = useState(false);
 
+  const [currentScreenshot, setCurrentScreenshot] = useState<string | null>(
+    null
+  );
+  const [screenshotOpen, setScreenshotOpen] = useState(false);
+
+  const handleOpenScreenshot = (screenshotUrl: any) => {
+    setCurrentScreenshot(screenshotUrl);
+    setScreenshotOpen(true);
+  };
+
   const phoneForm = useRef<HTMLFormElement>(null);
 
   function openPopupWindow() {
@@ -138,7 +145,6 @@ const ReviewsPage = () => {
   }
 
   const openModal = () => {
-    console.log("Opening modal");
     setOpen(true);
   };
 
@@ -198,7 +204,9 @@ const ReviewsPage = () => {
               <div className="divider-container">
                 <div className="divider"></div>
               </div>
-              <ReviewGallery></ReviewGallery>
+              <ReviewGallery
+              // openScreenshot={handleOpenScreenshot}
+              ></ReviewGallery>
               <div className="form-screen">
                 <section className="content">
                   <div className="form-heading-container">
@@ -329,21 +337,27 @@ const ReviewsPage = () => {
                     date="22.09.2023"
                     name="Елена Ушакова"
                     href="https://yandex.ru/profile/185014698556"
-                    navigate={"https://ibb.co.com/cTxfj4H"}
+                    navigate={() =>
+                      handleOpenScreenshot("https://i.ibb.co.com/Kym4JTk/1.png")
+                    }
                     paragraph="Приятный персонал, приятная обстановка, высококвалифицированные умные врачи. Только квалифицированные и умные врачи знают как заработать много денег. Ну, вот, например, шатаются зубы, если их шинировать и укреплять да на них поставить..."
                   ></ReviewTab>
                   <ReviewTab
                     date="05.02.2023"
                     name="Сергей Гончаров"
                     href="https://yandex.ru/profile/185014698556"
-                    navigate={"https://ibb.co.com/2qfZ4yf"}
+                    navigate={() =>
+                      handleOpenScreenshot("https://i.ibb.co.com/4W51r75/2.png")
+                    }
                     paragraph="Давно пользуюсь услугами этой клиники. Вся семья там периодически наблюдается и лечится. Это не смотря на то, что сам живу в Мытищах. Лечил, протезировал.... Жена и сын - брекеты устанавливали. На данный момент - ездим сюда с женой..."
                   ></ReviewTab>
                   <ReviewTab
                     date="28.03.2023"
                     name="Ксения"
                     href="https://yandex.ru/profile/185014698556"
-                    navigate={"https://ibb.co.com/0yb6q1h"}
+                    navigate={() =>
+                      handleOpenScreenshot("https://i.ibb.co.com/pjFM2NJ/3.png")
+                    }
                     paragraph="Специалист Виктория Олеговна сделала зубы идеально белыми , чистыми и красивыми🫶🏻  Максимально бережное отношение к клиенту , ни разу не больно , моментами даже хотелось поспать 😀  Виктория Олеговна и ассистент Ксения , огромное вам спасибо..."
                   ></ReviewTab>
                 </div>
@@ -353,21 +367,29 @@ const ReviewsPage = () => {
                     date="25.01.2023"
                     name="Катерина Ширкина"
                     href="https://yandex.ru/profile/185014698556"
-                    navigate={"https://ibb.co.com/P4LngvT"}
+                    navigate={() =>
+                      handleOpenScreenshot("https://i.ibb.co.com/q9Sfp30/4.png")
+                    }
                     paragraph="Это классная клиника с профессионалами своего дела👍 Зубы лечила, делаоа гигиеническую чистку и сейчас меняю коронку и все врачи замечательные🙌 Выслушают, посмотрят, расскажут, подскажут, покажут и всё сделают 👌 Муж трусил..."
                   ></ReviewTab>
                   <ReviewTab
                     date="01.09.2023"
                     name="Константин Г."
                     href="https://yandex.ru/profile/185014698556"
-                    navigate={"https://ibb.co.com/Rj2HXm3"}
+                    navigate={() =>
+                      handleOpenScreenshot("https://i.ibb.co.com/MBnNz4c/5.png")
+                    }
                     paragraph="Хочу выразить огромную благодарность коллективу Дентал Хоум и лично Павлу Сергеевичу. Сегодня был у него на приёме - высокий профессионализм, современное оборудование и трепетное отношение к пациенту. Дентал хоум - это действительно..."
                   ></ReviewTab>
                   <ReviewTab
                     date="03.02.2022"
                     name="Виктор П."
                     href="https://yandex.ru/profile/185014698556"
-                    navigate={"https://ibb.co.com/K66ZHXL"}
+                    navigate={() =>
+                      handleOpenScreenshot(
+                        "https://i.ibb.co.com/0qqN3cF/Screenshot-6.png"
+                      )
+                    }
                     paragraph="Я в пушкинском районе был во всех лучших стоматологических клиниках и после посещения был один негатив… А сегодня был в этом прекрасном месте, где меня очень и очень приятно удивили! Такого бережного отношения и аккуратно выполненной работы..."
                   ></ReviewTab>
                 </div>
@@ -377,21 +399,27 @@ const ReviewsPage = () => {
                     date="13.09.2023"
                     name="Марина"
                     href="https://yandex.ru/profile/185014698556"
-                    navigate={"https://ibb.co.com/vD1yG8c"}
+                    navigate={() =>
+                      handleOpenScreenshot("https://i.ibb.co.com/BwLWxRf/7.png")
+                    }
                     paragraph="Лечу, протезируюсь только в этой клинике. Не смотря на то, что переехала и живу очень далеко , обращаюсь с проблемами только сюда.Шикарные специалисты, прекрасный руководитель и создатель этой чудесной стоматологии Павел Сергеевич..."
                   ></ReviewTab>
                   <ReviewTab
                     date="23.03.2023"
                     name="Гаврила"
                     href="https://2gis.ru/ivanteevka/firm/70000001055489951/tab/reviews"
-                    navigate={"https://ibb.co.com/pzMp6Zn"}
+                    navigate={() =>
+                      handleOpenScreenshot("https://i.ibb.co.com/gTfCbw6/8.png")
+                    }
                     paragraph="Мне в клинике понравилось, стоматолог хорошая, приятная, с ней удобно работать. Был у Альфии Камиловны. Врач нравится своим подходом, она делает без боли, постоянно спрашивает все ли в порядке, дает советы на будущее, если отек какой-то появится..."
                   ></ReviewTab>
                   <ReviewTab
                     date="15.12.2023"
                     name="Пациент"
                     href="https://prodoctorov.ru/ivanteevka/lpu/78431-dental-houm/#rating"
-                    navigate={"https://ibb.co.com/zS6ZPkL"}
+                    navigate={() =>
+                      handleOpenScreenshot("https://i.ibb.co.com/Jz3Hrhb/9.png")
+                    }
                     paragraph="Очень благодарна Людмиле Юрьевне и Павлу Сергеевичу, была проделана грандиозная работа: полное восстановление зубов с исправлением прикуса. Спасибо Вам огромное! Это было долгое лечение с апреля по декабрь, и всё это время я ощущала..."
                   ></ReviewTab>
                 </div>
@@ -557,6 +585,16 @@ const ReviewsPage = () => {
                 </form>
               </div>
             </div>
+          </Popup>
+          <Popup
+            open={screenshotOpen}
+            onClose={() => setScreenshotOpen(false)}
+            contentStyle={{ padding: "0", border: "none" }}
+            overlayStyle={{ background: "rgba(0,0,0,0.7)" }}
+          >
+            {currentScreenshot && (
+              <img src={currentScreenshot} alt="Screenshot" />
+            )}
           </Popup>
         </div>
       )}

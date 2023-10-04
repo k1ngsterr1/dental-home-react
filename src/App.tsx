@@ -398,6 +398,14 @@ export default function HomePage() {
 
   // const closeModal = () => setOpen(false);
 
+  const [screenshotOpen, setScreenshotOpen] = useState(false);
+  const [currentScreenshot, setCurrentScreenshot] = useState(null);
+
+  const handleOpenScreenshot = (screenshotUrl: any) => {
+    setCurrentScreenshot(screenshotUrl);
+    setScreenshotOpen(true);
+  };
+
   function openPopupWindow() {
     setOpen(true);
   }
@@ -2064,6 +2072,16 @@ export default function HomePage() {
                 </form>
               </div>
             </div>
+          </Popup>
+          <Popup
+            open={screenshotOpen}
+            onClose={() => setScreenshotOpen(false)}
+            contentStyle={{ padding: "0", border: "none" }}
+            overlayStyle={{ background: "rgba(0,0,0,0.7)" }}
+          >
+            {currentScreenshot && (
+              <img src={currentScreenshot} alt="Screenshot" />
+            )}
           </Popup>
         </div>
         // </Fade>
