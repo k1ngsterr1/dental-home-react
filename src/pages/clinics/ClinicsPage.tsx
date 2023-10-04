@@ -304,7 +304,7 @@ const ClinicsPage = () => {
                     <div className="divider"></div>
                     <FeatureTab
                       number="06"
-                      text="Медицинское учреждениепремиум-класса"
+                      text="Медицинское учреждение премиум-класса"
                       goldText="У нас Вы можете воспользоваться широким спектром самых востребованных в современной стоматологии услуг."
                     ></FeatureTab>
                     <div className="text_divider">
@@ -328,7 +328,7 @@ const ClinicsPage = () => {
                     ></FeatureLong>
                     <FeatureLong
                       number="04"
-                      text="Современное обородувоние"
+                      text="Современное оборудование"
                     ></FeatureLong>
                   </div>
                   <button className="golden-button" onClick={openModal}>
@@ -348,6 +348,7 @@ const ClinicsPage = () => {
                   imageSrc={doctorOneMob}
                   imageSrcTwo={doctorTwoMob}
                   imageSrcThree={doctorThreeMob}
+                  openModal={openModal}
                   imageSrcFour={doctorFourMob}
                   imageSrcFive={doctorFiveMob}
                   imageSrcSix={doctorSixMob}
@@ -777,7 +778,7 @@ const ClinicsPage = () => {
                           }}
                         >
                           <p className="list-p l">
-                            Медицинское учреждениепремиум-класса
+                            Медицинское учреждение премиум-класса
                           </p>
                         </Fade>
                         <Fade
@@ -841,7 +842,7 @@ const ClinicsPage = () => {
                             <div className="square left">
                               <span className="number">04</span>
                               <span className="gold-p">
-                                Современное обородувоние
+                                Современное оборудование
                               </span>
                             </div>
                           </div>

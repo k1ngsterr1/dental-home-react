@@ -681,7 +681,7 @@ export default function HomePage() {
                 ></FeatureLong>
                 <FeatureLong
                   number="04"
-                  text="Современное обородувание"
+                  text="Современное оборудование"
                 ></FeatureLong>
               </div>
               <button className="golden-button" onClick={openPopupWindow}>
@@ -857,7 +857,7 @@ export default function HomePage() {
                       }}
                     >
                       <p className="list-p l">
-                        Медицинское учреждениепремиум-класса
+                        Медицинское учреждение премиум-класса
                       </p>
                     </Fade>
                     <Fade
@@ -918,7 +918,7 @@ export default function HomePage() {
                         <div className="square left">
                           <span className="number">04</span>
                           <span className="gold-p">
-                            Современное обородувание
+                            Современное оборудование
                           </span>
                         </div>
                       </div>
