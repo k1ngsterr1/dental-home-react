@@ -161,7 +161,9 @@ const ExpandedTab: React.FC<ExpandedService> = (props) => {
         <div className="divider"></div>
         <div className="row_text">
           <span className="paragraph">Описание</span>
-          <a className="golden-link">Цены</a>
+          <Link className="golden-link" to="/prices">
+            Цены
+          </Link>
         </div>
       </div>
       <button className="golden-button" onClick={props.openModal}>
@@ -916,7 +918,7 @@ export default function HomePage() {
                         <div className="square left">
                           <span className="number">04</span>
                           <span className="gold-p">
-                            Современное обородувоние
+                            Современное обородувание
                           </span>
                         </div>
                       </div>

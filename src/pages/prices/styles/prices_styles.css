@@ -102,6 +102,10 @@ body .screen .content .services-content .heading-container .heading {
   font-weight: 700;
   line-height: 137.4%;
 }
+body .screen .content .services-content #xray, body .screen .content .services-content #anasthetics, body .screen .content .services-content #restavration {
+  width: 100%;
+  height: auto;
+}
 body .screen .content .services-content .buttons {
   width: 100%;
   height: auto;

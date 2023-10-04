@@ -12,11 +12,11 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import { MDBCheckbox } from "mdb-react-ui-kit";
-
 import emailjs from "@emailjs/browser";
 import Popup from "reactjs-popup";
 import Gallery from "../../components/gallery/gallery";
 import Footer from "../../components/footer/Footer";
+import PcGallery from "../../components/gallery/pc_gallery";
 
 import "./styles/doctors_styles.css";
 
@@ -320,63 +320,17 @@ const DoctorsPage = () => {
                   <div className="divider"></div>
                 </div>
               </div>
-              <div className="doctors-container">
-                <div className="doctors-row">
-                  <div className="doctor">
-                    <img className="img" src={DoctorOnePc}></img>
-                    <span className="name">Аманова Альфия Камиловна</span>
-                    <span className="who">Врач стоматолог-терапевт</span>
-                  </div>
-                  {/* <div className="doctor">
-                    <img className="img" src={DoctorTwoPc}></img>
-                    <span className="name">Таха Дана Юрьевна</span>
-                    <span className="who">Управляющий</span>
-                  </div> */}
-                  <div className="doctor">
-                    <img className="img" src={DoctorThreePc}></img>
-                    <span className="name">Тамаров Павел Сергеевич</span>
-                    <span className="who">
-                      Главный врач, врач-ортопед, врач-хирург, имплантолог
-                    </span>
-                  </div>
-                </div>
-                <div className="doctors-row two">
-                  <div className="doctor">
-                    <img className="img" src={DoctorFourPc}></img>
-                    <span className="name">Пятаев Ислам Рушанович</span>
-                    <span className="who">
-                      Стоматолог терапевт-микроскопист
-                    </span>
-                  </div>
-                  {/* <div className="doctor">
-                    <img className="img" src={DoctorFivePc}></img>
-                    <span className="name">Терехова Елена Юрьевна</span>
-                    <span className="who">Стоматолог-терапевт</span>
-                  </div> */}
-                  <div className="doctor">
-                    <img className="img" src={DoctorSixPc}></img>
-                    <span className="name">Врач</span>
-                    <span className="who">Стоматолог</span>
-                  </div>
-                </div>
-                <div className="doctors-row two">
-                  <div className="doctor">
-                    <img className="img" src={DoctorSevenPc}></img>
-                    <span className="name">Врач</span>
-                    <span className="who">Стоматолог</span>
-                  </div>
-                  <div className="doctor">
-                    <img className="img" src={DoctorEightPc}></img>
-                    <span className="name">Врач</span>
-                    <span className="who">Стоматолог</span>
-                  </div>
-                  <div className="doctor">
-                    <img className="img" src={DoctorNinePc}></img>
-                    <span className="name">Юлия</span>
-                    <span className="who">Администратор</span>
-                  </div>
-                </div>
-              </div>
+              <PcGallery
+                imageSrc={DoctorOnePc}
+                imageSrc3={DoctorThreePc}
+                openModal={openModal}
+                imageSrc4={DoctorFourPc}
+                imageSrc5={DoctorFivePc}
+                imageSrc6={DoctorSixPc}
+                imageSrc7={DoctorSevenPc}
+                imageSrc8={DoctorEightPc}
+                imageSrc9={DoctorNinePc}
+              ></PcGallery>
               <div
                 className="form-pc-screen"
                 ref={form}

@@ -349,7 +349,7 @@ const Menu: React.FC<MenuProps> = ({
                     Лечение зубов
                   </Link>
                   <Link to="/" className="gold-link two">
-                    Отбеливние
+                    Отбеливание
                   </Link>
                   <Link to="/" className="gold-link two">
                     Гигиена полости рта

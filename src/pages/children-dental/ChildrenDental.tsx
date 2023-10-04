@@ -364,7 +364,7 @@ const ChildDental = () => {
               </div>
             </div>
           </Popup>
-          <Popup
+          {/* <Popup
             open={videoOpen}
             closeOnDocumentClick
             onClose={closeVideoModal}
@@ -392,7 +392,7 @@ const ChildDental = () => {
                 Видео
               </button>
             </div>
-          </Popup>
+          </Popup> */}
         </div>
       )}
     </div>

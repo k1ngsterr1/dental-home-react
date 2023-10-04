@@ -1497,7 +1497,10 @@ const PricesPage = () => {
                   <div
                     className=""
                     id="anasthetics-pc"
-                    style={{ marginTop: "clamp(32px,3.33312vw,128px)" }}
+                    style={{
+                      marginTop: "clamp(32px,3.33312vw,128px)",
+                      width: "100%",
+                    }}
                   >
                     <h2 className="heading">Анестезия</h2>
                     <PriceTabLong
