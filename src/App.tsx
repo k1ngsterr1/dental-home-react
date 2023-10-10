@@ -96,6 +96,7 @@ const doctorSix = require("./assets/6.webp");
 const doctorSeven = require("./assets/7.webp");
 const doctorEight = require("./assets/8.webp");
 const doctorNine = require("./assets/9.webp");
+const doctorTen = require("./assets/yana_pc.webp");
 
 // Gallery
 const galleryTwoPicture = require("./assets/gallery_c02.webp");
@@ -112,6 +113,7 @@ const doctorSixMob = require("./assets/06.webp");
 const doctorSevenMob = require("./assets/07.webp");
 const doctorEightMob = require("./assets/08.webp");
 const doctorNineMob = require("./assets/09.webp");
+const doctorTenMob = require("./assets/yana_mob.webp");
 
 const gallery02 = require("./assets/galleryS_02.webp");
 const gallery03 = require("./assets/galleryS_03.webp");
@@ -1512,7 +1514,7 @@ export default function HomePage() {
                 imageSrcFour={doctorFourMob}
                 imageSrcFive={doctorFiveMob}
                 imageSrcSix={doctorSixMob}
-                imageSrcSeven={doctorSevenMob}
+                imageSrcSeven={doctorTenMob}
                 imageSrcEight={doctorEightMob}
                 imageSrcNine={doctorNineMob}
               />
@@ -1531,7 +1533,7 @@ export default function HomePage() {
                 imageSrc4={doctorFour}
                 imageSrc5={doctorFive}
                 imageSrc6={doctorSix}
-                imageSrc7={doctorSeven}
+                imageSrc7={doctorTen}
                 imageSrc8={doctorEight}
                 imageSrc9={doctorNine}
                 openModal={openModal}

@@ -86,21 +86,12 @@ const Gallery: React.FC<PhotoSource> = ({
               <img src={imageSrc} alt="Doctor 1" className="doctor-image" />
             </div>
             <h3 className="doctor-name">Аманова Альфия Камиловна</h3>
-            <p className="doctor-position">Врач стоматолог-терапевт</p>
+            <p className="doctor-position">
+              Врач стоматолог. Терапевт-микроскопист
+            </p>
           </div>
         </SwiperSlide>
-        {/* <SwiperSlide>
-          <div className="dentist-card-2">
-            <div className="button-image-container">
-              <button className="doctor-btn" onClick={openModal}>
-                <span className="text">Записаться</span>
-              </button>
-              <img src={imageSrcTwo} alt="Doctor 2" className="doctor-image" />
-            </div>
-            <h3 className="doctor-name">Таха Дана Юрьевна</h3>
-            <p className="doctor-position">Управляющий</p>
-          </div>
-        </SwiperSlide> */}
+
         <SwiperSlide>
           <div className="dentist-card-2">
             <div className="button-image-container">
@@ -131,6 +122,7 @@ const Gallery: React.FC<PhotoSource> = ({
             <p className="doctor-position">Стоматолог терапевт-микроскопист</p>
           </div>
         </SwiperSlide>
+
         <SwiperSlide>
           <div className="dentist-card-2">
             <div className="button-image-container">
@@ -139,7 +131,7 @@ const Gallery: React.FC<PhotoSource> = ({
               </button>
               <img src={imageSrcFive} alt="Doctor 3" className="doctor-image" />
             </div>
-            <h3 className="doctor-name">Терехова Елена Юрьевна`</h3>
+            <h3 className="doctor-name">Терехова Елена Юрьевна</h3>
             <p className="doctor-position">Стоматолог-терапевт</p>
           </div>
         </SwiperSlide>
@@ -151,8 +143,21 @@ const Gallery: React.FC<PhotoSource> = ({
               </button>
               <img src={imageSrcSix} alt="Doctor 3" className="doctor-image" />
             </div>
-            <h3 className="doctor-name">Врач</h3>
-            <p className="doctor-position">Стоматолог</p>
+            <h3
+              className="doctor-name"
+              style={{
+                width: "80%",
+                textAlign: "left",
+                display: "flex",
+                alignItems: "flex-start",
+                float: "left",
+              }}
+            >
+              Бурмистрова Анастасия Игоревна
+            </h3>
+            <p className="doctor-position" style={{ width: "50%" }}>
+              Врач стоматолог терапевт-микроскопист
+            </p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -167,8 +172,10 @@ const Gallery: React.FC<PhotoSource> = ({
                 className="doctor-image"
               />
             </div>
-            <h3 className="doctor-name">Врач</h3>
-            <p className="doctor-position">Стоматолог</p>
+            <h3 className="doctor-name">Дербенцева Яна Сергеевна</h3>
+            <p className="doctor-position">
+              Врач стоматолог хирург-имплантолог-парадонтолог
+            </p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -183,8 +190,10 @@ const Gallery: React.FC<PhotoSource> = ({
                 className="doctor-image"
               />
             </div>
-            <h3 className="doctor-name">Врач</h3>
-            <p className="doctor-position">Стоматолог</p>
+            <h3 className="doctor-name">Лебединский Алек Иванович</h3>
+            <p className="doctor-position">
+              Врач Стоматолог-хирург-имплантолог
+            </p>
           </div>
         </SwiperSlide>
         {/* <SwiperSlide>
