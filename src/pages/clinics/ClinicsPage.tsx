@@ -38,6 +38,7 @@ const doctorSixMob = require("../../assets/06.webp");
 const doctorSevenMob = require("../../assets/07.webp");
 const doctorEightMob = require("../../assets/08.webp");
 const doctorNineMob = require("../../assets/09.webp");
+const doctorTenMob = require("../../assets/yana_mob.webp");
 
 const doctorOnePc = require("../../assets/1.webp");
 const doctorTwoPc = require("../../assets/2.webp");
@@ -48,6 +49,7 @@ const doctorSixPc = require("../../assets/6.webp");
 const doctorSevenPc = require("../../assets/7.webp");
 const doctorEightPc = require("../../assets/8.webp");
 const doctorNinePc = require("../../assets/9.webp");
+const doctorTenPc = require("../../assets/yana_pc.webp");
 
 const featuresPhotoPc = require("../../assets/features_image.webp");
 const galleryOnePic = require("../../assets/gallery_one_pic.webp");
@@ -352,7 +354,7 @@ const ClinicsPage = () => {
                   imageSrcFour={doctorFourMob}
                   imageSrcFive={doctorFiveMob}
                   imageSrcSix={doctorSixMob}
-                  imageSrcSeven={doctorSevenMob}
+                  imageSrcSeven={doctorTenMob}
                   imageSrcEight={doctorEightMob}
                   imageSrcNine={doctorNineMob}
                 />
@@ -872,7 +874,7 @@ const ClinicsPage = () => {
                   imageSrc4={doctorFourPc}
                   imageSrc5={doctorFivePc}
                   imageSrc6={doctorSixPc}
-                  imageSrc7={doctorSevenPc}
+                  imageSrc7={doctorTenPc}
                   imageSrc8={doctorEightPc}
                   imageSrc9={doctorNinePc}
                 ></PcGallery>
